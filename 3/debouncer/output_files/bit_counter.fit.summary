@@ -1,20 +1,16 @@
-Fitter Status : Successful - Thu May 03 17:35:08 2018
+Fitter Status : Successful - Fri May 04 03:19:40 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : bit_counter
 Top-level Entity Name : debouncer
-Family : Cyclone V
-Device : 5CEBA4F23C7
+Family : Cyclone IV E
+Device : EP4CE6E22C6
 Timing Models : Final
-Logic utilization (in ALMs) : 30 / 18,480 ( < 1 % )
-Total registers : 24
-Total pins : 25 / 224 ( 11 % )
+Total logic elements : 81 / 6,272 ( 1 % )
+    Total combinational functions : 81 / 6,272 ( 1 % )
+    Dedicated logic registers : 29 / 6,272 ( < 1 % )
+Total registers : 29
+Total pins : 25 / 92 ( 27 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 3,153,920 ( 0 % )
-Total RAM Blocks : 0 / 308 ( 0 % )
-Total DSP Blocks : 0 / 66 ( 0 % )
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
-Total PLLs : 0 / 4 ( 0 % )
-Total DLLs : 0 / 4 ( 0 % )
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

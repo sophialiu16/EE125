@@ -139,7 +139,7 @@ R15
 !s85 0
 !s101 -O0
 Edebouncer
-Z31 w1525390534
+Z31 w1525428966
 R3
 R7
 R2
@@ -148,20 +148,20 @@ R4
 R5
 R6
 Z33 DPx6 altera 28 altera_primitives_components 0 22 H[E=U;zSVlD;ca@gnkzIO0
-R8
+Z34 dC:\Users\Soph\Documents\College\Junior\EE 125\EE125\3\debouncer\simulation\qsim
 R9
 R10
 l0
 L79
-VD]Ln:ZT_9ZCiETc@DLX8=3
+VU?2QmmNzXSBRolnKJ<f8H2
 R11
 32
-Z34 !s108 1525390535.114000
+Z35 !s108 1525428967.342000
 R13
 R14
 R15
 R16
-!s100 eWonf4]<=4DF3f`K9]jZf2
+!s100 ?@4mHHkl1;i;dZRciSCc32
 !i10b 1
 Astructure
 R3
@@ -172,26 +172,26 @@ R4
 R5
 R6
 R33
-DEx4 work 9 debouncer 0 22 D]Ln:ZT_9ZCiETc@DLX8=3
-l160
-L101
-VUJ<:5=gCflg:RL8<;bGTP0
-!s100 GmdYIS<gW`l35g1Y2JYLi1
+DEx4 work 9 debouncer 0 22 U?2QmmNzXSBRolnKJ<f8H2
+l209
+L119
+VYk[2C4BdJg0:2cMmR0aC02
+!s100 Z[Ed]CVb`GBD@Q0cOjjeI1
 R11
 32
-R34
+R35
 R13
 R14
 R15
 R16
 !i10b 1
 Edebouncer_vhd_vec_tst
-Z35 w1525390532
+Z36 w1525428964
 R5
 R6
-R8
-Z36 8Waveform.vwf.vht
-Z37 FWaveform.vwf.vht
+R34
+Z37 8Waveform.vwf.vht
+Z38 FWaveform.vwf.vht
 l0
 L31
 Vl2ScA4S>D5:E2G^i6dhGj2
@@ -199,25 +199,25 @@ Vl2ScA4S>D5:E2G^i6dhGj2
 R11
 32
 !i10b 1
-Z38 !s108 1525390535.301000
-Z39 !s90 -work|work|Waveform.vwf.vht|
-Z40 !s107 Waveform.vwf.vht|
+Z39 !s108 1525428967.549000
+Z40 !s90 -work|work|Waveform.vwf.vht|
+Z41 !s107 Waveform.vwf.vht|
 R15
 R16
 Adebouncer_arch
 R5
 R6
-Z41 DEx4 work 21 debouncer_vhd_vec_tst 0 22 l2ScA4S>D5:E2G^i6dhGj2
-l48
+Z42 DEx4 work 21 debouncer_vhd_vec_tst 0 22 l2ScA4S>D5:E2G^i6dhGj2
+l54
 L33
-VWM8kd`8GiWi0zcVenYTb[1
-!s100 LN`PTeEc=2X7NJ[YE;[cM0
+VS79OS3RAn4Gelic@CafkD2
+!s100 UE:2fQg2N^fN2[a>GQXVE1
 R11
 32
 !i10b 1
-R38
 R39
 R40
+R41
 R15
 R16
 Ehard_block
@@ -228,7 +228,7 @@ R4
 R5
 R6
 R7
-R8
+R34
 R9
 R10
 l0
@@ -236,7 +236,7 @@ L34
 ViB[@XD6>4f^a@az=ll8LZ1
 R11
 32
-R34
+R35
 R13
 R14
 R15
@@ -257,7 +257,7 @@ VhZ4711OZWWPD=Sj=TIZU22
 !s100 ^Wl>I7QP@V:CC=<0N^P>?2
 R11
 32
-R34
+R35
 R13
 R14
 R15

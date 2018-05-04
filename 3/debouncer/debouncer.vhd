@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 --------------------------------------------------------------------------------
 entity debouncer is 
 	generic(
-		COUNT: positive := 2500 ); --- count to 2500 for 20ms with 50MHz clock 
+		COUNT: positive := 1000000 ); --- count to 10^6 for 20ms with 50MHz clock 
 	port( 
 		x, clk, reset: in std_logic; 
 		count_x, count_debounced: out std_logic_vector(3 downto 0); 

@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/simulation/qsim/" bit_counter -c bit_counter</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/bit_counter/simulation/qsim/" bit_counter -c bit_counter</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work bit_counter.vho
@@ -20,7 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
@@ -40,7 +39,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -89,7 +87,7 @@ SIGNAL("clk")
 	PARENT = "";
 }
 
-SIGNAL("debounced_count")
+SIGNAL("count_debounced")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -99,44 +97,264 @@ SIGNAL("debounced_count")
 	PARENT = "";
 }
 
-SIGNAL("debounced_count[3]")
+SIGNAL("count_debounced[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "debounced_count";
+	PARENT = "count_debounced";
 }
 
-SIGNAL("debounced_count[2]")
+SIGNAL("count_debounced[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "debounced_count";
+	PARENT = "count_debounced";
 }
 
-SIGNAL("debounced_count[1]")
+SIGNAL("count_debounced[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "debounced_count";
+	PARENT = "count_debounced";
 }
 
-SIGNAL("debounced_count[0]")
+SIGNAL("count_debounced[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "debounced_count";
+	PARENT = "count_debounced";
+}
+
+SIGNAL("count_x")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("count_x[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "count_x";
+}
+
+SIGNAL("count_x[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "count_x";
+}
+
+SIGNAL("count_x[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "count_x";
+}
+
+SIGNAL("count_x[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "count_x";
+}
+
+SIGNAL("reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ssd_debounced")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ssd_debounced[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_debounced[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_debounced";
+}
+
+SIGNAL("ssd_x")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ssd_x[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
+}
+
+SIGNAL("ssd_x[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ssd_x";
 }
 
 SIGNAL("x")
@@ -149,56 +367,6 @@ SIGNAL("x")
 	PARENT = "";
 }
 
-SIGNAL("x_count")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("x_count[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "x_count";
-}
-
-SIGNAL("x_count[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "x_count";
-}
-
-SIGNAL("x_count[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "x_count";
-}
-
-SIGNAL("x_count[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "x_count";
-}
-
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -206,15 +374,14 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 35;
+			REPEAT = 50;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
-		LEVEL 0 FOR 300.0;
 	}
 }
 
-TRANSITION_LIST("debounced_count[3]")
+TRANSITION_LIST("count_debounced[3]")
 {
 	NODE
 	{
@@ -223,7 +390,7 @@ TRANSITION_LIST("debounced_count[3]")
 	}
 }
 
-TRANSITION_LIST("debounced_count[2]")
+TRANSITION_LIST("count_debounced[2]")
 {
 	NODE
 	{
@@ -232,7 +399,7 @@ TRANSITION_LIST("debounced_count[2]")
 	}
 }
 
-TRANSITION_LIST("debounced_count[1]")
+TRANSITION_LIST("count_debounced[1]")
 {
 	NODE
 	{
@@ -241,7 +408,180 @@ TRANSITION_LIST("debounced_count[1]")
 	}
 }
 
-TRANSITION_LIST("debounced_count[0]")
+TRANSITION_LIST("count_debounced[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("count_x[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("count_x[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("count_x[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("count_x[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 800.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_debounced[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ssd_x[0]")
 {
 	NODE
 	{
@@ -255,55 +595,80 @@ TRANSITION_LIST("x")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 1 FOR 80.0;
 		NODE
 		{
-			REPEAT = 8;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 5;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
 		}
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 25.0;
+		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 21.819;
+		LEVEL 0 FOR 10.4;
+		LEVEL 1 FOR 7.781;
+		LEVEL 0 FOR 2.741;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 64.455;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 2.439;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 61.56;
+		LEVEL 1 FOR 4.707;
+		LEVEL 0 FOR 4.6;
+		LEVEL 1 FOR 0.693;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 1.277;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.867;
+			LEVEL 1 FOR 2.799;
+		}
+		LEVEL 0 FOR 3.867;
+		LEVEL 1 FOR 1.524;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 0.926;
+		LEVEL 1 FOR 2.666;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 2.666;
+		}
+		LEVEL 0 FOR 3.076;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 90.0;
 		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 300.0;
-	}
-}
-
-TRANSITION_LIST("x_count[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("x_count[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("x_count[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("x_count[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 3.138;
+		LEVEL 1 FOR 2.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.4;
+			LEVEL 1 FOR 2.266;
+		}
+		LEVEL 0 FOR 1.264;
+		LEVEL 1 FOR 1.467;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 2.9;
+		LEVEL 1 FOR 0.633;
+		LEVEL 0 FOR 70.0;
 	}
 }
 
@@ -318,52 +683,11 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "debounced_count";
+	CHANNEL = "reset";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
-	CHILDREN = 2, 3, 4, 5;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "debounced_count[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 2;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "debounced_count[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "debounced_count[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 1;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "debounced_count[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 1;
 }
 
 DISPLAY_LINE
@@ -371,58 +695,268 @@ DISPLAY_LINE
 	CHANNEL = "x";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 6;
+	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "x_count";
+	CHANNEL = "count_debounced";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+	CHILDREN = 4, 5, 6, 7;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_debounced[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_debounced[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_debounced[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_debounced[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 7;
-	TREE_LEVEL = 0;
-	CHILDREN = 8, 9, 10, 11;
+	TREE_LEVEL = 1;
+	PARENT = 3;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "x_count[3]";
+	CHANNEL = "count_x";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 7;
+	TREE_LEVEL = 0;
+	CHILDREN = 9, 10, 11, 12;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "x_count[2]";
+	CHANNEL = "count_x[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 7;
+	PARENT = 8;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "x_count[1]";
+	CHANNEL = "count_x[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
-	PARENT = 7;
+	PARENT = 8;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "x_count[0]";
+	CHANNEL = "count_x[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
-	PARENT = 7;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "count_x[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 0;
+	CHILDREN = 14, 15, 16, 17, 18, 19, 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_debounced[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+	CHILDREN = 22, 23, 24, 25, 26, 27, 28;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ssd_x[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 1;
+	PARENT = 21;
 }
 
 TIME_BAR
