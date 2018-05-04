@@ -1,0 +1,320 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is Add6~0 at LCCOMB_X1_Y8_N10
+A1L1 = (A1L29 & (leading_ones[7] $ (VCC))) # (!A1L29 & (leading_ones[7] & VCC));
+
+--A1L2 is Add6~1 at LCCOMB_X1_Y8_N10
+A1L2 = CARRY((A1L29 & leading_ones[7]));
+
+
+--A1L9 is Add7~0 at LCCOMB_X28_Y12_N0
+A1L9 = (A1L1 & (leading_ones[8] $ (VCC))) # (!A1L1 & (leading_ones[8] & VCC));
+
+--A1L10 is Add7~1 at LCCOMB_X28_Y12_N0
+A1L10 = CARRY((A1L1 & leading_ones[8]));
+
+
+--A1L3 is Add6~2 at LCCOMB_X1_Y8_N12
+A1L3 = (A1L31 & (!A1L2)) # (!A1L31 & ((A1L2) # (GND)));
+
+--A1L4 is Add6~3 at LCCOMB_X1_Y8_N12
+A1L4 = CARRY((!A1L2) # (!A1L31));
+
+
+--A1L11 is Add7~2 at LCCOMB_X28_Y12_N2
+A1L11 = (A1L3 & (!A1L10)) # (!A1L3 & ((A1L10) # (GND)));
+
+--A1L12 is Add7~3 at LCCOMB_X28_Y12_N2
+A1L12 = CARRY((!A1L10) # (!A1L3));
+
+
+--A1L5 is Add6~4 at LCCOMB_X1_Y8_N14
+A1L5 = (A1L28 & (A1L4 $ (GND))) # (!A1L28 & (!A1L4 & VCC));
+
+--A1L6 is Add6~5 at LCCOMB_X1_Y8_N14
+A1L6 = CARRY((A1L28 & !A1L4));
+
+
+--A1L13 is Add7~4 at LCCOMB_X28_Y12_N4
+A1L13 = (A1L5 & (A1L12 $ (GND))) # (!A1L5 & (!A1L12 & VCC));
+
+--A1L14 is Add7~5 at LCCOMB_X28_Y12_N4
+A1L14 = CARRY((A1L5 & !A1L12));
+
+
+--A1L7 is Add6~6 at LCCOMB_X1_Y8_N16
+A1L7 = A1L6;
+
+
+--A1L15 is Add7~6 at LCCOMB_X28_Y12_N6
+A1L15 = (A1L7 & (!A1L14)) # (!A1L7 & ((A1L14) # (GND)));
+
+--A1L16 is Add7~7 at LCCOMB_X28_Y12_N6
+A1L16 = CARRY((!A1L14) # (!A1L7));
+
+
+--A1L17 is Add7~8 at LCCOMB_X28_Y12_N8
+A1L17 = !A1L16;
+
+
+--A1L28 is leading_ones_counts[5][2]~0 at LCCOMB_X1_Y8_N24
+A1L28 = (A1L72 & (A1L74 & (A1L68 & A1L70)));
+
+
+--A1L24 is leading_ones[6]~2 at LCCOMB_X1_Y8_N2
+A1L24 = (A1L64 & A1L66);
+
+
+--A1L27 is leading_ones_counts[5][0]~1 at LCCOMB_X1_Y8_N4
+A1L27 = ((A1L70 & ((A1L66) # (!A1L68)))) # (!A1L72);
+
+
+--A1L29 is leading_ones_counts[6][0]~2 at LCCOMB_X1_Y8_N6
+A1L29 = (A1L28 & (A1L24 $ (((A1L74 & A1L27))))) # (!A1L28 & (A1L74 & (A1L27)));
+
+
+--leading_ones[8] is leading_ones[8] at LCCOMB_X1_Y8_N0
+leading_ones[8] = (A1L60 & (A1L28 & (A1L62 & A1L24)));
+
+
+--A1L30 is leading_ones_counts[6][1]~3 at LCCOMB_X1_Y8_N26
+A1L30 = (((A1L64 & A1L66)) # (!A1L70)) # (!A1L68);
+
+
+--A1L31 is leading_ones_counts[6][1]~4 at LCCOMB_X1_Y8_N20
+A1L31 = (A1L30 & (A1L74 & A1L72));
+
+
+--A1L20 is Equal0~0 at LCCOMB_X28_Y12_N10
+A1L20 = (!A1L17 & !A1L15);
+
+
+--WideOr5 is WideOr5 at LCCOMB_X28_Y12_N20
+WideOr5 = (A1L20 & ((A1L13 & (A1L9 & A1L11)) # (!A1L13 & ((!A1L11)))));
+
+
+--A1L21 is Equal0~1 at LCCOMB_X28_Y12_N30
+A1L21 = (!A1L15 & (!A1L17 & !A1L9));
+
+
+--A1L22 is Equal2~0 at LCCOMB_X28_Y12_N24
+A1L22 = (A1L21 & (!A1L13 & A1L11));
+
+
+--A1L56 is WideOr4~0 at LCCOMB_X28_Y12_N18
+A1L56 = (A1L20 & (A1L9 & ((A1L11) # (!A1L13))));
+
+
+--A1L47 is WideNor0~0 at LCCOMB_X28_Y12_N12
+A1L47 = (!A1L17 & (((!A1L13 & !A1L11)) # (!A1L15)));
+
+
+--WideOr4 is WideOr4 at LCCOMB_X13_Y18_N16
+WideOr4 = (A1L22) # ((A1L56) # (!A1L47));
+
+
+--WideOr2 is WideOr2 at LCCOMB_X28_Y12_N14
+WideOr2 = (A1L20 & ((A1L9 & (A1L13 $ (!A1L11))) # (!A1L9 & (A1L13 & !A1L11))));
+
+
+--A1L51 is WideOr1~0 at LCCOMB_X28_Y12_N16
+A1L51 = (A1L20 & (A1L13 & (A1L9 $ (A1L11))));
+
+
+--WideOr1 is WideOr1 at LCCOMB_X13_Y18_N18
+WideOr1 = (A1L51) # (!A1L47);
+
+
+--A1L49 is WideOr0~0 at LCCOMB_X28_Y12_N26
+A1L49 = (A1L20 & (!A1L11 & (A1L9 $ (A1L13))));
+
+
+--WideOr0 is WideOr0 at LCCOMB_X13_Y18_N12
+WideOr0 = (A1L49) # (!A1L47);
+
+
+--leading_ones[7] is leading_ones[7] at LCCOMB_X1_Y8_N22
+leading_ones[7] = (A1L64 & (A1L66 & (A1L62 & A1L28)));
+
+
+--A1L54 is WideOr3~2 at LCCOMB_X28_Y12_N28
+A1L54 = (A1L11 & ((A1L15) # ((!A1L9)))) # (!A1L11 & ((A1L13 & (A1L15)) # (!A1L13 & ((!A1L9)))));
+
+
+--WideOr3 is WideOr3 at LCCOMB_X28_Y12_N22
+WideOr3 = (A1L17) # (A1L54);
+
+
+--A1L77 is y[0]~output at IOOBUF_X21_Y0_N9
+A1L77 = OUTPUT_BUFFER.O(.I(A1L9), , , , , , , , , , , , , , , , , );
+
+
+--y[0] is y[0] at PIN_58
+y[0] = OUTPUT();
+
+
+--A1L79 is y[1]~output at IOOBUF_X23_Y0_N16
+A1L79 = OUTPUT_BUFFER.O(.I(A1L11), , , , , , , , , , , , , , , , , );
+
+
+--y[1] is y[1] at PIN_59
+y[1] = OUTPUT();
+
+
+--A1L81 is y[2]~output at IOOBUF_X16_Y24_N23
+A1L81 = OUTPUT_BUFFER.O(.I(A1L13), , , , , , , , , , , , , , , , , );
+
+
+--y[2] is y[2] at PIN_129
+y[2] = OUTPUT();
+
+
+--A1L83 is y[3]~output at IOOBUF_X23_Y24_N2
+A1L83 = OUTPUT_BUFFER.O(.I(A1L15), , , , , , , , , , , , , , , , , );
+
+
+--y[3] is y[3] at PIN_119
+y[3] = OUTPUT();
+
+
+--A1L34 is ssd[0]~output at IOOBUF_X28_Y0_N23
+A1L34 = OUTPUT_BUFFER.O(.I(!WideOr5), , , , , , , , , , , , , , , , , );
+
+
+--ssd[0] is ssd[0] at PIN_65
+ssd[0] = OUTPUT();
+
+
+--A1L36 is ssd[1]~output at IOOBUF_X34_Y7_N23
+A1L36 = OUTPUT_BUFFER.O(.I(!WideOr4), , , , , , , , , , , , , , , , , );
+
+
+--ssd[1] is ssd[1] at PIN_79
+ssd[1] = OUTPUT();
+
+
+--A1L38 is ssd[2]~output at IOOBUF_X13_Y24_N16
+A1L38 = OUTPUT_BUFFER.O(.I(WideOr3), , , , , , , , , , , , , , , , , );
+
+
+--ssd[2] is ssd[2] at PIN_132
+ssd[2] = OUTPUT();
+
+
+--A1L40 is ssd[3]~output at IOOBUF_X16_Y24_N16
+A1L40 = OUTPUT_BUFFER.O(.I(!WideOr2), , , , , , , , , , , , , , , , , );
+
+
+--ssd[3] is ssd[3] at PIN_128
+ssd[3] = OUTPUT();
+
+
+--A1L42 is ssd[4]~output at IOOBUF_X23_Y24_N9
+A1L42 = OUTPUT_BUFFER.O(.I(!A1L22), , , , , , , , , , , , , , , , , );
+
+
+--ssd[4] is ssd[4] at PIN_120
+ssd[4] = OUTPUT();
+
+
+--A1L44 is ssd[5]~output at IOOBUF_X30_Y24_N2
+A1L44 = OUTPUT_BUFFER.O(.I(!WideOr1), , , , , , , , , , , , , , , , , );
+
+
+--ssd[5] is ssd[5] at PIN_110
+ssd[5] = OUTPUT();
+
+
+--A1L46 is ssd[6]~output at IOOBUF_X7_Y24_N2
+A1L46 = OUTPUT_BUFFER.O(.I(!WideOr0), , , , , , , , , , , , , , , , , );
+
+
+--ssd[6] is ssd[6] at PIN_137
+ssd[6] = OUTPUT();
+
+
+--A1L74 is x[7]~input at IOIBUF_X0_Y5_N15
+A1L74 = INPUT_BUFFER(.I(x[7]), );
+
+
+--x[7] is x[7] at PIN_34
+x[7] = INPUT();
+
+
+--A1L72 is x[6]~input at IOIBUF_X0_Y18_N15
+A1L72 = INPUT_BUFFER(.I(x[6]), );
+
+
+--x[6] is x[6] at PIN_10
+x[6] = INPUT();
+
+
+--A1L70 is x[5]~input at IOIBUF_X1_Y0_N22
+A1L70 = INPUT_BUFFER(.I(x[5]), );
+
+
+--x[5] is x[5] at PIN_38
+x[5] = INPUT();
+
+
+--A1L68 is x[4]~input at IOIBUF_X0_Y6_N15
+A1L68 = INPUT_BUFFER(.I(x[4]), );
+
+
+--x[4] is x[4] at PIN_32
+x[4] = INPUT();
+
+
+--A1L66 is x[3]~input at IOIBUF_X0_Y9_N8
+A1L66 = INPUT_BUFFER(.I(x[3]), );
+
+
+--x[3] is x[3] at PIN_28
+x[3] = INPUT();
+
+
+--A1L64 is x[2]~input at IOIBUF_X0_Y8_N15
+A1L64 = INPUT_BUFFER(.I(x[2]), );
+
+
+--x[2] is x[2] at PIN_30
+x[2] = INPUT();
+
+
+--A1L62 is x[1]~input at IOIBUF_X0_Y11_N1
+A1L62 = INPUT_BUFFER(.I(x[1]), );
+
+
+--x[1] is x[1] at PIN_22
+x[1] = INPUT();
+
+
+--A1L60 is x[0]~input at IOIBUF_X0_Y11_N8
+A1L60 = INPUT_BUFFER(.I(x[0]), );
+
+
+--x[0] is x[0] at PIN_23
+x[0] = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
