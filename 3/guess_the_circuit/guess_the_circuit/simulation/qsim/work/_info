@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\projects\3\guess_the_circuit\simulation\qsim
+vguess_the_circuit
+Z1 I@=dWHlEiEX=SM3CL5kSQ_2
+Z2 ViORZ:IK_HW6<^AIO70Y2Q2
+Z3 dC:\altera\13.1\projects\3\guess_the_circuit\simulation\qsim
+Z4 w1525388293
+Z5 8guess_the_circuit.vo
+Z6 Fguess_the_circuit.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|guess_the_circuit.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 eJW^HjjE3ZQPhh55;X:OK2
+!s85 0
+Z11 !s108 1525388295.265000
+Z12 !s107 guess_the_circuit.vo|
+!s101 -O0
+vguess_the_circuit_vlg_check_tst
+!i10b 1
+Z13 !s100 IJa>3XB[VDNLAO0OoRIZ<2
+Z14 Iz1T:LMkH3na<;b7Ze9hOl1
+Z15 V2Cd1BHAnSlMXPEQN_QZ6Z3
+R3
+Z16 w1525388290
+Z17 8guess_the_circuit.vwf.vt
+Z18 Fguess_the_circuit.vwf.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z19 !s108 1525388295.438000
+Z20 !s107 guess_the_circuit.vwf.vt|
+Z21 !s90 -work|work|guess_the_circuit.vwf.vt|
+!s101 -O0
+R9
+vguess_the_circuit_vlg_sample_tst
+!i10b 1
+Z22 !s100 zfWIPg2Ogma9_LM]7a]WJ3
+Z23 IcOLLc1>IbJLPJ:Y]gKk322
+Z24 VGVaJPUHn4IBl`V[F41f9k0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vguess_the_circuit_vlg_vec_tst
+!i10b 1
+Z25 !s100 S35Vj^zX=13lan0b5a:P52
+Z26 IH>aBZXAjH8Wn:h9;cJ3@e1
+Z27 V0oJe4GI4V6cV6FlIG_V;<0
+R3
+R16
+R17
+R18
+Z28 L0 152
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

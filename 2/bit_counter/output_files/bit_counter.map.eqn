@@ -1,0 +1,258 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is Add5~0
+A1L1 = (A1L29 & (leading_ones[6] $ (VCC))) # (!A1L29 & (leading_ones[6] & VCC));
+
+--A1L2 is Add5~1
+A1L2 = CARRY((A1L29 & leading_ones[6]));
+
+
+--A1L9 is Add6~0
+A1L9 = (A1L1 & (leading_ones[7] $ (VCC))) # (!A1L1 & (leading_ones[7] & VCC));
+
+--A1L10 is Add6~1
+A1L10 = CARRY((A1L1 & leading_ones[7]));
+
+
+--A1L3 is Add5~2
+A1L3 = (A1L31 & (!A1L2)) # (!A1L31 & ((A1L2) # (GND)));
+
+--A1L4 is Add5~3
+A1L4 = CARRY((!A1L2) # (!A1L31));
+
+
+--A1L11 is Add6~2
+A1L11 = (A1L3 & (!A1L10)) # (!A1L3 & ((A1L10) # (GND)));
+
+--A1L12 is Add6~3
+A1L12 = CARRY((!A1L10) # (!A1L3));
+
+
+--A1L5 is Add5~4
+A1L5 = (A1L28 & (A1L4 $ (GND))) # (!A1L28 & (!A1L4 & VCC));
+
+--A1L6 is Add5~5
+A1L6 = CARRY((A1L28 & !A1L4));
+
+
+--A1L13 is Add6~4
+A1L13 = (A1L5 & (A1L12 $ (GND))) # (!A1L5 & (!A1L12 & VCC));
+
+--A1L14 is Add6~5
+A1L14 = CARRY((A1L5 & !A1L12));
+
+
+--A1L7 is Add5~6
+A1L7 = A1L6;
+
+
+--A1L15 is Add6~6
+A1L15 = (A1L7 & (!A1L14)) # (!A1L7 & ((A1L14) # (GND)));
+
+--A1L16 is Add6~7
+A1L16 = CARRY((!A1L14) # (!A1L7));
+
+
+--A1L17 is Add6~8
+A1L17 = !A1L16;
+
+
+--y[0] is y[0]
+y[0] = OUTPUT(A1L9);
+
+
+--y[1] is y[1]
+y[1] = OUTPUT(A1L11);
+
+
+--y[2] is y[2]
+y[2] = OUTPUT(A1L13);
+
+
+--y[3] is y[3]
+y[3] = OUTPUT(A1L15);
+
+
+--ssd[0] is ssd[0]
+ssd[0] = OUTPUT(A1L55);
+
+
+--ssd[1] is ssd[1]
+ssd[1] = OUTPUT(A1L53);
+
+
+--ssd[2] is ssd[2]
+ssd[2] = OUTPUT(WideOr3);
+
+
+--ssd[3] is ssd[3]
+ssd[3] = OUTPUT(A1L48);
+
+
+--ssd[4] is ssd[4]
+ssd[4] = OUTPUT(A1L22);
+
+
+--ssd[5] is ssd[5]
+ssd[5] = OUTPUT(A1L46);
+
+
+--ssd[6] is ssd[6]
+ssd[6] = OUTPUT(A1L43);
+
+
+--x[7] is x[7]
+x[7] = INPUT();
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--A1L28 is leading_ones_counts[4][2]~0
+A1L28 = (x[7] & (x[6] & (x[5] & x[4])));
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--A1L24 is leading_ones[5]~2
+A1L24 = (x[3] & x[2]);
+
+
+--A1L27 is leading_ones_counts[4][0]~1
+A1L27 = ((x[5] & ((x[3]) # (!x[4])))) # (!x[6]);
+
+
+--A1L29 is leading_ones_counts[5][0]~2
+A1L29 = (x[7] & (A1L27 $ (((A1L28 & A1L24))))) # (!x[7] & (A1L28 & (A1L24)));
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--leading_ones[7] is leading_ones[7]
+leading_ones[7] = (A1L28 & (A1L24 & (x[1] & x[0])));
+
+
+--A1L30 is leading_ones_counts[5][1]~3
+A1L30 = (((x[3] & x[2])) # (!x[4])) # (!x[5]);
+
+
+--A1L31 is leading_ones_counts[5][1]~4
+A1L31 = (x[7] & (x[6] & A1L30));
+
+
+--A1L19 is Equal0~0
+A1L19 = (!A1L15 & !A1L17);
+
+
+--WideOr5 is WideOr5
+WideOr5 = (A1L19 & ((A1L11 & (A1L9 & A1L13)) # (!A1L11 & ((!A1L13)))));
+
+
+--A1L20 is Equal0~1
+A1L20 = (!A1L9 & (!A1L15 & !A1L17));
+
+
+--A1L21 is Equal2~0
+A1L21 = (A1L11 & (A1L20 & !A1L13));
+
+
+--A1L52 is WideOr4~0
+A1L52 = (A1L9 & (A1L19 & ((A1L11) # (!A1L13))));
+
+
+--A1L40 is WideNor0~0
+A1L40 = (!A1L17 & (((!A1L11 & !A1L13)) # (!A1L15)));
+
+
+--WideOr4 is WideOr4
+WideOr4 = (A1L21) # ((A1L52) # (!A1L40));
+
+
+--WideOr2 is WideOr2
+WideOr2 = (A1L19 & ((A1L9 & (A1L13 $ (!A1L11))) # (!A1L9 & (A1L13 & !A1L11))));
+
+
+--A1L45 is WideOr1~0
+A1L45 = (A1L13 & (A1L19 & (A1L9 $ (A1L11))));
+
+
+--WideOr1 is WideOr1
+WideOr1 = (A1L45) # (!A1L40);
+
+
+--A1L42 is WideOr0~0
+A1L42 = (A1L19 & (!A1L11 & (A1L9 $ (A1L13))));
+
+
+--WideOr0 is WideOr0
+WideOr0 = (A1L42) # (!A1L40);
+
+
+--leading_ones[6] is leading_ones[6]
+leading_ones[6] = (x[3] & (x[2] & (A1L28 & x[1])));
+
+
+--A1L50 is WideOr3~2
+A1L50 = (A1L11 & (((A1L15)) # (!A1L9))) # (!A1L11 & ((A1L13 & ((A1L15))) # (!A1L13 & (!A1L9))));
+
+
+--WideOr3 is WideOr3
+WideOr3 = (A1L50) # (A1L17);
+
+
+--A1L22 is Equal2~0_wirecell
+A1L22 = !A1L21;
+
+
+--A1L43 is WideOr0~_wirecell
+A1L43 = !WideOr0;
+
+
+--A1L46 is WideOr1~_wirecell
+A1L46 = !WideOr1;
+
+
+--A1L48 is WideOr2~_wirecell
+A1L48 = !WideOr2;
+
+
+--A1L53 is WideOr4~_wirecell
+A1L53 = !WideOr4;
+
+
+--A1L55 is WideOr5~_wirecell
+A1L55 = !WideOr5;
+
+

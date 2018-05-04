@@ -1,0 +1,83 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L15Q is y~reg0 at FF_X14_Y23_N29
+--register power-up is low
+
+A1L15Q = DFFEAS(A1L5, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[0] is i[0] at FF_X14_Y23_N3
+--register power-up is low
+
+i[0] = DFFEAS(A1L8, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[1] is i[1] at FF_X14_Y23_N9
+--register power-up is low
+
+i[1] = DFFEAS(A1L11, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--i[2] is i[2] at FF_X14_Y23_N31
+--register power-up is low
+
+i[2] = DFFEAS(A1L12, GLOBAL(A1L4),  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L5 is Equal1~0 at LCCOMB_X14_Y23_N28
+A1L5 = (i[2]) # ((i[1]) # (i[0]));
+
+
+--A1L11 is i~0 at LCCOMB_X14_Y23_N8
+A1L11 = (i[1] & ((!i[0]))) # (!i[1] & (!i[2] & i[0]));
+
+
+--A1L12 is i~1 at LCCOMB_X14_Y23_N30
+A1L12 = (i[2] & ((!i[0]))) # (!i[2] & (i[1] & i[0]));
+
+
+--A1L8 is i[0]~2 at LCCOMB_X14_Y23_N2
+A1L8 = !i[0];
+
+
+--A1L14 is y~output at IOOBUF_X13_Y24_N2
+A1L14 = OUTPUT_BUFFER.O(.I(A1L15Q), , , , , , , , , , , , , , , , , );
+
+
+--y is y at PIN_C8
+y = OUTPUT();
+
+
+--A1L3 is clk~input at IOIBUF_X0_Y11_N1
+A1L3 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_E2
+clk = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L4 is clk~inputclkctrl at CLKCTRL_G4
+A1L4 = cycloneiii_clkctrl(.INCLK[0] = A1L3) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+

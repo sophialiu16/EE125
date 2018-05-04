@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\projects\2\bit_counter\simulation\qsim
+vbit_counter
+Z1 !s100 iHCIFXdf?i:j8^4G:IkFe0
+Z2 ImSzXUG3N0W[;cTmS@JTGP2
+Z3 V9SK>ec<Dcd`]O_AgRCnQ=0
+Z4 dC:\altera\13.1\projects\2\bit_counter\simulation\qsim
+Z5 w1524622807
+Z6 8bit_counter.vo
+Z7 Fbit_counter.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|bit_counter.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1524622809.387000
+Z12 !s107 bit_counter.vo|
+!s101 -O0
+vbit_counter_vlg_check_tst
+!i10b 1
+Z13 !s100 YUY;M9d<bI_IA>z@@29DG0
+Z14 I9dnJ2mI?;jfbS1WIcgWNa2
+Z15 VjZ5Kg=9<PV9gzg5]Tj]7f0
+R4
+Z16 w1524622803
+Z17 8leading_ones_counter.vwf.vt
+Z18 Fleading_ones_counter.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1524622809.548000
+Z20 !s107 leading_ones_counter.vwf.vt|
+Z21 !s90 -work|work|leading_ones_counter.vwf.vt|
+!s101 -O0
+R10
+vbit_counter_vlg_sample_tst
+!i10b 1
+Z22 !s100 WVST]RGJFHI4:BU[dDLO53
+Z23 IccoZFUF4kE491?4<Woi`l3
+Z24 V[0?YPShABb7PULJdJe7?D3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vbit_counter_vlg_vec_tst
+!i10b 1
+Z25 !s100 Lc3Bmz9@3i5hCajk;MG[T0
+Z26 IdL<UTo1h6gQWbCj?clc4D3
+Z27 VRASGm_9MJ0mk[:WNIfPmA3
+R4
+R16
+R17
+R18
+Z28 L0 339
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

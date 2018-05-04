@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\projects\2\abs_difference_calculator\simulation\qsim
+vabs_difference_calculator
+Z1 IFG6e3KVI?YUT^6[1L6gYH2
+Z2 Ve4f4F5:Ti;<5e55QIURLl1
+Z3 dC:\altera\13.1\projects\2\abs_difference_calculator\simulation\qsim
+Z4 w1524645755
+Z5 8abs_difference_calculator.vo
+Z6 Fabs_difference_calculator.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 09;a3n@U1Xn3BlBkC0aSN2
+!s85 0
+Z10 !s108 1524645757.879000
+Z11 !s107 abs_difference_calculator.vo|
+Z12 !s90 -work|work|abs_difference_calculator.vo|
+!s101 -O0
+vabs_difference_calculator_vlg_check_tst
+!i10b 1
+!s100 3Q@2XGe@AgL99jV`X2f7m3
+I8zWDKV[E0hdWHoD^J?@8?2
+V4;g4gHM;WZZ;J9fBKfi4W2
+R3
+Z13 w1524645752
+Z14 8abs_difference_calculator.vwf.vt
+Z15 Fabs_difference_calculator.vwf.vt
+L0 79
+R7
+r1
+!s85 0
+31
+Z16 !s108 1524645758.071000
+Z17 !s107 abs_difference_calculator.vwf.vt|
+Z18 !s90 -work|work|abs_difference_calculator.vwf.vt|
+!s101 -O0
+R8
+vabs_difference_calculator_vlg_sample_tst
+!i10b 1
+!s100 NAU]NU0;9PRCLRFT@_KHZ2
+I3Z2N=?6SeaSWT:<a>cFL20
+Vfd46X8zV4D09kRf_UmmR:1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vabs_difference_calculator_vlg_vec_tst
+!i10b 1
+!s100 a^_[@i>l8fbU]Ge6`Y;YC0
+InaZBIIVn>M[@<jcaS4@IE0
+V=?L0N@2SWnWjZjGRl?^zV0
+R3
+R13
+R14
+R15
+L0 299
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+--------------------------------------------------------------------------------
+entity abs_difference_calculator is 
+    generic (
+        SIZE:       natural := 6;    -- Length of the chain
+        BITS:       natural := 5;	 -- Number of bits in each vector	
+        --EXTRA_BITS:   integer := integer(ceil(log2(real(BITS + 1))))
+        EXTRA_BITS: natural := 4 );  -- Number of extra bits needed for abs_diff
+    port (
+	     -- Inputs: To facilitate simulation, the `a` and `b` slv_array inputs 
+		  -- in the original code have been replaced by discrete slv's
+        a0, a1, a2, a3, a4, a5:   in  std_logic_vector(BITS-1 downto 0);
+		  b0, b1, b2, b3, b4, b5:   in  std_logic_vector(BITS-1 downto 0);
+		  -- Outputs: absolute difference of each element in a and b
+        abs_diff:   out std_logic_vector(0 to BITS-1 + EXTRA_BITS) ); 
+end entity;
+--------------------------------------------------------------------------------
+architecture generic_chain_type of abs_difference_calculator is 
+    -- Define array of slv and unsigned types
+    type slv_array is array (natural range <>) of std_logic_vector;
+	 type uns_array is array (natural range <>) of unsigned;
+	 -- 'Convert' slv inputs to slv_array
+	 signal a_slvarr:  slv_array(0 to SIZE-1)(BITS-1 downto 0) 
+	     := (a0, a1, a2, a3, a4, a5);
+	 signal b_slvarr:  slv_array(0 to SIZE-1)(BITS-1 downto 0) 
+	     := (b0, b1, b2, b3, b4, b5);
+    -- Individual, accumulated absolute differences between a_i, b_i; 
+	 -- i from 0 to SIZE-1. Each element is of length BITS + EXTRA_BITS
+    signal abs_diff_uns: uns_array(0 to SIZE-1)(BITS-1 + EXTRA_BITS downto 0);
+begin
+    -- Initialize the first element of `abs_diff_uns` with the absolute 
+	 -- difference of the first a, b - essentially the output of the first 
+	 -- adder in the chain:
+	 abs_diff_uns(0) <= unsigned(
+	     abs(resize(signed(a_slvarr(0)), BITS + EXTRA_BITS) - 
+            resize(signed(b_slvarr(0)), BITS + EXTRA_BITS) ) );
+    gen: for i in 1 to SIZE-1 generate
+        -- Calculate absolute differences for each slv in a and b
+        -- and accumulate these differences in the `abs_diff_uns` array
+        abs_diff_uns(i) <= abs_diff_uns(i-1) + unsigned(
+		      abs(resize(signed(a_slvarr(i)), BITS + EXTRA_BITS) - 
+                resize(signed(b_slvarr(i)), BITS + EXTRA_BITS) ) );
+    end generate;
+	 -- The last element of the array is the total absolute difference
+    abs_diff <= std_logic_vector(abs_diff_uns(SIZE-1));
+end architecture;

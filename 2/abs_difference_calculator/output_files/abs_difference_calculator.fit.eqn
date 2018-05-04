@@ -1,0 +1,1303 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L268 is Add14~0 at LCCOMB_X17_Y5_N6
+A1L268 = (A1L366 & (A1L58 $ (VCC))) # (!A1L366 & ((A1L58) # (GND)));
+
+--A1L269 is Add14~1 at LCCOMB_X17_Y5_N6
+A1L269 = CARRY((A1L58) # (!A1L366));
+
+
+--A1L270 is Add14~2 at LCCOMB_X17_Y5_N8
+A1L270 = (A1L368 & ((A1L60 & (!A1L269)) # (!A1L60 & ((A1L269) # (GND))))) # (!A1L368 & ((A1L60 & (A1L269 & VCC)) # (!A1L60 & (!A1L269))));
+
+--A1L271 is Add14~3 at LCCOMB_X17_Y5_N8
+A1L271 = CARRY((A1L368 & ((!A1L269) # (!A1L60))) # (!A1L368 & (!A1L60 & !A1L269)));
+
+
+--A1L272 is Add14~4 at LCCOMB_X17_Y5_N10
+A1L272 = ((A1L370 $ (A1L62 $ (A1L271)))) # (GND);
+
+--A1L273 is Add14~5 at LCCOMB_X17_Y5_N10
+A1L273 = CARRY((A1L370 & (A1L62 & !A1L271)) # (!A1L370 & ((A1L62) # (!A1L271))));
+
+
+--A1L274 is Add14~6 at LCCOMB_X17_Y5_N12
+A1L274 = (A1L372 & ((A1L64 & (!A1L273)) # (!A1L64 & ((A1L273) # (GND))))) # (!A1L372 & ((A1L64 & (A1L273 & VCC)) # (!A1L64 & (!A1L273))));
+
+--A1L275 is Add14~7 at LCCOMB_X17_Y5_N12
+A1L275 = CARRY((A1L372 & ((!A1L273) # (!A1L64))) # (!A1L372 & (!A1L64 & !A1L273)));
+
+
+--A1L276 is Add14~8 at LCCOMB_X17_Y5_N14
+A1L276 = ((A1L66 $ (A1L374 $ (A1L275)))) # (GND);
+
+--A1L277 is Add14~9 at LCCOMB_X17_Y5_N14
+A1L277 = CARRY((A1L66 & ((!A1L275) # (!A1L374))) # (!A1L66 & (!A1L374 & !A1L275)));
+
+
+--A1L278 is Add14~10 at LCCOMB_X17_Y5_N16
+A1L278 = A1L66 $ (A1L374 $ (!A1L277));
+
+
+--A1L280 is Add15~0 at LCCOMB_X17_Y5_N20
+A1L280 = (A1L100 & (A1L278 $ (VCC))) # (!A1L100 & (A1L278 & VCC));
+
+--A1L281 is Add15~1 at LCCOMB_X17_Y5_N20
+A1L281 = CARRY((A1L100 & A1L278));
+
+
+--A1L230 is Add11~0 at LCCOMB_X33_Y5_N0
+A1L230 = (A1L355 & (A1L47 $ (VCC))) # (!A1L355 & ((A1L47) # (GND)));
+
+--A1L231 is Add11~1 at LCCOMB_X33_Y5_N0
+A1L231 = CARRY((A1L47) # (!A1L355));
+
+
+--A1L232 is Add11~2 at LCCOMB_X33_Y5_N2
+A1L232 = (A1L357 & ((A1L49 & (!A1L231)) # (!A1L49 & ((A1L231) # (GND))))) # (!A1L357 & ((A1L49 & (A1L231 & VCC)) # (!A1L49 & (!A1L231))));
+
+--A1L233 is Add11~3 at LCCOMB_X33_Y5_N2
+A1L233 = CARRY((A1L357 & ((!A1L231) # (!A1L49))) # (!A1L357 & (!A1L49 & !A1L231)));
+
+
+--A1L234 is Add11~4 at LCCOMB_X33_Y5_N4
+A1L234 = ((A1L51 $ (A1L359 $ (A1L233)))) # (GND);
+
+--A1L235 is Add11~5 at LCCOMB_X33_Y5_N4
+A1L235 = CARRY((A1L51 & ((!A1L233) # (!A1L359))) # (!A1L51 & (!A1L359 & !A1L233)));
+
+
+--A1L236 is Add11~6 at LCCOMB_X33_Y5_N6
+A1L236 = (A1L53 & ((A1L361 & (!A1L235)) # (!A1L361 & (A1L235 & VCC)))) # (!A1L53 & ((A1L361 & ((A1L235) # (GND))) # (!A1L361 & (!A1L235))));
+
+--A1L237 is Add11~7 at LCCOMB_X33_Y5_N6
+A1L237 = CARRY((A1L53 & (A1L361 & !A1L235)) # (!A1L53 & ((A1L361) # (!A1L235))));
+
+
+--A1L238 is Add11~8 at LCCOMB_X33_Y5_N8
+A1L238 = ((A1L363 $ (A1L55 $ (A1L237)))) # (GND);
+
+--A1L239 is Add11~9 at LCCOMB_X33_Y5_N8
+A1L239 = CARRY((A1L363 & (A1L55 & !A1L237)) # (!A1L363 & ((A1L55) # (!A1L237))));
+
+
+--A1L240 is Add11~10 at LCCOMB_X33_Y5_N10
+A1L240 = A1L363 $ (A1L239 $ (!A1L55));
+
+
+--A1L242 is Add12~0 at LCCOMB_X33_Y5_N12
+A1L242 = (A1L240 & (A1L101 $ (VCC))) # (!A1L240 & (A1L101 & VCC));
+
+--A1L243 is Add12~1 at LCCOMB_X33_Y5_N12
+A1L243 = CARRY((A1L240 & A1L101));
+
+
+--A1L254 is Add13~0 at LCCOMB_X25_Y5_N0
+A1L254 = (A1L280 & (A1L242 $ (VCC))) # (!A1L280 & (A1L242 & VCC));
+
+--A1L255 is Add13~1 at LCCOMB_X25_Y5_N0
+A1L255 = CARRY((A1L280 & A1L242));
+
+
+--A1L130 is Add2~0 at LCCOMB_X29_Y21_N16
+A1L130 = (A1L14 & ((GND) # (!A1L322))) # (!A1L14 & (A1L322 $ (GND)));
+
+--A1L131 is Add2~1 at LCCOMB_X29_Y21_N16
+A1L131 = CARRY((A1L14) # (!A1L322));
+
+
+--A1L132 is Add2~2 at LCCOMB_X29_Y21_N18
+A1L132 = (A1L324 & ((A1L16 & (!A1L131)) # (!A1L16 & ((A1L131) # (GND))))) # (!A1L324 & ((A1L16 & (A1L131 & VCC)) # (!A1L16 & (!A1L131))));
+
+--A1L133 is Add2~3 at LCCOMB_X29_Y21_N18
+A1L133 = CARRY((A1L324 & ((!A1L131) # (!A1L16))) # (!A1L324 & (!A1L16 & !A1L131)));
+
+
+--A1L134 is Add2~4 at LCCOMB_X29_Y21_N20
+A1L134 = ((A1L326 $ (A1L18 $ (A1L133)))) # (GND);
+
+--A1L135 is Add2~5 at LCCOMB_X29_Y21_N20
+A1L135 = CARRY((A1L326 & (A1L18 & !A1L133)) # (!A1L326 & ((A1L18) # (!A1L133))));
+
+
+--A1L136 is Add2~6 at LCCOMB_X29_Y21_N22
+A1L136 = (A1L20 & ((A1L328 & (!A1L135)) # (!A1L328 & (A1L135 & VCC)))) # (!A1L20 & ((A1L328 & ((A1L135) # (GND))) # (!A1L328 & (!A1L135))));
+
+--A1L137 is Add2~7 at LCCOMB_X29_Y21_N22
+A1L137 = CARRY((A1L20 & (A1L328 & !A1L135)) # (!A1L20 & ((A1L328) # (!A1L135))));
+
+
+--A1L138 is Add2~8 at LCCOMB_X29_Y21_N24
+A1L138 = ((A1L22 $ (A1L330 $ (A1L137)))) # (GND);
+
+--A1L139 is Add2~9 at LCCOMB_X29_Y21_N24
+A1L139 = CARRY((A1L22 & ((!A1L137) # (!A1L330))) # (!A1L22 & (!A1L330 & !A1L137)));
+
+
+--A1L140 is Add2~10 at LCCOMB_X29_Y21_N26
+A1L140 = A1L22 $ (A1L139 $ (!A1L330));
+
+
+--A1L142 is Add3~0 at LCCOMB_X29_Y21_N0
+A1L142 = (A1L140 & (A1L102 $ (VCC))) # (!A1L140 & (A1L102 & VCC));
+
+--A1L143 is Add3~1 at LCCOMB_X29_Y21_N0
+A1L143 = CARRY((A1L140 & A1L102));
+
+
+--A1L106 is Add0~0 at LCCOMB_X13_Y21_N0
+A1L106 = (A1L311 & (A1L3 $ (VCC))) # (!A1L311 & ((A1L3) # (GND)));
+
+--A1L107 is Add0~1 at LCCOMB_X13_Y21_N0
+A1L107 = CARRY((A1L3) # (!A1L311));
+
+
+--A1L108 is Add0~2 at LCCOMB_X13_Y21_N2
+A1L108 = (A1L313 & ((A1L5 & (!A1L107)) # (!A1L5 & ((A1L107) # (GND))))) # (!A1L313 & ((A1L5 & (A1L107 & VCC)) # (!A1L5 & (!A1L107))));
+
+--A1L109 is Add0~3 at LCCOMB_X13_Y21_N2
+A1L109 = CARRY((A1L313 & ((!A1L107) # (!A1L5))) # (!A1L313 & (!A1L5 & !A1L107)));
+
+
+--A1L110 is Add0~4 at LCCOMB_X13_Y21_N4
+A1L110 = ((A1L315 $ (A1L7 $ (A1L109)))) # (GND);
+
+--A1L111 is Add0~5 at LCCOMB_X13_Y21_N4
+A1L111 = CARRY((A1L315 & (A1L7 & !A1L109)) # (!A1L315 & ((A1L7) # (!A1L109))));
+
+
+--A1L112 is Add0~6 at LCCOMB_X13_Y21_N6
+A1L112 = (A1L9 & ((A1L317 & (!A1L111)) # (!A1L317 & (A1L111 & VCC)))) # (!A1L9 & ((A1L317 & ((A1L111) # (GND))) # (!A1L317 & (!A1L111))));
+
+--A1L113 is Add0~7 at LCCOMB_X13_Y21_N6
+A1L113 = CARRY((A1L9 & (A1L317 & !A1L111)) # (!A1L9 & ((A1L317) # (!A1L111))));
+
+
+--A1L114 is Add0~8 at LCCOMB_X13_Y21_N8
+A1L114 = ((A1L319 $ (A1L11 $ (A1L113)))) # (GND);
+
+--A1L115 is Add0~9 at LCCOMB_X13_Y21_N8
+A1L115 = CARRY((A1L319 & (A1L11 & !A1L113)) # (!A1L319 & ((A1L11) # (!A1L113))));
+
+
+--A1L116 is Add0~10 at LCCOMB_X13_Y21_N10
+A1L116 = A1L319 $ (A1L11 $ (!A1L115));
+
+
+--A1L118 is Add1~0 at LCCOMB_X13_Y21_N16
+A1L118 = (A1L116 & (A1L103 $ (VCC))) # (!A1L116 & (A1L103 & VCC));
+
+--A1L119 is Add1~1 at LCCOMB_X13_Y21_N16
+A1L119 = CARRY((A1L116 & A1L103));
+
+
+--A1L154 is Add4~0 at LCCOMB_X25_Y21_N0
+A1L154 = (A1L142 & (A1L118 $ (VCC))) # (!A1L142 & (A1L118 & VCC));
+
+--A1L155 is Add4~1 at LCCOMB_X25_Y21_N0
+A1L155 = CARRY((A1L142 & A1L118));
+
+
+--A1L206 is Add8~0 at LCCOMB_X23_Y21_N0
+A1L206 = (A1L36 & ((GND) # (!A1L344))) # (!A1L36 & (A1L344 $ (GND)));
+
+--A1L207 is Add8~1 at LCCOMB_X23_Y21_N0
+A1L207 = CARRY((A1L36) # (!A1L344));
+
+
+--A1L208 is Add8~2 at LCCOMB_X23_Y21_N2
+A1L208 = (A1L346 & ((A1L38 & (!A1L207)) # (!A1L38 & ((A1L207) # (GND))))) # (!A1L346 & ((A1L38 & (A1L207 & VCC)) # (!A1L38 & (!A1L207))));
+
+--A1L209 is Add8~3 at LCCOMB_X23_Y21_N2
+A1L209 = CARRY((A1L346 & ((!A1L207) # (!A1L38))) # (!A1L346 & (!A1L38 & !A1L207)));
+
+
+--A1L210 is Add8~4 at LCCOMB_X23_Y21_N4
+A1L210 = ((A1L40 $ (A1L348 $ (A1L209)))) # (GND);
+
+--A1L211 is Add8~5 at LCCOMB_X23_Y21_N4
+A1L211 = CARRY((A1L40 & ((!A1L209) # (!A1L348))) # (!A1L40 & (!A1L348 & !A1L209)));
+
+
+--A1L212 is Add8~6 at LCCOMB_X23_Y21_N6
+A1L212 = (A1L42 & ((A1L350 & (!A1L211)) # (!A1L350 & (A1L211 & VCC)))) # (!A1L42 & ((A1L350 & ((A1L211) # (GND))) # (!A1L350 & (!A1L211))));
+
+--A1L213 is Add8~7 at LCCOMB_X23_Y21_N6
+A1L213 = CARRY((A1L42 & (A1L350 & !A1L211)) # (!A1L42 & ((A1L350) # (!A1L211))));
+
+
+--A1L214 is Add8~8 at LCCOMB_X23_Y21_N8
+A1L214 = ((A1L352 $ (A1L44 $ (A1L213)))) # (GND);
+
+--A1L215 is Add8~9 at LCCOMB_X23_Y21_N8
+A1L215 = CARRY((A1L352 & (A1L44 & !A1L213)) # (!A1L352 & ((A1L44) # (!A1L213))));
+
+
+--A1L216 is Add8~10 at LCCOMB_X23_Y21_N10
+A1L216 = A1L352 $ (A1L215 $ (!A1L44));
+
+
+--A1L218 is Add9~0 at LCCOMB_X23_Y21_N16
+A1L218 = (A1L216 & (A1L104 $ (VCC))) # (!A1L216 & (A1L104 & VCC));
+
+--A1L219 is Add9~1 at LCCOMB_X23_Y21_N16
+A1L219 = CARRY((A1L216 & A1L104));
+
+
+--A1L168 is Add5~0 at LCCOMB_X33_Y17_N18
+A1L168 = (A1L25 & ((GND) # (!A1L333))) # (!A1L25 & (A1L333 $ (GND)));
+
+--A1L169 is Add5~1 at LCCOMB_X33_Y17_N18
+A1L169 = CARRY((A1L25) # (!A1L333));
+
+
+--A1L170 is Add5~2 at LCCOMB_X33_Y17_N20
+A1L170 = (A1L27 & ((A1L335 & (!A1L169)) # (!A1L335 & (A1L169 & VCC)))) # (!A1L27 & ((A1L335 & ((A1L169) # (GND))) # (!A1L335 & (!A1L169))));
+
+--A1L171 is Add5~3 at LCCOMB_X33_Y17_N20
+A1L171 = CARRY((A1L27 & (A1L335 & !A1L169)) # (!A1L27 & ((A1L335) # (!A1L169))));
+
+
+--A1L172 is Add5~4 at LCCOMB_X33_Y17_N22
+A1L172 = ((A1L29 $ (A1L337 $ (A1L171)))) # (GND);
+
+--A1L173 is Add5~5 at LCCOMB_X33_Y17_N22
+A1L173 = CARRY((A1L29 & ((!A1L171) # (!A1L337))) # (!A1L29 & (!A1L337 & !A1L171)));
+
+
+--A1L174 is Add5~6 at LCCOMB_X33_Y17_N24
+A1L174 = (A1L31 & ((A1L339 & (!A1L173)) # (!A1L339 & (A1L173 & VCC)))) # (!A1L31 & ((A1L339 & ((A1L173) # (GND))) # (!A1L339 & (!A1L173))));
+
+--A1L175 is Add5~7 at LCCOMB_X33_Y17_N24
+A1L175 = CARRY((A1L31 & (A1L339 & !A1L173)) # (!A1L31 & ((A1L339) # (!A1L173))));
+
+
+--A1L176 is Add5~8 at LCCOMB_X33_Y17_N26
+A1L176 = ((A1L33 $ (A1L341 $ (A1L175)))) # (GND);
+
+--A1L177 is Add5~9 at LCCOMB_X33_Y17_N26
+A1L177 = CARRY((A1L33 & ((!A1L175) # (!A1L341))) # (!A1L33 & (!A1L341 & !A1L175)));
+
+
+--A1L178 is Add5~10 at LCCOMB_X33_Y17_N28
+A1L178 = A1L33 $ (A1L177 $ (!A1L341));
+
+
+--A1L180 is Add6~0 at LCCOMB_X33_Y17_N6
+A1L180 = (A1L105 & (A1L178 $ (VCC))) # (!A1L105 & (A1L178 & VCC));
+
+--A1L181 is Add6~1 at LCCOMB_X33_Y17_N6
+A1L181 = CARRY((A1L105 & A1L178));
+
+
+--A1L192 is Add7~0 at LCCOMB_X26_Y21_N0
+A1L192 = (A1L180 & (A1L218 $ (VCC))) # (!A1L180 & (A1L218 & VCC));
+
+--A1L193 is Add7~1 at LCCOMB_X26_Y21_N0
+A1L193 = CARRY((A1L180 & A1L218));
+
+
+--A1L84 is abs_diff_uns[3][0]~6 at LCCOMB_X25_Y21_N14
+A1L84 = (A1L154 & (A1L192 $ (VCC))) # (!A1L154 & (A1L192 & VCC));
+
+--A1L85 is abs_diff_uns[3][0]~7 at LCCOMB_X25_Y21_N14
+A1L85 = CARRY((A1L154 & A1L192));
+
+
+--A1L292 is Add16~0 at LCCOMB_X25_Y5_N14
+A1L292 = (A1L84 & (A1L254 $ (VCC))) # (!A1L84 & (A1L254 & VCC));
+
+--A1L293 is Add16~1 at LCCOMB_X25_Y5_N14
+A1L293 = CARRY((A1L84 & A1L254));
+
+
+--A1L282 is Add15~2 at LCCOMB_X17_Y5_N22
+A1L282 = (A1L281 & (A1L270 $ ((!A1L278)))) # (!A1L281 & ((A1L270 $ (A1L278)) # (GND)));
+
+--A1L283 is Add15~3 at LCCOMB_X17_Y5_N22
+A1L283 = CARRY((A1L270 $ (!A1L278)) # (!A1L281));
+
+
+--A1L244 is Add12~2 at LCCOMB_X33_Y5_N14
+A1L244 = (A1L243 & (A1L240 $ ((!A1L232)))) # (!A1L243 & ((A1L240 $ (A1L232)) # (GND)));
+
+--A1L245 is Add12~3 at LCCOMB_X33_Y5_N14
+A1L245 = CARRY((A1L240 $ (!A1L232)) # (!A1L243));
+
+
+--A1L256 is Add13~2 at LCCOMB_X25_Y5_N2
+A1L256 = (A1L282 & ((A1L244 & (A1L255 & VCC)) # (!A1L244 & (!A1L255)))) # (!A1L282 & ((A1L244 & (!A1L255)) # (!A1L244 & ((A1L255) # (GND)))));
+
+--A1L257 is Add13~3 at LCCOMB_X25_Y5_N2
+A1L257 = CARRY((A1L282 & (!A1L244 & !A1L255)) # (!A1L282 & ((!A1L255) # (!A1L244))));
+
+
+--A1L144 is Add3~2 at LCCOMB_X29_Y21_N2
+A1L144 = (A1L143 & (A1L140 $ ((!A1L132)))) # (!A1L143 & ((A1L140 $ (A1L132)) # (GND)));
+
+--A1L145 is Add3~3 at LCCOMB_X29_Y21_N2
+A1L145 = CARRY((A1L140 $ (!A1L132)) # (!A1L143));
+
+
+--A1L120 is Add1~2 at LCCOMB_X13_Y21_N18
+A1L120 = (A1L119 & (A1L116 $ ((!A1L108)))) # (!A1L119 & ((A1L116 $ (A1L108)) # (GND)));
+
+--A1L121 is Add1~3 at LCCOMB_X13_Y21_N18
+A1L121 = CARRY((A1L116 $ (!A1L108)) # (!A1L119));
+
+
+--A1L156 is Add4~2 at LCCOMB_X25_Y21_N2
+A1L156 = (A1L120 & ((A1L144 & (A1L155 & VCC)) # (!A1L144 & (!A1L155)))) # (!A1L120 & ((A1L144 & (!A1L155)) # (!A1L144 & ((A1L155) # (GND)))));
+
+--A1L157 is Add4~3 at LCCOMB_X25_Y21_N2
+A1L157 = CARRY((A1L120 & (!A1L144 & !A1L155)) # (!A1L120 & ((!A1L155) # (!A1L144))));
+
+
+--A1L220 is Add9~2 at LCCOMB_X23_Y21_N18
+A1L220 = (A1L219 & (A1L216 $ ((!A1L208)))) # (!A1L219 & ((A1L216 $ (A1L208)) # (GND)));
+
+--A1L221 is Add9~3 at LCCOMB_X23_Y21_N18
+A1L221 = CARRY((A1L216 $ (!A1L208)) # (!A1L219));
+
+
+--A1L182 is Add6~2 at LCCOMB_X33_Y17_N8
+A1L182 = (A1L181 & (A1L170 $ ((!A1L178)))) # (!A1L181 & ((A1L170 $ (A1L178)) # (GND)));
+
+--A1L183 is Add6~3 at LCCOMB_X33_Y17_N8
+A1L183 = CARRY((A1L170 $ (!A1L178)) # (!A1L181));
+
+
+--A1L194 is Add7~2 at LCCOMB_X26_Y21_N2
+A1L194 = (A1L182 & ((A1L220 & (A1L193 & VCC)) # (!A1L220 & (!A1L193)))) # (!A1L182 & ((A1L220 & (!A1L193)) # (!A1L220 & ((A1L193) # (GND)))));
+
+--A1L195 is Add7~3 at LCCOMB_X26_Y21_N2
+A1L195 = CARRY((A1L182 & (!A1L220 & !A1L193)) # (!A1L182 & ((!A1L193) # (!A1L220))));
+
+
+--A1L86 is abs_diff_uns[3][1]~8 at LCCOMB_X25_Y21_N16
+A1L86 = (A1L194 & ((A1L156 & (A1L85 & VCC)) # (!A1L156 & (!A1L85)))) # (!A1L194 & ((A1L156 & (!A1L85)) # (!A1L156 & ((A1L85) # (GND)))));
+
+--A1L87 is abs_diff_uns[3][1]~9 at LCCOMB_X25_Y21_N16
+A1L87 = CARRY((A1L194 & (!A1L156 & !A1L85)) # (!A1L194 & ((!A1L85) # (!A1L156))));
+
+
+--A1L294 is Add16~2 at LCCOMB_X25_Y5_N16
+A1L294 = (A1L86 & ((A1L256 & (A1L293 & VCC)) # (!A1L256 & (!A1L293)))) # (!A1L86 & ((A1L256 & (!A1L293)) # (!A1L256 & ((A1L293) # (GND)))));
+
+--A1L295 is Add16~3 at LCCOMB_X25_Y5_N16
+A1L295 = CARRY((A1L86 & (!A1L256 & !A1L293)) # (!A1L86 & ((!A1L293) # (!A1L256))));
+
+
+--A1L284 is Add15~4 at LCCOMB_X17_Y5_N24
+A1L284 = (A1L283 & ((A1L272 $ (A1L278)))) # (!A1L283 & (A1L272 $ (A1L278 $ (VCC))));
+
+--A1L285 is Add15~5 at LCCOMB_X17_Y5_N24
+A1L285 = CARRY((!A1L283 & (A1L272 $ (A1L278))));
+
+
+--A1L246 is Add12~4 at LCCOMB_X33_Y5_N16
+A1L246 = (A1L245 & ((A1L240 $ (A1L234)))) # (!A1L245 & (A1L240 $ (A1L234 $ (VCC))));
+
+--A1L247 is Add12~5 at LCCOMB_X33_Y5_N16
+A1L247 = CARRY((!A1L245 & (A1L240 $ (A1L234))));
+
+
+--A1L258 is Add13~4 at LCCOMB_X25_Y5_N4
+A1L258 = ((A1L284 $ (A1L246 $ (!A1L257)))) # (GND);
+
+--A1L259 is Add13~5 at LCCOMB_X25_Y5_N4
+A1L259 = CARRY((A1L284 & ((A1L246) # (!A1L257))) # (!A1L284 & (A1L246 & !A1L257)));
+
+
+--A1L146 is Add3~4 at LCCOMB_X29_Y21_N4
+A1L146 = (A1L145 & ((A1L140 $ (A1L134)))) # (!A1L145 & (A1L140 $ (A1L134 $ (VCC))));
+
+--A1L147 is Add3~5 at LCCOMB_X29_Y21_N4
+A1L147 = CARRY((!A1L145 & (A1L140 $ (A1L134))));
+
+
+--A1L122 is Add1~4 at LCCOMB_X13_Y21_N20
+A1L122 = (A1L121 & ((A1L116 $ (A1L110)))) # (!A1L121 & (A1L116 $ (A1L110 $ (VCC))));
+
+--A1L123 is Add1~5 at LCCOMB_X13_Y21_N20
+A1L123 = CARRY((!A1L121 & (A1L116 $ (A1L110))));
+
+
+--A1L158 is Add4~4 at LCCOMB_X25_Y21_N4
+A1L158 = ((A1L146 $ (A1L122 $ (!A1L157)))) # (GND);
+
+--A1L159 is Add4~5 at LCCOMB_X25_Y21_N4
+A1L159 = CARRY((A1L146 & ((A1L122) # (!A1L157))) # (!A1L146 & (A1L122 & !A1L157)));
+
+
+--A1L222 is Add9~4 at LCCOMB_X23_Y21_N20
+A1L222 = (A1L221 & ((A1L216 $ (A1L210)))) # (!A1L221 & (A1L216 $ (A1L210 $ (VCC))));
+
+--A1L223 is Add9~5 at LCCOMB_X23_Y21_N20
+A1L223 = CARRY((!A1L221 & (A1L216 $ (A1L210))));
+
+
+--A1L184 is Add6~4 at LCCOMB_X33_Y17_N10
+A1L184 = (A1L183 & ((A1L172 $ (A1L178)))) # (!A1L183 & (A1L172 $ (A1L178 $ (VCC))));
+
+--A1L185 is Add6~5 at LCCOMB_X33_Y17_N10
+A1L185 = CARRY((!A1L183 & (A1L172 $ (A1L178))));
+
+
+--A1L196 is Add7~4 at LCCOMB_X26_Y21_N4
+A1L196 = ((A1L222 $ (A1L184 $ (!A1L195)))) # (GND);
+
+--A1L197 is Add7~5 at LCCOMB_X26_Y21_N4
+A1L197 = CARRY((A1L222 & ((A1L184) # (!A1L195))) # (!A1L222 & (A1L184 & !A1L195)));
+
+
+--A1L88 is abs_diff_uns[3][2]~10 at LCCOMB_X25_Y21_N18
+A1L88 = ((A1L196 $ (A1L158 $ (!A1L87)))) # (GND);
+
+--A1L89 is abs_diff_uns[3][2]~11 at LCCOMB_X25_Y21_N18
+A1L89 = CARRY((A1L196 & ((A1L158) # (!A1L87))) # (!A1L196 & (A1L158 & !A1L87)));
+
+
+--A1L296 is Add16~4 at LCCOMB_X25_Y5_N18
+A1L296 = ((A1L88 $ (A1L258 $ (!A1L295)))) # (GND);
+
+--A1L297 is Add16~5 at LCCOMB_X25_Y5_N18
+A1L297 = CARRY((A1L88 & ((A1L258) # (!A1L295))) # (!A1L88 & (A1L258 & !A1L295)));
+
+
+--A1L286 is Add15~6 at LCCOMB_X17_Y5_N26
+A1L286 = (A1L285 & (A1L274 $ ((!A1L278)))) # (!A1L285 & ((A1L274 $ (A1L278)) # (GND)));
+
+--A1L287 is Add15~7 at LCCOMB_X17_Y5_N26
+A1L287 = CARRY((A1L274 $ (!A1L278)) # (!A1L285));
+
+
+--A1L248 is Add12~6 at LCCOMB_X33_Y5_N18
+A1L248 = (A1L247 & (A1L240 $ ((!A1L236)))) # (!A1L247 & ((A1L240 $ (A1L236)) # (GND)));
+
+--A1L249 is Add12~7 at LCCOMB_X33_Y5_N18
+A1L249 = CARRY((A1L240 $ (!A1L236)) # (!A1L247));
+
+
+--A1L260 is Add13~6 at LCCOMB_X25_Y5_N6
+A1L260 = (A1L248 & ((A1L286 & (A1L259 & VCC)) # (!A1L286 & (!A1L259)))) # (!A1L248 & ((A1L286 & (!A1L259)) # (!A1L286 & ((A1L259) # (GND)))));
+
+--A1L261 is Add13~7 at LCCOMB_X25_Y5_N6
+A1L261 = CARRY((A1L248 & (!A1L286 & !A1L259)) # (!A1L248 & ((!A1L259) # (!A1L286))));
+
+
+--A1L148 is Add3~6 at LCCOMB_X29_Y21_N6
+A1L148 = (A1L147 & (A1L140 $ ((!A1L136)))) # (!A1L147 & ((A1L140 $ (A1L136)) # (GND)));
+
+--A1L149 is Add3~7 at LCCOMB_X29_Y21_N6
+A1L149 = CARRY((A1L140 $ (!A1L136)) # (!A1L147));
+
+
+--A1L124 is Add1~6 at LCCOMB_X13_Y21_N22
+A1L124 = (A1L123 & (A1L116 $ ((!A1L112)))) # (!A1L123 & ((A1L116 $ (A1L112)) # (GND)));
+
+--A1L125 is Add1~7 at LCCOMB_X13_Y21_N22
+A1L125 = CARRY((A1L116 $ (!A1L112)) # (!A1L123));
+
+
+--A1L160 is Add4~6 at LCCOMB_X25_Y21_N6
+A1L160 = (A1L148 & ((A1L124 & (A1L159 & VCC)) # (!A1L124 & (!A1L159)))) # (!A1L148 & ((A1L124 & (!A1L159)) # (!A1L124 & ((A1L159) # (GND)))));
+
+--A1L161 is Add4~7 at LCCOMB_X25_Y21_N6
+A1L161 = CARRY((A1L148 & (!A1L124 & !A1L159)) # (!A1L148 & ((!A1L159) # (!A1L124))));
+
+
+--A1L224 is Add9~6 at LCCOMB_X23_Y21_N22
+A1L224 = (A1L223 & (A1L216 $ ((!A1L212)))) # (!A1L223 & ((A1L216 $ (A1L212)) # (GND)));
+
+--A1L225 is Add9~7 at LCCOMB_X23_Y21_N22
+A1L225 = CARRY((A1L216 $ (!A1L212)) # (!A1L223));
+
+
+--A1L186 is Add6~6 at LCCOMB_X33_Y17_N12
+A1L186 = (A1L185 & (A1L174 $ ((!A1L178)))) # (!A1L185 & ((A1L174 $ (A1L178)) # (GND)));
+
+--A1L187 is Add6~7 at LCCOMB_X33_Y17_N12
+A1L187 = CARRY((A1L174 $ (!A1L178)) # (!A1L185));
+
+
+--A1L198 is Add7~6 at LCCOMB_X26_Y21_N6
+A1L198 = (A1L224 & ((A1L186 & (A1L197 & VCC)) # (!A1L186 & (!A1L197)))) # (!A1L224 & ((A1L186 & (!A1L197)) # (!A1L186 & ((A1L197) # (GND)))));
+
+--A1L199 is Add7~7 at LCCOMB_X26_Y21_N6
+A1L199 = CARRY((A1L224 & (!A1L186 & !A1L197)) # (!A1L224 & ((!A1L197) # (!A1L186))));
+
+
+--A1L90 is abs_diff_uns[3][3]~12 at LCCOMB_X25_Y21_N20
+A1L90 = (A1L198 & ((A1L160 & (A1L89 & VCC)) # (!A1L160 & (!A1L89)))) # (!A1L198 & ((A1L160 & (!A1L89)) # (!A1L160 & ((A1L89) # (GND)))));
+
+--A1L91 is abs_diff_uns[3][3]~13 at LCCOMB_X25_Y21_N20
+A1L91 = CARRY((A1L198 & (!A1L160 & !A1L89)) # (!A1L198 & ((!A1L89) # (!A1L160))));
+
+
+--A1L298 is Add16~6 at LCCOMB_X25_Y5_N20
+A1L298 = (A1L260 & ((A1L90 & (A1L297 & VCC)) # (!A1L90 & (!A1L297)))) # (!A1L260 & ((A1L90 & (!A1L297)) # (!A1L90 & ((A1L297) # (GND)))));
+
+--A1L299 is Add16~7 at LCCOMB_X25_Y5_N20
+A1L299 = CARRY((A1L260 & (!A1L90 & !A1L297)) # (!A1L260 & ((!A1L297) # (!A1L90))));
+
+
+--A1L288 is Add15~8 at LCCOMB_X17_Y5_N28
+A1L288 = (A1L287 & ((A1L276 $ (A1L278)))) # (!A1L287 & (A1L276 $ (A1L278 $ (VCC))));
+
+--A1L289 is Add15~9 at LCCOMB_X17_Y5_N28
+A1L289 = CARRY((!A1L287 & (A1L276 $ (A1L278))));
+
+
+--A1L250 is Add12~8 at LCCOMB_X33_Y5_N20
+A1L250 = (A1L249 & ((A1L240 $ (A1L238)))) # (!A1L249 & (A1L240 $ (A1L238 $ (VCC))));
+
+--A1L251 is Add12~9 at LCCOMB_X33_Y5_N20
+A1L251 = CARRY((!A1L249 & (A1L240 $ (A1L238))));
+
+
+--A1L262 is Add13~8 at LCCOMB_X25_Y5_N8
+A1L262 = ((A1L288 $ (A1L250 $ (!A1L261)))) # (GND);
+
+--A1L263 is Add13~9 at LCCOMB_X25_Y5_N8
+A1L263 = CARRY((A1L288 & ((A1L250) # (!A1L261))) # (!A1L288 & (A1L250 & !A1L261)));
+
+
+--A1L150 is Add3~8 at LCCOMB_X29_Y21_N8
+A1L150 = (A1L149 & ((A1L140 $ (A1L138)))) # (!A1L149 & (A1L140 $ (A1L138 $ (VCC))));
+
+--A1L151 is Add3~9 at LCCOMB_X29_Y21_N8
+A1L151 = CARRY((!A1L149 & (A1L140 $ (A1L138))));
+
+
+--A1L126 is Add1~8 at LCCOMB_X13_Y21_N24
+A1L126 = (A1L125 & ((A1L116 $ (A1L114)))) # (!A1L125 & (A1L116 $ (A1L114 $ (VCC))));
+
+--A1L127 is Add1~9 at LCCOMB_X13_Y21_N24
+A1L127 = CARRY((!A1L125 & (A1L116 $ (A1L114))));
+
+
+--A1L162 is Add4~8 at LCCOMB_X25_Y21_N8
+A1L162 = ((A1L126 $ (A1L150 $ (!A1L161)))) # (GND);
+
+--A1L163 is Add4~9 at LCCOMB_X25_Y21_N8
+A1L163 = CARRY((A1L126 & ((A1L150) # (!A1L161))) # (!A1L126 & (A1L150 & !A1L161)));
+
+
+--A1L226 is Add9~8 at LCCOMB_X23_Y21_N24
+A1L226 = (A1L225 & ((A1L216 $ (A1L214)))) # (!A1L225 & (A1L216 $ (A1L214 $ (VCC))));
+
+--A1L227 is Add9~9 at LCCOMB_X23_Y21_N24
+A1L227 = CARRY((!A1L225 & (A1L216 $ (A1L214))));
+
+
+--A1L188 is Add6~8 at LCCOMB_X33_Y17_N14
+A1L188 = (A1L187 & ((A1L176 $ (A1L178)))) # (!A1L187 & (A1L176 $ (A1L178 $ (VCC))));
+
+--A1L189 is Add6~9 at LCCOMB_X33_Y17_N14
+A1L189 = CARRY((!A1L187 & (A1L176 $ (A1L178))));
+
+
+--A1L200 is Add7~8 at LCCOMB_X26_Y21_N8
+A1L200 = ((A1L226 $ (A1L188 $ (!A1L199)))) # (GND);
+
+--A1L201 is Add7~9 at LCCOMB_X26_Y21_N8
+A1L201 = CARRY((A1L226 & ((A1L188) # (!A1L199))) # (!A1L226 & (A1L188 & !A1L199)));
+
+
+--A1L92 is abs_diff_uns[3][4]~14 at LCCOMB_X25_Y21_N22
+A1L92 = ((A1L200 $ (A1L162 $ (!A1L91)))) # (GND);
+
+--A1L93 is abs_diff_uns[3][4]~15 at LCCOMB_X25_Y21_N22
+A1L93 = CARRY((A1L200 & ((A1L162) # (!A1L91))) # (!A1L200 & (A1L162 & !A1L91)));
+
+
+--A1L300 is Add16~8 at LCCOMB_X25_Y5_N22
+A1L300 = ((A1L262 $ (A1L92 $ (!A1L299)))) # (GND);
+
+--A1L301 is Add16~9 at LCCOMB_X25_Y5_N22
+A1L301 = CARRY((A1L262 & ((A1L92) # (!A1L299))) # (!A1L262 & (A1L92 & !A1L299)));
+
+
+--A1L290 is Add15~10 at LCCOMB_X17_Y5_N30
+A1L290 = A1L289;
+
+
+--A1L252 is Add12~10 at LCCOMB_X33_Y5_N22
+A1L252 = A1L251;
+
+
+--A1L264 is Add13~10 at LCCOMB_X25_Y5_N10
+A1L264 = (A1L252 & ((A1L290 & (A1L263 & VCC)) # (!A1L290 & (!A1L263)))) # (!A1L252 & ((A1L290 & (!A1L263)) # (!A1L290 & ((A1L263) # (GND)))));
+
+--A1L265 is Add13~11 at LCCOMB_X25_Y5_N10
+A1L265 = CARRY((A1L252 & (!A1L290 & !A1L263)) # (!A1L252 & ((!A1L263) # (!A1L290))));
+
+
+--A1L152 is Add3~10 at LCCOMB_X29_Y21_N10
+A1L152 = A1L151;
+
+
+--A1L128 is Add1~10 at LCCOMB_X13_Y21_N26
+A1L128 = A1L127;
+
+
+--A1L164 is Add4~10 at LCCOMB_X25_Y21_N10
+A1L164 = (A1L128 & ((A1L152 & (A1L163 & VCC)) # (!A1L152 & (!A1L163)))) # (!A1L128 & ((A1L152 & (!A1L163)) # (!A1L152 & ((A1L163) # (GND)))));
+
+--A1L165 is Add4~11 at LCCOMB_X25_Y21_N10
+A1L165 = CARRY((A1L128 & (!A1L152 & !A1L163)) # (!A1L128 & ((!A1L163) # (!A1L152))));
+
+
+--A1L228 is Add9~10 at LCCOMB_X23_Y21_N26
+A1L228 = A1L227;
+
+
+--A1L190 is Add6~10 at LCCOMB_X33_Y17_N16
+A1L190 = A1L189;
+
+
+--A1L202 is Add7~10 at LCCOMB_X26_Y21_N10
+A1L202 = (A1L190 & ((A1L228 & (A1L201 & VCC)) # (!A1L228 & (!A1L201)))) # (!A1L190 & ((A1L228 & (!A1L201)) # (!A1L228 & ((A1L201) # (GND)))));
+
+--A1L203 is Add7~11 at LCCOMB_X26_Y21_N10
+A1L203 = CARRY((A1L190 & (!A1L228 & !A1L201)) # (!A1L190 & ((!A1L201) # (!A1L228))));
+
+
+--A1L94 is abs_diff_uns[3][5]~16 at LCCOMB_X25_Y21_N24
+A1L94 = (A1L164 & ((A1L202 & (A1L93 & VCC)) # (!A1L202 & (!A1L93)))) # (!A1L164 & ((A1L202 & (!A1L93)) # (!A1L202 & ((A1L93) # (GND)))));
+
+--A1L95 is abs_diff_uns[3][5]~17 at LCCOMB_X25_Y21_N24
+A1L95 = CARRY((A1L164 & (!A1L202 & !A1L93)) # (!A1L164 & ((!A1L93) # (!A1L202))));
+
+
+--A1L302 is Add16~10 at LCCOMB_X25_Y5_N24
+A1L302 = (A1L264 & ((A1L94 & (A1L301 & VCC)) # (!A1L94 & (!A1L301)))) # (!A1L264 & ((A1L94 & (!A1L301)) # (!A1L94 & ((A1L301) # (GND)))));
+
+--A1L303 is Add16~11 at LCCOMB_X25_Y5_N24
+A1L303 = CARRY((A1L264 & (!A1L94 & !A1L301)) # (!A1L264 & ((!A1L301) # (!A1L94))));
+
+
+--A1L266 is Add13~12 at LCCOMB_X25_Y5_N12
+A1L266 = !A1L265;
+
+
+--A1L166 is Add4~12 at LCCOMB_X25_Y21_N12
+A1L166 = !A1L165;
+
+
+--A1L204 is Add7~12 at LCCOMB_X26_Y21_N12
+A1L204 = !A1L203;
+
+
+--A1L96 is abs_diff_uns[3][6]~18 at LCCOMB_X25_Y21_N26
+A1L96 = ((A1L166 $ (A1L204 $ (!A1L95)))) # (GND);
+
+--A1L97 is abs_diff_uns[3][6]~19 at LCCOMB_X25_Y21_N26
+A1L97 = CARRY((A1L166 & ((A1L204) # (!A1L95))) # (!A1L166 & (A1L204 & !A1L95)));
+
+
+--A1L304 is Add16~12 at LCCOMB_X25_Y5_N26
+A1L304 = ((A1L96 $ (A1L266 $ (!A1L303)))) # (GND);
+
+--A1L305 is Add16~13 at LCCOMB_X25_Y5_N26
+A1L305 = CARRY((A1L96 & ((A1L266) # (!A1L303))) # (!A1L96 & (A1L266 & !A1L303)));
+
+
+--A1L98 is abs_diff_uns[3][7]~20 at LCCOMB_X25_Y21_N28
+A1L98 = A1L97;
+
+
+--A1L306 is Add16~14 at LCCOMB_X25_Y5_N28
+A1L306 = A1L305 $ (A1L98);
+
+
+--A1L100 is abs_diff_uns~0 at LCCOMB_X17_Y5_N0
+A1L100 = A1L268 $ (A1L278);
+
+
+--A1L101 is abs_diff_uns~1 at LCCOMB_X33_Y5_N24
+A1L101 = A1L240 $ (A1L230);
+
+
+--A1L102 is abs_diff_uns~2 at LCCOMB_X29_Y21_N28
+A1L102 = A1L140 $ (A1L130);
+
+
+--A1L103 is abs_diff_uns~3 at LCCOMB_X13_Y21_N12
+A1L103 = A1L116 $ (A1L106);
+
+
+--A1L104 is abs_diff_uns~4 at LCCOMB_X23_Y21_N12
+A1L104 = A1L216 $ (A1L206);
+
+
+--A1L105 is abs_diff_uns~5 at LCCOMB_X33_Y17_N0
+A1L105 = A1L168 $ (A1L178);
+
+
+--A1L83 is abs_diff[7]~output at IOOBUF_X28_Y0_N23
+A1L83 = OUTPUT_BUFFER.O(.I(A1L292), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[7] is abs_diff[7] at PIN_65
+abs_diff[7] = OUTPUT();
+
+
+--A1L81 is abs_diff[6]~output at IOOBUF_X0_Y6_N16
+A1L81 = OUTPUT_BUFFER.O(.I(A1L294), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[6] is abs_diff[6] at PIN_32
+abs_diff[6] = OUTPUT();
+
+
+--A1L79 is abs_diff[5]~output at IOOBUF_X28_Y0_N2
+A1L79 = OUTPUT_BUFFER.O(.I(A1L296), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[5] is abs_diff[5] at PIN_66
+abs_diff[5] = OUTPUT();
+
+
+--A1L77 is abs_diff[4]~output at IOOBUF_X30_Y0_N2
+A1L77 = OUTPUT_BUFFER.O(.I(A1L298), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[4] is abs_diff[4] at PIN_69
+abs_diff[4] = OUTPUT();
+
+
+--A1L75 is abs_diff[3]~output at IOOBUF_X23_Y0_N16
+A1L75 = OUTPUT_BUFFER.O(.I(A1L300), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[3] is abs_diff[3] at PIN_59
+abs_diff[3] = OUTPUT();
+
+
+--A1L73 is abs_diff[2]~output at IOOBUF_X23_Y0_N9
+A1L73 = OUTPUT_BUFFER.O(.I(A1L302), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[2] is abs_diff[2] at PIN_60
+abs_diff[2] = OUTPUT();
+
+
+--A1L71 is abs_diff[1]~output at IOOBUF_X30_Y0_N23
+A1L71 = OUTPUT_BUFFER.O(.I(A1L304), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[1] is abs_diff[1] at PIN_67
+abs_diff[1] = OUTPUT();
+
+
+--A1L69 is abs_diff[0]~output at IOOBUF_X25_Y0_N2
+A1L69 = OUTPUT_BUFFER.O(.I(A1L306), , , , , , , , , , , , , , , , , );
+
+
+--abs_diff[0] is abs_diff[0] at PIN_64
+abs_diff[0] = OUTPUT();
+
+
+--A1L374 is b5[4]~input at IOIBUF_X0_Y5_N15
+A1L374 = INPUT_BUFFER(.I(b5[4]), );
+
+
+--b5[4] is b5[4] at PIN_34
+b5[4] = INPUT();
+
+
+--A1L66 is a5[4]~input at IOIBUF_X16_Y0_N22
+A1L66 = INPUT_BUFFER(.I(a5[4]), );
+
+
+--a5[4] is a5[4] at PIN_51
+a5[4] = INPUT();
+
+
+--A1L372 is b5[3]~input at IOIBUF_X13_Y0_N1
+A1L372 = INPUT_BUFFER(.I(b5[3]), );
+
+
+--b5[3] is b5[3] at PIN_50
+b5[3] = INPUT();
+
+
+--A1L64 is a5[3]~input at IOIBUF_X18_Y0_N15
+A1L64 = INPUT_BUFFER(.I(a5[3]), );
+
+
+--a5[3] is a5[3] at PIN_55
+a5[3] = INPUT();
+
+
+--A1L370 is b5[2]~input at IOIBUF_X7_Y0_N1
+A1L370 = INPUT_BUFFER(.I(b5[2]), );
+
+
+--b5[2] is b5[2] at PIN_46
+b5[2] = INPUT();
+
+
+--A1L62 is a5[2]~input at IOIBUF_X21_Y0_N8
+A1L62 = INPUT_BUFFER(.I(a5[2]), );
+
+
+--a5[2] is a5[2] at PIN_58
+a5[2] = INPUT();
+
+
+--A1L368 is b5[1]~input at IOIBUF_X16_Y0_N1
+A1L368 = INPUT_BUFFER(.I(b5[1]), );
+
+
+--b5[1] is b5[1] at PIN_53
+b5[1] = INPUT();
+
+
+--A1L60 is a5[1]~input at IOIBUF_X18_Y0_N22
+A1L60 = INPUT_BUFFER(.I(a5[1]), );
+
+
+--a5[1] is a5[1] at PIN_54
+a5[1] = INPUT();
+
+
+--A1L366 is b5[0]~input at IOIBUF_X13_Y0_N15
+A1L366 = INPUT_BUFFER(.I(b5[0]), );
+
+
+--b5[0] is b5[0] at PIN_49
+b5[0] = INPUT();
+
+
+--A1L58 is a5[0]~input at IOIBUF_X16_Y0_N8
+A1L58 = INPUT_BUFFER(.I(a5[0]), );
+
+
+--a5[0] is a5[0] at PIN_52
+a5[0] = INPUT();
+
+
+--A1L363 is b4[4]~input at IOIBUF_X32_Y0_N8
+A1L363 = INPUT_BUFFER(.I(b4[4]), );
+
+
+--b4[4] is b4[4] at PIN_72
+b4[4] = INPUT();
+
+
+--A1L55 is a4[4]~input at IOIBUF_X34_Y7_N8
+A1L55 = INPUT_BUFFER(.I(a4[4]), );
+
+
+--a4[4] is a4[4] at PIN_80
+a4[4] = INPUT();
+
+
+--A1L361 is b4[3]~input at IOIBUF_X34_Y3_N22
+A1L361 = INPUT_BUFFER(.I(b4[3]), );
+
+
+--b4[3] is b4[3] at PIN_75
+b4[3] = INPUT();
+
+
+--A1L53 is a4[3]~input at IOIBUF_X34_Y2_N15
+A1L53 = INPUT_BUFFER(.I(a4[3]), );
+
+
+--a4[3] is a4[3] at PIN_74
+a4[3] = INPUT();
+
+
+--A1L359 is b4[2]~input at IOIBUF_X32_Y0_N22
+A1L359 = INPUT_BUFFER(.I(b4[2]), );
+
+
+--b4[2] is b4[2] at PIN_70
+b4[2] = INPUT();
+
+
+--A1L51 is a4[2]~input at IOIBUF_X34_Y7_N22
+A1L51 = INPUT_BUFFER(.I(a4[2]), );
+
+
+--a4[2] is a4[2] at PIN_79
+a4[2] = INPUT();
+
+
+--A1L357 is b4[1]~input at IOIBUF_X34_Y4_N22
+A1L357 = INPUT_BUFFER(.I(b4[1]), );
+
+
+--b4[1] is b4[1] at PIN_76
+b4[1] = INPUT();
+
+
+--A1L49 is a4[1]~input at IOIBUF_X34_Y4_N15
+A1L49 = INPUT_BUFFER(.I(a4[1]), );
+
+
+--a4[1] is a4[1] at PIN_77
+a4[1] = INPUT();
+
+
+--A1L355 is b4[0]~input at IOIBUF_X34_Y2_N22
+A1L355 = INPUT_BUFFER(.I(b4[0]), );
+
+
+--b4[0] is b4[0] at PIN_73
+b4[0] = INPUT();
+
+
+--A1L47 is a4[0]~input at IOIBUF_X32_Y0_N15
+A1L47 = INPUT_BUFFER(.I(a4[0]), );
+
+
+--a4[0] is a4[0] at PIN_71
+a4[0] = INPUT();
+
+
+--A1L330 is b1[4]~input at IOIBUF_X34_Y18_N15
+A1L330 = INPUT_BUFFER(.I(b1[4]), );
+
+
+--b1[4] is b1[4] at PIN_103
+b1[4] = INPUT();
+
+
+--A1L22 is a1[4]~input at IOIBUF_X30_Y24_N22
+A1L22 = INPUT_BUFFER(.I(a1[4]), );
+
+
+--a1[4] is a1[4] at PIN_111
+a1[4] = INPUT();
+
+
+--A1L328 is b1[3]~input at IOIBUF_X34_Y20_N8
+A1L328 = INPUT_BUFFER(.I(b1[3]), );
+
+
+--b1[3] is b1[3] at PIN_106
+b1[3] = INPUT();
+
+
+--A1L20 is a1[3]~input at IOIBUF_X28_Y24_N15
+A1L20 = INPUT_BUFFER(.I(a1[3]), );
+
+
+--a1[3] is a1[3] at PIN_114
+a1[3] = INPUT();
+
+
+--A1L326 is b1[2]~input at IOIBUF_X30_Y24_N1
+A1L326 = INPUT_BUFFER(.I(b1[2]), );
+
+
+--b1[2] is b1[2] at PIN_110
+b1[2] = INPUT();
+
+
+--A1L18 is a1[2]~input at IOIBUF_X34_Y12_N22
+A1L18 = INPUT_BUFFER(.I(a1[2]), );
+
+
+--a1[2] is a1[2] at PIN_88
+a1[2] = INPUT();
+
+
+--A1L324 is b1[1]~input at IOIBUF_X34_Y12_N15
+A1L324 = INPUT_BUFFER(.I(b1[1]), );
+
+
+--b1[1] is b1[1] at PIN_89
+b1[1] = INPUT();
+
+
+--A1L16 is a1[1]~input at IOIBUF_X28_Y24_N1
+A1L16 = INPUT_BUFFER(.I(a1[1]), );
+
+
+--a1[1] is a1[1] at PIN_112
+a1[1] = INPUT();
+
+
+--A1L322 is b1[0]~input at IOIBUF_X34_Y9_N1
+A1L322 = INPUT_BUFFER(.I(b1[0]), );
+
+
+--b1[0] is b1[0] at PIN_86
+b1[0] = INPUT();
+
+
+--A1L14 is a1[0]~input at IOIBUF_X34_Y19_N15
+A1L14 = INPUT_BUFFER(.I(a1[0]), );
+
+
+--a1[0] is a1[0] at PIN_105
+a1[0] = INPUT();
+
+
+--A1L319 is b0[4]~input at IOIBUF_X3_Y24_N22
+A1L319 = INPUT_BUFFER(.I(b0[4]), );
+
+
+--b0[4] is b0[4] at PIN_142
+b0[4] = INPUT();
+
+
+--A1L11 is a0[4]~input at IOIBUF_X5_Y24_N8
+A1L11 = INPUT_BUFFER(.I(a0[4]), );
+
+
+--a0[4] is a0[4] at PIN_141
+a0[4] = INPUT();
+
+
+--A1L317 is b0[3]~input at IOIBUF_X13_Y24_N22
+A1L317 = INPUT_BUFFER(.I(b0[3]), );
+
+
+--b0[3] is b0[3] at PIN_133
+b0[3] = INPUT();
+
+
+--A1L9 is a0[3]~input at IOIBUF_X7_Y24_N8
+A1L9 = INPUT_BUFFER(.I(a0[3]), );
+
+
+--a0[3] is a0[3] at PIN_138
+a0[3] = INPUT();
+
+
+--A1L315 is b0[2]~input at IOIBUF_X13_Y24_N15
+A1L315 = INPUT_BUFFER(.I(b0[2]), );
+
+
+--b0[2] is b0[2] at PIN_132
+b0[2] = INPUT();
+
+
+--A1L7 is a0[2]~input at IOIBUF_X11_Y24_N15
+A1L7 = INPUT_BUFFER(.I(a0[2]), );
+
+
+--a0[2] is a0[2] at PIN_135
+a0[2] = INPUT();
+
+
+--A1L313 is b0[1]~input at IOIBUF_X9_Y24_N8
+A1L313 = INPUT_BUFFER(.I(b0[1]), );
+
+
+--b0[1] is b0[1] at PIN_136
+b0[1] = INPUT();
+
+
+--A1L5 is a0[1]~input at IOIBUF_X0_Y21_N8
+A1L5 = INPUT_BUFFER(.I(a0[1]), );
+
+
+--a0[1] is a0[1] at PIN_7
+a0[1] = INPUT();
+
+
+--A1L311 is b0[0]~input at IOIBUF_X7_Y24_N1
+A1L311 = INPUT_BUFFER(.I(b0[0]), );
+
+
+--b0[0] is b0[0] at PIN_137
+b0[0] = INPUT();
+
+
+--A1L3 is a0[0]~input at IOIBUF_X16_Y24_N1
+A1L3 = INPUT_BUFFER(.I(a0[0]), );
+
+
+--a0[0] is a0[0] at PIN_126
+a0[0] = INPUT();
+
+
+--A1L352 is b3[4]~input at IOIBUF_X23_Y24_N8
+A1L352 = INPUT_BUFFER(.I(b3[4]), );
+
+
+--b3[4] is b3[4] at PIN_120
+b3[4] = INPUT();
+
+
+--A1L44 is a3[4]~input at IOIBUF_X28_Y24_N22
+A1L44 = INPUT_BUFFER(.I(a3[4]), );
+
+
+--a3[4] is a3[4] at PIN_115
+a3[4] = INPUT();
+
+
+--A1L350 is b3[3]~input at IOIBUF_X23_Y24_N15
+A1L350 = INPUT_BUFFER(.I(b3[3]), );
+
+
+--b3[3] is b3[3] at PIN_121
+b3[3] = INPUT();
+
+
+--A1L42 is a3[3]~input at IOIBUF_X18_Y24_N22
+A1L42 = INPUT_BUFFER(.I(a3[3]), );
+
+
+--a3[3] is a3[3] at PIN_125
+a3[3] = INPUT();
+
+
+--A1L348 is b3[2]~input at IOIBUF_X28_Y24_N8
+A1L348 = INPUT_BUFFER(.I(b3[2]), );
+
+
+--b3[2] is b3[2] at PIN_113
+b3[2] = INPUT();
+
+
+--A1L40 is a3[2]~input at IOIBUF_X16_Y24_N8
+A1L40 = INPUT_BUFFER(.I(a3[2]), );
+
+
+--a3[2] is a3[2] at PIN_127
+a3[2] = INPUT();
+
+
+--A1L346 is b3[1]~input at IOIBUF_X16_Y24_N15
+A1L346 = INPUT_BUFFER(.I(b3[1]), );
+
+
+--b3[1] is b3[1] at PIN_128
+b3[1] = INPUT();
+
+
+--A1L38 is a3[1]~input at IOIBUF_X16_Y24_N22
+A1L38 = INPUT_BUFFER(.I(a3[1]), );
+
+
+--a3[1] is a3[1] at PIN_129
+a3[1] = INPUT();
+
+
+--A1L344 is b3[0]~input at IOIBUF_X23_Y24_N1
+A1L344 = INPUT_BUFFER(.I(b3[0]), );
+
+
+--b3[0] is b3[0] at PIN_119
+b3[0] = INPUT();
+
+
+--A1L36 is a3[0]~input at IOIBUF_X18_Y24_N15
+A1L36 = INPUT_BUFFER(.I(a3[0]), );
+
+
+--a3[0] is a3[0] at PIN_124
+a3[0] = INPUT();
+
+
+--A1L341 is b2[4]~input at IOIBUF_X34_Y18_N1
+A1L341 = INPUT_BUFFER(.I(b2[4]), );
+
+
+--b2[4] is b2[4] at PIN_104
+b2[4] = INPUT();
+
+
+--A1L33 is a2[4]~input at IOIBUF_X34_Y9_N22
+A1L33 = INPUT_BUFFER(.I(a2[4]), );
+
+
+--a2[4] is a2[4] at PIN_83
+a2[4] = INPUT();
+
+
+--A1L339 is b2[3]~input at IOIBUF_X34_Y12_N8
+A1L339 = INPUT_BUFFER(.I(b2[3]), );
+
+
+--b2[3] is b2[3] at PIN_90
+b2[3] = INPUT();
+
+
+--A1L31 is a2[3]~input at IOIBUF_X34_Y12_N1
+A1L31 = INPUT_BUFFER(.I(a2[3]), );
+
+
+--a2[3] is a2[3] at PIN_91
+a2[3] = INPUT();
+
+
+--A1L337 is b2[2]~input at IOIBUF_X34_Y17_N15
+A1L337 = INPUT_BUFFER(.I(b2[2]), );
+
+
+--b2[2] is b2[2] at PIN_99
+b2[2] = INPUT();
+
+
+--A1L29 is a2[2]~input at IOIBUF_X34_Y17_N22
+A1L29 = INPUT_BUFFER(.I(a2[2]), );
+
+
+--a2[2] is a2[2] at PIN_98
+a2[2] = INPUT();
+
+
+--A1L335 is b2[1]~input at IOIBUF_X34_Y10_N8
+A1L335 = INPUT_BUFFER(.I(b2[1]), );
+
+
+--b2[1] is b2[1] at PIN_87
+b2[1] = INPUT();
+
+
+--A1L27 is a2[1]~input at IOIBUF_X34_Y17_N1
+A1L27 = INPUT_BUFFER(.I(a2[1]), );
+
+
+--a2[1] is a2[1] at PIN_100
+a2[1] = INPUT();
+
+
+--A1L333 is b2[0]~input at IOIBUF_X34_Y9_N15
+A1L333 = INPUT_BUFFER(.I(b2[0]), );
+
+
+--b2[0] is b2[0] at PIN_84
+b2[0] = INPUT();
+
+
+--A1L25 is a2[0]~input at IOIBUF_X34_Y9_N8
+A1L25 = INPUT_BUFFER(.I(a2[0]), );
+
+
+--a2[0] is a2[0] at PIN_85
+a2[0] = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+

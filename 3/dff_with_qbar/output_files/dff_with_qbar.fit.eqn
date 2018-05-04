@@ -1,0 +1,65 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L10Q is q~reg0 at FF_X1_Y4_N9
+--register power-up is low
+
+A1L10Q = DFFEAS(A1L11, A1L3,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L9 is q~output at IOOBUF_X0_Y23_N2
+A1L9 = OUTPUT_BUFFER.O(.I(A1L10Q), , , , , , , , , , , , , , , , , );
+
+
+--q is q at PIN_D4
+q = OUTPUT();
+
+
+--A1L8 is qbar~output at IOOBUF_X0_Y5_N23
+A1L8 = OUTPUT_BUFFER.O(.I(!A1L10Q), , , , , , , , , , , , , , , , , );
+
+
+--qbar is qbar at PIN_R1
+qbar = OUTPUT();
+
+
+--A1L5 is d~input at IOIBUF_X0_Y4_N15
+A1L5 = INPUT_BUFFER(.I(d), );
+
+
+--d is d at PIN_P2
+d = INPUT();
+
+
+--A1L3 is clk~input at IOIBUF_X0_Y4_N22
+A1L3 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_P1
+clk = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L11 is q~reg0feeder at LCCOMB_X1_Y4_N8
+A1L11 = A1L5;
+
+

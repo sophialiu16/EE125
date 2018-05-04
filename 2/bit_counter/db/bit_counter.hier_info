@@ -1,0 +1,24 @@
+|bit_counter
+x[0] => leading_ones[7].IN1
+x[1] => leading_ones[6].IN1
+x[2] => leading_ones[5].IN1
+x[3] => leading_ones[4].IN1
+x[4] => leading_ones[3].IN1
+x[5] => leading_ones[2].IN1
+x[6] => leading_ones[1].IN0
+x[7] => Add0.IN64
+x[7] => leading_ones_counts[1][0].DATAA
+x[7] => leading_ones[1].IN1
+y[0] <= leading_ones_counts.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= leading_ones_counts.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= leading_ones_counts.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= leading_ones_counts.DB_MAX_OUTPUT_PORT_TYPE
+ssd[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ssd[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ssd[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ssd[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ssd[4] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+ssd[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ssd[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
