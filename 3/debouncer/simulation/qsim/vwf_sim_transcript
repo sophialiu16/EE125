@@ -26,11 +26,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri May 04 03:16:02 2018
+    Info: Processing started: Fri May 04 10:29:00 2018
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-pin "ssd_x[4]" in vector source file when writing test bench files
+ench files
 
 Completed successfully. 
 
@@ -55,7 +55,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Fri May 04 03:16:04 2018
+    Info: Processing started: Fri May 04 10:29:03 2018
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file bit_counter_6_1200mv_85c_slow.vho in folder "C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim//" for EDA simulation tool
@@ -68,7 +68,7 @@ Info (204019): Generated file bit_counter_min_1200mv_0c_vhd_fast.sdo in folder "
 Info (204019): Generated file bit_counter_vhd.sdo in folder "C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 568 megabytes
-    Info: Processing ended: Fri May 04 03:16:06 2018
+    Info: Processing ended: Fri May 04 10:29:05 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -102,8 +102,8 @@ Reading C:/altera/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Compiling entity hard_block
-# -- Compiling architecture structure of hard_block
 
+# -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
 # -- Compiling entity debouncer
@@ -143,7 +143,6 @@ Reading C:/altera/modelsim_ase/tcl/vsim/pref.tcl
 # Loading timing data from bit_counter_vhd.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ps  Iteration: 0  Instance: /debouncer_vhd_vec_tst File: Waveform.vwf.vht
-
 # after#28
 
 Completed successfully. 
@@ -156,7 +155,53 @@ Reading C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulati
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/bit_counter_20180504031608.sim.vwf
+Warning: count_debounced[3] - signal not found in VCD.
+
+Warning: count_debounced[2] - signal not found in VCD.
+
+Warning: count_debounced[1] - signal not found in VCD.
+
+Warning: count_debounced[0] - signal not found in VCD.
+
+Warning: count_x[3] - signal not found in VCD.
+
+Warning: count_x[2] - signal not found in VCD.
+
+Warning: count_x[1] - signal not found in VCD.
+
+Warning: count_x[0] - signal not found in VCD.
+
+Warning: reset - signal not found in VCD.
+
+Warning: ssd_debounced[6] - signal not found in VCD.
+
+Warning: ssd_debounced[5] - signal not found in VCD.
+
+Warning: ssd_debounced[4] - signal not found in VCD.
+
+Warning: ssd_debounced[3] - signal not found in VCD.
+
+Warning: ssd_debounced[2] - signal not found in VCD.
+
+Warning: ssd_debounced[1] - signal not found in VCD.
+
+Warning: ssd_debounced[0] - signal not found in VCD.
+
+Warning: ssd_x[6] - signal not found in VCD.
+
+Warning: ssd_x[5] - signal not found in VCD.
+
+Warning: ssd_x[4] - signal not found in VCD.
+
+Warning: ssd_x[3] - signal not found in VCD.
+
+Warning: ssd_x[2] - signal not found in VCD.
+
+Warning: ssd_x[1] - signal not found in VCD.
+
+Warning: ssd_x[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/bit_counter_20180504102907.sim.vwf
 
 Finished VCD to VWF conversion.
 

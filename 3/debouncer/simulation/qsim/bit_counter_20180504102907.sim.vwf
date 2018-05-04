@@ -1,50 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vcom -work work bit_counter.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.debouncer_vhd_vec_tst
-vcd file -direction bit_counter.msim.vcd
-vcd add -internal debouncer_vhd_vec_tst/*
-vcd add -internal debouncer_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vcom -work work bit_counter.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax debouncer_vhd_vec_tst/i1=bit_counter_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.debouncer_vhd_vec_tst
-vcd file -direction bit_counter.msim.vcd
-vcd add -internal debouncer_vhd_vec_tst/*
-vcd add -internal debouncer_vhd_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -386,7 +339,105 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -607,80 +658,76 @@ TRANSITION_LIST("x")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 80.0;
-		NODE
-		{
-			REPEAT = 5;
-			LEVEL 0 FOR 7.5;
-			LEVEL 1 FOR 7.5;
-		}
-		LEVEL 0 FOR 25.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 21.819;
-		LEVEL 0 FOR 10.4;
-		LEVEL 1 FOR 7.781;
-		LEVEL 0 FOR 2.741;
-		LEVEL 1 FOR 4.5;
-		LEVEL 0 FOR 64.455;
-		LEVEL 1 FOR 2.533;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 4.133;
-			LEVEL 1 FOR 2.533;
-		}
-		LEVEL 0 FOR 2.439;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 2.04;
-		LEVEL 1 FOR 6.4;
-		LEVEL 0 FOR 61.56;
-		LEVEL 1 FOR 4.707;
-		LEVEL 0 FOR 4.6;
-		LEVEL 1 FOR 0.693;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 1.277;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 3.867;
-			LEVEL 1 FOR 2.799;
-		}
-		LEVEL 0 FOR 3.867;
-		LEVEL 1 FOR 1.524;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 0.926;
-		LEVEL 1 FOR 2.666;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 4.0;
-			LEVEL 1 FOR 2.666;
-		}
-		LEVEL 0 FOR 3.076;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 3.138;
-		LEVEL 1 FOR 2.266;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 4.4;
-			LEVEL 1 FOR 2.266;
-		}
-		LEVEL 0 FOR 1.264;
-		LEVEL 1 FOR 1.467;
 		NODE
 		{
 			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 21.819;
+			LEVEL 0 FOR 10.4;
+			LEVEL 1 FOR 7.781;
+			LEVEL 0 FOR 2.741;
+			LEVEL 1 FOR 4.5;
+			LEVEL 0 FOR 64.455;
+			LEVEL 1 FOR 2.533;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+			LEVEL 0 FOR 2.439;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 2.04;
+			LEVEL 1 FOR 6.4;
+			LEVEL 0 FOR 61.56;
+			LEVEL 1 FOR 4.707;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 0.693;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 1.277;
+			LEVEL 0 FOR 3.867;
+			LEVEL 1 FOR 2.799;
+			LEVEL 0 FOR 3.867;
+			LEVEL 1 FOR 2.799;
+			LEVEL 0 FOR 3.867;
+			LEVEL 1 FOR 1.524;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 0.926;
+			LEVEL 1 FOR 2.666;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 2.666;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 2.666;
+			LEVEL 0 FOR 3.076;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 90.0;
+			LEVEL 1 FOR 70.0;
+			LEVEL 0 FOR 3.138;
+			LEVEL 1 FOR 2.266;
+			LEVEL 0 FOR 4.4;
+			LEVEL 1 FOR 2.266;
+			LEVEL 0 FOR 4.4;
+			LEVEL 1 FOR 2.266;
+			LEVEL 0 FOR 1.264;
+			LEVEL 1 FOR 1.467;
 			LEVEL 0 FOR 2.9;
 			LEVEL 1 FOR 2.1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 0.633;
+			LEVEL 0 FOR 70.0;
 		}
-		LEVEL 0 FOR 2.9;
-		LEVEL 1 FOR 0.633;
-		LEVEL 0 FOR 70.0;
 	}
 }
 
@@ -689,7 +736,18 @@ TRANSITION_LIST("y")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.944;
+			LEVEL 1 FOR 292.24;
+			LEVEL 0 FOR 120.028;
+			LEVEL 1 FOR 79.972;
+			LEVEL 0 FOR 120.028;
+			LEVEL 1 FOR 179.972;
+			LEVEL 0 FOR 100.028;
+			LEVEL 1 FOR 104.788;
+		}
 	}
 }
 

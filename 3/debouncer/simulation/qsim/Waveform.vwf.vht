@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/04/2018 03:16:04"
+-- Generated on "05/04/2018 10:29:02"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          debouncer
 -- 
@@ -34,21 +34,13 @@ ARCHITECTURE debouncer_arch OF debouncer_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL count_debounced : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL count_x : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL reset : STD_LOGIC;
-SIGNAL ssd_debounced : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL ssd_x : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL x : STD_LOGIC;
+SIGNAL y : STD_LOGIC;
 COMPONENT debouncer
 	PORT (
 	clk : IN STD_LOGIC;
-	count_debounced : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	count_x : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	reset : IN STD_LOGIC;
-	ssd_debounced : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ssd_x : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	x : IN STD_LOGIC
+	x : IN STD_LOGIC;
+	y : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -56,12 +48,8 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
-	count_debounced => count_debounced,
-	count_x => count_x,
-	reset => reset,
-	ssd_debounced => ssd_debounced,
-	ssd_x => ssd_x,
-	x => x
+	x => x,
+	y => y
 	);
 
 -- clk
@@ -75,17 +63,6 @@ LOOP
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
-
--- reset
-t_prcs_reset: PROCESS
-BEGIN
-	reset <= '1';
-	WAIT FOR 800000 ps;
-	reset <= '0';
-	WAIT FOR 40000 ps;
-	reset <= '1';
-WAIT;
-END PROCESS t_prcs_reset;
 
 -- x
 t_prcs_x: PROCESS

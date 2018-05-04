@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bit_counter
-Fri May 04 03:19:32 2018
+Fri May 04 10:28:04 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 04 03:19:32 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 04 10:28:04 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; bit_counter                                 ;
 ; Top-level Entity Name              ; debouncer                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 81                                          ;
-;     Total combinational functions  ; 81                                          ;
-;     Dedicated logic registers      ; 29                                          ;
-; Total registers                    ; 29                                          ;
-; Total pins                         ; 25                                          ;
+; Total logic elements               ; 3                                           ;
+;     Total combinational functions  ; 3                                           ;
+;     Dedicated logic registers      ; 3                                           ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 3                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -177,30 +177,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 81      ;
+; Estimated Total logic elements              ; 3       ;
 ;                                             ;         ;
-; Total combinational functions               ; 81      ;
+; Total combinational functions               ; 3       ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 51      ;
-;     -- 3 input functions                    ; 5       ;
-;     -- <=2 input functions                  ; 25      ;
+;     -- 4 input functions                    ; 3       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 0       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 62      ;
-;     -- arithmetic mode                      ; 19      ;
+;     -- normal mode                          ; 3       ;
+;     -- arithmetic mode                      ; 0       ;
 ;                                             ;         ;
-; Total registers                             ; 29      ;
-;     -- Dedicated logic registers            ; 29      ;
+; Total registers                             ; 3       ;
+;     -- Dedicated logic registers            ; 3       ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
-; I/O pins                                    ; 25      ;
+; I/O pins                                    ; 3       ;
 ;                                             ;         ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ;                                             ;         ;
-; Maximum fan-out node                        ; x~input ;
-; Maximum fan-out                             ; 29      ;
-; Total fan-out                               ; 380     ;
-; Average fan-out                             ; 2.38    ;
+; Maximum fan-out node                        ; pressed ;
+; Maximum fan-out                             ; 4       ;
+; Total fan-out                               ; 22      ;
+; Average fan-out                             ; 1.83    ;
 +---------------------------------------------+---------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |debouncer                 ; 81 (81)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |debouncer          ; debouncer   ; work         ;
+; |debouncer                 ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |debouncer          ; debouncer   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,10 +219,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 3     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -234,17 +234,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 20 bits   ; 100 LEs       ; 20 LEs               ; 80 LEs                 ; Yes        ; |debouncer|counter[19]     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; Yes        ; |debouncer|counter[0]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |debouncer ;
-+----------------+---------+------------------------------------------------+
-; Parameter Name ; Value   ; Type                                           ;
-+----------------+---------+------------------------------------------------+
-; COUNT          ; 1000000 ; Signed Integer                                 ;
-+----------------+---------+------------------------------------------------+
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; COUNT          ; 3     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -253,21 +253,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 29                          ;
-;     CLR               ; 8                           ;
-;     plain             ; 21                          ;
-; cycloneiii_lcell_comb ; 83                          ;
-;     arith             ; 19                          ;
-;         2 data inputs ; 19                          ;
-;     normal            ; 64                          ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 51                          ;
+; boundary_port         ; 3                           ;
+; cycloneiii_ff         ; 3                           ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 4                           ;
+;     normal            ; 4                           ;
+;         1 data inputs ; 1                           ;
+;         4 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 5.75                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -286,7 +281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri May 04 03:19:18 2018
+    Info: Processing started: Fri May 04 10:27:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bit_counter -c bit_counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -294,20 +289,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file bit_cou
     Info (12022): Found design unit 1: bit_counter-leading_ones_counter File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/bit_counter.vhd Line: 15
     Info (12023): Found entity 1: bit_counter File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/bit_counter.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
-    Info (12022): Found design unit 1: debouncer-debouncer File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/debouncer.vhd Line: 15
+    Info (12022): Found design unit 1: debouncer-debouncer File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/debouncer.vhd Line: 16
     Info (12023): Found entity 1: debouncer File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/debouncer.vhd Line: 5
 Info (12127): Elaborating entity "debouncer" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 81 logic cells
+Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 720 megabytes
-    Info: Processing ended: Fri May 04 03:19:32 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 728 megabytes
+    Info: Processing ended: Fri May 04 10:28:04 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
 
 

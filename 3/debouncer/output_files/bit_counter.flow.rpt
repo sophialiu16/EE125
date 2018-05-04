@@ -1,5 +1,5 @@
 Flow report for bit_counter
-Fri May 04 03:19:51 2018
+Fri May 04 10:29:05 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 04 03:19:51 2018       ;
+; Flow Status                        ; Successful - Fri May 04 10:29:05 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; bit_counter                                 ;
 ; Top-level Entity Name              ; debouncer                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 81 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 81 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 29 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 29                                          ;
-; Total pins                         ; 25 / 92 ( 27 % )                            ;
+; Total logic elements               ; 3 / 6,272 ( < 1 % )                         ;
+;     Total combinational functions  ; 3 / 6,272 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 3 / 6,272 ( < 1 % )                         ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 3 / 92 ( 3 % )                              ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/04/2018 03:19:19 ;
+; Start date & time ; 05/04/2018 10:27:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bit_counter         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 172309001466009.152542915911592                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 172309001466009.152545487005544                        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/altera/13.1/projects/2/bit_counter/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                            ; --            ; --          ; eda_simulation ;
@@ -94,12 +94,16 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 720 MB              ; 00:00:30                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 1475 MB             ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 728 MB              ; 00:00:33                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 1470 MB             ; 00:00:07                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 599 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 704 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 569 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:27     ; --                      ; --                  ; 00:00:44                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 701 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 566 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 551 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 565 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 551 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 565 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:52                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +117,10 @@ refer to the applicable agreement for further details.
 ; Assembler                 ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AGLPVLE  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -124,6 +132,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off bit_counter -c 
 quartus_asm --read_settings_files=off --write_settings_files=off bit_counter -c bit_counter
 quartus_sta bit_counter -c bit_counter
 quartus_eda --read_settings_files=off --write_settings_files=off bit_counter -c bit_counter
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bit_counter -c bit_counter --vector_source="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/Waveform.vwf" --testbench_file="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Soph/Documents/College/Junior/EE 125/EE125/3/debouncer/simulation/qsim/" bit_counter -c bit_counter
 
 
 
