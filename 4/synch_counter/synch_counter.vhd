@@ -3,21 +3,15 @@ use ieee.std_logic_1164.all;
 --------------------------------------------------------------------------------
 entity synch_counter is
     generic (
-        BITS:           positive := 4);  -- # of cells in counter
+        BITS:           positive := 4);                      -- # of cells
     port (
         clk:    in      std_logic;
-        q:      buffer  std_logic_vector(BITS-1 downto 0) );
+        q:      buffer  std_logic_vector(BITS-1 downto 0) ); -- The count
 end entity;
 --------------------------------------------------------------------------------
-architecture generic_chain_type of synch_counter is
-    -- Intermediate signal 'C's
+architecture structural of synch_counter is
+    -- Intermediate signal 'c's (AND gate outputs)
      signal c:   std_logic_vector(BITS-1 downto 0);
-    -- Component declaration
-    component synch_counter_cell is
-        port (
-        a, b, clk:  in      std_logic;
-        c, q:       buffer  std_logic );
-    end component synch_counter_cell;
 begin
     -- Component instantiation with entities
     -- First cell has C and Q inputs of '1'

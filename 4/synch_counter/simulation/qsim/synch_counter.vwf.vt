@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/14/2018 01:47:48"
+// Generated on "05/14/2018 03:03:47"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    synch_counter
 // 

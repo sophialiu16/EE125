@@ -3,7 +3,7 @@ $comment
 		vcd file synch_counter.msim.vcd -direction
 $end
 $date
-	Mon May 14 01:47:56 2018
+	Mon May 14 03:03:57 2018
 $end
 $version
 	ModelSim Version 10.1d
