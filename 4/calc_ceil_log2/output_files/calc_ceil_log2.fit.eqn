@@ -1,0 +1,247 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L7 is ceil_log2~37 at LCCOMB_X29_Y3_N16
+A1L7 = (!A1L28 & !A1L30);
+
+
+--A1L8 is ceil_log2~38 at LCCOMB_X29_Y3_N2
+A1L8 = ((!A1L34 & (!A1L32 & A1L7))) # (!A1L36);
+
+
+--A1L9 is ceil_log2~39 at LCCOMB_X29_Y3_N12
+A1L9 = (!A1L34 & (!A1L36 & (!A1L32 & !A1L38)));
+
+
+--A1L10 is ceil_log2~40 at LCCOMB_X29_Y3_N22
+A1L10 = ((A1L34 & ((A1L32) # (!A1L7)))) # (!A1L20);
+
+
+--A1L11 is ceil_log2~41 at LCCOMB_X29_Y3_N8
+A1L11 = (A1L9 & (A1L7 & (A1L42 & !A1L40)));
+
+
+--A1L24 is LessThan5~0 at LCCOMB_X29_Y3_N26
+A1L24 = (A1L38 & ((A1L28) # ((A1L32) # (A1L30))));
+
+
+--A1L25 is LessThan5~1 at LCCOMB_X29_Y3_N4
+A1L25 = (A1L40) # ((A1L38 & ((A1L34) # (A1L36))));
+
+
+--A1L12 is ceil_log2~42 at LCCOMB_X29_Y17_N24
+A1L12 = (A1L19) # ((!A1L25 & !A1L24));
+
+
+--A1L13 is ceil_log2~43 at LCCOMB_X29_Y3_N6
+A1L13 = (!A1L42 & ((A1L40) # ((A1L38) # (!A1L8))));
+
+
+--A1L14 is ceil_log2~44 at LCCOMB_X29_Y17_N2
+A1L14 = (A1L11) # ((A1L21) # ((A1L13 & A1L12)));
+
+
+--A1L15 is ceil_log2~45 at LCCOMB_X29_Y17_N12
+A1L15 = (A1L13 & ((A1L25) # (A1L24)));
+
+
+--A1L16 is ceil_log2~46 at LCCOMB_X29_Y17_N22
+A1L16 = (A1L22) # ((A1L11) # (A1L15));
+
+
+--A1L17 is ceil_log2~47 at LCCOMB_X29_Y3_N24
+A1L17 = (A1L11) # ((A1L23 & (A1L10 & !A1L42)));
+
+
+--A1L18 is ceil_log2~48 at LCCOMB_X29_Y3_N10
+A1L18 = ((A1L9 & (A1L7 & !A1L40))) # (!A1L42);
+
+
+--A1L19 is ceil_log2~49 at LCCOMB_X29_Y3_N20
+A1L19 = (A1L40 & (((A1L30) # (A1L28)) # (!A1L9)));
+
+
+--A1L20 is ceil_log2~50 at LCCOMB_X29_Y3_N14
+A1L20 = (!A1L40 & (!A1L36 & !A1L38));
+
+
+--A1L3 is ceil_log2~7 at LCCOMB_X29_Y3_N0
+A1L3 = (A1L34 & (!A1L32 & (!A1L28 & !A1L30))) # (!A1L34 & ((A1L28 & (A1L32)) # (!A1L28 & ((A1L30)))));
+
+
+--A1L2 is ceil_log2~5 at LCCOMB_X29_Y17_N0
+A1L2 = (!A1L38 & A1L3);
+
+
+--A1L21 is ceil_log2~51 at LCCOMB_X29_Y17_N26
+A1L21 = (!A1L42 & (A1L2 & (!A1L36 & !A1L40)));
+
+
+--A1L5 is ceil_log2~17 at LCCOMB_X29_Y3_N18
+A1L5 = (A1L34 & (!A1L32 & (!A1L28 & !A1L30))) # (!A1L34 & ((A1L32) # ((A1L28 & A1L30))));
+
+
+--A1L4 is ceil_log2~15 at LCCOMB_X29_Y17_N28
+A1L4 = (!A1L38 & A1L5);
+
+
+--A1L22 is ceil_log2~52 at LCCOMB_X29_Y17_N6
+A1L22 = (!A1L42 & (A1L4 & (!A1L36 & !A1L40)));
+
+
+--A1L23 is ceil_log2~53 at LCCOMB_X29_Y3_N28
+A1L23 = (A1L6) # ((A1L36) # ((A1L34) # (A1L40)));
+
+
+--A1L6 is ceil_log2~25 at LCCOMB_X29_Y3_N30
+A1L6 = (A1L38) # ((A1L32 & ((A1L28) # (A1L30))));
+
+
+--A1L45 is y[0]~output at IOOBUF_X28_Y24_N2
+A1L45 = OUTPUT_BUFFER.O(.I(A1L14), , , , , , , , , , , , , , , , , );
+
+
+--y[0] is y[0] at PIN_A14
+y[0] = OUTPUT();
+
+
+--A1L47 is y[1]~output at IOOBUF_X25_Y24_N2
+A1L47 = OUTPUT_BUFFER.O(.I(A1L16), , , , , , , , , , , , , , , , , );
+
+
+--y[1] is y[1] at PIN_A12
+y[1] = OUTPUT();
+
+
+--A1L49 is y[2]~output at IOOBUF_X0_Y7_N23
+A1L49 = OUTPUT_BUFFER.O(.I(A1L17), , , , , , , , , , , , , , , , , );
+
+
+--y[2] is y[2] at PIN_N1
+y[2] = OUTPUT();
+
+
+--A1L51 is y[3]~output at IOOBUF_X16_Y0_N9
+A1L51 = OUTPUT_BUFFER.O(.I(!A1L18), , , , , , , , , , , , , , , , , );
+
+
+--y[3] is y[3] at PIN_R8
+y[3] = OUTPUT();
+
+
+--A1L53 is y[4]~output at IOOBUF_X13_Y0_N23
+A1L53 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[4] is y[4] at PIN_T7
+y[4] = OUTPUT();
+
+
+--A1L55 is y[5]~output at IOOBUF_X0_Y22_N16
+A1L55 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[5] is y[5] at PIN_C2
+y[5] = OUTPUT();
+
+
+--A1L57 is y[6]~output at IOOBUF_X30_Y0_N9
+A1L57 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[6] is y[6] at PIN_T15
+y[6] = OUTPUT();
+
+
+--A1L59 is y[7]~output at IOOBUF_X28_Y0_N16
+A1L59 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[7] is y[7] at PIN_R13
+y[7] = OUTPUT();
+
+
+--A1L28 is x[0]~input at IOIBUF_X34_Y12_N8
+A1L28 = INPUT_BUFFER(.I(x[0]), );
+
+
+--x[0] is x[0] at PIN_E16
+x[0] = INPUT();
+
+
+--A1L30 is x[1]~input at IOIBUF_X34_Y12_N1
+A1L30 = INPUT_BUFFER(.I(x[1]), );
+
+
+--x[1] is x[1] at PIN_E15
+x[1] = INPUT();
+
+
+--A1L32 is x[2]~input at IOIBUF_X11_Y0_N22
+A1L32 = INPUT_BUFFER(.I(x[2]), );
+
+
+--x[2] is x[2] at PIN_R6
+x[2] = INPUT();
+
+
+--A1L34 is x[3]~input at IOIBUF_X23_Y24_N1
+A1L34 = INPUT_BUFFER(.I(x[3]), );
+
+
+--x[3] is x[3] at PIN_C11
+x[3] = INPUT();
+
+
+--A1L36 is x[4]~input at IOIBUF_X0_Y10_N1
+A1L36 = INPUT_BUFFER(.I(x[4]), );
+
+
+--x[4] is x[4] at PIN_J2
+x[4] = INPUT();
+
+
+--A1L42 is x[7]~input at IOIBUF_X28_Y0_N22
+A1L42 = INPUT_BUFFER(.I(x[7]), );
+
+
+--x[7] is x[7] at PIN_P11
+x[7] = INPUT();
+
+
+--A1L40 is x[6]~input at IOIBUF_X34_Y5_N22
+A1L40 = INPUT_BUFFER(.I(x[6]), );
+
+
+--x[6] is x[6] at PIN_P16
+x[6] = INPUT();
+
+
+--A1L38 is x[5]~input at IOIBUF_X16_Y0_N15
+A1L38 = INPUT_BUFFER(.I(x[5]), );
+
+
+--x[5] is x[5] at PIN_P8
+x[5] = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+

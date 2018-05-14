@@ -1,0 +1,1699 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L145 is LessThan127~0 at LCCOMB_X24_Y8_N0
+A1L145 = (!A1L153 & (!A1L157 & !A1L155));
+
+
+--A1L100 is LessThan96~0 at LCCOMB_X19_Y12_N8
+A1L100 = (!A1L163 & !A1L161);
+
+
+--A1L146 is LessThan127~1 at LCCOMB_X21_Y20_N24
+A1L146 = (A1L151) # (((A1L159) # (!A1L145)) # (!A1L100));
+
+
+--A1L143 is LessThan126~2 at LCCOMB_X28_Y7_N8
+A1L143 = (!A1L161 & !A1L159);
+
+
+--A1L141 is LessThan125~2 at LCCOMB_X24_Y8_N26
+A1L141 = (!A1L155 & (!A1L157 & ((!A1L151) # (!A1L153))));
+
+
+--A1L147 is LessThan127~2 at LCCOMB_X17_Y6_N0
+A1L147 = (!A1L155 & !A1L157);
+
+
+--A1L139 is LessThan124~4 at LCCOMB_X19_Y12_N18
+A1L139 = (!A1L163 & (!A1L159 & !A1L161));
+
+
+--A1L137 is LessThan123~0 at LCCOMB_X24_Y8_N28
+A1L137 = (A1L155 & ((A1L153) # (A1L151)));
+
+
+--A1L138 is LessThan123~1 at LCCOMB_X19_Y12_N20
+A1L138 = (A1L157) # (((A1L159) # (A1L137)) # (!A1L100));
+
+
+--A1L135 is LessThan122~2 at LCCOMB_X24_Y8_N22
+A1L135 = (!A1L159 & (!A1L157 & ((!A1L155) # (!A1L153))));
+
+
+--A1L132 is LessThan121~0 at LCCOMB_X24_Y8_N8
+A1L132 = (A1L155 & (A1L153 & A1L151));
+
+
+--A1L133 is LessThan121~1 at LCCOMB_X16_Y8_N8
+A1L133 = ((A1L132) # ((A1L159) # (A1L157))) # (!A1L100);
+
+
+--A1L131 is LessThan120~0 at LCCOMB_X19_Y12_N22
+A1L131 = (A1L157) # ((A1L163) # ((A1L159) # (A1L161)));
+
+
+--A1L129 is LessThan119~2 at LCCOMB_X24_Y8_N2
+A1L129 = (A1L157 & ((A1L155) # ((A1L153) # (A1L151))));
+
+
+--A1L127 is LessThan118~4 at LCCOMB_X24_Y8_N12
+A1L127 = (A1L157 & ((A1L153) # (A1L155)));
+
+
+--A1L125 is LessThan117~2 at LCCOMB_X24_Y8_N30
+A1L125 = (A1L157 & ((A1L155) # ((A1L153 & A1L151))));
+
+
+--A1L124 is LessThan116~0 at LCCOMB_X24_Y8_N16
+A1L124 = ((A1L157 & A1L155)) # (!A1L139);
+
+
+--A1L53 is LessThan51~2 at LCCOMB_X24_Y8_N10
+A1L53 = (A1L155 & (A1L157 & ((A1L153) # (A1L151))));
+
+
+--A1L51 is LessThan50~2 at LCCOMB_X24_Y8_N4
+A1L51 = (A1L153 & (A1L157 & A1L155));
+
+
+--A1L121 is LessThan113~0 at LCCOMB_X16_Y8_N18
+A1L121 = ((A1L159) # ((A1L132 & A1L157))) # (!A1L100);
+
+
+--A1L119 is LessThan111~0 at LCCOMB_X21_Y20_N18
+A1L119 = ((A1L159 & ((A1L151) # (!A1L145)))) # (!A1L100);
+
+
+--A1L114 is LessThan107~0 at LCCOMB_X19_Y12_N0
+A1L114 = ((A1L159 & ((A1L157) # (A1L137)))) # (!A1L100);
+
+
+--A1L112 is LessThan106~2 at LCCOMB_X24_Y8_N6
+A1L112 = (A1L159 & ((A1L157) # ((A1L153 & A1L155))));
+
+
+--A1L110 is LessThan105~0 at LCCOMB_X16_Y8_N4
+A1L110 = ((A1L159 & ((A1L132) # (A1L157)))) # (!A1L100);
+
+
+--A1L108 is LessThan104~0 at LCCOMB_X19_Y12_N2
+A1L108 = (A1L163) # ((A1L161) # ((A1L157 & A1L159)));
+
+
+--A1L109 is LessThan104~1 at LCCOMB_X16_Y8_N22
+A1L109 = (A1L157 & A1L159);
+
+
+--A1L148 is LessThan127~3 at LCCOMB_X21_Y20_N4
+A1L148 = (A1L151) # ((A1L159) # (!A1L145));
+
+
+--A1L99 is LessThan95~0 at LCCOMB_X22_Y16_N0
+A1L99 = (A1L163) # ((A1L161 & A1L148));
+
+
+--A1L98 is LessThan94~0 at LCCOMB_X21_Y20_N14
+A1L98 = (A1L163) # ((A1L161 & ((A1L159) # (!A1L145))));
+
+
+--A1L97 is LessThan93~0 at LCCOMB_X33_Y7_N0
+A1L97 = (A1L163) # ((A1L161 & ((A1L159) # (!A1L141))));
+
+
+--A1L96 is LessThan92~0 at LCCOMB_X17_Y7_N24
+A1L96 = (A1L163) # ((A1L161 & ((A1L159) # (!A1L147))));
+
+
+--A1L94 is LessThan91~0 at LCCOMB_X19_Y12_N28
+A1L94 = (A1L161 & ((A1L157) # ((A1L137) # (A1L159))));
+
+
+--A1L95 is LessThan91~1 at LCCOMB_X22_Y16_N26
+A1L95 = (A1L94) # (A1L163);
+
+
+--A1L93 is LessThan90~0 at LCCOMB_X22_Y16_N12
+A1L93 = (A1L163) # ((!A1L135 & A1L161));
+
+
+--A1L91 is LessThan89~0 at LCCOMB_X30_Y12_N24
+A1L91 = (A1L161 & ((A1L132) # ((A1L157) # (A1L159))));
+
+
+--A1L92 is LessThan89~1 at LCCOMB_X30_Y12_N10
+A1L92 = (A1L163) # (A1L91);
+
+
+--A1L90 is LessThan88~0 at LCCOMB_X19_Y12_N6
+A1L90 = (A1L163) # ((A1L161 & ((A1L157) # (A1L159))));
+
+
+--A1L88 is LessThan87~2 at LCCOMB_X30_Y12_N28
+A1L88 = (!A1L163 & ((!A1L159) # (!A1L161)));
+
+
+--A1L85 is LessThan84~0 at LCCOMB_X30_Y12_N6
+A1L85 = ((A1L157 & (A1L155 & A1L161))) # (!A1L88);
+
+
+--A1L82 is LessThan81~0 at LCCOMB_X30_Y12_N16
+A1L82 = ((A1L132 & (A1L157 & A1L161))) # (!A1L88);
+
+
+--A1L120 is LessThan111~1 at LCCOMB_X21_Y20_N8
+A1L120 = (A1L159 & ((A1L151) # (!A1L145)));
+
+
+--A1L81 is LessThan79~0 at LCCOMB_X22_Y16_N30
+A1L81 = (A1L163) # ((A1L120 & A1L161));
+
+
+--A1L80 is LessThan78~0 at LCCOMB_X21_Y20_N2
+A1L80 = (A1L163) # ((A1L161 & (!A1L145 & A1L159)));
+
+
+--A1L79 is LessThan77~0 at LCCOMB_X33_Y7_N18
+A1L79 = (A1L163) # ((!A1L141 & (A1L161 & A1L159)));
+
+
+--A1L78 is LessThan76~0 at LCCOMB_X17_Y7_N26
+A1L78 = (A1L163) # ((A1L159 & (!A1L147 & A1L161)));
+
+
+--A1L115 is LessThan107~1 at LCCOMB_X19_Y12_N24
+A1L115 = (A1L159 & ((A1L157) # (A1L137)));
+
+
+--A1L77 is LessThan75~0 at LCCOMB_X22_Y16_N24
+A1L77 = (A1L163) # ((A1L161 & A1L115));
+
+
+--A1L76 is LessThan74~0 at LCCOMB_X22_Y16_N18
+A1L76 = (A1L163) # ((A1L161 & A1L112));
+
+
+--A1L111 is LessThan105~1 at LCCOMB_X30_Y12_N26
+A1L111 = (A1L159 & ((A1L132) # (A1L157)));
+
+
+--A1L75 is LessThan73~0 at LCCOMB_X22_Y16_N4
+A1L75 = (A1L163) # ((A1L161 & A1L111));
+
+
+--A1L74 is LessThan72~0 at LCCOMB_X19_Y12_N26
+A1L74 = (A1L163) # ((A1L157 & (A1L159 & A1L161)));
+
+
+--A1L73 is LessThan71~0 at LCCOMB_X17_Y7_N12
+A1L73 = (A1L163) # ((A1L159 & (A1L129 & A1L161)));
+
+
+--A1L72 is LessThan70~0 at LCCOMB_X28_Y7_N2
+A1L72 = (A1L163) # ((A1L127 & (A1L161 & A1L159)));
+
+
+--A1L71 is LessThan69~0 at LCCOMB_X33_Y7_N12
+A1L71 = (A1L163) # ((A1L125 & (A1L161 & A1L159)));
+
+
+--A1L70 is LessThan68~0 at LCCOMB_X16_Y8_N0
+A1L70 = (A1L163) # ((A1L155 & (A1L109 & A1L161)));
+
+
+--A1L69 is LessThan67~0 at LCCOMB_X19_Y12_N12
+A1L69 = (A1L163) # ((A1L109 & (A1L137 & A1L161)));
+
+
+--A1L134 is LessThan121~2 at LCCOMB_X24_Y8_N24
+A1L134 = (A1L153 & A1L155);
+
+
+--A1L68 is LessThan66~0 at LCCOMB_X16_Y8_N2
+A1L68 = (A1L163) # ((A1L161 & (A1L134 & A1L109)));
+
+
+--A1L67 is LessThan65~0 at LCCOMB_X16_Y8_N12
+A1L67 = (A1L163) # ((A1L161 & (A1L132 & A1L109)));
+
+
+--A1L66 is LessThan63~0 at LCCOMB_X22_Y16_N22
+A1L66 = (A1L163 & ((A1L161) # (A1L148)));
+
+
+--A1L62 is LessThan59~0 at LCCOMB_X19_Y12_N14
+A1L62 = (A1L163 & ((A1L157) # ((A1L137) # (!A1L143))));
+
+
+--A1L61 is LessThan58~0 at LCCOMB_X16_Y8_N6
+A1L61 = (A1L163 & ((A1L134) # ((A1L157) # (!A1L143))));
+
+
+--A1L60 is LessThan57~0 at LCCOMB_X16_Y8_N16
+A1L60 = (A1L163 & ((A1L132) # ((A1L157) # (!A1L143))));
+
+
+--A1L59 is LessThan56~0 at LCCOMB_X19_Y12_N16
+A1L59 = (A1L163 & ((A1L157) # ((A1L159) # (A1L161))));
+
+
+--A1L55 is LessThan52~0 at LCCOMB_X16_Y8_N10
+A1L55 = (A1L163 & (((A1L155 & A1L157)) # (!A1L143)));
+
+
+--A1L33 is LessThan32~0 at LCCOMB_X21_Y20_N28
+A1L33 = (A1L161 & A1L163);
+
+
+--A1L50 is LessThan49~0 at LCCOMB_X28_Y7_N28
+A1L50 = (A1L163 & (((A1L51 & A1L151)) # (!A1L143)));
+
+
+--A1L49 is LessThan48~0 at LCCOMB_X21_Y20_N30
+A1L49 = (A1L163 & ((A1L161) # (A1L159)));
+
+
+--A1L48 is LessThan47~0 at LCCOMB_X22_Y16_N8
+A1L48 = (A1L163 & ((A1L120) # (A1L161)));
+
+
+--A1L47 is LessThan46~0 at LCCOMB_X21_Y20_N0
+A1L47 = (A1L163 & ((A1L161) # ((!A1L145 & A1L159))));
+
+
+--A1L46 is LessThan45~0 at LCCOMB_X33_Y7_N14
+A1L46 = (A1L163 & ((A1L161) # ((!A1L141 & A1L159))));
+
+
+--A1L45 is LessThan44~0 at LCCOMB_X17_Y7_N30
+A1L45 = (A1L163 & ((A1L161) # ((A1L159 & !A1L147))));
+
+
+--A1L44 is LessThan43~0 at LCCOMB_X22_Y16_N2
+A1L44 = (A1L163 & ((A1L161) # (A1L115)));
+
+
+--A1L43 is LessThan42~0 at LCCOMB_X22_Y16_N20
+A1L43 = (A1L163 & ((A1L161) # (A1L112)));
+
+
+--A1L42 is LessThan41~0 at LCCOMB_X30_Y12_N20
+A1L42 = (A1L163 & ((A1L111) # (A1L161)));
+
+
+--A1L41 is LessThan40~0 at LCCOMB_X19_Y12_N10
+A1L41 = (A1L163 & ((A1L161) # ((A1L157 & A1L159))));
+
+
+--A1L35 is LessThan34~0 at LCCOMB_X28_Y7_N22
+A1L35 = (A1L163 & ((A1L161) # ((A1L51 & A1L159))));
+
+
+--A1L32 is LessThan31~0 at LCCOMB_X21_Y20_N10
+A1L32 = (A1L33 & ((A1L151) # ((A1L159) # (!A1L145))));
+
+
+--A1L31 is LessThan30~0 at LCCOMB_X21_Y20_N12
+A1L31 = (A1L161 & (A1L163 & ((A1L159) # (!A1L145))));
+
+
+--A1L30 is LessThan29~0 at LCCOMB_X33_Y7_N16
+A1L30 = (A1L161 & (A1L163 & ((A1L159) # (!A1L141))));
+
+
+--A1L29 is LessThan28~0 at LCCOMB_X17_Y7_N16
+A1L29 = (A1L161 & (A1L163 & ((A1L159) # (!A1L147))));
+
+
+--A1L28 is LessThan27~0 at LCCOMB_X22_Y16_N6
+A1L28 = (A1L94 & A1L163);
+
+
+--A1L27 is LessThan26~0 at LCCOMB_X22_Y16_N16
+A1L27 = (!A1L135 & (A1L161 & A1L163));
+
+
+--A1L26 is LessThan25~0 at LCCOMB_X30_Y12_N22
+A1L26 = (A1L163 & A1L91);
+
+
+--A1L25 is LessThan24~0 at LCCOMB_X19_Y12_N4
+A1L25 = (A1L163 & (A1L161 & ((A1L157) # (A1L159))));
+
+
+--A1L21 is LessThan20~0 at LCCOMB_X30_Y12_N0
+A1L21 = (A1L33 & ((A1L159) # ((A1L157 & A1L155))));
+
+
+--A1L19 is LessThan19~4 at LCCOMB_X28_Y7_N16
+A1L19 = (A1L163 & (A1L161 & A1L159));
+
+
+--A1L17 is LessThan17~0 at LCCOMB_X30_Y12_N2
+A1L17 = (A1L33 & ((A1L159) # ((A1L132 & A1L157))));
+
+
+--A1L16 is LessThan15~0 at LCCOMB_X21_Y20_N6
+A1L16 = (A1L33 & (A1L159 & ((A1L151) # (!A1L145))));
+
+
+--A1L12 is LessThan11~0 at LCCOMB_X19_Y12_N30
+A1L12 = (A1L33 & (A1L159 & ((A1L157) # (A1L137))));
+
+
+--A1L10 is LessThan9~0 at LCCOMB_X30_Y12_N4
+A1L10 = (A1L33 & (A1L159 & ((A1L132) # (A1L157))));
+
+
+--A1L9 is LessThan8~0 at LCCOMB_X30_Y12_N14
+A1L9 = (A1L157 & (A1L161 & (A1L163 & A1L159)));
+
+
+--A1L144 is LessThan126~3 at LCCOMB_X21_Y20_N16
+A1L144 = (A1L161) # (((A1L163) # (A1L159)) # (!A1L145));
+
+
+--A1L142 is LessThan125~3 at LCCOMB_X33_Y7_N2
+A1L142 = ((A1L161) # ((A1L159) # (A1L163))) # (!A1L141);
+
+
+--A1L140 is LessThan124~5 at LCCOMB_X17_Y6_N18
+A1L140 = ((A1L155) # (A1L157)) # (!A1L139);
+
+
+--A1L136 is LessThan122~3 at LCCOMB_X22_Y16_N10
+A1L136 = ((A1L161) # (A1L163)) # (!A1L135);
+
+
+--A1L130 is LessThan119~3 at LCCOMB_X17_Y7_N10
+A1L130 = (A1L159) # ((A1L129) # ((A1L161) # (A1L163)));
+
+
+--A1L128 is LessThan118~5 at LCCOMB_X24_Y8_N18
+A1L128 = ((A1L157 & ((A1L153) # (A1L155)))) # (!A1L139);
+
+
+--A1L126 is LessThan117~3 at LCCOMB_X33_Y7_N4
+A1L126 = (A1L125) # ((A1L161) # ((A1L159) # (A1L163)));
+
+
+--A1L123 is LessThan115~2 at LCCOMB_X17_Y7_N4
+A1L123 = (A1L53) # ((A1L163) # ((A1L161) # (A1L159)));
+
+
+--A1L122 is LessThan114~4 at LCCOMB_X24_Y8_N20
+A1L122 = ((A1L153 & (A1L157 & A1L155))) # (!A1L139);
+
+
+--A1L118 is LessThan110~2 at LCCOMB_X21_Y20_N26
+A1L118 = (A1L161) # ((A1L163) # ((!A1L145 & A1L159)));
+
+
+--A1L117 is LessThan109~2 at LCCOMB_X33_Y7_N30
+A1L117 = (A1L161) # ((A1L163) # ((!A1L141 & A1L159)));
+
+
+--A1L116 is LessThan108~4 at LCCOMB_X16_Y8_N28
+A1L116 = ((A1L159 & ((A1L155) # (A1L157)))) # (!A1L100);
+
+
+--A1L113 is LessThan106~3 at LCCOMB_X22_Y16_N28
+A1L113 = (A1L161) # ((A1L112) # (A1L163));
+
+
+--A1L107 is LessThan103~2 at LCCOMB_X17_Y7_N22
+A1L107 = (A1L161) # ((A1L163) # ((A1L159 & A1L129)));
+
+
+--A1L106 is LessThan102~2 at LCCOMB_X28_Y7_N18
+A1L106 = (A1L163) # ((A1L161) # ((A1L127 & A1L159)));
+
+
+--A1L105 is LessThan101~2 at LCCOMB_X33_Y7_N24
+A1L105 = (A1L161) # ((A1L163) # ((A1L125 & A1L159)));
+
+
+--A1L104 is LessThan100~4 at LCCOMB_X16_Y8_N14
+A1L104 = ((A1L155 & (A1L157 & A1L159))) # (!A1L100);
+
+
+--A1L103 is LessThan99~2 at LCCOMB_X17_Y7_N0
+A1L103 = (A1L163) # ((A1L161) # ((A1L53 & A1L159)));
+
+
+--A1L102 is LessThan98~2 at LCCOMB_X28_Y7_N12
+A1L102 = (A1L163) # ((A1L161) # ((A1L51 & A1L159)));
+
+
+--A1L101 is LessThan97~4 at LCCOMB_X16_Y8_N24
+A1L101 = ((A1L132 & (A1L159 & A1L157))) # (!A1L100);
+
+
+--A1L89 is LessThan87~3 at LCCOMB_X17_Y7_N18
+A1L89 = (A1L163) # ((A1L161 & ((A1L159) # (A1L129))));
+
+
+--A1L87 is LessThan86~2 at LCCOMB_X28_Y7_N14
+A1L87 = (A1L163) # ((A1L161 & ((A1L127) # (A1L159))));
+
+
+--A1L86 is LessThan85~2 at LCCOMB_X33_Y7_N10
+A1L86 = (A1L163) # ((A1L161 & ((A1L125) # (A1L159))));
+
+
+--A1L84 is LessThan83~2 at LCCOMB_X17_Y7_N20
+A1L84 = (A1L163) # ((A1L161 & ((A1L53) # (A1L159))));
+
+
+--A1L83 is LessThan82~2 at LCCOMB_X28_Y7_N0
+A1L83 = (A1L163) # ((A1L161 & ((A1L51) # (A1L159))));
+
+
+--A1L65 is LessThan62~2 at LCCOMB_X21_Y20_N20
+A1L65 = (A1L163 & ((A1L161) # ((A1L159) # (!A1L145))));
+
+
+--A1L64 is LessThan61~2 at LCCOMB_X33_Y7_N20
+A1L64 = (A1L163 & (((A1L161) # (A1L159)) # (!A1L141)));
+
+
+--A1L63 is LessThan60~4 at LCCOMB_X16_Y8_N26
+A1L63 = (A1L163 & ((A1L155) # ((A1L157) # (!A1L143))));
+
+
+--A1L58 is LessThan55~2 at LCCOMB_X28_Y7_N10
+A1L58 = (A1L163 & ((A1L129) # ((A1L161) # (A1L159))));
+
+
+--A1L57 is LessThan54~2 at LCCOMB_X28_Y7_N20
+A1L57 = (A1L163 & ((A1L127) # ((A1L161) # (A1L159))));
+
+
+--A1L56 is LessThan53~2 at LCCOMB_X33_Y7_N6
+A1L56 = (A1L163 & ((A1L125) # ((A1L161) # (A1L159))));
+
+
+--A1L54 is LessThan51~3 at LCCOMB_X17_Y7_N14
+A1L54 = (A1L163 & ((A1L53) # ((A1L161) # (A1L159))));
+
+
+--A1L52 is LessThan50~3 at LCCOMB_X28_Y7_N30
+A1L52 = (A1L163 & ((A1L51) # ((A1L161) # (A1L159))));
+
+
+--A1L40 is LessThan39~2 at LCCOMB_X30_Y12_N8
+A1L40 = (A1L163 & ((A1L161) # ((A1L159 & A1L129))));
+
+
+--A1L39 is LessThan38~2 at LCCOMB_X28_Y7_N24
+A1L39 = (A1L163 & ((A1L161) # ((A1L127 & A1L159))));
+
+
+--A1L38 is LessThan37~2 at LCCOMB_X33_Y7_N8
+A1L38 = (A1L163 & ((A1L161) # ((A1L125 & A1L159))));
+
+
+--A1L37 is LessThan36~2 at LCCOMB_X16_Y8_N20
+A1L37 = (A1L163 & ((A1L161) # ((A1L155 & A1L109))));
+
+
+--A1L36 is LessThan35~2 at LCCOMB_X17_Y7_N8
+A1L36 = (A1L163 & ((A1L161) # ((A1L53 & A1L159))));
+
+
+--A1L34 is LessThan33~2 at LCCOMB_X16_Y8_N30
+A1L34 = (A1L163 & ((A1L161) # ((A1L132 & A1L109))));
+
+
+--A1L24 is LessThan23~2 at LCCOMB_X30_Y12_N18
+A1L24 = (A1L163 & (A1L161 & ((A1L159) # (A1L129))));
+
+
+--A1L23 is LessThan22~2 at LCCOMB_X28_Y7_N26
+A1L23 = (A1L163 & (A1L161 & ((A1L127) # (A1L159))));
+
+
+--A1L22 is LessThan21~2 at LCCOMB_X33_Y7_N26
+A1L22 = (A1L161 & (A1L163 & ((A1L125) # (A1L159))));
+
+
+--A1L18 is LessThan18~2 at LCCOMB_X28_Y7_N4
+A1L18 = (A1L163 & (A1L161 & ((A1L51) # (A1L159))));
+
+
+--A1L15 is LessThan14~2 at LCCOMB_X21_Y20_N22
+A1L15 = (A1L161 & (!A1L145 & (A1L163 & A1L159)));
+
+
+--A1L14 is LessThan13~2 at LCCOMB_X33_Y7_N28
+A1L14 = (!A1L141 & (A1L161 & (A1L159 & A1L163)));
+
+
+--A1L13 is LessThan12~4 at LCCOMB_X17_Y7_N2
+A1L13 = (A1L159 & (!A1L147 & (A1L161 & A1L163)));
+
+
+--A1L11 is LessThan10~2 at LCCOMB_X22_Y16_N14
+A1L11 = (A1L161 & (A1L112 & A1L163));
+
+
+--A1L8 is LessThan7~2 at LCCOMB_X26_Y7_N0
+A1L8 = (A1L129 & (A1L163 & (A1L161 & A1L159)));
+
+
+--A1L7 is LessThan6~2 at LCCOMB_X28_Y7_N6
+A1L7 = (A1L163 & (A1L127 & (A1L161 & A1L159)));
+
+
+--A1L6 is LessThan5~2 at LCCOMB_X33_Y7_N22
+A1L6 = (A1L125 & (A1L161 & (A1L159 & A1L163)));
+
+
+--A1L5 is LessThan4~4 at LCCOMB_X30_Y12_N12
+A1L5 = (A1L157 & (A1L33 & (A1L155 & A1L159)));
+
+
+--A1L4 is LessThan3~2 at LCCOMB_X17_Y7_N28
+A1L4 = (A1L53 & (A1L163 & (A1L161 & A1L159)));
+
+
+--A1L3 is LessThan2~4 at LCCOMB_X24_Y8_N14
+A1L3 = (A1L155 & (A1L153 & (A1L157 & A1L19)));
+
+
+--A1L2 is LessThan1~4 at LCCOMB_X30_Y12_N30
+A1L2 = (A1L132 & (A1L33 & (A1L157 & A1L159)));
+
+
+--A1L20 is LessThan19~5 at LCCOMB_X17_Y7_N6
+A1L20 = (A1L163 & (A1L161 & ((A1L53) # (A1L159))));
+
+
+--A1L166 is y[0]~output at IOOBUF_X13_Y24_N9
+A1L166 = OUTPUT_BUFFER.O(.I(A1L146), , , , , , , , , , , , , , , , , );
+
+
+--y[0] is y[0] at PIN_D8
+y[0] = OUTPUT();
+
+
+--A1L168 is y[1]~output at IOOBUF_X11_Y24_N2
+A1L168 = OUTPUT_BUFFER.O(.I(A1L144), , , , , , , , , , , , , , , , , );
+
+
+--y[1] is y[1] at PIN_A7
+y[1] = OUTPUT();
+
+
+--A1L170 is y[2]~output at IOOBUF_X34_Y7_N16
+A1L170 = OUTPUT_BUFFER.O(.I(A1L142), , , , , , , , , , , , , , , , , );
+
+
+--y[2] is y[2] at PIN_N15
+y[2] = OUTPUT();
+
+
+--A1L172 is y[3]~output at IOOBUF_X11_Y0_N9
+A1L172 = OUTPUT_BUFFER.O(.I(A1L140), , , , , , , , , , , , , , , , , );
+
+
+--y[3] is y[3] at PIN_L7
+y[3] = OUTPUT();
+
+
+--A1L174 is y[4]~output at IOOBUF_X11_Y24_N9
+A1L174 = OUTPUT_BUFFER.O(.I(A1L138), , , , , , , , , , , , , , , , , );
+
+
+--y[4] is y[4] at PIN_B7
+y[4] = OUTPUT();
+
+
+--A1L176 is y[5]~output at IOOBUF_X34_Y17_N2
+A1L176 = OUTPUT_BUFFER.O(.I(A1L136), , , , , , , , , , , , , , , , , );
+
+
+--y[5] is y[5] at PIN_F13
+y[5] = OUTPUT();
+
+
+--A1L178 is y[6]~output at IOOBUF_X7_Y0_N2
+A1L178 = OUTPUT_BUFFER.O(.I(A1L133), , , , , , , , , , , , , , , , , );
+
+
+--y[6] is y[6] at PIN_P6
+y[6] = OUTPUT();
+
+
+--A1L180 is y[7]~output at IOOBUF_X18_Y24_N16
+A1L180 = OUTPUT_BUFFER.O(.I(A1L131), , , , , , , , , , , , , , , , , );
+
+
+--y[7] is y[7] at PIN_D9
+y[7] = OUTPUT();
+
+
+--A1L182 is y[8]~output at IOOBUF_X9_Y0_N2
+A1L182 = OUTPUT_BUFFER.O(.I(A1L130), , , , , , , , , , , , , , , , , );
+
+
+--y[8] is y[8] at PIN_T5
+y[8] = OUTPUT();
+
+
+--A1L184 is y[9]~output at IOOBUF_X25_Y0_N23
+A1L184 = OUTPUT_BUFFER.O(.I(A1L128), , , , , , , , , , , , , , , , , );
+
+
+--y[9] is y[9] at PIN_T12
+y[9] = OUTPUT();
+
+
+--A1L186 is y[10]~output at IOOBUF_X34_Y8_N16
+A1L186 = OUTPUT_BUFFER.O(.I(A1L126), , , , , , , , , , , , , , , , , );
+
+
+--y[10] is y[10] at PIN_L16
+y[10] = OUTPUT();
+
+
+--A1L188 is y[11]~output at IOOBUF_X23_Y0_N2
+A1L188 = OUTPUT_BUFFER.O(.I(A1L124), , , , , , , , , , , , , , , , , );
+
+
+--y[11] is y[11] at PIN_R12
+y[11] = OUTPUT();
+
+
+--A1L190 is y[12]~output at IOOBUF_X16_Y0_N16
+A1L190 = OUTPUT_BUFFER.O(.I(A1L123), , , , , , , , , , , , , , , , , );
+
+
+--y[12] is y[12] at PIN_P8
+y[12] = OUTPUT();
+
+
+--A1L192 is y[13]~output at IOOBUF_X25_Y24_N23
+A1L192 = OUTPUT_BUFFER.O(.I(A1L122), , , , , , , , , , , , , , , , , );
+
+
+--y[13] is y[13] at PIN_B11
+y[13] = OUTPUT();
+
+
+--A1L194 is y[14]~output at IOOBUF_X0_Y8_N16
+A1L194 = OUTPUT_BUFFER.O(.I(A1L121), , , , , , , , , , , , , , , , , );
+
+
+--y[14] is y[14] at PIN_L2
+y[14] = OUTPUT();
+
+
+--A1L196 is y[15]~output at IOOBUF_X21_Y0_N9
+A1L196 = OUTPUT_BUFFER.O(.I(!A1L139), , , , , , , , , , , , , , , , , );
+
+
+--y[15] is y[15] at PIN_R10
+y[15] = OUTPUT();
+
+
+--A1L198 is y[16]~output at IOOBUF_X28_Y24_N23
+A1L198 = OUTPUT_BUFFER.O(.I(A1L119), , , , , , , , , , , , , , , , , );
+
+
+--y[16] is y[16] at PIN_E10
+y[16] = OUTPUT();
+
+
+--A1L200 is y[17]~output at IOOBUF_X16_Y24_N16
+A1L200 = OUTPUT_BUFFER.O(.I(A1L118), , , , , , , , , , , , , , , , , );
+
+
+--y[17] is y[17] at PIN_A8
+y[17] = OUTPUT();
+
+
+--A1L202 is y[18]~output at IOOBUF_X34_Y8_N23
+A1L202 = OUTPUT_BUFFER.O(.I(A1L117), , , , , , , , , , , , , , , , , );
+
+
+--y[18] is y[18] at PIN_L13
+y[18] = OUTPUT();
+
+
+--A1L204 is y[19]~output at IOOBUF_X9_Y0_N16
+A1L204 = OUTPUT_BUFFER.O(.I(A1L116), , , , , , , , , , , , , , , , , );
+
+
+--y[19] is y[19] at PIN_K8
+y[19] = OUTPUT();
+
+
+--A1L206 is y[20]~output at IOOBUF_X0_Y9_N2
+A1L206 = OUTPUT_BUFFER.O(.I(A1L114), , , , , , , , , , , , , , , , , );
+
+
+--y[20] is y[20] at PIN_K6
+y[20] = OUTPUT();
+
+
+--A1L208 is y[21]~output at IOOBUF_X23_Y24_N23
+A1L208 = OUTPUT_BUFFER.O(.I(A1L113), , , , , , , , , , , , , , , , , );
+
+
+--y[21] is y[21] at PIN_F11
+y[21] = OUTPUT();
+
+
+--A1L210 is y[22]~output at IOOBUF_X9_Y24_N23
+A1L210 = OUTPUT_BUFFER.O(.I(A1L110), , , , , , , , , , , , , , , , , );
+
+
+--y[22] is y[22] at PIN_B6
+y[22] = OUTPUT();
+
+
+--A1L212 is y[23]~output at IOOBUF_X21_Y24_N16
+A1L212 = OUTPUT_BUFFER.O(.I(A1L108), , , , , , , , , , , , , , , , , );
+
+
+--y[23] is y[23] at PIN_B10
+y[23] = OUTPUT();
+
+
+--A1L214 is y[24]~output at IOOBUF_X18_Y0_N16
+A1L214 = OUTPUT_BUFFER.O(.I(A1L107), , , , , , , , , , , , , , , , , );
+
+
+--y[24] is y[24] at PIN_T9
+y[24] = OUTPUT();
+
+
+--A1L216 is y[25]~output at IOOBUF_X34_Y3_N16
+A1L216 = OUTPUT_BUFFER.O(.I(A1L106), , , , , , , , , , , , , , , , , );
+
+
+--y[25] is y[25] at PIN_K12
+y[25] = OUTPUT();
+
+
+--A1L218 is y[26]~output at IOOBUF_X34_Y7_N9
+A1L218 = OUTPUT_BUFFER.O(.I(A1L105), , , , , , , , , , , , , , , , , );
+
+
+--y[26] is y[26] at PIN_L14
+y[26] = OUTPUT();
+
+
+--A1L220 is y[27]~output at IOOBUF_X7_Y0_N23
+A1L220 = OUTPUT_BUFFER.O(.I(A1L104), , , , , , , , , , , , , , , , , );
+
+
+--y[27] is y[27] at PIN_N5
+y[27] = OUTPUT();
+
+
+--A1L222 is y[28]~output at IOOBUF_X13_Y0_N23
+A1L222 = OUTPUT_BUFFER.O(.I(A1L103), , , , , , , , , , , , , , , , , );
+
+
+--y[28] is y[28] at PIN_T7
+y[28] = OUTPUT();
+
+
+--A1L224 is y[29]~output at IOOBUF_X34_Y3_N23
+A1L224 = OUTPUT_BUFFER.O(.I(A1L102), , , , , , , , , , , , , , , , , );
+
+
+--y[29] is y[29] at PIN_L12
+y[29] = OUTPUT();
+
+
+--A1L226 is y[30]~output at IOOBUF_X0_Y8_N9
+A1L226 = OUTPUT_BUFFER.O(.I(A1L101), , , , , , , , , , , , , , , , , );
+
+
+--y[30] is y[30] at PIN_K1
+y[30] = OUTPUT();
+
+
+--A1L228 is y[31]~output at IOOBUF_X16_Y24_N9
+A1L228 = OUTPUT_BUFFER.O(.I(!A1L100), , , , , , , , , , , , , , , , , );
+
+
+--y[31] is y[31] at PIN_B9
+y[31] = OUTPUT();
+
+
+--A1L230 is y[32]~output at IOOBUF_X21_Y0_N23
+A1L230 = OUTPUT_BUFFER.O(.I(A1L99), , , , , , , , , , , , , , , , , );
+
+
+--y[32] is y[32] at PIN_M9
+y[32] = OUTPUT();
+
+
+--A1L232 is y[33]~output at IOOBUF_X13_Y24_N2
+A1L232 = OUTPUT_BUFFER.O(.I(A1L98), , , , , , , , , , , , , , , , , );
+
+
+--y[33] is y[33] at PIN_C8
+y[33] = OUTPUT();
+
+
+--A1L234 is y[34]~output at IOOBUF_X32_Y0_N23
+A1L234 = OUTPUT_BUFFER.O(.I(A1L97), , , , , , , , , , , , , , , , , );
+
+
+--y[34] is y[34] at PIN_P14
+y[34] = OUTPUT();
+
+
+--A1L236 is y[35]~output at IOOBUF_X11_Y0_N2
+A1L236 = OUTPUT_BUFFER.O(.I(A1L96), , , , , , , , , , , , , , , , , );
+
+
+--y[35] is y[35] at PIN_R7
+y[35] = OUTPUT();
+
+
+--A1L238 is y[36]~output at IOOBUF_X25_Y24_N16
+A1L238 = OUTPUT_BUFFER.O(.I(A1L95), , , , , , , , , , , , , , , , , );
+
+
+--y[36] is y[36] at PIN_A11
+y[36] = OUTPUT();
+
+
+--A1L240 is y[37]~output at IOOBUF_X21_Y24_N2
+A1L240 = OUTPUT_BUFFER.O(.I(A1L93), , , , , , , , , , , , , , , , , );
+
+
+--y[37] is y[37] at PIN_A15
+y[37] = OUTPUT();
+
+
+--A1L242 is y[38]~output at IOOBUF_X34_Y11_N9
+A1L242 = OUTPUT_BUFFER.O(.I(A1L92), , , , , , , , , , , , , , , , , );
+
+
+--y[38] is y[38] at PIN_J12
+y[38] = OUTPUT();
+
+
+--A1L244 is y[39]~output at IOOBUF_X0_Y18_N23
+A1L244 = OUTPUT_BUFFER.O(.I(A1L90), , , , , , , , , , , , , , , , , );
+
+
+--y[39] is y[39] at PIN_G1
+y[39] = OUTPUT();
+
+
+--A1L246 is y[40]~output at IOOBUF_X0_Y7_N16
+A1L246 = OUTPUT_BUFFER.O(.I(A1L89), , , , , , , , , , , , , , , , , );
+
+
+--y[40] is y[40] at PIN_N2
+y[40] = OUTPUT();
+
+
+--A1L248 is y[41]~output at IOOBUF_X25_Y0_N2
+A1L248 = OUTPUT_BUFFER.O(.I(A1L87), , , , , , , , , , , , , , , , , );
+
+
+--y[41] is y[41] at PIN_P9
+y[41] = OUTPUT();
+
+
+--A1L250 is y[42]~output at IOOBUF_X34_Y2_N23
+A1L250 = OUTPUT_BUFFER.O(.I(A1L86), , , , , , , , , , , , , , , , , );
+
+
+--y[42] is y[42] at PIN_N13
+y[42] = OUTPUT();
+
+
+--A1L252 is y[43]~output at IOOBUF_X34_Y18_N16
+A1L252 = OUTPUT_BUFFER.O(.I(A1L85), , , , , , , , , , , , , , , , , );
+
+
+--y[43] is y[43] at PIN_F15
+y[43] = OUTPUT();
+
+
+--A1L254 is y[44]~output at IOOBUF_X16_Y0_N9
+A1L254 = OUTPUT_BUFFER.O(.I(A1L84), , , , , , , , , , , , , , , , , );
+
+
+--y[44] is y[44] at PIN_R8
+y[44] = OUTPUT();
+
+
+--A1L256 is y[45]~output at IOOBUF_X30_Y0_N9
+A1L256 = OUTPUT_BUFFER.O(.I(A1L83), , , , , , , , , , , , , , , , , );
+
+
+--y[45] is y[45] at PIN_T15
+y[45] = OUTPUT();
+
+
+--A1L258 is y[46]~output at IOOBUF_X32_Y24_N23
+A1L258 = OUTPUT_BUFFER.O(.I(A1L82), , , , , , , , , , , , , , , , , );
+
+
+--y[46] is y[46] at PIN_D11
+y[46] = OUTPUT();
+
+
+--A1L260 is y[47]~output at IOOBUF_X30_Y0_N2
+A1L260 = OUTPUT_BUFFER.O(.I(!A1L88), , , , , , , , , , , , , , , , , );
+
+
+--y[47] is y[47] at PIN_R14
+y[47] = OUTPUT();
+
+
+--A1L262 is y[48]~output at IOOBUF_X23_Y0_N9
+A1L262 = OUTPUT_BUFFER.O(.I(A1L81), , , , , , , , , , , , , , , , , );
+
+
+--y[48] is y[48] at PIN_T11
+y[48] = OUTPUT();
+
+
+--A1L264 is y[49]~output at IOOBUF_X18_Y24_N9
+A1L264 = OUTPUT_BUFFER.O(.I(A1L80), , , , , , , , , , , , , , , , , );
+
+
+--y[49] is y[49] at PIN_C9
+y[49] = OUTPUT();
+
+
+--A1L266 is y[50]~output at IOOBUF_X34_Y4_N23
+A1L266 = OUTPUT_BUFFER.O(.I(A1L79), , , , , , , , , , , , , , , , , );
+
+
+--y[50] is y[50] at PIN_N14
+y[50] = OUTPUT();
+
+
+--A1L268 is y[51]~output at IOOBUF_X16_Y0_N23
+A1L268 = OUTPUT_BUFFER.O(.I(A1L78), , , , , , , , , , , , , , , , , );
+
+
+--y[51] is y[51] at PIN_N8
+y[51] = OUTPUT();
+
+
+--A1L270 is y[52]~output at IOOBUF_X23_Y24_N16
+A1L270 = OUTPUT_BUFFER.O(.I(A1L77), , , , , , , , , , , , , , , , , );
+
+
+--y[52] is y[52] at PIN_F9
+y[52] = OUTPUT();
+
+
+--A1L272 is y[53]~output at IOOBUF_X25_Y24_N2
+A1L272 = OUTPUT_BUFFER.O(.I(A1L76), , , , , , , , , , , , , , , , , );
+
+
+--y[53] is y[53] at PIN_A12
+y[53] = OUTPUT();
+
+
+--A1L274 is y[54]~output at IOOBUF_X0_Y23_N9
+A1L274 = OUTPUT_BUFFER.O(.I(A1L75), , , , , , , , , , , , , , , , , );
+
+
+--y[54] is y[54] at PIN_E5
+y[54] = OUTPUT();
+
+
+--A1L276 is y[55]~output at IOOBUF_X7_Y24_N9
+A1L276 = OUTPUT_BUFFER.O(.I(A1L74), , , , , , , , , , , , , , , , , );
+
+
+--y[55] is y[55] at PIN_E6
+y[55] = OUTPUT();
+
+
+--A1L278 is y[56]~output at IOOBUF_X13_Y0_N2
+A1L278 = OUTPUT_BUFFER.O(.I(A1L73), , , , , , , , , , , , , , , , , );
+
+
+--y[56] is y[56] at PIN_M8
+y[56] = OUTPUT();
+
+
+--A1L280 is y[57]~output at IOOBUF_X28_Y0_N16
+A1L280 = OUTPUT_BUFFER.O(.I(A1L72), , , , , , , , , , , , , , , , , );
+
+
+--y[57] is y[57] at PIN_R13
+y[57] = OUTPUT();
+
+
+--A1L282 is y[58]~output at IOOBUF_X34_Y5_N16
+A1L282 = OUTPUT_BUFFER.O(.I(A1L71), , , , , , , , , , , , , , , , , );
+
+
+--y[58] is y[58] at PIN_R16
+y[58] = OUTPUT();
+
+
+--A1L284 is y[59]~output at IOOBUF_X9_Y24_N16
+A1L284 = OUTPUT_BUFFER.O(.I(A1L70), , , , , , , , , , , , , , , , , );
+
+
+--y[59] is y[59] at PIN_A6
+y[59] = OUTPUT();
+
+
+--A1L286 is y[60]~output at IOOBUF_X0_Y10_N16
+A1L286 = OUTPUT_BUFFER.O(.I(A1L69), , , , , , , , , , , , , , , , , );
+
+
+--y[60] is y[60] at PIN_J1
+y[60] = OUTPUT();
+
+
+--A1L288 is y[61]~output at IOOBUF_X11_Y0_N23
+A1L288 = OUTPUT_BUFFER.O(.I(A1L68), , , , , , , , , , , , , , , , , );
+
+
+--y[61] is y[61] at PIN_R6
+y[61] = OUTPUT();
+
+
+--A1L290 is y[62]~output at IOOBUF_X5_Y0_N16
+A1L290 = OUTPUT_BUFFER.O(.I(A1L67), , , , , , , , , , , , , , , , , );
+
+
+--y[62] is y[62] at PIN_T4
+y[62] = OUTPUT();
+
+
+--A1L292 is y[63]~output at IOOBUF_X34_Y18_N2
+A1L292 = OUTPUT_BUFFER.O(.I(A1L163), , , , , , , , , , , , , , , , , );
+
+
+--y[63] is y[63] at PIN_B16
+y[63] = OUTPUT();
+
+
+--A1L294 is y[64]~output at IOOBUF_X13_Y24_N23
+A1L294 = OUTPUT_BUFFER.O(.I(A1L66), , , , , , , , , , , , , , , , , );
+
+
+--y[64] is y[64] at PIN_F8
+y[64] = OUTPUT();
+
+
+--A1L296 is y[65]~output at IOOBUF_X9_Y24_N9
+A1L296 = OUTPUT_BUFFER.O(.I(A1L65), , , , , , , , , , , , , , , , , );
+
+
+--y[65] is y[65] at PIN_C6
+y[65] = OUTPUT();
+
+
+--A1L298 is y[66]~output at IOOBUF_X34_Y5_N23
+A1L298 = OUTPUT_BUFFER.O(.I(A1L64), , , , , , , , , , , , , , , , , );
+
+
+--y[66] is y[66] at PIN_P16
+y[66] = OUTPUT();
+
+
+--A1L300 is y[67]~output at IOOBUF_X9_Y0_N9
+A1L300 = OUTPUT_BUFFER.O(.I(A1L63), , , , , , , , , , , , , , , , , );
+
+
+--y[67] is y[67] at PIN_R5
+y[67] = OUTPUT();
+
+
+--A1L302 is y[68]~output at IOOBUF_X18_Y0_N23
+A1L302 = OUTPUT_BUFFER.O(.I(A1L62), , , , , , , , , , , , , , , , , );
+
+
+--y[68] is y[68] at PIN_R9
+y[68] = OUTPUT();
+
+
+--A1L304 is y[69]~output at IOOBUF_X0_Y6_N16
+A1L304 = OUTPUT_BUFFER.O(.I(A1L61), , , , , , , , , , , , , , , , , );
+
+
+--y[69] is y[69] at PIN_K5
+y[69] = OUTPUT();
+
+
+--A1L306 is y[70]~output at IOOBUF_X0_Y10_N23
+A1L306 = OUTPUT_BUFFER.O(.I(A1L60), , , , , , , , , , , , , , , , , );
+
+
+--y[70] is y[70] at PIN_J6
+y[70] = OUTPUT();
+
+
+--A1L308 is y[71]~output at IOOBUF_X21_Y0_N2
+A1L308 = OUTPUT_BUFFER.O(.I(A1L59), , , , , , , , , , , , , , , , , );
+
+
+--y[71] is y[71] at PIN_T10
+y[71] = OUTPUT();
+
+
+--A1L310 is y[72]~output at IOOBUF_X32_Y24_N16
+A1L310 = OUTPUT_BUFFER.O(.I(A1L58), , , , , , , , , , , , , , , , , );
+
+
+--y[72] is y[72] at PIN_D14
+y[72] = OUTPUT();
+
+
+--A1L312 is y[73]~output at IOOBUF_X34_Y11_N2
+A1L312 = OUTPUT_BUFFER.O(.I(A1L57), , , , , , , , , , , , , , , , , );
+
+
+--y[73] is y[73] at PIN_J13
+y[73] = OUTPUT();
+
+
+--A1L314 is y[74]~output at IOOBUF_X34_Y9_N2
+A1L314 = OUTPUT_BUFFER.O(.I(A1L56), , , , , , , , , , , , , , , , , );
+
+
+--y[74] is y[74] at PIN_J16
+y[74] = OUTPUT();
+
+
+--A1L316 is y[75]~output at IOOBUF_X13_Y24_N16
+A1L316 = OUTPUT_BUFFER.O(.I(A1L55), , , , , , , , , , , , , , , , , );
+
+
+--y[75] is y[75] at PIN_E8
+y[75] = OUTPUT();
+
+
+--A1L318 is y[76]~output at IOOBUF_X0_Y7_N23
+A1L318 = OUTPUT_BUFFER.O(.I(A1L54), , , , , , , , , , , , , , , , , );
+
+
+--y[76] is y[76] at PIN_N1
+y[76] = OUTPUT();
+
+
+--A1L320 is y[77]~output at IOOBUF_X28_Y0_N23
+A1L320 = OUTPUT_BUFFER.O(.I(A1L52), , , , , , , , , , , , , , , , , );
+
+
+--y[77] is y[77] at PIN_P11
+y[77] = OUTPUT();
+
+
+--A1L322 is y[78]~output at IOOBUF_X25_Y0_N9
+A1L322 = OUTPUT_BUFFER.O(.I(A1L50), , , , , , , , , , , , , , , , , );
+
+
+--y[78] is y[78] at PIN_L10
+y[78] = OUTPUT();
+
+
+--A1L324 is y[79]~output at IOOBUF_X25_Y24_N9
+A1L324 = OUTPUT_BUFFER.O(.I(A1L49), , , , , , , , , , , , , , , , , );
+
+
+--y[79] is y[79] at PIN_B12
+y[79] = OUTPUT();
+
+
+--A1L326 is y[80]~output at IOOBUF_X30_Y24_N9
+A1L326 = OUTPUT_BUFFER.O(.I(A1L48), , , , , , , , , , , , , , , , , );
+
+
+--y[80] is y[80] at PIN_A13
+y[80] = OUTPUT();
+
+
+--A1L328 is y[81]~output at IOOBUF_X5_Y24_N9
+A1L328 = OUTPUT_BUFFER.O(.I(A1L47), , , , , , , , , , , , , , , , , );
+
+
+--y[81] is y[81] at PIN_B5
+y[81] = OUTPUT();
+
+
+--A1L330 is y[82]~output at IOOBUF_X34_Y8_N9
+A1L330 = OUTPUT_BUFFER.O(.I(A1L46), , , , , , , , , , , , , , , , , );
+
+
+--y[82] is y[82] at PIN_L15
+y[82] = OUTPUT();
+
+
+--A1L332 is y[83]~output at IOOBUF_X16_Y0_N2
+A1L332 = OUTPUT_BUFFER.O(.I(A1L45), , , , , , , , , , , , , , , , , );
+
+
+--y[83] is y[83] at PIN_T8
+y[83] = OUTPUT();
+
+
+--A1L334 is y[84]~output at IOOBUF_X28_Y24_N9
+A1L334 = OUTPUT_BUFFER.O(.I(A1L44), , , , , , , , , , , , , , , , , );
+
+
+--y[84] is y[84] at PIN_B14
+y[84] = OUTPUT();
+
+
+--A1L336 is y[85]~output at IOOBUF_X18_Y24_N23
+A1L336 = OUTPUT_BUFFER.O(.I(A1L43), , , , , , , , , , , , , , , , , );
+
+
+--y[85] is y[85] at PIN_E9
+y[85] = OUTPUT();
+
+
+--A1L338 is y[86]~output at IOOBUF_X34_Y17_N16
+A1L338 = OUTPUT_BUFFER.O(.I(A1L42), , , , , , , , , , , , , , , , , );
+
+
+--y[86] is y[86] at PIN_G15
+y[86] = OUTPUT();
+
+
+--A1L340 is y[87]~output at IOOBUF_X11_Y0_N16
+A1L340 = OUTPUT_BUFFER.O(.I(A1L41), , , , , , , , , , , , , , , , , );
+
+
+--y[87] is y[87] at PIN_T6
+y[87] = OUTPUT();
+
+
+--A1L342 is y[88]~output at IOOBUF_X34_Y9_N9
+A1L342 = OUTPUT_BUFFER.O(.I(A1L40), , , , , , , , , , , , , , , , , );
+
+
+--y[88] is y[88] at PIN_K15
+y[88] = OUTPUT();
+
+
+--A1L344 is y[89]~output at IOOBUF_X28_Y0_N2
+A1L344 = OUTPUT_BUFFER.O(.I(A1L39), , , , , , , , , , , , , , , , , );
+
+
+--y[89] is y[89] at PIN_M10
+y[89] = OUTPUT();
+
+
+--A1L346 is y[90]~output at IOOBUF_X34_Y2_N16
+A1L346 = OUTPUT_BUFFER.O(.I(A1L38), , , , , , , , , , , , , , , , , );
+
+
+--y[90] is y[90] at PIN_M12
+y[90] = OUTPUT();
+
+
+--A1L348 is y[91]~output at IOOBUF_X7_Y0_N9
+A1L348 = OUTPUT_BUFFER.O(.I(A1L37), , , , , , , , , , , , , , , , , );
+
+
+--y[91] is y[91] at PIN_M6
+y[91] = OUTPUT();
+
+
+--A1L350 is y[92]~output at IOOBUF_X18_Y0_N2
+A1L350 = OUTPUT_BUFFER.O(.I(A1L36), , , , , , , , , , , , , , , , , );
+
+
+--y[92] is y[92] at PIN_L9
+y[92] = OUTPUT();
+
+
+--A1L352 is y[93]~output at IOOBUF_X28_Y0_N9
+A1L352 = OUTPUT_BUFFER.O(.I(A1L35), , , , , , , , , , , , , , , , , );
+
+
+--y[93] is y[93] at PIN_T13
+y[93] = OUTPUT();
+
+
+--A1L354 is y[94]~output at IOOBUF_X0_Y8_N23
+A1L354 = OUTPUT_BUFFER.O(.I(A1L34), , , , , , , , , , , , , , , , , );
+
+
+--y[94] is y[94] at PIN_L1
+y[94] = OUTPUT();
+
+
+--A1L356 is y[95]~output at IOOBUF_X34_Y19_N16
+A1L356 = OUTPUT_BUFFER.O(.I(A1L33), , , , , , , , , , , , , , , , , );
+
+
+--y[95] is y[95] at PIN_F14
+y[95] = OUTPUT();
+
+
+--A1L358 is y[96]~output at IOOBUF_X30_Y24_N23
+A1L358 = OUTPUT_BUFFER.O(.I(A1L32), , , , , , , , , , , , , , , , , );
+
+
+--y[96] is y[96] at PIN_B13
+y[96] = OUTPUT();
+
+
+--A1L360 is y[97]~output at IOOBUF_X16_Y24_N23
+A1L360 = OUTPUT_BUFFER.O(.I(A1L31), , , , , , , , , , , , , , , , , );
+
+
+--y[97] is y[97] at PIN_B8
+y[97] = OUTPUT();
+
+
+--A1L362 is y[98]~output at IOOBUF_X34_Y7_N23
+A1L362 = OUTPUT_BUFFER.O(.I(A1L30), , , , , , , , , , , , , , , , , );
+
+
+--y[98] is y[98] at PIN_N16
+y[98] = OUTPUT();
+
+
+--A1L364 is y[99]~output at IOOBUF_X13_Y0_N16
+A1L364 = OUTPUT_BUFFER.O(.I(A1L29), , , , , , , , , , , , , , , , , );
+
+
+--y[99] is y[99] at PIN_L8
+y[99] = OUTPUT();
+
+
+--A1L366 is y[100]~output at IOOBUF_X23_Y24_N2
+A1L366 = OUTPUT_BUFFER.O(.I(A1L28), , , , , , , , , , , , , , , , , );
+
+
+--y[100] is y[100] at PIN_C11
+y[100] = OUTPUT();
+
+
+--A1L368 is y[101]~output at IOOBUF_X34_Y16_N2
+A1L368 = OUTPUT_BUFFER.O(.I(A1L27), , , , , , , , , , , , , , , , , );
+
+
+--y[101] is y[101] at PIN_H15
+y[101] = OUTPUT();
+
+
+--A1L370 is y[102]~output at IOOBUF_X30_Y0_N23
+A1L370 = OUTPUT_BUFFER.O(.I(A1L26), , , , , , , , , , , , , , , , , );
+
+
+--y[102] is y[102] at PIN_N11
+y[102] = OUTPUT();
+
+
+--A1L372 is y[103]~output at IOOBUF_X18_Y0_N9
+A1L372 = OUTPUT_BUFFER.O(.I(A1L25), , , , , , , , , , , , , , , , , );
+
+
+--y[103] is y[103] at PIN_K9
+y[103] = OUTPUT();
+
+
+--A1L374 is y[104]~output at IOOBUF_X34_Y16_N9
+A1L374 = OUTPUT_BUFFER.O(.I(A1L24), , , , , , , , , , , , , , , , , );
+
+
+--y[104] is y[104] at PIN_H16
+y[104] = OUTPUT();
+
+
+--A1L376 is y[105]~output at IOOBUF_X34_Y6_N16
+A1L376 = OUTPUT_BUFFER.O(.I(A1L23), , , , , , , , , , , , , , , , , );
+
+
+--y[105] is y[105] at PIN_K11
+y[105] = OUTPUT();
+
+
+--A1L378 is y[106]~output at IOOBUF_X32_Y0_N16
+A1L378 = OUTPUT_BUFFER.O(.I(A1L22), , , , , , , , , , , , , , , , , );
+
+
+--y[106] is y[106] at PIN_L11
+y[106] = OUTPUT();
+
+
+--A1L380 is y[107]~output at IOOBUF_X28_Y24_N2
+A1L380 = OUTPUT_BUFFER.O(.I(A1L21), , , , , , , , , , , , , , , , , );
+
+
+--y[107] is y[107] at PIN_A14
+y[107] = OUTPUT();
+
+
+--A1L382 is y[108]~output at IOOBUF_X21_Y0_N16
+A1L382 = OUTPUT_BUFFER.O(.I(A1L20), , , , , , , , , , , , , , , , , );
+
+
+--y[108] is y[108] at PIN_N9
+y[108] = OUTPUT();
+
+
+--A1L384 is y[109]~output at IOOBUF_X32_Y0_N2
+A1L384 = OUTPUT_BUFFER.O(.I(A1L18), , , , , , , , , , , , , , , , , );
+
+
+--y[109] is y[109] at PIN_N12
+y[109] = OUTPUT();
+
+
+--A1L386 is y[110]~output at IOOBUF_X30_Y24_N2
+A1L386 = OUTPUT_BUFFER.O(.I(A1L17), , , , , , , , , , , , , , , , , );
+
+
+--y[110] is y[110] at PIN_D12
+y[110] = OUTPUT();
+
+
+--A1L388 is y[111]~output at IOOBUF_X34_Y10_N9
+A1L388 = OUTPUT_BUFFER.O(.I(A1L19), , , , , , , , , , , , , , , , , );
+
+
+--y[111] is y[111] at PIN_J15
+y[111] = OUTPUT();
+
+
+--A1L390 is y[112]~output at IOOBUF_X16_Y24_N2
+A1L390 = OUTPUT_BUFFER.O(.I(A1L16), , , , , , , , , , , , , , , , , );
+
+
+--y[112] is y[112] at PIN_A9
+y[112] = OUTPUT();
+
+
+--A1L392 is y[113]~output at IOOBUF_X11_Y24_N23
+A1L392 = OUTPUT_BUFFER.O(.I(A1L15), , , , , , , , , , , , , , , , , );
+
+
+--y[113] is y[113] at PIN_F7
+y[113] = OUTPUT();
+
+
+--A1L394 is y[114]~output at IOOBUF_X34_Y9_N16
+A1L394 = OUTPUT_BUFFER.O(.I(A1L14), , , , , , , , , , , , , , , , , );
+
+
+--y[114] is y[114] at PIN_K16
+y[114] = OUTPUT();
+
+
+--A1L396 is y[115]~output at IOOBUF_X9_Y0_N23
+A1L396 = OUTPUT_BUFFER.O(.I(A1L13), , , , , , , , , , , , , , , , , );
+
+
+--y[115] is y[115] at PIN_M7
+y[115] = OUTPUT();
+
+
+--A1L398 is y[116]~output at IOOBUF_X0_Y9_N9
+A1L398 = OUTPUT_BUFFER.O(.I(A1L12), , , , , , , , , , , , , , , , , );
+
+
+--y[116] is y[116] at PIN_L6
+y[116] = OUTPUT();
+
+
+--A1L400 is y[117]~output at IOOBUF_X21_Y24_N9
+A1L400 = OUTPUT_BUFFER.O(.I(A1L11), , , , , , , , , , , , , , , , , );
+
+
+--y[117] is y[117] at PIN_A10
+y[117] = OUTPUT();
+
+
+--A1L402 is y[118]~output at IOOBUF_X34_Y20_N16
+A1L402 = OUTPUT_BUFFER.O(.I(A1L10), , , , , , , , , , , , , , , , , );
+
+
+--y[118] is y[118] at PIN_G11
+y[118] = OUTPUT();
+
+
+--A1L404 is y[119]~output at IOOBUF_X28_Y24_N16
+A1L404 = OUTPUT_BUFFER.O(.I(A1L9), , , , , , , , , , , , , , , , , );
+
+
+--y[119] is y[119] at PIN_E11
+y[119] = OUTPUT();
+
+
+--A1L406 is y[120]~output at IOOBUF_X25_Y0_N16
+A1L406 = OUTPUT_BUFFER.O(.I(A1L8), , , , , , , , , , , , , , , , , );
+
+
+--y[120] is y[120] at PIN_K10
+y[120] = OUTPUT();
+
+
+--A1L408 is y[121]~output at IOOBUF_X32_Y0_N9
+A1L408 = OUTPUT_BUFFER.O(.I(A1L7), , , , , , , , , , , , , , , , , );
+
+
+--y[121] is y[121] at PIN_M11
+y[121] = OUTPUT();
+
+
+--A1L410 is y[122]~output at IOOBUF_X34_Y4_N16
+A1L410 = OUTPUT_BUFFER.O(.I(A1L6), , , , , , , , , , , , , , , , , );
+
+
+--y[122] is y[122] at PIN_P15
+y[122] = OUTPUT();
+
+
+--A1L412 is y[123]~output at IOOBUF_X34_Y10_N2
+A1L412 = OUTPUT_BUFFER.O(.I(A1L5), , , , , , , , , , , , , , , , , );
+
+
+--y[123] is y[123] at PIN_J14
+y[123] = OUTPUT();
+
+
+--A1L414 is y[124]~output at IOOBUF_X1_Y0_N2
+A1L414 = OUTPUT_BUFFER.O(.I(A1L4), , , , , , , , , , , , , , , , , );
+
+
+--y[124] is y[124] at PIN_T3
+y[124] = OUTPUT();
+
+
+--A1L416 is y[125]~output at IOOBUF_X23_Y0_N16
+A1L416 = OUTPUT_BUFFER.O(.I(A1L3), , , , , , , , , , , , , , , , , );
+
+
+--y[125] is y[125] at PIN_R11
+y[125] = OUTPUT();
+
+
+--A1L418 is y[126]~output at IOOBUF_X34_Y19_N9
+A1L418 = OUTPUT_BUFFER.O(.I(A1L2), , , , , , , , , , , , , , , , , );
+
+
+--y[126] is y[126] at PIN_D16
+y[126] = OUTPUT();
+
+
+--A1L420 is y[127]~output at IOOBUF_X5_Y24_N16
+A1L420 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[127] is y[127] at PIN_A4
+y[127] = OUTPUT();
+
+
+--A1L422 is y[128]~output at IOOBUF_X0_Y23_N2
+A1L422 = OUTPUT_BUFFER.O(.I(GND), , , , , , , , , , , , , , , , , );
+
+
+--y[128] is y[128] at PIN_D4
+y[128] = OUTPUT();
+
+
+--A1L159 is x[4]~input at IOIBUF_X34_Y20_N8
+A1L159 = INPUT_BUFFER(.I(x[4]), );
+
+
+--x[4] is x[4] at PIN_C16
+x[4] = INPUT();
+
+
+--A1L151 is x[0]~input at IOIBUF_X32_Y24_N8
+A1L151 = INPUT_BUFFER(.I(x[0]), );
+
+
+--x[0] is x[0] at PIN_C14
+x[0] = INPUT();
+
+
+--A1L153 is x[1]~input at IOIBUF_X23_Y24_N8
+A1L153 = INPUT_BUFFER(.I(x[1]), );
+
+
+--x[1] is x[1] at PIN_F10
+x[1] = INPUT();
+
+
+--A1L155 is x[2]~input at IOIBUF_X30_Y0_N15
+A1L155 = INPUT_BUFFER(.I(x[2]), );
+
+
+--x[2] is x[2] at PIN_T14
+x[2] = INPUT();
+
+
+--A1L157 is x[3]~input at IOIBUF_X34_Y9_N22
+A1L157 = INPUT_BUFFER(.I(x[3]), );
+
+
+--x[3] is x[3] at PIN_J11
+x[3] = INPUT();
+
+
+--A1L161 is x[5]~input at IOIBUF_X34_Y17_N22
+A1L161 = INPUT_BUFFER(.I(x[5]), );
+
+
+--x[5] is x[5] at PIN_G16
+x[5] = INPUT();
+
+
+--A1L163 is x[6]~input at IOIBUF_X34_Y19_N1
+A1L163 = INPUT_BUFFER(.I(x[6]), );
+
+
+--x[6] is x[6] at PIN_D15
+x[6] = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+

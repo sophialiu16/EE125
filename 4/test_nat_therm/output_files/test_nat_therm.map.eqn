@@ -1,0 +1,1161 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--y[0] is y[0]
+y[0] = OUTPUT(A1L148);
+
+
+--y[1] is y[1]
+y[1] = OUTPUT(A1L146);
+
+
+--y[2] is y[2]
+y[2] = OUTPUT(A1L144);
+
+
+--y[3] is y[3]
+y[3] = OUTPUT(A1L142);
+
+
+--y[4] is y[4]
+y[4] = OUTPUT(A1L139);
+
+
+--y[5] is y[5]
+y[5] = OUTPUT(A1L137);
+
+
+--y[6] is y[6]
+y[6] = OUTPUT(A1L134);
+
+
+--y[7] is y[7]
+y[7] = OUTPUT(A1L132);
+
+
+--y[8] is y[8]
+y[8] = OUTPUT(A1L131);
+
+
+--y[9] is y[9]
+y[9] = OUTPUT(A1L129);
+
+
+--y[10] is y[10]
+y[10] = OUTPUT(A1L127);
+
+
+--y[11] is y[11]
+y[11] = OUTPUT(A1L125);
+
+
+--y[12] is y[12]
+y[12] = OUTPUT(A1L124);
+
+
+--y[13] is y[13]
+y[13] = OUTPUT(A1L123);
+
+
+--y[14] is y[14]
+y[14] = OUTPUT(A1L122);
+
+
+--y[15] is y[15]
+y[15] = OUTPUT(A1L141);
+
+
+--y[16] is y[16]
+y[16] = OUTPUT(A1L120);
+
+
+--y[17] is y[17]
+y[17] = OUTPUT(A1L119);
+
+
+--y[18] is y[18]
+y[18] = OUTPUT(A1L118);
+
+
+--y[19] is y[19]
+y[19] = OUTPUT(A1L117);
+
+
+--y[20] is y[20]
+y[20] = OUTPUT(A1L115);
+
+
+--y[21] is y[21]
+y[21] = OUTPUT(A1L114);
+
+
+--y[22] is y[22]
+y[22] = OUTPUT(A1L111);
+
+
+--y[23] is y[23]
+y[23] = OUTPUT(A1L109);
+
+
+--y[24] is y[24]
+y[24] = OUTPUT(A1L108);
+
+
+--y[25] is y[25]
+y[25] = OUTPUT(A1L107);
+
+
+--y[26] is y[26]
+y[26] = OUTPUT(A1L106);
+
+
+--y[27] is y[27]
+y[27] = OUTPUT(A1L105);
+
+
+--y[28] is y[28]
+y[28] = OUTPUT(A1L104);
+
+
+--y[29] is y[29]
+y[29] = OUTPUT(A1L103);
+
+
+--y[30] is y[30]
+y[30] = OUTPUT(A1L102);
+
+
+--y[31] is y[31]
+y[31] = OUTPUT(A1L101);
+
+
+--y[32] is y[32]
+y[32] = OUTPUT(A1L99);
+
+
+--y[33] is y[33]
+y[33] = OUTPUT(A1L98);
+
+
+--y[34] is y[34]
+y[34] = OUTPUT(A1L97);
+
+
+--y[35] is y[35]
+y[35] = OUTPUT(A1L96);
+
+
+--y[36] is y[36]
+y[36] = OUTPUT(A1L95);
+
+
+--y[37] is y[37]
+y[37] = OUTPUT(A1L93);
+
+
+--y[38] is y[38]
+y[38] = OUTPUT(A1L92);
+
+
+--y[39] is y[39]
+y[39] = OUTPUT(A1L90);
+
+
+--y[40] is y[40]
+y[40] = OUTPUT(A1L89);
+
+
+--y[41] is y[41]
+y[41] = OUTPUT(A1L86);
+
+
+--y[42] is y[42]
+y[42] = OUTPUT(A1L85);
+
+
+--y[43] is y[43]
+y[43] = OUTPUT(A1L84);
+
+
+--y[44] is y[44]
+y[44] = OUTPUT(A1L83);
+
+
+--y[45] is y[45]
+y[45] = OUTPUT(A1L82);
+
+
+--y[46] is y[46]
+y[46] = OUTPUT(A1L81);
+
+
+--y[47] is y[47]
+y[47] = OUTPUT(A1L88);
+
+
+--y[48] is y[48]
+y[48] = OUTPUT(A1L80);
+
+
+--y[49] is y[49]
+y[49] = OUTPUT(A1L79);
+
+
+--y[50] is y[50]
+y[50] = OUTPUT(A1L78);
+
+
+--y[51] is y[51]
+y[51] = OUTPUT(A1L77);
+
+
+--y[52] is y[52]
+y[52] = OUTPUT(A1L76);
+
+
+--y[53] is y[53]
+y[53] = OUTPUT(A1L75);
+
+
+--y[54] is y[54]
+y[54] = OUTPUT(A1L74);
+
+
+--y[55] is y[55]
+y[55] = OUTPUT(A1L73);
+
+
+--y[56] is y[56]
+y[56] = OUTPUT(A1L72);
+
+
+--y[57] is y[57]
+y[57] = OUTPUT(A1L71);
+
+
+--y[58] is y[58]
+y[58] = OUTPUT(A1L70);
+
+
+--y[59] is y[59]
+y[59] = OUTPUT(A1L69);
+
+
+--y[60] is y[60]
+y[60] = OUTPUT(A1L68);
+
+
+--y[61] is y[61]
+y[61] = OUTPUT(A1L67);
+
+
+--y[62] is y[62]
+y[62] = OUTPUT(A1L66);
+
+
+--y[63] is y[63]
+y[63] = OUTPUT(x[6]);
+
+
+--y[64] is y[64]
+y[64] = OUTPUT(A1L65);
+
+
+--y[65] is y[65]
+y[65] = OUTPUT(A1L64);
+
+
+--y[66] is y[66]
+y[66] = OUTPUT(A1L63);
+
+
+--y[67] is y[67]
+y[67] = OUTPUT(A1L62);
+
+
+--y[68] is y[68]
+y[68] = OUTPUT(A1L61);
+
+
+--y[69] is y[69]
+y[69] = OUTPUT(A1L60);
+
+
+--y[70] is y[70]
+y[70] = OUTPUT(A1L59);
+
+
+--y[71] is y[71]
+y[71] = OUTPUT(A1L58);
+
+
+--y[72] is y[72]
+y[72] = OUTPUT(A1L57);
+
+
+--y[73] is y[73]
+y[73] = OUTPUT(A1L56);
+
+
+--y[74] is y[74]
+y[74] = OUTPUT(A1L55);
+
+
+--y[75] is y[75]
+y[75] = OUTPUT(A1L54);
+
+
+--y[76] is y[76]
+y[76] = OUTPUT(A1L53);
+
+
+--y[77] is y[77]
+y[77] = OUTPUT(A1L51);
+
+
+--y[78] is y[78]
+y[78] = OUTPUT(A1L49);
+
+
+--y[79] is y[79]
+y[79] = OUTPUT(A1L48);
+
+
+--y[80] is y[80]
+y[80] = OUTPUT(A1L47);
+
+
+--y[81] is y[81]
+y[81] = OUTPUT(A1L46);
+
+
+--y[82] is y[82]
+y[82] = OUTPUT(A1L45);
+
+
+--y[83] is y[83]
+y[83] = OUTPUT(A1L44);
+
+
+--y[84] is y[84]
+y[84] = OUTPUT(A1L43);
+
+
+--y[85] is y[85]
+y[85] = OUTPUT(A1L42);
+
+
+--y[86] is y[86]
+y[86] = OUTPUT(A1L41);
+
+
+--y[87] is y[87]
+y[87] = OUTPUT(A1L40);
+
+
+--y[88] is y[88]
+y[88] = OUTPUT(A1L39);
+
+
+--y[89] is y[89]
+y[89] = OUTPUT(A1L38);
+
+
+--y[90] is y[90]
+y[90] = OUTPUT(A1L37);
+
+
+--y[91] is y[91]
+y[91] = OUTPUT(A1L36);
+
+
+--y[92] is y[92]
+y[92] = OUTPUT(A1L35);
+
+
+--y[93] is y[93]
+y[93] = OUTPUT(A1L34);
+
+
+--y[94] is y[94]
+y[94] = OUTPUT(A1L33);
+
+
+--y[95] is y[95]
+y[95] = OUTPUT(A1L32);
+
+
+--y[96] is y[96]
+y[96] = OUTPUT(A1L31);
+
+
+--y[97] is y[97]
+y[97] = OUTPUT(A1L30);
+
+
+--y[98] is y[98]
+y[98] = OUTPUT(A1L29);
+
+
+--y[99] is y[99]
+y[99] = OUTPUT(A1L28);
+
+
+--y[100] is y[100]
+y[100] = OUTPUT(A1L27);
+
+
+--y[101] is y[101]
+y[101] = OUTPUT(A1L26);
+
+
+--y[102] is y[102]
+y[102] = OUTPUT(A1L25);
+
+
+--y[103] is y[103]
+y[103] = OUTPUT(A1L24);
+
+
+--y[104] is y[104]
+y[104] = OUTPUT(A1L23);
+
+
+--y[105] is y[105]
+y[105] = OUTPUT(A1L22);
+
+
+--y[106] is y[106]
+y[106] = OUTPUT(A1L21);
+
+
+--y[107] is y[107]
+y[107] = OUTPUT(A1L20);
+
+
+--y[108] is y[108]
+y[108] = OUTPUT(A1L19);
+
+
+--y[109] is y[109]
+y[109] = OUTPUT(A1L17);
+
+
+--y[110] is y[110]
+y[110] = OUTPUT(A1L16);
+
+
+--y[111] is y[111]
+y[111] = OUTPUT(A1L18);
+
+
+--y[112] is y[112]
+y[112] = OUTPUT(A1L15);
+
+
+--y[113] is y[113]
+y[113] = OUTPUT(A1L14);
+
+
+--y[114] is y[114]
+y[114] = OUTPUT(A1L13);
+
+
+--y[115] is y[115]
+y[115] = OUTPUT(A1L12);
+
+
+--y[116] is y[116]
+y[116] = OUTPUT(A1L11);
+
+
+--y[117] is y[117]
+y[117] = OUTPUT(A1L10);
+
+
+--y[118] is y[118]
+y[118] = OUTPUT(A1L9);
+
+
+--y[119] is y[119]
+y[119] = OUTPUT(A1L8);
+
+
+--y[120] is y[120]
+y[120] = OUTPUT(A1L7);
+
+
+--y[121] is y[121]
+y[121] = OUTPUT(A1L6);
+
+
+--y[122] is y[122]
+y[122] = OUTPUT(A1L5);
+
+
+--y[123] is y[123]
+y[123] = OUTPUT(A1L4);
+
+
+--y[124] is y[124]
+y[124] = OUTPUT(A1L3);
+
+
+--y[125] is y[125]
+y[125] = OUTPUT(A1L2);
+
+
+--y[126] is y[126]
+y[126] = OUTPUT(A1L1);
+
+
+--y[127] is y[127]
+y[127] = OUTPUT(A1L289);
+
+
+--y[128] is y[128]
+y[128] = OUTPUT(A1L289);
+
+
+--x[4] is x[4]
+x[4] = INPUT();
+
+
+--x[0] is x[0]
+x[0] = INPUT();
+
+
+--x[1] is x[1]
+x[1] = INPUT();
+
+
+--x[2] is x[2]
+x[2] = INPUT();
+
+
+--x[3] is x[3]
+x[3] = INPUT();
+
+
+--A1L147 is LessThan127~0
+A1L147 = (!x[1] & (!x[2] & !x[3]));
+
+
+--x[5] is x[5]
+x[5] = INPUT();
+
+
+--x[6] is x[6]
+x[6] = INPUT();
+
+
+--A1L100 is LessThan96~0
+A1L100 = (!x[5] & !x[6]);
+
+
+--A1L148 is LessThan127~1
+A1L148 = (x[4]) # ((x[0]) # ((!A1L100) # (!A1L147)));
+
+
+--A1L145 is LessThan126~2
+A1L145 = (!x[4] & !x[5]);
+
+
+--A1L143 is LessThan125~2
+A1L143 = (!x[2] & (!x[3] & ((!x[1]) # (!x[0]))));
+
+
+--A1L149 is LessThan127~2
+A1L149 = (!x[2] & !x[3]);
+
+
+--A1L140 is LessThan124~4
+A1L140 = (!x[4] & (!x[5] & !x[6]));
+
+
+--A1L138 is LessThan123~0
+A1L138 = (x[2] & ((x[0]) # (x[1])));
+
+
+--A1L139 is LessThan123~1
+A1L139 = (x[4]) # ((x[3]) # ((A1L138) # (!A1L100)));
+
+
+--A1L136 is LessThan122~2
+A1L136 = (!x[4] & (!x[3] & ((!x[2]) # (!x[1]))));
+
+
+--A1L133 is LessThan121~0
+A1L133 = (x[0] & (x[1] & x[2]));
+
+
+--A1L134 is LessThan121~1
+A1L134 = (x[4]) # ((x[3]) # ((A1L133) # (!A1L100)));
+
+
+--A1L132 is LessThan120~0
+A1L132 = (x[4]) # ((x[3]) # ((x[5]) # (x[6])));
+
+
+--A1L130 is LessThan119~2
+A1L130 = (x[3] & ((x[0]) # ((x[1]) # (x[2]))));
+
+
+--A1L128 is LessThan118~4
+A1L128 = (x[3] & ((x[1]) # (x[2])));
+
+
+--A1L126 is LessThan117~2
+A1L126 = (x[3] & ((x[2]) # ((x[0] & x[1]))));
+
+
+--A1L125 is LessThan116~0
+A1L125 = ((x[2] & x[3])) # (!A1L140);
+
+
+--A1L52 is LessThan51~2
+A1L52 = (x[2] & (x[3] & ((x[0]) # (x[1]))));
+
+
+--A1L50 is LessThan50~2
+A1L50 = (x[1] & (x[2] & x[3]));
+
+
+--A1L122 is LessThan113~0
+A1L122 = (x[4]) # (((x[3] & A1L133)) # (!A1L100));
+
+
+--A1L120 is LessThan111~0
+A1L120 = ((x[4] & ((x[0]) # (!A1L147)))) # (!A1L100);
+
+
+--A1L115 is LessThan107~0
+A1L115 = ((x[4] & ((x[3]) # (A1L138)))) # (!A1L100);
+
+
+--A1L113 is LessThan106~2
+A1L113 = (x[4] & ((x[3]) # ((x[1] & x[2]))));
+
+
+--A1L111 is LessThan105~0
+A1L111 = ((x[4] & ((x[3]) # (A1L133)))) # (!A1L100);
+
+
+--A1L109 is LessThan104~0
+A1L109 = (x[5]) # ((x[6]) # ((x[4] & x[3])));
+
+
+--A1L110 is LessThan104~1
+A1L110 = (x[4] & x[3]);
+
+
+--A1L150 is LessThan127~3
+A1L150 = (x[4]) # ((x[0]) # (!A1L147));
+
+
+--A1L99 is LessThan95~0
+A1L99 = (x[6]) # ((A1L150 & x[5]));
+
+
+--A1L98 is LessThan94~0
+A1L98 = (x[6]) # ((x[5] & ((x[4]) # (!A1L147))));
+
+
+--A1L97 is LessThan93~0
+A1L97 = (x[6]) # ((x[5] & ((x[4]) # (!A1L143))));
+
+
+--A1L96 is LessThan92~0
+A1L96 = (x[6]) # ((x[5] & ((x[4]) # (!A1L149))));
+
+
+--A1L94 is LessThan91~0
+A1L94 = (x[5] & ((x[4]) # ((x[3]) # (A1L138))));
+
+
+--A1L95 is LessThan91~1
+A1L95 = (x[6]) # (A1L94);
+
+
+--A1L93 is LessThan90~0
+A1L93 = (x[6]) # ((x[5] & !A1L136));
+
+
+--A1L91 is LessThan89~0
+A1L91 = (x[5] & ((x[4]) # ((x[3]) # (A1L133))));
+
+
+--A1L92 is LessThan89~1
+A1L92 = (x[6]) # (A1L91);
+
+
+--A1L90 is LessThan88~0
+A1L90 = (x[6]) # ((x[5] & ((x[4]) # (x[3]))));
+
+
+--A1L87 is LessThan87~2
+A1L87 = (!x[6] & ((!x[5]) # (!x[4])));
+
+
+--A1L84 is LessThan84~0
+A1L84 = ((x[2] & (x[3] & x[5]))) # (!A1L87);
+
+
+--A1L81 is LessThan81~0
+A1L81 = ((x[3] & (x[5] & A1L133))) # (!A1L87);
+
+
+--A1L121 is LessThan111~1
+A1L121 = (x[4] & ((x[0]) # (!A1L147)));
+
+
+--A1L80 is LessThan79~0
+A1L80 = (x[6]) # ((x[5] & A1L121));
+
+
+--A1L79 is LessThan78~0
+A1L79 = (x[6]) # ((x[4] & (x[5] & !A1L147)));
+
+
+--A1L78 is LessThan77~0
+A1L78 = (x[6]) # ((x[4] & (x[5] & !A1L143)));
+
+
+--A1L77 is LessThan76~0
+A1L77 = (x[6]) # ((x[4] & (x[5] & !A1L149)));
+
+
+--A1L116 is LessThan107~1
+A1L116 = (x[4] & ((x[3]) # (A1L138)));
+
+
+--A1L76 is LessThan75~0
+A1L76 = (x[6]) # ((x[5] & A1L116));
+
+
+--A1L75 is LessThan74~0
+A1L75 = (x[6]) # ((x[5] & A1L113));
+
+
+--A1L112 is LessThan105~1
+A1L112 = (x[4] & ((x[3]) # (A1L133)));
+
+
+--A1L74 is LessThan73~0
+A1L74 = (x[6]) # ((x[5] & A1L112));
+
+
+--A1L73 is LessThan72~0
+A1L73 = (x[6]) # ((x[4] & (x[3] & x[5])));
+
+
+--A1L72 is LessThan71~0
+A1L72 = (x[6]) # ((x[4] & (x[5] & A1L130)));
+
+
+--A1L71 is LessThan70~0
+A1L71 = (x[6]) # ((x[4] & (x[5] & A1L128)));
+
+
+--A1L70 is LessThan69~0
+A1L70 = (x[6]) # ((x[4] & (x[5] & A1L126)));
+
+
+--A1L69 is LessThan68~0
+A1L69 = (x[6]) # ((x[2] & (x[5] & A1L110)));
+
+
+--A1L68 is LessThan67~0
+A1L68 = (x[6]) # ((x[5] & (A1L138 & A1L110)));
+
+
+--A1L135 is LessThan121~2
+A1L135 = (x[1] & x[2]);
+
+
+--A1L67 is LessThan66~0
+A1L67 = (x[6]) # ((x[5] & (A1L135 & A1L110)));
+
+
+--A1L66 is LessThan65~0
+A1L66 = (x[6]) # ((x[5] & (A1L133 & A1L110)));
+
+
+--A1L65 is LessThan63~0
+A1L65 = (x[6] & ((A1L150) # (x[5])));
+
+
+--A1L61 is LessThan59~0
+A1L61 = (x[6] & ((x[3]) # ((A1L138) # (!A1L145))));
+
+
+--A1L60 is LessThan58~0
+A1L60 = (x[6] & ((x[3]) # ((A1L135) # (!A1L145))));
+
+
+--A1L59 is LessThan57~0
+A1L59 = (x[6] & ((x[3]) # ((A1L133) # (!A1L145))));
+
+
+--A1L58 is LessThan56~0
+A1L58 = (x[6] & ((x[4]) # ((x[3]) # (x[5]))));
+
+
+--A1L54 is LessThan52~0
+A1L54 = (x[6] & (((x[2] & x[3])) # (!A1L145)));
+
+
+--A1L32 is LessThan32~0
+A1L32 = (x[5] & x[6]);
+
+
+--A1L49 is LessThan49~0
+A1L49 = (x[6] & (((x[0] & A1L50)) # (!A1L145)));
+
+
+--A1L48 is LessThan48~0
+A1L48 = (x[6] & ((x[4]) # (x[5])));
+
+
+--A1L47 is LessThan47~0
+A1L47 = (x[6] & ((x[5]) # (A1L121)));
+
+
+--A1L46 is LessThan46~0
+A1L46 = (x[6] & ((x[5]) # ((x[4] & !A1L147))));
+
+
+--A1L45 is LessThan45~0
+A1L45 = (x[6] & ((x[5]) # ((x[4] & !A1L143))));
+
+
+--A1L44 is LessThan44~0
+A1L44 = (x[6] & ((x[5]) # ((x[4] & !A1L149))));
+
+
+--A1L43 is LessThan43~0
+A1L43 = (x[6] & ((x[5]) # (A1L116)));
+
+
+--A1L42 is LessThan42~0
+A1L42 = (x[6] & ((x[5]) # (A1L113)));
+
+
+--A1L41 is LessThan41~0
+A1L41 = (x[6] & ((x[5]) # (A1L112)));
+
+
+--A1L40 is LessThan40~0
+A1L40 = (x[6] & ((x[5]) # ((x[4] & x[3]))));
+
+
+--A1L34 is LessThan34~0
+A1L34 = (x[6] & ((x[5]) # ((x[4] & A1L50))));
+
+
+--A1L31 is LessThan31~0
+A1L31 = (A1L32 & ((x[4]) # ((x[0]) # (!A1L147))));
+
+
+--A1L30 is LessThan30~0
+A1L30 = (x[5] & (x[6] & ((x[4]) # (!A1L147))));
+
+
+--A1L29 is LessThan29~0
+A1L29 = (x[5] & (x[6] & ((x[4]) # (!A1L143))));
+
+
+--A1L28 is LessThan28~0
+A1L28 = (x[5] & (x[6] & ((x[4]) # (!A1L149))));
+
+
+--A1L27 is LessThan27~0
+A1L27 = (x[6] & A1L94);
+
+
+--A1L26 is LessThan26~0
+A1L26 = (x[5] & (x[6] & !A1L136));
+
+
+--A1L25 is LessThan25~0
+A1L25 = (x[6] & A1L91);
+
+
+--A1L24 is LessThan24~0
+A1L24 = (x[5] & (x[6] & ((x[4]) # (x[3]))));
+
+
+--A1L20 is LessThan20~0
+A1L20 = (A1L32 & ((x[4]) # ((x[2] & x[3]))));
+
+
+--A1L18 is LessThan19~4
+A1L18 = (x[4] & (x[5] & x[6]));
+
+
+--A1L16 is LessThan17~0
+A1L16 = (A1L32 & ((x[4]) # ((x[3] & A1L133))));
+
+
+--A1L15 is LessThan15~0
+A1L15 = (x[4] & (A1L32 & ((x[0]) # (!A1L147))));
+
+
+--A1L11 is LessThan11~0
+A1L11 = (x[4] & (A1L32 & ((x[3]) # (A1L138))));
+
+
+--A1L9 is LessThan9~0
+A1L9 = (x[4] & (A1L32 & ((x[3]) # (A1L133))));
+
+
+--A1L8 is LessThan8~0
+A1L8 = (x[4] & (x[3] & (x[5] & x[6])));
+
+
+--A1L146 is LessThan126~3
+A1L146 = (x[4]) # ((x[5]) # ((x[6]) # (!A1L147)));
+
+
+--A1L144 is LessThan125~3
+A1L144 = (x[4]) # ((x[5]) # ((x[6]) # (!A1L143)));
+
+
+--A1L142 is LessThan124~5
+A1L142 = (x[2]) # ((x[3]) # (!A1L140));
+
+
+--A1L137 is LessThan122~3
+A1L137 = (x[5]) # ((x[6]) # (!A1L136));
+
+
+--A1L131 is LessThan119~3
+A1L131 = (x[4]) # ((x[5]) # ((x[6]) # (A1L130)));
+
+
+--A1L129 is LessThan118~5
+A1L129 = ((x[3] & ((x[1]) # (x[2])))) # (!A1L140);
+
+
+--A1L127 is LessThan117~3
+A1L127 = (x[4]) # ((x[5]) # ((x[6]) # (A1L126)));
+
+
+--A1L124 is LessThan115~2
+A1L124 = (x[4]) # ((x[5]) # ((x[6]) # (A1L52)));
+
+
+--A1L123 is LessThan114~4
+A1L123 = ((x[1] & (x[2] & x[3]))) # (!A1L140);
+
+
+--A1L119 is LessThan110~2
+A1L119 = (x[5]) # ((x[6]) # ((x[4] & !A1L147)));
+
+
+--A1L118 is LessThan109~2
+A1L118 = (x[5]) # ((x[6]) # ((x[4] & !A1L143)));
+
+
+--A1L117 is LessThan108~4
+A1L117 = ((x[4] & ((x[2]) # (x[3])))) # (!A1L100);
+
+
+--A1L114 is LessThan106~3
+A1L114 = (x[5]) # ((x[6]) # (A1L113));
+
+
+--A1L108 is LessThan103~2
+A1L108 = (x[5]) # ((x[6]) # ((x[4] & A1L130)));
+
+
+--A1L107 is LessThan102~2
+A1L107 = (x[5]) # ((x[6]) # ((x[4] & A1L128)));
+
+
+--A1L106 is LessThan101~2
+A1L106 = (x[5]) # ((x[6]) # ((x[4] & A1L126)));
+
+
+--A1L105 is LessThan100~4
+A1L105 = ((x[4] & (x[3] & x[2]))) # (!A1L100);
+
+
+--A1L104 is LessThan99~2
+A1L104 = (x[5]) # ((x[6]) # ((x[4] & A1L52)));
+
+
+--A1L103 is LessThan98~2
+A1L103 = (x[5]) # ((x[6]) # ((x[4] & A1L50)));
+
+
+--A1L102 is LessThan97~4
+A1L102 = ((x[4] & (x[3] & A1L133))) # (!A1L100);
+
+
+--A1L89 is LessThan87~3
+A1L89 = (x[6]) # ((x[5] & ((x[4]) # (A1L130))));
+
+
+--A1L86 is LessThan86~2
+A1L86 = (x[6]) # ((x[5] & ((x[4]) # (A1L128))));
+
+
+--A1L85 is LessThan85~2
+A1L85 = (x[6]) # ((x[5] & ((x[4]) # (A1L126))));
+
+
+--A1L83 is LessThan83~2
+A1L83 = (x[6]) # ((x[5] & ((x[4]) # (A1L52))));
+
+
+--A1L82 is LessThan82~2
+A1L82 = (x[6]) # ((x[5] & ((x[4]) # (A1L50))));
+
+
+--A1L64 is LessThan62~2
+A1L64 = (x[6] & ((x[4]) # ((x[5]) # (!A1L147))));
+
+
+--A1L63 is LessThan61~2
+A1L63 = (x[6] & ((x[4]) # ((x[5]) # (!A1L143))));
+
+
+--A1L62 is LessThan60~4
+A1L62 = (x[6] & ((x[2]) # ((x[3]) # (!A1L145))));
+
+
+--A1L57 is LessThan55~2
+A1L57 = (x[6] & ((x[4]) # ((x[5]) # (A1L130))));
+
+
+--A1L56 is LessThan54~2
+A1L56 = (x[6] & ((x[4]) # ((x[5]) # (A1L128))));
+
+
+--A1L55 is LessThan53~2
+A1L55 = (x[6] & ((x[4]) # ((x[5]) # (A1L126))));
+
+
+--A1L53 is LessThan51~3
+A1L53 = (x[6] & ((x[5]) # ((x[4]) # (A1L52))));
+
+
+--A1L51 is LessThan50~3
+A1L51 = (x[6] & ((x[5]) # ((x[4]) # (A1L50))));
+
+
+--A1L39 is LessThan39~2
+A1L39 = (x[6] & ((x[5]) # ((x[4] & A1L130))));
+
+
+--A1L38 is LessThan38~2
+A1L38 = (x[6] & ((x[5]) # ((x[4] & A1L128))));
+
+
+--A1L37 is LessThan37~2
+A1L37 = (x[6] & ((x[5]) # ((x[4] & A1L126))));
+
+
+--A1L36 is LessThan36~2
+A1L36 = (x[6] & ((x[5]) # ((x[2] & A1L110))));
+
+
+--A1L35 is LessThan35~2
+A1L35 = (x[6] & ((x[5]) # ((x[4] & A1L52))));
+
+
+--A1L33 is LessThan33~2
+A1L33 = (x[6] & ((x[5]) # ((A1L133 & A1L110))));
+
+
+--A1L23 is LessThan23~2
+A1L23 = (x[5] & (x[6] & ((x[4]) # (A1L130))));
+
+
+--A1L22 is LessThan22~2
+A1L22 = (x[5] & (x[6] & ((x[4]) # (A1L128))));
+
+
+--A1L21 is LessThan21~2
+A1L21 = (x[5] & (x[6] & ((x[4]) # (A1L126))));
+
+
+--A1L17 is LessThan18~2
+A1L17 = (x[5] & (x[6] & ((x[4]) # (A1L50))));
+
+
+--A1L14 is LessThan14~2
+A1L14 = (x[5] & (x[6] & (x[4] & !A1L147)));
+
+
+--A1L13 is LessThan13~2
+A1L13 = (x[5] & (x[6] & (x[4] & !A1L143)));
+
+
+--A1L12 is LessThan12~4
+A1L12 = (x[5] & (x[6] & (x[4] & !A1L149)));
+
+
+--A1L10 is LessThan10~2
+A1L10 = (x[5] & (x[6] & A1L113));
+
+
+--A1L7 is LessThan7~2
+A1L7 = (x[5] & (x[6] & (x[4] & A1L130)));
+
+
+--A1L6 is LessThan6~2
+A1L6 = (x[5] & (x[6] & (x[4] & A1L128)));
+
+
+--A1L5 is LessThan5~2
+A1L5 = (x[5] & (x[6] & (x[4] & A1L126)));
+
+
+--A1L4 is LessThan4~4
+A1L4 = (x[4] & (x[3] & (x[2] & A1L32)));
+
+
+--A1L3 is LessThan3~2
+A1L3 = (x[4] & (x[5] & (x[6] & A1L52)));
+
+
+--A1L2 is LessThan2~4
+A1L2 = (x[1] & (x[2] & (x[3] & A1L18)));
+
+
+--A1L1 is LessThan1~4
+A1L1 = (x[4] & (x[3] & (A1L133 & A1L32)));
+
+
+--A1L19 is LessThan19~5
+A1L19 = (x[5] & (x[6] & ((x[4]) # (A1L52))));
+
+
+--A1L289 is ~GND
+A1L289 = GND;
+
+
+--A1L141 is LessThan124~4_wirecell
+A1L141 = !A1L140;
+
+
+--A1L88 is LessThan87~2_wirecell
+A1L88 = !A1L87;
+
+
+--A1L101 is LessThan96~0_wirecell
+A1L101 = !A1L100;
+
+

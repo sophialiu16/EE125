@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+--------------------------------------------------------------------------------
+package nat_therm_conv is  
+    function natural_to_thermometer (inp: natural) 
+        return std_logic_vector;
+end package;
+--------------------------------------------------------------------------------
+package body nat_therm_conv is  
+    function natural_to_thermometer (inp: natural) 
+        return std_logic_vector is 
+        variable otp: std_logic_vector;
+    begin
+        otp := "0";
+        -- Build up thermometer code by concatenating `inp` 1s
+        for i in 0 to inp loop 
+            otp := otp & "1";
+        end loop;
+        return otp;
+    end function natural_to_thermometer;
+end package body;
+--------------------------------------------------------------------------------\
+use work.nat_therm_conv.all;
+--------------------------------------------------------------------------------
+entity test_nat_therm is 
+    generic (
+        BITS:       positive := 7);
+    port (
+        x:  in      std_logic_vector(BITS-1 downto 0);
+        -- Largest output is '0' & (2^BITS) ones, or length 2^BITS + 1
+        y:  out     std_logic_vector(2**BITS downto 0) );
+end entity;
+--------------------------------------------------------------------------------        
+architecture test_nat_therm of test_nat_therm is 
+begin 
+    y <= natural_to_thermometer(to_integer(unsigned(x)); 
+end architecture;
+-------------------------------------------------------------------------------- 

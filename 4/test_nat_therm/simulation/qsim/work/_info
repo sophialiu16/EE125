@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\xiaobaobao\Documents\vhdl\4\test_nat_therm\simulation\qsim
+vtest_nat_therm
+Z1 !s100 Q>aH`6?R][Y[B<L]PNG`:0
+Z2 IlT0n2BSdN56T]:FWAoYXF0
+Z3 V97>W4Q2Sm=Uh0g[@f@QYA3
+Z4 dC:\Users\xiaobaobao\Documents\vhdl\4\test_nat_therm\simulation\qsim
+Z5 w1526268941
+Z6 8test_nat_therm.vo
+Z7 Ftest_nat_therm.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|test_nat_therm.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1526268942.687000
+Z12 !s107 test_nat_therm.vo|
+!s101 -O0
+vtest_nat_therm_vlg_check_tst
+!i10b 1
+Z13 !s100 lP;ZSnBh[MN49PdGUSoCa1
+Z14 I]ScQnVaz3MKKQAn<8^CK83
+Z15 VjgHFk`TON1hgW3ihbkfiM2
+R4
+Z16 w1526268940
+Z17 8test_nat_therm.vwf.vt
+Z18 Ftest_nat_therm.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1526268943.094000
+Z20 !s107 test_nat_therm.vwf.vt|
+Z21 !s90 -work|work|test_nat_therm.vwf.vt|
+!s101 -O0
+R10
+vtest_nat_therm_vlg_sample_tst
+!i10b 1
+Z22 !s100 U6S^Wjc3lX[0T1<HHF11K2
+Z23 IGT;Th]R:dOB1ob`O_5S^62
+Z24 VjlLTFYX@B0mmL8Jn^fRXY1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vtest_nat_therm_vlg_vec_tst
+!i10b 1
+!s100 llUg<_;CJoW^ei?k6CUQI3
+IE0ON?KcLI9M06z8`kPfM83
+Z25 V7@8UiL@hdUGIXhV]XV`ji3
+R4
+R16
+R17
+R18
+Z26 L0 259
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
