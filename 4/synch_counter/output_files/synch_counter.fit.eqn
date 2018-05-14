@@ -1,0 +1,107 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--B1_q is synch_counter_cell:cell0|q at FF_X1_Y6_N13
+--register power-up is low
+
+B1_q = DFFEAS(B1L2, GLOBAL(A1L8),  ,  ,  ,  ,  ,  ,  );
+
+
+--B2_q is synch_counter_cell:\gen:1:other_cells|q at FF_X1_Y6_N3
+--register power-up is low
+
+B2_q = DFFEAS(B2L2, GLOBAL(A1L8),  ,  ,  ,  ,  ,  ,  );
+
+
+--B3_q is synch_counter_cell:\gen:2:other_cells|q at FF_X1_Y6_N25
+--register power-up is low
+
+B3_q = DFFEAS(B3L2, GLOBAL(A1L8),  ,  ,  ,  ,  ,  ,  );
+
+
+--B4_q is synch_counter_cell:\gen:3:other_cells|q at FF_X1_Y6_N31
+--register power-up is low
+
+B4_q = DFFEAS(B4L2, GLOBAL(A1L8),  ,  ,  ,  ,  ,  ,  );
+
+
+--B2L2 is synch_counter_cell:\gen:1:other_cells|q~0 at LCCOMB_X1_Y6_N2
+B2L2 = B2_q $ (B1_q);
+
+
+--B3L2 is synch_counter_cell:\gen:2:other_cells|q~0 at LCCOMB_X1_Y6_N24
+B3L2 = B3_q $ (((B2_q & B1_q)));
+
+
+--B4L2 is synch_counter_cell:\gen:3:other_cells|q~0 at LCCOMB_X1_Y6_N30
+B4L2 = B4_q $ (((B1_q & (B3_q & B2_q))));
+
+
+--B1L2 is synch_counter_cell:cell0|q~0 at LCCOMB_X1_Y6_N12
+B1L2 = !B1_q;
+
+
+--A1L11 is q[0]~output at IOOBUF_X0_Y7_N16
+A1L11 = OUTPUT_BUFFER.O(.I(B1_q), , , , , , , , , , , , , , , , , );
+
+
+--q[0] is q[0] at PIN_N2
+q[0] = OUTPUT();
+
+
+--A1L13 is q[1]~output at IOOBUF_X0_Y6_N23
+A1L13 = OUTPUT_BUFFER.O(.I(B2_q), , , , , , , , , , , , , , , , , );
+
+
+--q[1] is q[1] at PIN_L4
+q[1] = OUTPUT();
+
+
+--A1L15 is q[2]~output at IOOBUF_X0_Y6_N16
+A1L15 = OUTPUT_BUFFER.O(.I(B3_q), , , , , , , , , , , , , , , , , );
+
+
+--q[2] is q[2] at PIN_K5
+q[2] = OUTPUT();
+
+
+--A1L17 is q[3]~output at IOOBUF_X0_Y5_N23
+A1L17 = OUTPUT_BUFFER.O(.I(B4_q), , , , , , , , , , , , , , , , , );
+
+
+--q[3] is q[3] at PIN_R1
+q[3] = OUTPUT();
+
+
+--A1L7 is clk~input at IOIBUF_X0_Y11_N1
+A1L7 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_E2
+clk = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L8 is clk~inputclkctrl at CLKCTRL_G4
+A1L8 = cycloneiii_clkctrl(.INCLK[0] = A1L7) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+

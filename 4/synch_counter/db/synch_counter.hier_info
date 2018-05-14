@@ -1,0 +1,43 @@
+|synch_counter
+clk => synch_counter_cell:cell0.clk
+clk => synch_counter_cell:gen:1:other_cells.clk
+clk => synch_counter_cell:gen:2:other_cells.clk
+clk => synch_counter_cell:gen:3:other_cells.clk
+q[0] << synch_counter_cell:cell0.q
+q[1] << synch_counter_cell:gen:1:other_cells.q
+q[2] << synch_counter_cell:gen:2:other_cells.q
+q[3] << synch_counter_cell:gen:3:other_cells.q
+
+
+|synch_counter|synch_counter_cell:cell0
+a => c.IN0
+b => c.IN1
+clk => q~reg0.CLK
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synch_counter|synch_counter_cell:\gen:1:other_cells
+a => c.IN0
+b => c.IN1
+clk => q~reg0.CLK
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synch_counter|synch_counter_cell:\gen:2:other_cells
+a => c.IN0
+b => c.IN1
+clk => q~reg0.CLK
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synch_counter|synch_counter_cell:\gen:3:other_cells
+a => c.IN0
+b => c.IN1
+clk => q~reg0.CLK
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\projects\4\calc_ceil_log2\simulation\qsim
+vcalc_ceil_log2
+Z1 !s100 W8PZXCZRz0_OoHR7j7B1:3
+Z2 IGcLQKZN0F_o4^ZkQAlz]f0
+Z3 V07:g?oX;3I^NGDzfa1:3E1
+Z4 dC:\Users\xiaobaobao\Documents\vhdl\4\calc_ceil_log2\simulation\qsim
+Z5 w1526270349
+Z6 8calc_ceil_log2.vo
+Z7 Fcalc_ceil_log2.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|calc_ceil_log2.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1526270350.647000
+Z12 !s107 calc_ceil_log2.vo|
+!s101 -O0
+vcalc_ceil_log2_vlg_check_tst
+!i10b 1
+Z13 !s100 D=DKAidAo`Vi_72TgI1EB0
+Z14 I91nO4[eWNdSnfz2EmZ?_X2
+Z15 VFNoboK53Z3Yl9AeQOaj<G0
+R4
+Z16 w1526270348
+Z17 8calc_ceil_log2.vwf.vt
+Z18 Fcalc_ceil_log2.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1526270350.913000
+Z20 !s107 calc_ceil_log2.vwf.vt|
+Z21 !s90 -work|work|calc_ceil_log2.vwf.vt|
+!s101 -O0
+R10
+vcalc_ceil_log2_vlg_sample_tst
+!i10b 1
+Z22 !s100 ^CEGLQ2E:ACSMdZCa>6Y30
+Z23 IZ7IHdNz>SYo:HNPGULQ]X0
+Z24 V>;kR6ebokh_f7=<gVDPon3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vcalc_ceil_log2_vlg_vec_tst
+!i10b 1
+!s100 63g]Mj?07T[g:o]7lNQZb2
+IaNhWbF9R9Lo:iLQJoTl1G1
+Z25 V1LoFiKVPL_f:@:oD4`lkb1
+R4
+R16
+R17
+R18
+Z26 L0 277
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
