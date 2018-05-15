@@ -1,0 +1,695 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is Add0~0
+A1L1 = count[0] $ (VCC);
+
+--A1L2 is Add0~1
+A1L2 = CARRY(count[0]);
+
+
+--A1L3 is Add0~2
+A1L3 = (down_en & ((count[1] & (A1L2 & VCC)) # (!count[1] & (!A1L2)))) # (!down_en & ((count[1] & (!A1L2)) # (!count[1] & ((A1L2) # (GND)))));
+
+--A1L4 is Add0~3
+A1L4 = CARRY((down_en & (!count[1] & !A1L2)) # (!down_en & ((!A1L2) # (!count[1]))));
+
+
+--A1L5 is Add0~4
+A1L5 = ((down_en $ (A1L74 $ (!A1L4)))) # (GND);
+
+--A1L6 is Add0~5
+A1L6 = CARRY((down_en & ((A1L74) # (!A1L4))) # (!down_en & (A1L74 & !A1L4)));
+
+
+--A1L7 is Add0~6
+A1L7 = (down_en & ((A1L78 & (A1L6 & VCC)) # (!A1L78 & (!A1L6)))) # (!down_en & ((A1L78 & (!A1L6)) # (!A1L78 & ((A1L6) # (GND)))));
+
+--A1L8 is Add0~7
+A1L8 = CARRY((down_en & (!A1L78 & !A1L6)) # (!down_en & ((!A1L6) # (!A1L78))));
+
+
+--A1L9 is Add0~8
+A1L9 = ((down_en $ (A1L82 $ (!A1L8)))) # (GND);
+
+--A1L10 is Add0~9
+A1L10 = CARRY((down_en & ((A1L82) # (!A1L8))) # (!down_en & (A1L82 & !A1L8)));
+
+
+--A1L11 is Add0~10
+A1L11 = (down_en & ((A1L86 & (A1L10 & VCC)) # (!A1L86 & (!A1L10)))) # (!down_en & ((A1L86 & (!A1L10)) # (!A1L86 & ((A1L10) # (GND)))));
+
+--A1L12 is Add0~11
+A1L12 = CARRY((down_en & (!A1L86 & !A1L10)) # (!down_en & ((!A1L10) # (!A1L86))));
+
+
+--A1L13 is Add0~12
+A1L13 = ((down_en $ (count[6] $ (!A1L12)))) # (GND);
+
+--A1L14 is Add0~13
+A1L14 = CARRY((down_en & ((count[6]) # (!A1L12))) # (!down_en & (count[6] & !A1L12)));
+
+
+--A1L15 is Add0~14
+A1L15 = (down_en & ((count[7] & (A1L14 & VCC)) # (!count[7] & (!A1L14)))) # (!down_en & ((count[7] & (!A1L14)) # (!count[7] & ((A1L14) # (GND)))));
+
+--A1L16 is Add0~15
+A1L16 = CARRY((down_en & (!count[7] & !A1L14)) # (!down_en & ((!A1L14) # (!count[7]))));
+
+
+--A1L17 is Add0~16
+A1L17 = ((down_en $ (count[8] $ (!A1L16)))) # (GND);
+
+--A1L18 is Add0~17
+A1L18 = CARRY((down_en & ((count[8]) # (!A1L16))) # (!down_en & (count[8] & !A1L16)));
+
+
+--A1L19 is Add0~18
+A1L19 = (down_en & ((count[9] & (A1L18 & VCC)) # (!count[9] & (!A1L18)))) # (!down_en & ((count[9] & (!A1L18)) # (!count[9] & ((A1L18) # (GND)))));
+
+--A1L20 is Add0~19
+A1L20 = CARRY((down_en & (!count[9] & !A1L18)) # (!down_en & ((!A1L18) # (!count[9]))));
+
+
+--A1L21 is Add0~20
+A1L21 = ((down_en $ (count[10] $ (!A1L20)))) # (GND);
+
+--A1L22 is Add0~21
+A1L22 = CARRY((down_en & ((count[10]) # (!A1L20))) # (!down_en & (count[10] & !A1L20)));
+
+
+--A1L23 is Add0~22
+A1L23 = (down_en & ((count[11] & (A1L22 & VCC)) # (!count[11] & (!A1L22)))) # (!down_en & ((count[11] & (!A1L22)) # (!count[11] & ((A1L22) # (GND)))));
+
+--A1L24 is Add0~23
+A1L24 = CARRY((down_en & (!count[11] & !A1L22)) # (!down_en & ((!A1L22) # (!count[11]))));
+
+
+--A1L25 is Add0~24
+A1L25 = ((down_en $ (count[12] $ (!A1L24)))) # (GND);
+
+--A1L26 is Add0~25
+A1L26 = CARRY((down_en & ((count[12]) # (!A1L24))) # (!down_en & (count[12] & !A1L24)));
+
+
+--A1L27 is Add0~26
+A1L27 = (down_en & ((count[13] & (A1L26 & VCC)) # (!count[13] & (!A1L26)))) # (!down_en & ((count[13] & (!A1L26)) # (!count[13] & ((A1L26) # (GND)))));
+
+--A1L28 is Add0~27
+A1L28 = CARRY((down_en & (!count[13] & !A1L26)) # (!down_en & ((!A1L26) # (!count[13]))));
+
+
+--A1L29 is Add0~28
+A1L29 = ((down_en $ (count[14] $ (!A1L28)))) # (GND);
+
+--A1L30 is Add0~29
+A1L30 = CARRY((down_en & ((count[14]) # (!A1L28))) # (!down_en & (count[14] & !A1L28)));
+
+
+--A1L31 is Add0~30
+A1L31 = (down_en & ((count[15] & (A1L30 & VCC)) # (!count[15] & (!A1L30)))) # (!down_en & ((count[15] & (!A1L30)) # (!count[15] & ((A1L30) # (GND)))));
+
+--A1L32 is Add0~31
+A1L32 = CARRY((down_en & (!count[15] & !A1L30)) # (!down_en & ((!A1L30) # (!count[15]))));
+
+
+--A1L33 is Add0~32
+A1L33 = ((down_en $ (count[16] $ (!A1L32)))) # (GND);
+
+--A1L34 is Add0~33
+A1L34 = CARRY((down_en & ((count[16]) # (!A1L32))) # (!down_en & (count[16] & !A1L32)));
+
+
+--A1L35 is Add0~34
+A1L35 = (down_en & ((count[17] & (A1L34 & VCC)) # (!count[17] & (!A1L34)))) # (!down_en & ((count[17] & (!A1L34)) # (!count[17] & ((A1L34) # (GND)))));
+
+--A1L36 is Add0~35
+A1L36 = CARRY((down_en & (!count[17] & !A1L34)) # (!down_en & ((!A1L34) # (!count[17]))));
+
+
+--A1L37 is Add0~36
+A1L37 = ((down_en $ (count[18] $ (!A1L36)))) # (GND);
+
+--A1L38 is Add0~37
+A1L38 = CARRY((down_en & ((count[18]) # (!A1L36))) # (!down_en & (count[18] & !A1L36)));
+
+
+--A1L39 is Add0~38
+A1L39 = (down_en & ((count[19] & (A1L38 & VCC)) # (!count[19] & (!A1L38)))) # (!down_en & ((count[19] & (!A1L38)) # (!count[19] & ((A1L38) # (GND)))));
+
+--A1L40 is Add0~39
+A1L40 = CARRY((down_en & (!count[19] & !A1L38)) # (!down_en & ((!A1L38) # (!count[19]))));
+
+
+--A1L41 is Add0~40
+A1L41 = ((down_en $ (count[20] $ (!A1L40)))) # (GND);
+
+--A1L42 is Add0~41
+A1L42 = CARRY((down_en & ((count[20]) # (!A1L40))) # (!down_en & (count[20] & !A1L40)));
+
+
+--A1L43 is Add0~42
+A1L43 = (down_en & ((count[21] & (A1L42 & VCC)) # (!count[21] & (!A1L42)))) # (!down_en & ((count[21] & (!A1L42)) # (!count[21] & ((A1L42) # (GND)))));
+
+--A1L44 is Add0~43
+A1L44 = CARRY((down_en & (!count[21] & !A1L42)) # (!down_en & ((!A1L42) # (!count[21]))));
+
+
+--A1L45 is Add0~44
+A1L45 = ((down_en $ (count[22] $ (!A1L44)))) # (GND);
+
+--A1L46 is Add0~45
+A1L46 = CARRY((down_en & ((count[22]) # (!A1L44))) # (!down_en & (count[22] & !A1L44)));
+
+
+--A1L47 is Add0~46
+A1L47 = (down_en & ((count[23] & (A1L46 & VCC)) # (!count[23] & (!A1L46)))) # (!down_en & ((count[23] & (!A1L46)) # (!count[23] & ((A1L46) # (GND)))));
+
+--A1L48 is Add0~47
+A1L48 = CARRY((down_en & (!count[23] & !A1L46)) # (!down_en & ((!A1L46) # (!count[23]))));
+
+
+--A1L49 is Add0~48
+A1L49 = ((down_en $ (count[24] $ (!A1L48)))) # (GND);
+
+--A1L50 is Add0~49
+A1L50 = CARRY((down_en & ((count[24]) # (!A1L48))) # (!down_en & (count[24] & !A1L48)));
+
+
+--A1L51 is Add0~50
+A1L51 = (down_en & ((count[25] & (A1L50 & VCC)) # (!count[25] & (!A1L50)))) # (!down_en & ((count[25] & (!A1L50)) # (!count[25] & ((A1L50) # (GND)))));
+
+--A1L52 is Add0~51
+A1L52 = CARRY((down_en & (!count[25] & !A1L50)) # (!down_en & ((!A1L50) # (!count[25]))));
+
+
+--A1L53 is Add0~52
+A1L53 = ((down_en $ (count[26] $ (!A1L52)))) # (GND);
+
+--A1L54 is Add0~53
+A1L54 = CARRY((down_en & ((count[26]) # (!A1L52))) # (!down_en & (count[26] & !A1L52)));
+
+
+--A1L55 is Add0~54
+A1L55 = (down_en & ((count[27] & (A1L54 & VCC)) # (!count[27] & (!A1L54)))) # (!down_en & ((count[27] & (!A1L54)) # (!count[27] & ((A1L54) # (GND)))));
+
+--A1L56 is Add0~55
+A1L56 = CARRY((down_en & (!count[27] & !A1L54)) # (!down_en & ((!A1L54) # (!count[27]))));
+
+
+--A1L57 is Add0~56
+A1L57 = ((down_en $ (count[28] $ (!A1L56)))) # (GND);
+
+--A1L58 is Add0~57
+A1L58 = CARRY((down_en & ((count[28]) # (!A1L56))) # (!down_en & (count[28] & !A1L56)));
+
+
+--A1L59 is Add0~58
+A1L59 = (down_en & ((count[29] & (A1L58 & VCC)) # (!count[29] & (!A1L58)))) # (!down_en & ((count[29] & (!A1L58)) # (!count[29] & ((A1L58) # (GND)))));
+
+--A1L60 is Add0~59
+A1L60 = CARRY((down_en & (!count[29] & !A1L58)) # (!down_en & ((!A1L58) # (!count[29]))));
+
+
+--A1L61 is Add0~60
+A1L61 = down_en $ (count[30] $ (!A1L60));
+
+
+--led_out is led_out
+led_out = OUTPUT(counted_to_zero);
+
+
+--q[0] is q[0]
+q[0] = OUTPUT(count[0]);
+
+
+--q[1] is q[1]
+q[1] = OUTPUT(count[1]);
+
+
+--q[2] is q[2]
+q[2] = OUTPUT(A1L74);
+
+
+--q[3] is q[3]
+q[3] = OUTPUT(A1L78);
+
+
+--q[4] is q[4]
+q[4] = OUTPUT(A1L82);
+
+
+--q[5] is q[5]
+q[5] = OUTPUT(A1L86);
+
+
+--counted_to_zero is counted_to_zero
+--register power-up is low
+
+counted_to_zero = DFFEAS(A1L152, clock, !rst,  ,  ,  ,  ,  ,  );
+
+
+--count[0] is count[0]
+--register power-up is low
+
+count[0] = DFFEAS(A1L68, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[1] is count[1]
+--register power-up is low
+
+count[1] = DFFEAS(A1L71, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[26] is count[26]
+--register power-up is low
+
+count[26] = DFFEAS(A1L132, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[25] is count[25]
+--register power-up is low
+
+count[25] = DFFEAS(A1L130, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[24] is count[24]
+--register power-up is low
+
+count[24] = DFFEAS(A1L128, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[23] is count[23]
+--register power-up is low
+
+count[23] = DFFEAS(A1L126, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L142 is counted_to_zero~0
+A1L142 = (!count[26] & (!count[25] & (!count[24] & !count[23])));
+
+
+--count[18] is count[18]
+--register power-up is low
+
+count[18] = DFFEAS(A1L116, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[17] is count[17]
+--register power-up is low
+
+count[17] = DFFEAS(A1L114, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[16] is count[16]
+--register power-up is low
+
+count[16] = DFFEAS(A1L112, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[15] is count[15]
+--register power-up is low
+
+count[15] = DFFEAS(A1L110, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L143 is counted_to_zero~1
+A1L143 = (!count[18] & (!count[17] & (!count[16] & !count[15])));
+
+
+--count[6] is count[6]
+--register power-up is low
+
+count[6] = DFFEAS(A1L92, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[29] is count[29]
+--register power-up is low
+
+count[29] = DFFEAS(A1L138, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[28] is count[28]
+--register power-up is low
+
+count[28] = DFFEAS(A1L136, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[21] is count[21]
+--register power-up is low
+
+count[21] = DFFEAS(A1L122, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L144 is counted_to_zero~2
+A1L144 = (!count[6] & (!count[29] & (!count[28] & !count[21])));
+
+
+--count[14] is count[14]
+--register power-up is low
+
+count[14] = DFFEAS(A1L108, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[13] is count[13]
+--register power-up is low
+
+count[13] = DFFEAS(A1L106, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[12] is count[12]
+--register power-up is low
+
+count[12] = DFFEAS(A1L104, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[11] is count[11]
+--register power-up is low
+
+count[11] = DFFEAS(A1L102, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L145 is counted_to_zero~3
+A1L145 = (!count[14] & (!count[13] & (!count[12] & !count[11])));
+
+
+--count[10] is count[10]
+--register power-up is low
+
+count[10] = DFFEAS(A1L100, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[9] is count[9]
+--register power-up is low
+
+count[9] = DFFEAS(A1L98, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[8] is count[8]
+--register power-up is low
+
+count[8] = DFFEAS(A1L96, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[7] is count[7]
+--register power-up is low
+
+count[7] = DFFEAS(A1L94, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L146 is counted_to_zero~4
+A1L146 = (!count[10] & (!count[9] & (!count[8] & !count[7])));
+
+
+--count[30] is count[30]
+--register power-up is low
+
+count[30] = DFFEAS(A1L140, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[27] is count[27]
+--register power-up is low
+
+count[27] = DFFEAS(A1L134, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[22] is count[22]
+--register power-up is low
+
+count[22] = DFFEAS(A1L124, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[20] is count[20]
+--register power-up is low
+
+count[20] = DFFEAS(A1L120, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--count[19] is count[19]
+--register power-up is low
+
+count[19] = DFFEAS(A1L118, clock, !A1L70,  ,  ,  ,  ,  ,  );
+
+
+--A1L147 is counted_to_zero~5
+A1L147 = (!count[27] & (!count[22] & (!count[20] & !count[19])));
+
+
+--A1L148 is counted_to_zero~6
+A1L148 = (A1L145 & (A1L146 & (!count[30] & A1L147)));
+
+
+--A1L149 is counted_to_zero~7
+A1L149 = (A1L142 & (A1L143 & (A1L144 & A1L148)));
+
+
+--down_en is down_en
+down_en = INPUT();
+
+
+--A1L150 is counted_to_zero~8
+A1L150 = (down_en & (!count[0] & (!count[1] & !A1L74)));
+
+
+--A1L151 is counted_to_zero~9
+A1L151 = (!A1L78 & (!A1L82 & !A1L86));
+
+
+--A1L152 is counted_to_zero~10
+A1L152 = (counted_to_zero) # ((A1L149 & (A1L150 & A1L151)));
+
+
+--rst is rst
+rst = INPUT();
+
+
+--A1L68 is count[0]~14
+A1L68 = (A1L1 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L70 is count[1]~16
+A1L70 = (rst) # (A1L157);
+
+
+--A1L71 is count[1]~17
+A1L71 = (A1L3 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L77Q is count[2]~_emulated
+--register power-up is low
+
+A1L77Q = DFFEAS(A1L75, clock, !A1L72,  ,  ,  ,  ,  ,  );
+
+
+--A1L74 is count[2]~2
+A1L74 = (!A1L88 & ((A1L157) # (A1L77Q $ (A1L73))));
+
+
+--A1L81Q is count[3]~_emulated
+--register power-up is low
+
+A1L81Q = DFFEAS(A1L79, clock, !A1L72,  ,  ,  ,  ,  ,  );
+
+
+--A1L78 is count[3]~4
+A1L78 = (!A1L88 & ((A1L157) # (A1L81Q $ (A1L73))));
+
+
+--A1L85Q is count[4]~_emulated
+--register power-up is low
+
+A1L85Q = DFFEAS(A1L83, clock, !A1L72,  ,  ,  ,  ,  ,  );
+
+
+--A1L82 is count[4]~6
+A1L82 = (!A1L88 & ((A1L157) # (A1L85Q $ (A1L73))));
+
+
+--A1L90Q is count[5]~_emulated
+--register power-up is low
+
+A1L90Q = DFFEAS(A1L87, clock, !A1L72,  ,  ,  ,  ,  ,  );
+
+
+--A1L86 is count[5]~8
+A1L86 = (!A1L88 & ((A1L157) # (A1L90Q $ (A1L73))));
+
+
+--A1L132 is count[26]~19
+A1L132 = (A1L53 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L130 is count[25]~20
+A1L130 = (A1L51 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L128 is count[24]~21
+A1L128 = (A1L49 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L126 is count[23]~22
+A1L126 = (A1L47 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L116 is count[18]~23
+A1L116 = (A1L37 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L114 is count[17]~24
+A1L114 = (A1L35 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L112 is count[16]~25
+A1L112 = (A1L33 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L110 is count[15]~26
+A1L110 = (A1L31 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L92 is count[6]~27
+A1L92 = (A1L13 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L138 is count[29]~28
+A1L138 = (A1L59 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L136 is count[28]~29
+A1L136 = (A1L57 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L122 is count[21]~30
+A1L122 = (A1L43 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L108 is count[14]~31
+A1L108 = (A1L29 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L106 is count[13]~32
+A1L106 = (A1L27 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L104 is count[12]~33
+A1L104 = (A1L25 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L102 is count[11]~34
+A1L102 = (A1L23 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L100 is count[10]~35
+A1L100 = (A1L21 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L98 is count[9]~36
+A1L98 = (A1L19 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L96 is count[8]~37
+A1L96 = (A1L17 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L94 is count[7]~38
+A1L94 = (A1L15 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L140 is count[30]~39
+A1L140 = (A1L61 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L134 is count[27]~40
+A1L134 = (A1L55 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L124 is count[22]~41
+A1L124 = (A1L45 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L120 is count[20]~42
+A1L120 = (A1L41 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L118 is count[19]~43
+A1L118 = (A1L39 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--btn_press is btn_press
+btn_press = INPUT();
+
+
+--clk is clk
+clk = INPUT();
+
+
+--clock is clock
+clock = LCELL((down_en & ((clk))) # (!down_en & (btn_press)));
+
+
+--A1L155 is LessThan1~0
+A1L155 = (A1L78 & (A1L74 & ((count[0]) # (count[1]))));
+
+
+--A1L156 is LessThan1~1
+A1L156 = (A1L82 & A1L86);
+
+
+--A1L157 is process_0~0
+A1L157 = (!down_en & (((A1L155 & A1L156)) # (!A1L149)));
+
+
+--A1L76 is count[2]~44
+A1L76 = (A1L5 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L75 is count[2]~3
+A1L75 = A1L76 $ (A1L73);
+
+
+--A1L72 is count[2]~0
+A1L72 = (A1L88) # (A1L157);
+
+
+--A1L88 is count[5]~45
+A1L88 = (rst & !A1L157);
+
+
+--A1L80 is count[3]~46
+A1L80 = (A1L7 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L79 is count[3]~5
+A1L79 = A1L80 $ (A1L73);
+
+
+--A1L84 is count[4]~47
+A1L84 = (A1L9 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L83 is count[4]~7
+A1L83 = A1L84 $ (A1L73);
+
+
+--A1L89 is count[5]~48
+A1L89 = (A1L11 & (((!A1L151) # (!A1L150)) # (!A1L149)));
+
+
+--A1L87 is count[5]~9
+A1L87 = A1L89 $ (A1L73);
+
+
+--A1L73 is count[2]~1
+A1L73 = (!A1L88 & ((A1L73) # (A1L157)));
+
+

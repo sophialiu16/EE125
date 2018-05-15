@@ -1,0 +1,753 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L1 is Add0~0 at LCCOMB_X21_Y22_N2
+A1L1 = count[0] $ (VCC);
+
+--A1L2 is Add0~1 at LCCOMB_X21_Y22_N2
+A1L2 = CARRY(count[0]);
+
+
+--A1L3 is Add0~2 at LCCOMB_X21_Y22_N4
+A1L3 = (A1L158 & ((count[1] & (A1L2 & VCC)) # (!count[1] & (!A1L2)))) # (!A1L158 & ((count[1] & (!A1L2)) # (!count[1] & ((A1L2) # (GND)))));
+
+--A1L4 is Add0~3 at LCCOMB_X21_Y22_N4
+A1L4 = CARRY((A1L158 & (!count[1] & !A1L2)) # (!A1L158 & ((!A1L2) # (!count[1]))));
+
+
+--A1L5 is Add0~4 at LCCOMB_X21_Y22_N6
+A1L5 = ((A1L78 $ (A1L158 $ (!A1L4)))) # (GND);
+
+--A1L6 is Add0~5 at LCCOMB_X21_Y22_N6
+A1L6 = CARRY((A1L78 & ((A1L158) # (!A1L4))) # (!A1L78 & (A1L158 & !A1L4)));
+
+
+--A1L7 is Add0~6 at LCCOMB_X21_Y22_N8
+A1L7 = (A1L82 & ((A1L158 & (A1L6 & VCC)) # (!A1L158 & (!A1L6)))) # (!A1L82 & ((A1L158 & (!A1L6)) # (!A1L158 & ((A1L6) # (GND)))));
+
+--A1L8 is Add0~7 at LCCOMB_X21_Y22_N8
+A1L8 = CARRY((A1L82 & (!A1L158 & !A1L6)) # (!A1L82 & ((!A1L6) # (!A1L158))));
+
+
+--A1L9 is Add0~8 at LCCOMB_X21_Y22_N10
+A1L9 = ((A1L158 $ (A1L86 $ (!A1L8)))) # (GND);
+
+--A1L10 is Add0~9 at LCCOMB_X21_Y22_N10
+A1L10 = CARRY((A1L158 & ((A1L86) # (!A1L8))) # (!A1L158 & (A1L86 & !A1L8)));
+
+
+--A1L11 is Add0~10 at LCCOMB_X21_Y22_N12
+A1L11 = (A1L90 & ((A1L158 & (A1L10 & VCC)) # (!A1L158 & (!A1L10)))) # (!A1L90 & ((A1L158 & (!A1L10)) # (!A1L158 & ((A1L10) # (GND)))));
+
+--A1L12 is Add0~11 at LCCOMB_X21_Y22_N12
+A1L12 = CARRY((A1L90 & (!A1L158 & !A1L10)) # (!A1L90 & ((!A1L10) # (!A1L158))));
+
+
+--A1L13 is Add0~12 at LCCOMB_X21_Y22_N14
+A1L13 = ((A1L158 $ (count[6] $ (!A1L12)))) # (GND);
+
+--A1L14 is Add0~13 at LCCOMB_X21_Y22_N14
+A1L14 = CARRY((A1L158 & ((count[6]) # (!A1L12))) # (!A1L158 & (count[6] & !A1L12)));
+
+
+--A1L15 is Add0~14 at LCCOMB_X21_Y22_N16
+A1L15 = (count[7] & ((A1L158 & (A1L14 & VCC)) # (!A1L158 & (!A1L14)))) # (!count[7] & ((A1L158 & (!A1L14)) # (!A1L158 & ((A1L14) # (GND)))));
+
+--A1L16 is Add0~15 at LCCOMB_X21_Y22_N16
+A1L16 = CARRY((count[7] & (!A1L158 & !A1L14)) # (!count[7] & ((!A1L14) # (!A1L158))));
+
+
+--A1L17 is Add0~16 at LCCOMB_X21_Y22_N18
+A1L17 = ((A1L158 $ (count[8] $ (!A1L16)))) # (GND);
+
+--A1L18 is Add0~17 at LCCOMB_X21_Y22_N18
+A1L18 = CARRY((A1L158 & ((count[8]) # (!A1L16))) # (!A1L158 & (count[8] & !A1L16)));
+
+
+--A1L19 is Add0~18 at LCCOMB_X21_Y22_N20
+A1L19 = (count[9] & ((A1L158 & (A1L18 & VCC)) # (!A1L158 & (!A1L18)))) # (!count[9] & ((A1L158 & (!A1L18)) # (!A1L158 & ((A1L18) # (GND)))));
+
+--A1L20 is Add0~19 at LCCOMB_X21_Y22_N20
+A1L20 = CARRY((count[9] & (!A1L158 & !A1L18)) # (!count[9] & ((!A1L18) # (!A1L158))));
+
+
+--A1L21 is Add0~20 at LCCOMB_X21_Y22_N22
+A1L21 = ((count[10] $ (A1L158 $ (!A1L20)))) # (GND);
+
+--A1L22 is Add0~21 at LCCOMB_X21_Y22_N22
+A1L22 = CARRY((count[10] & ((A1L158) # (!A1L20))) # (!count[10] & (A1L158 & !A1L20)));
+
+
+--A1L23 is Add0~22 at LCCOMB_X21_Y22_N24
+A1L23 = (count[11] & ((A1L158 & (A1L22 & VCC)) # (!A1L158 & (!A1L22)))) # (!count[11] & ((A1L158 & (!A1L22)) # (!A1L158 & ((A1L22) # (GND)))));
+
+--A1L24 is Add0~23 at LCCOMB_X21_Y22_N24
+A1L24 = CARRY((count[11] & (!A1L158 & !A1L22)) # (!count[11] & ((!A1L22) # (!A1L158))));
+
+
+--A1L25 is Add0~24 at LCCOMB_X21_Y22_N26
+A1L25 = ((A1L158 $ (count[12] $ (!A1L24)))) # (GND);
+
+--A1L26 is Add0~25 at LCCOMB_X21_Y22_N26
+A1L26 = CARRY((A1L158 & ((count[12]) # (!A1L24))) # (!A1L158 & (count[12] & !A1L24)));
+
+
+--A1L27 is Add0~26 at LCCOMB_X21_Y22_N28
+A1L27 = (A1L158 & ((count[13] & (A1L26 & VCC)) # (!count[13] & (!A1L26)))) # (!A1L158 & ((count[13] & (!A1L26)) # (!count[13] & ((A1L26) # (GND)))));
+
+--A1L28 is Add0~27 at LCCOMB_X21_Y22_N28
+A1L28 = CARRY((A1L158 & (!count[13] & !A1L26)) # (!A1L158 & ((!A1L26) # (!count[13]))));
+
+
+--A1L29 is Add0~28 at LCCOMB_X21_Y22_N30
+A1L29 = ((A1L158 $ (count[14] $ (!A1L28)))) # (GND);
+
+--A1L30 is Add0~29 at LCCOMB_X21_Y22_N30
+A1L30 = CARRY((A1L158 & ((count[14]) # (!A1L28))) # (!A1L158 & (count[14] & !A1L28)));
+
+
+--A1L31 is Add0~30 at LCCOMB_X21_Y21_N0
+A1L31 = (count[15] & ((A1L158 & (A1L30 & VCC)) # (!A1L158 & (!A1L30)))) # (!count[15] & ((A1L158 & (!A1L30)) # (!A1L158 & ((A1L30) # (GND)))));
+
+--A1L32 is Add0~31 at LCCOMB_X21_Y21_N0
+A1L32 = CARRY((count[15] & (!A1L158 & !A1L30)) # (!count[15] & ((!A1L30) # (!A1L158))));
+
+
+--A1L33 is Add0~32 at LCCOMB_X21_Y21_N2
+A1L33 = ((count[16] $ (A1L158 $ (!A1L32)))) # (GND);
+
+--A1L34 is Add0~33 at LCCOMB_X21_Y21_N2
+A1L34 = CARRY((count[16] & ((A1L158) # (!A1L32))) # (!count[16] & (A1L158 & !A1L32)));
+
+
+--A1L35 is Add0~34 at LCCOMB_X21_Y21_N4
+A1L35 = (count[17] & ((A1L158 & (A1L34 & VCC)) # (!A1L158 & (!A1L34)))) # (!count[17] & ((A1L158 & (!A1L34)) # (!A1L158 & ((A1L34) # (GND)))));
+
+--A1L36 is Add0~35 at LCCOMB_X21_Y21_N4
+A1L36 = CARRY((count[17] & (!A1L158 & !A1L34)) # (!count[17] & ((!A1L34) # (!A1L158))));
+
+
+--A1L37 is Add0~36 at LCCOMB_X21_Y21_N6
+A1L37 = ((A1L158 $ (count[18] $ (!A1L36)))) # (GND);
+
+--A1L38 is Add0~37 at LCCOMB_X21_Y21_N6
+A1L38 = CARRY((A1L158 & ((count[18]) # (!A1L36))) # (!A1L158 & (count[18] & !A1L36)));
+
+
+--A1L39 is Add0~38 at LCCOMB_X21_Y21_N8
+A1L39 = (A1L158 & ((count[19] & (A1L38 & VCC)) # (!count[19] & (!A1L38)))) # (!A1L158 & ((count[19] & (!A1L38)) # (!count[19] & ((A1L38) # (GND)))));
+
+--A1L40 is Add0~39 at LCCOMB_X21_Y21_N8
+A1L40 = CARRY((A1L158 & (!count[19] & !A1L38)) # (!A1L158 & ((!A1L38) # (!count[19]))));
+
+
+--A1L41 is Add0~40 at LCCOMB_X21_Y21_N10
+A1L41 = ((A1L158 $ (count[20] $ (!A1L40)))) # (GND);
+
+--A1L42 is Add0~41 at LCCOMB_X21_Y21_N10
+A1L42 = CARRY((A1L158 & ((count[20]) # (!A1L40))) # (!A1L158 & (count[20] & !A1L40)));
+
+
+--A1L43 is Add0~42 at LCCOMB_X21_Y21_N12
+A1L43 = (count[21] & ((A1L158 & (A1L42 & VCC)) # (!A1L158 & (!A1L42)))) # (!count[21] & ((A1L158 & (!A1L42)) # (!A1L158 & ((A1L42) # (GND)))));
+
+--A1L44 is Add0~43 at LCCOMB_X21_Y21_N12
+A1L44 = CARRY((count[21] & (!A1L158 & !A1L42)) # (!count[21] & ((!A1L42) # (!A1L158))));
+
+
+--A1L45 is Add0~44 at LCCOMB_X21_Y21_N14
+A1L45 = ((A1L158 $ (count[22] $ (!A1L44)))) # (GND);
+
+--A1L46 is Add0~45 at LCCOMB_X21_Y21_N14
+A1L46 = CARRY((A1L158 & ((count[22]) # (!A1L44))) # (!A1L158 & (count[22] & !A1L44)));
+
+
+--A1L47 is Add0~46 at LCCOMB_X21_Y21_N16
+A1L47 = (A1L158 & ((count[23] & (A1L46 & VCC)) # (!count[23] & (!A1L46)))) # (!A1L158 & ((count[23] & (!A1L46)) # (!count[23] & ((A1L46) # (GND)))));
+
+--A1L48 is Add0~47 at LCCOMB_X21_Y21_N16
+A1L48 = CARRY((A1L158 & (!count[23] & !A1L46)) # (!A1L158 & ((!A1L46) # (!count[23]))));
+
+
+--A1L49 is Add0~48 at LCCOMB_X21_Y21_N18
+A1L49 = ((A1L158 $ (count[24] $ (!A1L48)))) # (GND);
+
+--A1L50 is Add0~49 at LCCOMB_X21_Y21_N18
+A1L50 = CARRY((A1L158 & ((count[24]) # (!A1L48))) # (!A1L158 & (count[24] & !A1L48)));
+
+
+--A1L51 is Add0~50 at LCCOMB_X21_Y21_N20
+A1L51 = (count[25] & ((A1L158 & (A1L50 & VCC)) # (!A1L158 & (!A1L50)))) # (!count[25] & ((A1L158 & (!A1L50)) # (!A1L158 & ((A1L50) # (GND)))));
+
+--A1L52 is Add0~51 at LCCOMB_X21_Y21_N20
+A1L52 = CARRY((count[25] & (!A1L158 & !A1L50)) # (!count[25] & ((!A1L50) # (!A1L158))));
+
+
+--A1L53 is Add0~52 at LCCOMB_X21_Y21_N22
+A1L53 = ((count[26] $ (A1L158 $ (!A1L52)))) # (GND);
+
+--A1L54 is Add0~53 at LCCOMB_X21_Y21_N22
+A1L54 = CARRY((count[26] & ((A1L158) # (!A1L52))) # (!count[26] & (A1L158 & !A1L52)));
+
+
+--A1L55 is Add0~54 at LCCOMB_X21_Y21_N24
+A1L55 = (A1L158 & ((count[27] & (A1L54 & VCC)) # (!count[27] & (!A1L54)))) # (!A1L158 & ((count[27] & (!A1L54)) # (!count[27] & ((A1L54) # (GND)))));
+
+--A1L56 is Add0~55 at LCCOMB_X21_Y21_N24
+A1L56 = CARRY((A1L158 & (!count[27] & !A1L54)) # (!A1L158 & ((!A1L54) # (!count[27]))));
+
+
+--A1L57 is Add0~56 at LCCOMB_X21_Y21_N26
+A1L57 = ((A1L158 $ (count[28] $ (!A1L56)))) # (GND);
+
+--A1L58 is Add0~57 at LCCOMB_X21_Y21_N26
+A1L58 = CARRY((A1L158 & ((count[28]) # (!A1L56))) # (!A1L158 & (count[28] & !A1L56)));
+
+
+--A1L59 is Add0~58 at LCCOMB_X21_Y21_N28
+A1L59 = (count[29] & ((A1L158 & (A1L58 & VCC)) # (!A1L158 & (!A1L58)))) # (!count[29] & ((A1L158 & (!A1L58)) # (!A1L158 & ((A1L58) # (GND)))));
+
+--A1L60 is Add0~59 at LCCOMB_X21_Y21_N28
+A1L60 = CARRY((count[29] & (!A1L158 & !A1L58)) # (!count[29] & ((!A1L58) # (!A1L158))));
+
+
+--A1L61 is Add0~60 at LCCOMB_X21_Y21_N30
+A1L61 = count[30] $ (A1L60 $ (!A1L158));
+
+
+--counted_to_zero is counted_to_zero at FF_X23_Y22_N25
+--register power-up is low
+
+counted_to_zero = DFFEAS(A1L156, GLOBAL(A1L69), !A1L178,  ,  ,  ,  ,  ,  );
+
+
+--count[0] is count[0] at FF_X24_Y21_N17
+--register power-up is low
+
+count[0] = DFFEAS(A1L72, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[1] is count[1] at FF_X23_Y21_N25
+--register power-up is low
+
+count[1] = DFFEAS(A1L75, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[26] is count[26] at FF_X23_Y21_N27
+--register power-up is low
+
+count[26] = DFFEAS(A1L136, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[25] is count[25] at FF_X23_Y21_N5
+--register power-up is low
+
+count[25] = DFFEAS(A1L134, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[24] is count[24] at FF_X23_Y21_N23
+--register power-up is low
+
+count[24] = DFFEAS(A1L132, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[23] is count[23] at FF_X23_Y21_N13
+--register power-up is low
+
+count[23] = DFFEAS(A1L130, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L146 is counted_to_zero~0 at LCCOMB_X23_Y21_N6
+A1L146 = (!count[23] & (!count[25] & (!count[26] & !count[24])));
+
+
+--count[18] is count[18] at FF_X24_Y21_N27
+--register power-up is low
+
+count[18] = DFFEAS(A1L120, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[17] is count[17] at FF_X24_Y21_N25
+--register power-up is low
+
+count[17] = DFFEAS(A1L118, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[16] is count[16] at FF_X23_Y21_N21
+--register power-up is low
+
+count[16] = DFFEAS(A1L116, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[15] is count[15] at FF_X24_Y21_N31
+--register power-up is low
+
+count[15] = DFFEAS(A1L114, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L147 is counted_to_zero~1 at LCCOMB_X24_Y21_N8
+A1L147 = (!count[15] & (!count[17] & (!count[18] & !count[16])));
+
+
+--count[6] is count[6] at FF_X23_Y21_N3
+--register power-up is low
+
+count[6] = DFFEAS(A1L96, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[29] is count[29] at FF_X23_Y21_N9
+--register power-up is low
+
+count[29] = DFFEAS(A1L142, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[28] is count[28] at FF_X23_Y21_N31
+--register power-up is low
+
+count[28] = DFFEAS(A1L140, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[21] is count[21] at FF_X23_Y21_N1
+--register power-up is low
+
+count[21] = DFFEAS(A1L126, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L148 is counted_to_zero~2 at LCCOMB_X23_Y21_N14
+A1L148 = (!count[28] & (!count[6] & (!count[29] & !count[21])));
+
+
+--count[14] is count[14] at FF_X22_Y21_N5
+--register power-up is low
+
+count[14] = DFFEAS(A1L112, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[13] is count[13] at FF_X23_Y21_N17
+--register power-up is low
+
+count[13] = DFFEAS(A1L110, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[12] is count[12] at FF_X22_Y21_N23
+--register power-up is low
+
+count[12] = DFFEAS(A1L108, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[11] is count[11] at FF_X22_Y21_N29
+--register power-up is low
+
+count[11] = DFFEAS(A1L106, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L149 is counted_to_zero~3 at LCCOMB_X22_Y21_N2
+A1L149 = (!count[12] & (!count[11] & (!count[14] & !count[13])));
+
+
+--count[10] is count[10] at FF_X22_Y21_N17
+--register power-up is low
+
+count[10] = DFFEAS(A1L104, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[9] is count[9] at FF_X22_Y21_N31
+--register power-up is low
+
+count[9] = DFFEAS(A1L102, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[8] is count[8] at FF_X22_Y21_N1
+--register power-up is low
+
+count[8] = DFFEAS(A1L100, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[7] is count[7] at FF_X22_Y21_N7
+--register power-up is low
+
+count[7] = DFFEAS(A1L98, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L150 is counted_to_zero~4 at LCCOMB_X22_Y21_N12
+A1L150 = (!count[7] & (!count[8] & (!count[9] & !count[10])));
+
+
+--count[30] is count[30] at FF_X22_Y21_N19
+--register power-up is low
+
+count[30] = DFFEAS(A1L144, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[27] is count[27] at FF_X22_Y21_N21
+--register power-up is low
+
+count[27] = DFFEAS(A1L138, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[22] is count[22] at FF_X22_Y21_N27
+--register power-up is low
+
+count[22] = DFFEAS(A1L128, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[20] is count[20] at FF_X22_Y21_N25
+--register power-up is low
+
+count[20] = DFFEAS(A1L124, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--count[19] is count[19] at FF_X22_Y21_N15
+--register power-up is low
+
+count[19] = DFFEAS(A1L122, GLOBAL(A1L69), !A1L74,  ,  ,  ,  ,  ,  );
+
+
+--A1L151 is counted_to_zero~5 at LCCOMB_X22_Y21_N8
+A1L151 = (!count[22] & (!count[27] & (!count[19] & !count[20])));
+
+
+--A1L152 is counted_to_zero~6 at LCCOMB_X22_Y21_N10
+A1L152 = (!count[30] & (A1L149 & (A1L151 & A1L150)));
+
+
+--A1L153 is counted_to_zero~7 at LCCOMB_X23_Y21_N10
+A1L153 = (A1L146 & (A1L148 & (A1L147 & A1L152)));
+
+
+--A1L154 is counted_to_zero~8 at LCCOMB_X24_Y21_N22
+A1L154 = (A1L158 & (!count[0] & (!A1L78 & !count[1])));
+
+
+--A1L155 is counted_to_zero~9 at LCCOMB_X22_Y22_N28
+A1L155 = (!A1L90 & (!A1L82 & !A1L86));
+
+
+--A1L156 is counted_to_zero~10 at LCCOMB_X23_Y22_N24
+A1L156 = (counted_to_zero) # ((A1L153 & (A1L155 & A1L154)));
+
+
+--A1L72 is count[0]~14 at LCCOMB_X24_Y21_N16
+A1L72 = (A1L1 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L74 is count[1]~16 at LCCOMB_X23_Y21_N28
+A1L74 = (A1L178) # (A1L163);
+
+
+--A1L75 is count[1]~17 at LCCOMB_X23_Y21_N24
+A1L75 = (A1L3 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L81Q is count[2]~_emulated at FF_X22_Y22_N11
+--register power-up is low
+
+A1L81Q = DFFEAS(A1L79, GLOBAL(A1L69), !A1L76,  ,  ,  ,  ,  ,  );
+
+
+--A1L78 is count[2]~2 at LCCOMB_X22_Y22_N20
+A1L78 = (!A1L92 & ((A1L163) # (A1L77 $ (A1L81Q))));
+
+
+--A1L85Q is count[3]~_emulated at FF_X22_Y22_N19
+--register power-up is low
+
+A1L85Q = DFFEAS(A1L83, GLOBAL(A1L69), !A1L76,  ,  ,  ,  ,  ,  );
+
+
+--A1L82 is count[3]~4 at LCCOMB_X22_Y22_N4
+A1L82 = (!A1L92 & ((A1L163) # (A1L77 $ (A1L85Q))));
+
+
+--A1L89Q is count[4]~_emulated at FF_X22_Y22_N7
+--register power-up is low
+
+A1L89Q = DFFEAS(A1L87, GLOBAL(A1L69), !A1L76,  ,  ,  ,  ,  ,  );
+
+
+--A1L86 is count[4]~6 at LCCOMB_X21_Y22_N0
+A1L86 = (!A1L92 & ((A1L163) # (A1L77 $ (A1L89Q))));
+
+
+--A1L94Q is count[5]~_emulated at FF_X22_Y22_N25
+--register power-up is low
+
+A1L94Q = DFFEAS(A1L91, GLOBAL(A1L69), !A1L76,  ,  ,  ,  ,  ,  );
+
+
+--A1L90 is count[5]~8 at LCCOMB_X22_Y22_N30
+A1L90 = (!A1L92 & ((A1L163) # (A1L77 $ (A1L94Q))));
+
+
+--A1L136 is count[26]~19 at LCCOMB_X23_Y21_N26
+A1L136 = (A1L53 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L134 is count[25]~20 at LCCOMB_X23_Y21_N4
+A1L134 = (A1L51 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L132 is count[24]~21 at LCCOMB_X23_Y21_N22
+A1L132 = (A1L49 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L130 is count[23]~22 at LCCOMB_X23_Y21_N12
+A1L130 = (A1L47 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L120 is count[18]~23 at LCCOMB_X24_Y21_N26
+A1L120 = (A1L37 & (((!A1L154) # (!A1L155)) # (!A1L153)));
+
+
+--A1L118 is count[17]~24 at LCCOMB_X24_Y21_N24
+A1L118 = (A1L35 & (((!A1L153) # (!A1L155)) # (!A1L154)));
+
+
+--A1L116 is count[16]~25 at LCCOMB_X23_Y21_N20
+A1L116 = (A1L33 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L114 is count[15]~26 at LCCOMB_X24_Y21_N30
+A1L114 = (A1L31 & (((!A1L154) # (!A1L155)) # (!A1L153)));
+
+
+--A1L96 is count[6]~27 at LCCOMB_X23_Y21_N2
+A1L96 = (A1L13 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L142 is count[29]~28 at LCCOMB_X23_Y21_N8
+A1L142 = (A1L59 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L140 is count[28]~29 at LCCOMB_X23_Y21_N30
+A1L140 = (A1L57 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L126 is count[21]~30 at LCCOMB_X23_Y21_N0
+A1L126 = (A1L43 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L112 is count[14]~31 at LCCOMB_X22_Y21_N4
+A1L112 = (A1L29 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L110 is count[13]~32 at LCCOMB_X23_Y21_N16
+A1L110 = (A1L27 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L108 is count[12]~33 at LCCOMB_X22_Y21_N22
+A1L108 = (A1L25 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L106 is count[11]~34 at LCCOMB_X22_Y21_N28
+A1L106 = (A1L23 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L104 is count[10]~35 at LCCOMB_X22_Y21_N16
+A1L104 = (A1L21 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L102 is count[9]~36 at LCCOMB_X22_Y21_N30
+A1L102 = (A1L19 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L100 is count[8]~37 at LCCOMB_X22_Y21_N0
+A1L100 = (A1L17 & (((!A1L154) # (!A1L155)) # (!A1L153)));
+
+
+--A1L98 is count[7]~38 at LCCOMB_X22_Y21_N6
+A1L98 = (A1L15 & (((!A1L154) # (!A1L153)) # (!A1L155)));
+
+
+--A1L144 is count[30]~39 at LCCOMB_X22_Y21_N18
+A1L144 = (A1L61 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L138 is count[27]~40 at LCCOMB_X22_Y21_N20
+A1L138 = (A1L55 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L128 is count[22]~41 at LCCOMB_X22_Y21_N26
+A1L128 = (A1L45 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L124 is count[20]~42 at LCCOMB_X22_Y21_N24
+A1L124 = (A1L41 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--A1L122 is count[19]~43 at LCCOMB_X22_Y21_N14
+A1L122 = (A1L39 & (((!A1L155) # (!A1L153)) # (!A1L154)));
+
+
+--clock is clock at LCCOMB_X25_Y20_N20
+clock = LCELL((A1L158 & (A1L67)) # (!A1L158 & ((A1L65))));
+
+
+--A1L161 is LessThan1~0 at LCCOMB_X24_Y21_N28
+A1L161 = (A1L78 & (A1L82 & ((count[0]) # (count[1]))));
+
+
+--A1L162 is LessThan1~1 at LCCOMB_X22_Y22_N12
+A1L162 = (A1L86 & A1L90);
+
+
+--A1L163 is process_0~0 at LCCOMB_X23_Y21_N18
+A1L163 = (!A1L158 & (((A1L161 & A1L162)) # (!A1L153)));
+
+
+--A1L80 is count[2]~44 at LCCOMB_X22_Y22_N14
+A1L80 = (A1L5 & (((!A1L155) # (!A1L154)) # (!A1L153)));
+
+
+--A1L79 is count[2]~3 at LCCOMB_X22_Y22_N10
+A1L79 = A1L80 $ (A1L77);
+
+
+--A1L76 is count[2]~0 at LCCOMB_X22_Y22_N8
+A1L76 = (A1L92) # (A1L163);
+
+
+--A1L92 is count[5]~45 at LCCOMB_X22_Y22_N26
+A1L92 = (!A1L163 & A1L178);
+
+
+--A1L84 is count[3]~46 at LCCOMB_X22_Y22_N0
+A1L84 = (A1L7 & (((!A1L153) # (!A1L154)) # (!A1L155)));
+
+
+--A1L83 is count[3]~5 at LCCOMB_X22_Y22_N18
+A1L83 = A1L77 $ (A1L84);
+
+
+--A1L88 is count[4]~47 at LCCOMB_X22_Y22_N22
+A1L88 = (A1L9 & (((!A1L154) # (!A1L155)) # (!A1L153)));
+
+
+--A1L87 is count[4]~7 at LCCOMB_X22_Y22_N6
+A1L87 = A1L88 $ (A1L77);
+
+
+--A1L93 is count[5]~48 at LCCOMB_X22_Y22_N16
+A1L93 = (A1L11 & (((!A1L154) # (!A1L155)) # (!A1L153)));
+
+
+--A1L91 is count[5]~9 at LCCOMB_X22_Y22_N24
+A1L91 = A1L77 $ (A1L93);
+
+
+--A1L77 is count[2]~1 at LCCOMB_X22_Y22_N2
+A1L77 = (!A1L92 & ((A1L163) # (A1L77)));
+
+
+--A1L160 is led_out~output at IOOBUF_X25_Y24_N2
+A1L160 = OUTPUT_BUFFER.O(.I(counted_to_zero), , , , , , , , , , , , , , , , , );
+
+
+--led_out is led_out at PIN_A12
+led_out = OUTPUT();
+
+
+--A1L166 is q[0]~output at IOOBUF_X21_Y24_N2
+A1L166 = OUTPUT_BUFFER.O(.I(count[0]), , , , , , , , , , , , , , , , , );
+
+
+--q[0] is q[0] at PIN_A15
+q[0] = OUTPUT();
+
+
+--A1L168 is q[1]~output at IOOBUF_X23_Y24_N2
+A1L168 = OUTPUT_BUFFER.O(.I(count[1]), , , , , , , , , , , , , , , , , );
+
+
+--q[1] is q[1] at PIN_C11
+q[1] = OUTPUT();
+
+
+--A1L170 is q[2]~output at IOOBUF_X23_Y24_N9
+A1L170 = OUTPUT_BUFFER.O(.I(A1L78), , , , , , , , , , , , , , , , , );
+
+
+--q[2] is q[2] at PIN_F10
+q[2] = OUTPUT();
+
+
+--A1L172 is q[3]~output at IOOBUF_X23_Y24_N16
+A1L172 = OUTPUT_BUFFER.O(.I(A1L82), , , , , , , , , , , , , , , , , );
+
+
+--q[3] is q[3] at PIN_F9
+q[3] = OUTPUT();
+
+
+--A1L174 is q[4]~output at IOOBUF_X21_Y24_N16
+A1L174 = OUTPUT_BUFFER.O(.I(A1L86), , , , , , , , , , , , , , , , , );
+
+
+--q[4] is q[4] at PIN_B10
+q[4] = OUTPUT();
+
+
+--A1L176 is q[5]~output at IOOBUF_X21_Y24_N9
+A1L176 = OUTPUT_BUFFER.O(.I(A1L90), , , , , , , , , , , , , , , , , );
+
+
+--q[5] is q[5] at PIN_A10
+q[5] = OUTPUT();
+
+
+--A1L158 is down_en~input at IOIBUF_X25_Y24_N8
+A1L158 = INPUT_BUFFER(.I(down_en), );
+
+
+--down_en is down_en at PIN_B12
+down_en = INPUT();
+
+
+--A1L178 is rst~input at IOIBUF_X23_Y0_N8
+A1L178 = INPUT_BUFFER(.I(rst), );
+
+
+--rst is rst at PIN_T11
+rst = INPUT();
+
+
+--A1L65 is btn_press~input at IOIBUF_X25_Y24_N15
+A1L65 = INPUT_BUFFER(.I(btn_press), );
+
+
+--btn_press is btn_press at PIN_A11
+btn_press = INPUT();
+
+
+--A1L67 is clk~input at IOIBUF_X25_Y24_N22
+A1L67 = INPUT_BUFFER(.I(clk), );
+
+
+--clk is clk at PIN_B11
+clk = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+
+--A1L69 is clock~clkctrl at CLKCTRL_G6
+A1L69 = cycloneiii_clkctrl(.INCLK[0] = clock) WITH (clock_type = "Global Clock", ena_register_mode = "none");
+
+
