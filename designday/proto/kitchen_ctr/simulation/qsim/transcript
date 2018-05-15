@@ -50,7 +50,7 @@
 # ERROR! Vector Mismatch for output port q[5] :: @time = 1320000.000 ps
 #      Expected value = 000000
 #      Real value = 100000
-# ERROR! Vector Mismatch for output port led_out :: @time = 5080000.000 ps
+# ERROR! Vector Mismatch for output port led_out :: @time = 3400000.000 ps
 #      Expected value = 0
 #      Real value = 1
 #           7 mismatched vectors : Simulation failed !

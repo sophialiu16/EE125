@@ -1,5 +1,5 @@
 EDA Netlist Writer report for kitchen_ctr
-Mon May 14 18:16:43 2018
+Mon May 14 18:57:53 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon May 14 18:16:43 2018 ;
+; EDA Netlist Writer Status ; Successful - Mon May 14 18:57:53 2018 ;
 ; Revision Name             ; kitchen_ctr                           ;
 ; Top-level Entity Name     ; kitchen_ctr                           ;
 ; Family                    ; Cyclone III                           ;
@@ -101,7 +101,7 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Mon May 14 18:16:39 2018
+    Info: Processing started: Mon May 14 18:57:51 2018
 Info: Command: quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/altera/13.1/projects/designday/kitchen_ctr/simulation/qsim/ kitchen_ctr -c kitchen_ctr
 Info (204019): Generated file kitchen_ctr_6_1200mv_85c_slow.vo in folder "C:/altera/13.1/projects/designday/kitchen_ctr/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file kitchen_ctr_6_1200mv_0c_slow.vo in folder "C:/altera/13.1/projects/designday/kitchen_ctr/simulation/qsim//" for EDA simulation tool
@@ -113,8 +113,8 @@ Info (204019): Generated file kitchen_ctr_min_1200mv_0c_v_fast.sdo in folder "C:
 Info (204019): Generated file kitchen_ctr_v.sdo in folder "C:/altera/13.1/projects/designday/kitchen_ctr/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4563 megabytes
-    Info: Processing ended: Mon May 14 18:16:43 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Mon May 14 18:57:53 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/14/2018 18:16:35"
+// Generated on "05/14/2018 18:57:49"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    kitchen_ctr
 // 
@@ -307,8 +307,10 @@ initial
 begin
 	rst = 1'b1;
 	rst = #40000 1'b0;
-	rst = #5160000 1'b1;
-	rst = #120000 1'b0;
+	rst = #3800000 1'b1;
+	rst = #40000 1'b0;
+	rst = #400000 1'b1;
+	rst = #80000 1'b0;
 end 
 
 // btn_press
@@ -320,7 +322,16 @@ begin
 		btn_press = #20000 1'b1;
 		# 20000;
 	end
-	repeat(61)
+	repeat(37)
+	begin
+		btn_press = 1'b0;
+		btn_press = #20000 1'b1;
+		# 20000;
+	end
+	btn_press = 1'b0;
+	btn_press = #2060000 1'b1;
+	# 20000;
+	repeat(45)
 	begin
 		btn_press = 1'b0;
 		btn_press = #20000 1'b1;
@@ -372,7 +383,8 @@ end
 initial
 begin
 	down_en = 1'b0;
-	down_en = #2640000 1'b1;
+	down_en = #1800000 1'b1;
+	down_en = #2320000 1'b0;
 end 
 
 kitchen_ctr_vlg_sample_tst tb_sample (
