@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Soph\Documents\College\Junior\EE 125\EE125\6\light_rotator\simulation\qsim
+Elight_rotator
+Z1 w1527044387
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 @<1[K8[D0DA_@`dnM^MjN0
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 4TQeXT[OQ;m15YJ_cYMn<1
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 iFG@gDcfg=HaVi265=hhn2
+Z5 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z6 DPx6 altera 11 dffeas_pack 0 22 oY7WPe2I:Taj0>HV`A`AH0
+Z7 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z8 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 H[E=U;zSVlD;ca@gnkzIO0
+Z11 dC:\Users\Soph\Documents\College\Junior\EE 125\EE125\6\light_rotator\simulation\qsim
+Z12 8light_rotator.vho
+Z13 Flight_rotator.vho
+l0
+L38
+V6DBohOjWhTz@6G8dY8k5?3
+Z14 OV;C;10.1d;51
+32
+Z15 !s108 1527044388.348000
+Z16 !s90 -work|work|light_rotator.vho|
+Z17 !s107 light_rotator.vho|
+Z18 o-work work -O0
+Z19 tExplicit 1
+!s100 BWOQV>0J4?lM75FbegfS=3
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 13 light_rotator 0 22 6DBohOjWhTz@6G8dY8k5?3
+l130
+L74
+V[W?Ene=[:MCX?ald<DZ;U3
+!s100 6HR7g>P;S2I_Z9A6b?Y7N2
+R14
+32
+R15
+R16
+R17
+R18
+R19
+!i10b 1
+Elight_rotator_vhd_vec_tst
+Z20 w1527044384
+R8
+R9
+R11
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L31
+VZAN?E?o_?bga<h^;OaQ5N2
+!s100 VL@NRK07Yf5JG[a?6?kX00
+R14
+32
+!i10b 1
+Z23 !s108 1527044388.520000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+R18
+R19
+Alight_rotator_arch
+R8
+R9
+Z26 DEx4 work 25 light_rotator_vhd_vec_tst 0 22 ZAN?E?o_?bga<h^;OaQ5N2
+l54
+L33
+Vhlf@Hddj[iaYVN8DmooIC0
+!s100 ;bBb<@JzRQYIE=Bb_Qzak2
+R14
+32
+!i10b 1
+R23
+R24
+R25
+R18
+R19
