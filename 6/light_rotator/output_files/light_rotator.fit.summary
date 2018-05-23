@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue May 22 20:26:06 2018
+Fitter Status : Successful - Wed May 23 01:42:41 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : light_rotator
 Top-level Entity Name : light_rotator
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 73 / 18,480 ( < 1 % )
-Total registers : 52
+Logic utilization (in ALMs) : 52 / 18,480 ( < 1 % )
+Total registers : 39
 Total pins : 21 / 224 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

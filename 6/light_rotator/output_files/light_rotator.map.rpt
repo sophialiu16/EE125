@@ -1,5 +1,5 @@
 Analysis & Synthesis report for light_rotator
-Tue May 22 20:25:41 2018
+Wed May 23 01:42:14 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,14 +13,12 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |light_rotator|spd_pr_state
-  9. State Machine - |light_rotator|pr_state
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |light_rotator
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |light_rotator
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +44,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 22 20:25:41 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 23 01:42:14 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; light_rotator                               ;
 ; Top-level Entity Name           ; light_rotator                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 49                                          ;
+; Total registers                 ; 38                                          ;
 ; Total pins                      ; 21                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -179,31 +177,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 73        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 111       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 34        ;
-;     -- 5 input functions                    ; 7         ;
-;     -- 4 input functions                    ; 8         ;
-;     -- <=3 input functions                  ; 62        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 49        ;
-;                                             ;           ;
-; I/O pins                                    ; 21        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; dir~input ;
-; Maximum fan-out                             ; 28        ;
-; Total fan-out                               ; 606       ;
-; Average fan-out                             ; 3.00      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 51    ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 85    ;
+;     -- 7 input functions                    ; 1     ;
+;     -- 6 input functions                    ; 16    ;
+;     -- 5 input functions                    ; 12    ;
+;     -- 4 input functions                    ; 10    ;
+;     -- <=3 input functions                  ; 46    ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 38    ;
+;                                             ;       ;
+; I/O pins                                    ; 21    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 18    ;
+; Total fan-out                               ; 462   ;
+; Average fan-out                             ; 2.80  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,45 +209,9 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |light_rotator             ; 111 (111)           ; 49 (49)                   ; 0                 ; 0          ; 21   ; 0            ; |light_rotator      ; light_rotator ; work         ;
+; |light_rotator             ; 85 (85)             ; 38 (38)                   ; 0                 ; 0          ; 21   ; 0            ; |light_rotator      ; light_rotator ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |light_rotator|spd_pr_state                                                                                 ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name            ; spd_pr_state.S6 ; spd_pr_state.S5 ; spd_pr_state.S4 ; spd_pr_state.S3 ; spd_pr_state.S2 ; spd_pr_state.S1 ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; spd_pr_state.S1 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; spd_pr_state.S2 ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
-; spd_pr_state.S3 ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
-; spd_pr_state.S4 ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
-; spd_pr_state.S5 ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
-; spd_pr_state.S6 ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |light_rotator|pr_state                                                                                                                                       ;
-+-------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+
-; Name        ; pr_state.FA ; pr_state.F ; pr_state.EF ; pr_state.E ; pr_state.DE ; pr_state.D ; pr_state.CD ; pr_state.C ; pr_state.BC ; pr_state.B ; pr_state.AB ; pr_state.A ;
-+-------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+
-; pr_state.A  ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ;
-; pr_state.AB ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 1           ; 1          ;
-; pr_state.B  ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ; 0           ; 1          ;
-; pr_state.BC ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 1           ; 0          ; 0           ; 1          ;
-; pr_state.C  ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.CD ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 1           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.D  ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.DE ; 0           ; 0          ; 0           ; 0          ; 1           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.E  ; 0           ; 0          ; 0           ; 1          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.EF ; 0           ; 0          ; 1           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.F  ; 0           ; 1          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-; pr_state.FA ; 1           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ;
-+-------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+-------------+------------+
 
 
 +------------------------------------------------------+
@@ -257,10 +219,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
+; Total registers                              ; 38    ;
 ; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Clear ; 15    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
@@ -272,8 +234,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |light_rotator|t[2]        ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |light_rotator|counter[0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |light_rotator|t[4]        ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |light_rotator|counter[4]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |light_rotator|Mux7        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -293,27 +256,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
-;     CLR               ; 18                          ;
+; arriav_ff             ; 38                          ;
+;     CLR               ; 7                           ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     SCLR              ; 16                          ;
 ;     plain             ; 7                           ;
-; arriav_lcell_comb     ; 121                         ;
-;     arith             ; 31                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 3                           ;
-;     normal            ; 90                          ;
+; arriav_lcell_comb     ; 95                          ;
+;     arith             ; 33                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 34                          ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 3                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 61                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 16                          ;
 ; boundary_port         ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 3.98                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 3.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -332,7 +299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue May 22 20:25:27 2018
+    Info: Processing started: Wed May 23 01:41:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off light_rotator -c light_rotator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -340,10 +307,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file light_r
     Info (12022): Found design unit 1: light_rotator-light_rotator File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 16
     Info (12023): Found entity 1: light_rotator File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 5
 Info (12127): Elaborating entity "light_rotator" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at light_rotator.vhd(33): used implicit default value for signal "deb_pr_state" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at light_rotator.vhd(33): used implicit default value for signal "deb_nx_state" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at light_rotator.vhd(207): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 207
-Warning (10631): VHDL Process Statement warning at light_rotator.vhd(278): inferring latch(es) for signal or variable "td", which holds its previous value in one or more paths through the process File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 278
+Warning (10492): VHDL Process Statement warning at light_rotator.vhd(205): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 205
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ssd[0]" is stuck at VCC File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 12
     Warning (13410): Pin "tout[0]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/6/light_rotator/light_rotator.vhd Line: 13
@@ -351,14 +315,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 135 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 782 megabytes
-    Info: Processing ended: Tue May 22 20:25:41 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 101 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 783 megabytes
+    Info: Processing ended: Wed May 23 01:42:14 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

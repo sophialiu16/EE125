@@ -17,29 +17,27 @@ architecture light_rotator of light_rotator is
 	-- ssd FSM 
 	type state is (A, AB, B, BC, C, CD, D, DE, E, EF, F, FA); 
 	signal pr_state, nx_state: state; 
+	attribute enum_encoding: string;
+	attribute enum_encoding of state: type is "sequential";
 
 	signal clk: std_logic; 
 	signal T1: natural ;   
 	constant T2: natural  := 20; -- 20 ms @ 1kHz clock 
-	constant tmax: natural:= 250; 
+	constant TMAX: natural:= 250; 
 	signal t: natural range 0 to 250-1; -- max(T1, T2) = 250
 	
 	-- speed FSM 
 	type spd_state is (S1, S2, S3, S4, S5, S6); 
 	signal spd_pr_state, spd_nx_state: spd_state; 
-	
-	-- speed input debouncing FSM 
-	type deb_state is (S_low, S_low_count, S_high, S_high_count); 
-	signal deb_pr_state, deb_nx_state : deb_state; 
+	attribute enum_encoding of spd_state: type is "sequential";
 
-	--constant TD: natural := 20; -- 20 ms debounce time
-	constant TDMAX : natural := 20; 
-	signal td: natural range 0 to TDMAX; 
+	-- debouncing
+	constant TDMAX : natural := 20; -- 20 ms debounce time
 	signal spd_deb : std_logic; 
 	
 	begin 
 		-- FSM for ssd rotation 
-		process(all) --TODO?
+		process(all) 
 		begin
 			case pr_state is 
 				when A => 
@@ -206,72 +204,31 @@ architecture light_rotator of light_rotator is
 			end case;  
 			tout <=  std_logic_vector(to_unsigned(T1, tout'length)); 
 		end process;  
-		
---		-- speed input with debouncing
---		process(spd, clk)
---		begin 
---			case deb_pr_state is 
---				when S_high =>
---					spd_deb <= '1'; 
---					if spd = '0' then 
---						deb_nx_state <= S_high_count; 
---					else 
---						deb_nx_state <= S_high; 
---					end if;
---				when S_high_count => 
---					spd_deb <= '1'; 
---					if spd = '1' then 
---						deb_nx_state <=S_high; 
---					elsif td = TDMAX then 
---						deb_nx_state <= S_low; 
---					else 
---						deb_nx_state <= S_high_count; 
---					end if; 
---				when S_low =>
---					spd_deb <= '0'; 
---					if spd = '1' then 
---						deb_nx_state <= S_low_count; 
---					else 
---						deb_nx_state <= S_low; 
---					end if;
---				when S_low_count => 
---					spd_deb <= '0'; 
---					if spd = '0' then 
---						deb_nx_state <= S_low; 
---					elsif td = TDMAX then 
---						deb_nx_state <= S_high; 
---					else 
---						deb_nx_state <= S_low_count; 
---					end if; 
---				when others => 
---					deb_nx_state <= S_high; 
---			end case; 
---		end process; 
+
+		-- debouncer
 		process(clk, spd)
-			variable pressed: std_logic := '0'; --- '0' if button unpressed, '1' if pressed
-			variable counter : integer range 0 to TDMAX := 0; 
-			---variable var_count: integer range 0 to 15 := 0; 
-			---variable var_count_debounced: integer range 0 to 15 := 0;
+		variable pressed: std_logic := '0'; --- '0' if button unpressed, '1' if pressed
+		variable counter : integer range 0 to TDMAX := 0; 
 		begin
-		if (pressed = '0' and rising_edge(clk) and spd = '0' and counter /= TDMAX) then 
-			counter := counter + 1; 	
-			if counter = TDMAX then 
-				pressed := '1';
-			end if; 
+			if (pressed = '0' and rising_edge(clk) and spd = '0' and counter /= TDMAX) then 
+				counter := counter + 1; 	
+				if counter = TDMAX then 
+					pressed := '1';
+				end if; 
+				
+			elsif (pressed = '0' and rising_edge(clk) and spd = '1') then 
+				counter := 0; 
 			
-		elsif (pressed = '0' and rising_edge(clk) and spd = '1') then 
-			counter := 0; 
-		
-		elsif (pressed = '1' and rising_edge(clk) and spd = '1' and counter /= TDMAX) then 
-			counter := counter + 1; 	
-			if counter = TDMAX then 
-				pressed := '0'; 
-			end if; 
-			
-		elsif(pressed = '1' and rising_edge(clk) and spd = '0') then 
-			counter := 0; 
-		end if;
-		spd_deb <= not pressed; 
+			elsif (pressed = '1' and rising_edge(clk) and spd = '1' and counter /= TDMAX) then 
+				counter := counter + 1; 	
+				if counter = TDMAX then 
+					pressed := '0'; 
+				end if; 
+				
+			elsif(pressed = '1' and rising_edge(clk) and spd = '0') then 
+				counter := 0; 
+			end if;
+			spd_deb <= not pressed; 
 		end process;
 		
 		-- timer
@@ -279,21 +236,12 @@ architecture light_rotator of light_rotator is
 		begin 
 			if rst = '0' then
 				t <= 0; 
-				td <= 0; 
 			elsif rising_edge(clk) and stp = '1' then 
 				if pr_state /= nx_state then 
 					t <= 0; 
-				elsif t /= tmax then 
+				elsif t /= TMAX then 
 					t <= t+1; 
-				end if; 
-				
-				if deb_pr_state /= deb_nx_state then 
-					td <= 0; 
-				elsif td /= TDMAX and 
-					(deb_pr_state = S_low_count or deb_pr_state = S_high_count) then 
-					td <= td+1; 
-				end if;
-				
+				end if; 		
 			end if; 
 		end process; 
 		
@@ -307,16 +255,6 @@ architecture light_rotator of light_rotator is
 			end if; 
 		end process; 
 		
---		-- spd debouncing state register 
---		process (spd, rst)  
---		begin 
---			if rst = '0' then 
---				deb_pr_state <= S_high; 
---			if falling_edge(spd) then 
---				deb_pr_state <= deb_nx_state; 
---			end if; 
---		end process; 
-		
 		-- spd changing state register 
 		process (spd_deb, rst)  
 		begin 
@@ -327,7 +265,6 @@ architecture light_rotator of light_rotator is
 			end if; 
 		end process; 
 		
-		
 		--- generate 1 KHz clock
 		process(clk_sys) 
 		variable sc_counter : integer range 0 to T_CLK/T_CLK_SYS := 0;
@@ -336,10 +273,8 @@ architecture light_rotator of light_rotator is
 				sc_counter := sc_counter + 1; 
 				if sc_counter< T_CLK/T_CLK_SYS then 
 					clk <= '0'; 
-					---clk_tmr_out <= '0';
 				else 
 					clk <= '1'; 
-					---clk_tmr_out <= '1';  
 				end if;  
 				
 				if sc_counter = T_CLK/T_CLK_SYS then 
