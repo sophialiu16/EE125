@@ -2,7 +2,60 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "pixel_clk",
+					"strict" : false
+				},
+				{
+					"name" : "Hsync",
+					"strict" : false
+				},
+				{
+					"name" : "Vsync",
+					"strict" : false
+				},
+				{
+					"name" : "R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "dkey",
+					"strict" : false
+				},
+				{
+					"name" : "lkey",
+					"strict" : false
+				},
+				{
+					"name" : "ukey",
+					"strict" : false
+				},
+				{
+					"name" : "rkey",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
