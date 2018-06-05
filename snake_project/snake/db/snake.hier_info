@@ -1,0 +1,16 @@
+|snake
+clk_sys => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+ukey => ~NO_FANOUT~
+dkey => ~NO_FANOUT~
+lkey => ~NO_FANOUT~
+rkey => ~NO_FANOUT~
+ssd_score[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[1] <= ssd_score[1].DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[2] <= ssd_score[2].DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[3] <= ssd_score[3].DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[4] <= ssd_score[4].DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[5] <= ssd_score[5].DB_MAX_OUTPUT_PORT_TYPE
+ssd_score[6] <= ssd_score[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
