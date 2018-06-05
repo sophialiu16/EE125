@@ -6,7 +6,7 @@ USE ieee.std_logic_1164.all;
 PACKAGE vga_disp_buf IS 
     CONSTANT SCREEN_W: INTEGER := 640;
     CONSTANT SCREEN_H: INTEGER := 480;
-    CONSTANT SQ_SIZE: INTEGER := 64;	-- Need such low res to actually fit design
+    CONSTANT SQ_SIZE: INTEGER := 32;	-- Need such low res to actually fit design
     -- A display row, of SLVs in [G, R] format
 	 -- No support for blue (not needed)
     TYPE disp_row IS ARRAY 
@@ -33,7 +33,7 @@ ENTITY vga IS
     PORT (
         -- Display buffer
         --      Pass in from game code
-        display_buffer: IN disp_buf;
+        --display_buffer: IN disp_buf;
         -- VGA signals:
         clk: IN STD_LOGIC; --50MHz in our board
         pixel_clk: BUFFER STD_LOGIC;
@@ -103,7 +103,22 @@ BEGIN
         VARIABLE row_counter: INTEGER RANGE 0 TO Vc;
         VARIABLE col_counter: INTEGER RANGE 0 TO Hc;
         VARIABLE curr_sq:     std_logic_vector(1 downto 0);
+		  VARIABLE display_buffer: disp_buf;
     BEGIN
+        -- Initialize display buffer - test image
+		  FOR row IN 0 TO (SCREEN_H / SQ_SIZE) - 1 LOOP 
+		      FOR col IN 0 TO (SCREEN_W / SQ_SIZE) - 1 LOOP
+				    IF ((row mod 2 = 1) AND (col mod 2 = 1)) THEN 
+					     display_buffer(row)(col) := "11";
+					 ELSIF ((row mod 2 = 0) AND (col mod 2 = 0)) THEN 
+					     display_buffer(row)(col) := "00";
+				    ELSIF ((row mod 2 = 0) AND (col mod 2 = 1)) THEN 
+					     display_buffer(row)(col) := "01";
+					 ELSE 
+					     display_buffer(row)(col) := "10";
+					 END IF;
+				END LOOP;
+		  END LOOP;
         -- Reset row counter if Vsync is low
         IF (Vsync='0') THEN
             row_counter := 0;
