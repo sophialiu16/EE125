@@ -1,12 +1,13 @@
 library ieee; 
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.math_real.all; 
 --------------------------------------------------------------------------------
 entity snake is 
 	generic(	
-		GRID_WIDTH: positive := 100; 
-		GRID_LENGTH: positive := 100; 
-		MAX_SNAKE_LENGTH: positive:= 100; 
+		GRID_WIDTH: positive := 20; 
+		GRID_LENGTH: positive := 15; 
+		MAX_SNAKE_LENGTH: positive:= 10; 
 		T_CLK_SYS: positive := 20; ---period of 50 MHz system clock (20 ns) 
 		T_CLK: positive := 100000000); -- period of 10 Hz (10^8 ns)
 	port(
@@ -18,15 +19,17 @@ end entity;
 architecture snake of snake is
 	type position is array(0 to 1) of natural; -- position (x, y), (0, 0) upper left corner
 	type pos_array is array(natural range <>) of position; 
-	type grid is array(natural range <>) of integer_vector; -- (0, 0) upper left corner
+	type grid_row is array(natural range <>) of std_logic_vector;
+	type grid is array(natural range <>) of grid_row; -- (0, 0) upper left corner
 	signal head: natural := 1; 
 	signal tail: natural := 0; -- head and tail pointers of snake 
 	signal snake_body: pos_array(0 to MAX_SNAKE_LENGTH); -- queue for snake body 
 	signal apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
 	
-	signal game_grid : grid(0 to GRID_LENGTH)(0 to GRID_WIDTH) := (others => (others => 0)); 
+	signal game_grid : grid(0 to GRID_LENGTH)(0 to GRID_WIDTH)(0 to 1) := (others => (others => ('0','0'))); 
 	signal clk: std_logic; 
 	signal game_end: std_logic:= '0'; 
+	signal new_apple: std_logic:= '0'; 
 	
 	signal score: natural := 0; 
 	
@@ -36,13 +39,37 @@ architecture snake of snake is
 	attribute enum_encoding: string;
 	attribute enum_encoding of state: type is "sequential";
 	
-begin --split up 
--- init 
+	
+	-- check position is in array 
+	function in_array (pos_list: pos_array; p1: position; h, t: natural) 
+	return std_logic is 
+		variable arr_i, arr_max, arr_min: natural; 
+	begin 
+		if t > h then -- array full 
+			arr_max := MAX_SNAKE_LENGTH; 
+			arr_min := 0; 
+		else 
+			arr_max := h; 
+			arr_min := t;
+		end if; 
+		for i in 0 to MAX_SNAKE_LENGTH loop--pos_list'length loop
+		    if i >=  arr_min and i <= arr_max and pos_list(i) = p1 then 
+				return '1'; 
+			 end if; 
+		end loop; 
+		return '0'; 
+	end function in_array; 
+	
+begin -- split 
+-- TODO init 
 -- output score 
 
 -- main game loop 
 		process(clk)
 		variable next_head: position := (0, 1); 
+		variable next_apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
+		--variable next_apple_x, next_apple_y: real; 
+		--variable seed1, seed2 : positive;
 		begin 
 			if rising_edge(clk) and game_end = '0' then 
 				if pr_dir_state = ddir then 
@@ -75,9 +102,9 @@ begin --split up
 				end if; 
 				
 				-- check for hitting snake body 
---				if next_head in array then 
---					game_end <= '1'; 
---				end if; 
+				if in_array(snake_body, next_head, head, tail) = '1' then  
+					game_end <= '1'; 
+				end if; 
 				
 				-- move snake to new position 
 				head <= head + 1; 
@@ -86,8 +113,8 @@ begin --split up
 				end if; -- wrap head pointer around queue 
 				
 				snake_body(head) <= next_head; 	
-				game_grid(snake_body(tail)(1))(snake_body(tail)(0)) <= 0; 
-				game_grid(snake_body(head)(1))(snake_body(head)(0)) <= 1; 
+				game_grid(snake_body(tail)(1))(snake_body(tail)(0)) <= ('0', '0'); 
+				game_grid(snake_body(head)(1))(snake_body(head)(0)) <= ('0', '1'); --TODO 
 				
 				tail <= tail + 1; 
 				if(tail >= MAX_SNAKE_LENGTH) then 
@@ -98,14 +125,23 @@ begin --split up
 				if(next_head = apple) then 
 					-- increment score, make snake longer (if not maxed), new apple
 					score <= score + 1; 
-					if (head + 1 /= tail) and (head + 1 /= tail + MAX_SNAKE_LENGTH) then 
+					if (head + 1 /= tail) and (head + 1 /= tail + MAX_SNAKE_LENGTH) then --TODO ew
 						if tail = 0 then 
 							tail <= MAX_SNAKE_LENGTH - 1; 
 						else 
 							tail <= tail - 1; -- bring back old tail 
+							game_grid(snake_body(tail)(1))(snake_body(tail)(0)) <= ('0', '1');
 						end if; 
 					end if; 
-					-- TODO new apple
+					new_apple <= '1';  
+--					-- make new apple
+--					while in_array(snake_body, next_apple, head, tail) = '1' loop
+--						uniform(seed1, seed2, next_apple_x); -- 0 to 1 
+--						uniform(seed1, seed2, next_apple_y); -- 0 to 1 
+--						next_apple := (natural(next_apple_x * real(GRID_WIDTH)), natural(next_apple_y * real(GRID_LENGTH)));
+--					end loop; 
+--					apple <= next_apple;  
+--					game_grid(apple(1))(apple(0)) <= 2;
 				end if; 
 				
 			end if; 
@@ -116,6 +152,24 @@ begin --split up
 			end if; 
 		
 		end process; 
+		
+--		process(new_apple)
+--		variable next_apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
+--		variable next_apple_x, next_apple_y: real; 
+--		variable seed1, seed2 : positive;	
+--		begin 
+--			-- make new apple
+--			if new_apple = '1' then 
+--				while in_array(snake_body, next_apple, head, tail) = '1' loop
+--					uniform(seed1, seed2, next_apple_x); -- 0 to 1 
+--					uniform(seed1, seed2, next_apple_y); -- 0 to 1 
+--					next_apple := (natural(next_apple_x * real(GRID_WIDTH)), natural(next_apple_y * real(GRID_LENGTH)));
+--				end loop; 
+--				apple <= next_apple;  
+--				game_grid(apple(1))(apple(0)) <= ('1', '0');
+--				new_apple <= '0'; 
+--			end if; 
+--		end process; 
 		
 -- reset 
 		process(rst) 
@@ -128,9 +182,10 @@ begin --split up
 				snake_body(head) <= (0, 1); 
 				snake_body(tail) <= (0, 0); 
 				
-				game_grid <= (others => (others => 0)); 
-				game_grid(snake_body(head)(1))(snake_body(head)(0)) <= 1; 
-				game_grid(snake_body(tail)(1))(snake_body(tail)(0)) <= 1; 
+				game_grid <= (others => (others => ('0', '0'))); 
+				game_grid(snake_body(head)(1))(snake_body(head)(0)) <= ('0', '1'); 
+				game_grid(snake_body(tail)(1))(snake_body(tail)(0)) <= ('0', '1'); 
+				new_apple <= '0'; 
 			end if; 
 		end process; 
 
