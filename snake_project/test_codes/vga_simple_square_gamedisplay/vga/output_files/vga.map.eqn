@@ -11,6 +11,196 @@
 -- programming logic devices manufactured by Altera and sold by 
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
+--A1L170 is Add6~1
+A1L170_adder_eqn = ( GND ) + ( A1L180 ) + ( A1L179 );
+A1L170 = SUM(A1L170_adder_eqn);
+
+
+--A1L122 is Add4~1
+A1L122_adder_eqn = ( col_counter[3] ) + ( row_counter[3] ) + ( A1L143 );
+A1L122 = SUM(A1L122_adder_eqn);
+
+--A1L123 is Add4~2
+A1L123_adder_eqn = ( col_counter[3] ) + ( row_counter[3] ) + ( A1L143 );
+A1L123 = CARRY(A1L123_adder_eqn);
+
+
+--A1L126 is Add4~5
+A1L126_adder_eqn = ( col_counter[4] ) + ( row_counter[4] ) + ( A1L123 );
+A1L126 = SUM(A1L126_adder_eqn);
+
+--A1L127 is Add4~6
+A1L127_adder_eqn = ( col_counter[4] ) + ( row_counter[4] ) + ( A1L123 );
+A1L127 = CARRY(A1L127_adder_eqn);
+
+
+--A1L130 is Add4~9
+A1L130_adder_eqn = ( GND ) + ( GND ) + ( A1L127 );
+A1L130 = SUM(A1L130_adder_eqn);
+
+
+--A1L134 is Add4~13
+A1L134_adder_eqn = ( col_counter[0] ) + ( row_counter[0] ) + ( !VCC );
+A1L134 = SUM(A1L134_adder_eqn);
+
+--A1L135 is Add4~14
+A1L135_adder_eqn = ( col_counter[0] ) + ( row_counter[0] ) + ( !VCC );
+A1L135 = CARRY(A1L135_adder_eqn);
+
+
+--A1L138 is Add4~17
+A1L138_adder_eqn = ( col_counter[1] ) + ( row_counter[1] ) + ( A1L135 );
+A1L138 = SUM(A1L138_adder_eqn);
+
+--A1L139 is Add4~18
+A1L139_adder_eqn = ( col_counter[1] ) + ( row_counter[1] ) + ( A1L135 );
+A1L139 = CARRY(A1L139_adder_eqn);
+
+
+--A1L142 is Add4~21
+A1L142_adder_eqn = ( col_counter[2] ) + ( row_counter[2] ) + ( A1L139 );
+A1L142 = SUM(A1L142_adder_eqn);
+
+--A1L143 is Add4~22
+A1L143_adder_eqn = ( col_counter[2] ) + ( row_counter[2] ) + ( A1L139 );
+A1L143 = CARRY(A1L143_adder_eqn);
+
+
+--A1L146 is Add5~1
+A1L146_adder_eqn = ( !row_counter[3] $ (col_counter[3]) ) + ( A1L168 ) + ( A1L167 );
+A1L146 = SUM(A1L146_adder_eqn);
+
+--A1L147 is Add5~2
+A1L147_adder_eqn = ( !row_counter[3] $ (col_counter[3]) ) + ( A1L168 ) + ( A1L167 );
+A1L147 = CARRY(A1L147_adder_eqn);
+
+--A1L148 is Add5~3
+A1L148_share_eqn = (row_counter[3] & !col_counter[3]);
+A1L148 = SHARE(A1L148_share_eqn);
+
+
+--A1L150 is Add5~5
+A1L150_adder_eqn = ( !row_counter[4] $ (col_counter[4]) ) + ( A1L148 ) + ( A1L147 );
+A1L150 = SUM(A1L150_adder_eqn);
+
+--A1L151 is Add5~6
+A1L151_adder_eqn = ( !row_counter[4] $ (col_counter[4]) ) + ( A1L148 ) + ( A1L147 );
+A1L151 = CARRY(A1L151_adder_eqn);
+
+--A1L152 is Add5~7
+A1L152_share_eqn = (row_counter[4] & !col_counter[4]);
+A1L152 = SHARE(A1L152_share_eqn);
+
+
+--A1L154 is Add5~9
+A1L154_adder_eqn = ( GND ) + ( A1L152 ) + ( A1L151 );
+A1L154 = SUM(A1L154_adder_eqn);
+
+
+--A1L158 is Add5~13
+A1L158_adder_eqn = ( !row_counter[0] $ (!col_counter[0]) ) + ( !VCC ) + ( !VCC );
+A1L158 = SUM(A1L158_adder_eqn);
+
+--A1L159 is Add5~14
+A1L159_adder_eqn = ( !row_counter[0] $ (!col_counter[0]) ) + ( !VCC ) + ( !VCC );
+A1L159 = CARRY(A1L159_adder_eqn);
+
+--A1L160 is Add5~15
+A1L160_share_eqn = (!col_counter[0]) # (row_counter[0]);
+A1L160 = SHARE(A1L160_share_eqn);
+
+
+--A1L162 is Add5~17
+A1L162_adder_eqn = ( !row_counter[1] $ (col_counter[1]) ) + ( A1L160 ) + ( A1L159 );
+A1L162 = SUM(A1L162_adder_eqn);
+
+--A1L163 is Add5~18
+A1L163_adder_eqn = ( !row_counter[1] $ (col_counter[1]) ) + ( A1L160 ) + ( A1L159 );
+A1L163 = CARRY(A1L163_adder_eqn);
+
+--A1L164 is Add5~19
+A1L164_share_eqn = (row_counter[1] & !col_counter[1]);
+A1L164 = SHARE(A1L164_share_eqn);
+
+
+--A1L166 is Add5~21
+A1L166_adder_eqn = ( !row_counter[2] $ (col_counter[2]) ) + ( A1L164 ) + ( A1L163 );
+A1L166 = SUM(A1L166_adder_eqn);
+
+--A1L167 is Add5~22
+A1L167_adder_eqn = ( !row_counter[2] $ (col_counter[2]) ) + ( A1L164 ) + ( A1L163 );
+A1L167 = CARRY(A1L167_adder_eqn);
+
+--A1L168 is Add5~23
+A1L168_share_eqn = (row_counter[2] & !col_counter[2]);
+A1L168 = SHARE(A1L168_share_eqn);
+
+
+--A1L174 is Add6~5
+A1L174_adder_eqn = ( !row_counter[3] $ (col_counter[3]) ) + ( A1L192 ) + ( A1L191 );
+A1L174 = SUM(A1L174_adder_eqn);
+
+--A1L175 is Add6~6
+A1L175_adder_eqn = ( !row_counter[3] $ (col_counter[3]) ) + ( A1L192 ) + ( A1L191 );
+A1L175 = CARRY(A1L175_adder_eqn);
+
+--A1L176 is Add6~7
+A1L176_share_eqn = (!row_counter[3] & col_counter[3]);
+A1L176 = SHARE(A1L176_share_eqn);
+
+
+--A1L178 is Add6~9
+A1L178_adder_eqn = ( !row_counter[4] $ (col_counter[4]) ) + ( A1L176 ) + ( A1L175 );
+A1L178 = SUM(A1L178_adder_eqn);
+
+--A1L179 is Add6~10
+A1L179_adder_eqn = ( !row_counter[4] $ (col_counter[4]) ) + ( A1L176 ) + ( A1L175 );
+A1L179 = CARRY(A1L179_adder_eqn);
+
+--A1L180 is Add6~11
+A1L180_share_eqn = (!row_counter[4] & col_counter[4]);
+A1L180 = SHARE(A1L180_share_eqn);
+
+
+--A1L182 is Add6~13
+A1L182_adder_eqn = ( !row_counter[0] $ (!col_counter[0]) ) + ( !VCC ) + ( !VCC );
+A1L182 = SUM(A1L182_adder_eqn);
+
+--A1L183 is Add6~14
+A1L183_adder_eqn = ( !row_counter[0] $ (!col_counter[0]) ) + ( !VCC ) + ( !VCC );
+A1L183 = CARRY(A1L183_adder_eqn);
+
+--A1L184 is Add6~15
+A1L184_share_eqn = (!row_counter[0]) # (col_counter[0]);
+A1L184 = SHARE(A1L184_share_eqn);
+
+
+--A1L186 is Add6~17
+A1L186_adder_eqn = ( !row_counter[1] $ (col_counter[1]) ) + ( A1L184 ) + ( A1L183 );
+A1L186 = SUM(A1L186_adder_eqn);
+
+--A1L187 is Add6~18
+A1L187_adder_eqn = ( !row_counter[1] $ (col_counter[1]) ) + ( A1L184 ) + ( A1L183 );
+A1L187 = CARRY(A1L187_adder_eqn);
+
+--A1L188 is Add6~19
+A1L188_share_eqn = (!row_counter[1] & col_counter[1]);
+A1L188 = SHARE(A1L188_share_eqn);
+
+
+--A1L190 is Add6~21
+A1L190_adder_eqn = ( !row_counter[2] $ (col_counter[2]) ) + ( A1L188 ) + ( A1L187 );
+A1L190 = SUM(A1L190_adder_eqn);
+
+--A1L191 is Add6~22
+A1L191_adder_eqn = ( !row_counter[2] $ (col_counter[2]) ) + ( A1L188 ) + ( A1L187 );
+A1L191 = CARRY(A1L191_adder_eqn);
+
+--A1L192 is Add6~23
+A1L192_share_eqn = (!row_counter[2] & col_counter[2]);
+A1L192 = SHARE(A1L192_share_eqn);
+
+
 --A1L2 is Add0~1
 A1L2_adder_eqn = ( Hcount[8] ) + ( GND ) + ( A1L31 );
 A1L2 = SUM(A1L2_adder_eqn);
@@ -189,128 +379,128 @@ A1L102 = SUM(A1L102_adder_eqn);
 
 
 --A1L82 is Add2~1
-A1L82_adder_eqn = ( row_counter[5] ) + ( GND ) + ( A1L87 );
+A1L82_adder_eqn = ( row_counter[5] ) + ( GND ) + ( A1L91 );
 A1L82 = SUM(A1L82_adder_eqn);
 
 
 --Hcount[8] is Hcount[8]
 --register power-up is low
 
-Hcount[8] = DFFEAS(A1L2, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[8] = DFFEAS(A1L2, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[9] is Hcount[9]
 --register power-up is low
 
-Hcount[9] = DFFEAS(A1L6, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[9] = DFFEAS(A1L6, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[0] is Hcount[0]
 --register power-up is low
 
-Hcount[0] = DFFEAS(A1L10, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[0] = DFFEAS(A1L10, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[1] is Hcount[1]
 --register power-up is low
 
-Hcount[1] = DFFEAS(A1L14, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[1] = DFFEAS(A1L14, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[2] is Hcount[2]
 --register power-up is low
 
-Hcount[2] = DFFEAS(A1L18, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[2] = DFFEAS(A1L18, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[3] is Hcount[3]
 --register power-up is low
 
-Hcount[3] = DFFEAS(A1L22, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[3] = DFFEAS(A1L22, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[6] is Hcount[6]
 --register power-up is low
 
-Hcount[6] = DFFEAS(A1L26, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[6] = DFFEAS(A1L26, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[7] is Hcount[7]
 --register power-up is low
 
-Hcount[7] = DFFEAS(A1L30, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[7] = DFFEAS(A1L30, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[4] is Hcount[4]
 --register power-up is low
 
-Hcount[4] = DFFEAS(A1L34, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[4] = DFFEAS(A1L34, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Hcount[5] is Hcount[5]
 --register power-up is low
 
-Hcount[5] = DFFEAS(A1L38, A1L177Q,  ,  ,  ,  ,  , A1L143,  );
+Hcount[5] = DFFEAS(A1L38, A1L249Q,  ,  ,  ,  ,  , A1L215,  );
 
 
 --Vcount[0] is Vcount[0]
 --register power-up is low
 
-Vcount[0] = DFFEAS(A1L42, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[0] = DFFEAS(A1L42, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[5] is Vcount[5]
 --register power-up is low
 
-Vcount[5] = DFFEAS(A1L46, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[5] = DFFEAS(A1L46, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[9] is Vcount[9]
 --register power-up is low
 
-Vcount[9] = DFFEAS(A1L50, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[9] = DFFEAS(A1L50, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[3] is Vcount[3]
 --register power-up is low
 
-Vcount[3] = DFFEAS(A1L54, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[3] = DFFEAS(A1L54, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[4] is Vcount[4]
 --register power-up is low
 
-Vcount[4] = DFFEAS(A1L58, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[4] = DFFEAS(A1L58, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[6] is Vcount[6]
 --register power-up is low
 
-Vcount[6] = DFFEAS(A1L62, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[6] = DFFEAS(A1L62, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[7] is Vcount[7]
 --register power-up is low
 
-Vcount[7] = DFFEAS(A1L66, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[7] = DFFEAS(A1L66, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[8] is Vcount[8]
 --register power-up is low
 
-Vcount[8] = DFFEAS(A1L70, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[8] = DFFEAS(A1L70, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[1] is Vcount[1]
 --register power-up is low
 
-Vcount[1] = DFFEAS(A1L74, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[1] = DFFEAS(A1L74, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --Vcount[2] is Vcount[2]
 --register power-up is low
 
-Vcount[2] = DFFEAS(A1L78, !A1L172Q,  ,  ,  ,  ,  , A1L149,  );
+Vcount[2] = DFFEAS(A1L78, !A1L244Q,  ,  ,  ,  ,  , A1L221,  );
 
 
 --A1L106 is Add3~5
@@ -322,348 +512,364 @@ A1L107_adder_eqn = ( col_counter[4] ) + ( GND ) + ( A1L111 );
 A1L107 = CARRY(A1L107_adder_eqn);
 
 
---A1L86 is Add2~5
-A1L86_adder_eqn = ( row_counter[4] ) + ( GND ) + ( A1L91 );
-A1L86 = SUM(A1L86_adder_eqn);
-
---A1L87 is Add2~6
-A1L87_adder_eqn = ( row_counter[4] ) + ( GND ) + ( A1L91 );
-A1L87 = CARRY(A1L87_adder_eqn);
-
-
 --A1L110 is Add3~9
-A1L110_adder_eqn = ( col_counter[3] ) + ( GND ) + ( A1L115 );
+A1L110_adder_eqn = ( col_counter[3] ) + ( GND ) + ( A1L119 );
 A1L110 = SUM(A1L110_adder_eqn);
 
 --A1L111 is Add3~10
-A1L111_adder_eqn = ( col_counter[3] ) + ( GND ) + ( A1L115 );
+A1L111_adder_eqn = ( col_counter[3] ) + ( GND ) + ( A1L119 );
 A1L111 = CARRY(A1L111_adder_eqn);
 
 
+--A1L86 is Add2~5
+A1L86_adder_eqn = ( row_counter[3] ) + ( GND ) + ( A1L99 );
+A1L86 = SUM(A1L86_adder_eqn);
+
+--A1L87 is Add2~6
+A1L87_adder_eqn = ( row_counter[3] ) + ( GND ) + ( A1L99 );
+A1L87 = CARRY(A1L87_adder_eqn);
+
+
 --A1L90 is Add2~9
-A1L90_adder_eqn = ( row_counter[3] ) + ( GND ) + ( A1L95 );
+A1L90_adder_eqn = ( row_counter[4] ) + ( GND ) + ( A1L87 );
 A1L90 = SUM(A1L90_adder_eqn);
 
 --A1L91 is Add2~10
-A1L91_adder_eqn = ( row_counter[3] ) + ( GND ) + ( A1L95 );
+A1L91_adder_eqn = ( row_counter[4] ) + ( GND ) + ( A1L87 );
 A1L91 = CARRY(A1L91_adder_eqn);
 
 
 --A1L114 is Add3~13
-A1L114_adder_eqn = ( col_counter[2] ) + ( GND ) + ( A1L119 );
+A1L114_adder_eqn = ( col_counter[0] ) + ( col_counter[1] ) + ( !VCC );
 A1L114 = SUM(A1L114_adder_eqn);
 
 --A1L115 is Add3~14
-A1L115_adder_eqn = ( col_counter[2] ) + ( GND ) + ( A1L119 );
+A1L115_adder_eqn = ( col_counter[0] ) + ( col_counter[1] ) + ( !VCC );
 A1L115 = CARRY(A1L115_adder_eqn);
 
 
 --A1L94 is Add2~13
-A1L94_adder_eqn = ( row_counter[2] ) + ( GND ) + ( A1L99 );
+A1L94_adder_eqn = ( row_counter[0] ) + ( row_counter[1] ) + ( !VCC );
 A1L94 = SUM(A1L94_adder_eqn);
 
 --A1L95 is Add2~14
-A1L95_adder_eqn = ( row_counter[2] ) + ( GND ) + ( A1L99 );
+A1L95_adder_eqn = ( row_counter[0] ) + ( row_counter[1] ) + ( !VCC );
 A1L95 = CARRY(A1L95_adder_eqn);
 
 
 --A1L118 is Add3~17
-A1L118_adder_eqn = ( col_counter[0] ) + ( col_counter[1] ) + ( !VCC );
+A1L118_adder_eqn = ( col_counter[2] ) + ( GND ) + ( A1L115 );
 A1L118 = SUM(A1L118_adder_eqn);
 
 --A1L119 is Add3~18
-A1L119_adder_eqn = ( col_counter[0] ) + ( col_counter[1] ) + ( !VCC );
+A1L119_adder_eqn = ( col_counter[2] ) + ( GND ) + ( A1L115 );
 A1L119 = CARRY(A1L119_adder_eqn);
 
 
 --A1L98 is Add2~17
-A1L98_adder_eqn = ( row_counter[0] ) + ( row_counter[1] ) + ( !VCC );
+A1L98_adder_eqn = ( row_counter[2] ) + ( GND ) + ( A1L95 );
 A1L98 = SUM(A1L98_adder_eqn);
 
 --A1L99 is Add2~18
-A1L99_adder_eqn = ( row_counter[0] ) + ( row_counter[1] ) + ( !VCC );
+A1L99_adder_eqn = ( row_counter[2] ) + ( GND ) + ( A1L95 );
 A1L99 = CARRY(A1L99_adder_eqn);
 
 
 --pixel_clk is pixel_clk
-pixel_clk = OUTPUT(A1L177Q);
+pixel_clk = OUTPUT(A1L249Q);
 
 
 --Hsync is Hsync
-Hsync = OUTPUT(A1L172Q);
+Hsync = OUTPUT(A1L244Q);
 
 
 --Vsync is Vsync
-Vsync = OUTPUT(A1L207Q);
+Vsync = OUTPUT(A1L283Q);
 
 
 --R[0] is R[0]
-R[0] = OUTPUT(A1L191);
+R[0] = OUTPUT(A1L267);
 
 
 --R[1] is R[1]
-R[1] = OUTPUT(A1L191);
+R[1] = OUTPUT(A1L267);
 
 
 --R[2] is R[2]
-R[2] = OUTPUT(A1L191);
+R[2] = OUTPUT(A1L267);
 
 
 --R[3] is R[3]
-R[3] = OUTPUT(A1L191);
+R[3] = OUTPUT(A1L267);
 
 
 --G[0] is G[0]
-G[0] = OUTPUT(A1L156);
+G[0] = OUTPUT(A1L228);
 
 
 --G[1] is G[1]
-G[1] = OUTPUT(A1L156);
+G[1] = OUTPUT(A1L228);
 
 
 --G[2] is G[2]
-G[2] = OUTPUT(A1L156);
+G[2] = OUTPUT(A1L228);
 
 
 --G[3] is G[3]
-G[3] = OUTPUT(A1L156);
+G[3] = OUTPUT(A1L228);
 
 
 --B[0] is B[0]
-B[0] = OUTPUT(A1L208);
+B[0] = OUTPUT(A1L284);
 
 
 --B[1] is B[1]
-B[1] = OUTPUT(A1L208);
+B[1] = OUTPUT(A1L284);
 
 
 --B[2] is B[2]
-B[2] = OUTPUT(A1L208);
+B[2] = OUTPUT(A1L284);
 
 
 --B[3] is B[3]
-B[3] = OUTPUT(A1L208);
+B[3] = OUTPUT(A1L284);
 
 
 --nblanck is nblanck
-nblanck = OUTPUT(A1L209);
+nblanck = OUTPUT(A1L285);
 
 
 --nsync is nsync
-nsync = OUTPUT(A1L208);
+nsync = OUTPUT(A1L284);
 
 
---A1L177Q is pixel_clk~reg0
+--A1L249Q is pixel_clk~reg0
 --register power-up is low
 
-A1L177Q = DFFEAS(A1L176, clk,  ,  ,  ,  ,  ,  ,  );
+A1L249Q = DFFEAS(A1L248, clk,  ,  ,  ,  ,  ,  ,  );
 
 
---A1L172Q is Hsync~reg0
+--A1L244Q is Hsync~reg0
 --register power-up is low
 
-A1L172Q = DFFEAS(A1L171, A1L177Q,  ,  ,  ,  ,  ,  ,  );
+A1L244Q = DFFEAS(A1L243, A1L249Q,  ,  ,  ,  ,  ,  ,  );
 
 
---A1L207Q is Vsync~reg0
+--A1L283Q is Vsync~reg0
 --register power-up is low
 
-A1L207Q = DFFEAS(A1L206, !A1L172Q,  ,  ,  ,  ,  ,  ,  );
+A1L283Q = DFFEAS(A1L282, !A1L244Q,  ,  ,  ,  ,  ,  ,  );
 
 
 --col_counter[5] is col_counter[5]
 --register power-up is low
 
-col_counter[5] = DFFEAS(A1L102, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
+col_counter[5] = DFFEAS(A1L102, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
+
+
+--A1L263 is R~0
+A1L263 = ( A1L138 & ( A1L142 & ( (A1L122 & (A1L126 & A1L130)) ) ) ) # ( !A1L138 & ( A1L142 & ( (A1L122 & (A1L126 & A1L130)) ) ) ) # ( A1L138 & ( !A1L142 & ( (A1L122 & (A1L126 & A1L130)) ) ) ) # ( !A1L138 & ( !A1L142 & ( (A1L122 & (A1L126 & (A1L130 & A1L134))) ) ) );
 
 
 --Hactive is Hactive
 --register power-up is low
 
-Hactive = DFFEAS(A1L158, A1L177Q,  ,  ,  ,  ,  ,  ,  );
+Hactive = DFFEAS(A1L230, A1L249Q,  ,  ,  ,  ,  ,  ,  );
 
 
 --Vactive is Vactive
 --register power-up is low
 
-Vactive = DFFEAS(A1L193, !A1L172Q,  ,  ,  ,  ,  ,  ,  );
+Vactive = DFFEAS(A1L269, !A1L244Q,  ,  ,  ,  ,  ,  ,  );
 
 
---A1L191 is R~0
-A1L191 = (col_counter[5] & (Hactive & Vactive));
+--A1L264 is R~1
+A1L264 = ( A1L130 & ( (Hactive & Vactive) ) ) # ( !A1L130 & ( (Hactive & (Vactive & ((A1L126) # (A1L122)))) ) );
+
+
+--A1L265 is R~2
+A1L265 = ( A1L162 & ( A1L166 & ( (A1L146 & (A1L150 & A1L154)) ) ) ) # ( !A1L162 & ( A1L166 & ( (A1L146 & (A1L150 & A1L154)) ) ) ) # ( A1L162 & ( !A1L166 & ( (A1L146 & (A1L150 & A1L154)) ) ) ) # ( !A1L162 & ( !A1L166 & ( (A1L146 & (A1L150 & (A1L154 & A1L158))) ) ) );
+
+
+--A1L266 is R~3
+A1L266 = ( A1L190 & ( (A1L174 & A1L178) ) ) # ( !A1L190 & ( (A1L174 & (A1L178 & ((A1L186) # (A1L182)))) ) );
+
+
+--A1L267 is R~4
+A1L267 = ( !A1L265 & ( A1L266 & ( (col_counter[5] & (!A1L170 & (!A1L263 & A1L264))) ) ) ) # ( !A1L265 & ( !A1L266 & ( (col_counter[5] & (!A1L263 & A1L264)) ) ) );
 
 
 --row_counter[5] is row_counter[5]
 --register power-up is low
 
-row_counter[5] = DFFEAS(A1L82, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+row_counter[5] = DFFEAS(A1L82, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
 
 
---A1L156 is G~0
-A1L156 = (Hactive & (Vactive & row_counter[5]));
+--A1L228 is G~0
+A1L228 = ( A1L266 & ( row_counter[5] & ( (!A1L170 & (!A1L263 & (A1L264 & !A1L265))) ) ) ) # ( !A1L266 & ( row_counter[5] & ( (!A1L263 & (A1L264 & !A1L265)) ) ) );
 
 
 --clk is clk
 clk = INPUT();
 
 
---A1L135 is Equal0~0
-A1L135 = ( !A1L18 & ( !A1L22 & ( (!A1L2 & (!A1L6 & (!A1L10 & !A1L14))) ) ) );
+--A1L207 is Equal0~0
+A1L207 = ( !A1L18 & ( !A1L22 & ( (!A1L2 & (!A1L6 & (!A1L10 & !A1L14))) ) ) );
 
 
---A1L139 is Equal1~0
-A1L139 = (!A1L26 & (A1L30 & (A1L34 & !A1L38)));
+--A1L211 is Equal1~0
+A1L211 = (!A1L26 & (A1L30 & (A1L34 & !A1L38)));
 
 
---A1L140 is Equal1~1
-A1L140 = (A1L34 & !A1L38);
+--A1L212 is Equal1~1
+A1L212 = (A1L34 & !A1L38);
 
 
---A1L136 is Equal0~1
-A1L136 = (!A1L10 & (!A1L14 & (!A1L18 & !A1L22)));
+--A1L208 is Equal0~1
+A1L208 = (!A1L10 & (!A1L14 & (!A1L18 & !A1L22)));
 
 
---A1L141 is Equal2~0
-A1L141 = ( A1L140 & ( A1L136 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
+--A1L213 is Equal2~0
+A1L213 = ( A1L212 & ( A1L208 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
 
 
---A1L143 is Equal3~0
-A1L143 = ( A1L38 & ( A1L144 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
+--A1L215 is Equal3~0
+A1L215 = ( A1L38 & ( A1L216 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
 
 
---A1L137 is Equal0~2
-A1L137 = (A1L26 & (!A1L30 & (!A1L34 & A1L38)));
+--A1L209 is Equal0~2
+A1L209 = (A1L26 & (!A1L30 & (!A1L34 & A1L38)));
 
 
---A1L171 is Hsync~0
-A1L171 = ( A1L143 & ( A1L137 & ( ((A1L172Q & A1L141)) # (A1L135) ) ) ) # ( !A1L143 & ( A1L137 & ( (A1L135) # (A1L172Q) ) ) ) # ( A1L143 & ( !A1L137 & ( (A1L172Q & (((A1L135 & A1L139)) # (A1L141))) ) ) ) # ( !A1L143 & ( !A1L137 & ( A1L172Q ) ) );
+--A1L243 is Hsync~0
+A1L243 = ( A1L215 & ( A1L209 & ( ((A1L244Q & A1L213)) # (A1L207) ) ) ) # ( !A1L215 & ( A1L209 & ( (A1L207) # (A1L244Q) ) ) ) # ( A1L215 & ( !A1L209 & ( (A1L244Q & (((A1L207 & A1L211)) # (A1L213))) ) ) ) # ( !A1L215 & ( !A1L209 & ( A1L244Q ) ) );
 
 
---A1L145 is Equal4~0
-A1L145 = (A1L74 & !A1L78);
+--A1L217 is Equal4~0
+A1L217 = (A1L74 & !A1L78);
 
 
---A1L146 is Equal4~1
-A1L146 = ( !A1L70 & ( A1L145 & ( (!A1L54 & (!A1L58 & (!A1L62 & !A1L66))) ) ) );
+--A1L218 is Equal4~1
+A1L218 = ( !A1L70 & ( A1L217 & ( (!A1L54 & (!A1L58 & (!A1L62 & !A1L66))) ) ) );
 
 
---A1L149 is Equal7~0
-A1L149 = ( !A1L46 & ( A1L150 & ( (A1L50 & (!A1L66 & (!A1L70 & !A1L62))) ) ) );
+--A1L221 is Equal7~0
+A1L221 = ( !A1L46 & ( A1L222 & ( (A1L50 & (!A1L66 & (!A1L70 & !A1L62))) ) ) );
 
 
---A1L206 is Vsync~0
-A1L206 = ( A1L146 & ( A1L149 & ( (!A1L42 & (((!A1L46 & !A1L50)))) # (A1L42 & (A1L207Q & (!A1L46 $ (!A1L50)))) ) ) ) # ( A1L146 & ( !A1L149 & ( ((!A1L42 & (!A1L46 & !A1L50))) # (A1L207Q) ) ) ) # ( !A1L146 & ( !A1L149 & ( A1L207Q ) ) );
-
-
---A1L138 is Equal0~3
-A1L138 = (!A1L10 & (!A1L14 & !A1L18));
-
-
---A1L142 is Equal2~1
-A1L142 = ( !A1L22 & ( A1L138 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
-
-
---A1L158 is Hactive~0
-A1L158 = ( A1L142 & ( A1L137 & ( (Hactive & ((!A1L140) # (A1L135))) ) ) ) # ( !A1L142 & ( A1L137 & ( Hactive ) ) ) # ( A1L142 & ( !A1L137 & ( (!Hactive & (((A1L135 & A1L139)))) # (Hactive & ((!A1L140) # ((A1L135 & A1L139)))) ) ) ) # ( !A1L142 & ( !A1L137 & ( ((A1L135 & A1L139)) # (Hactive) ) ) );
-
-
---A1L147 is Equal4~2
-A1L147 = (!A1L58 & (!A1L62 & (!A1L66 & !A1L70)));
-
-
---A1L148 is Equal4~3
-A1L148 = (A1L74 & (!A1L78 & !A1L54));
-
-
---A1L193 is Vactive~0
-A1L193 = ( A1L147 & ( A1L148 & ( (!Vactive & (A1L42 & (A1L46 & !A1L50))) # (Vactive & ((!A1L42) # ((!A1L50) # (A1L46)))) ) ) ) # ( !A1L147 & ( A1L148 & ( Vactive ) ) ) # ( A1L147 & ( !A1L148 & ( Vactive ) ) ) # ( !A1L147 & ( !A1L148 & ( Vactive ) ) );
-
-
---col_counter[4] is col_counter[4]
---register power-up is low
-
-col_counter[4] = DFFEAS(A1L106, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
-
-
---row_counter[4] is row_counter[4]
---register power-up is low
-
-row_counter[4] = DFFEAS(A1L86, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+--A1L282 is Vsync~0
+A1L282 = ( A1L218 & ( A1L221 & ( (!A1L42 & (((!A1L46 & !A1L50)))) # (A1L42 & (A1L283Q & (!A1L46 $ (!A1L50)))) ) ) ) # ( A1L218 & ( !A1L221 & ( ((!A1L42 & (!A1L46 & !A1L50))) # (A1L283Q) ) ) ) # ( !A1L218 & ( !A1L221 & ( A1L283Q ) ) );
 
 
 --col_counter[3] is col_counter[3]
 --register power-up is low
 
-col_counter[3] = DFFEAS(A1L110, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
+col_counter[3] = DFFEAS(A1L110, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
 
 
 --row_counter[3] is row_counter[3]
 --register power-up is low
 
-row_counter[3] = DFFEAS(A1L90, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+row_counter[3] = DFFEAS(A1L86, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
 
 
---col_counter[2] is col_counter[2]
+--col_counter[4] is col_counter[4]
 --register power-up is low
 
-col_counter[2] = DFFEAS(A1L114, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
+col_counter[4] = DFFEAS(A1L106, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
 
 
---row_counter[2] is row_counter[2]
+--row_counter[4] is row_counter[4]
 --register power-up is low
 
-row_counter[2] = DFFEAS(A1L94, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+row_counter[4] = DFFEAS(A1L90, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
 
 
 --col_counter[0] is col_counter[0]
 --register power-up is low
 
-col_counter[0] = DFFEAS(A1L129, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
-
-
---col_counter[1] is col_counter[1]
---register power-up is low
-
-col_counter[1] = DFFEAS(A1L118, A1L177Q, A1L172Q,  , Hactive,  ,  ,  ,  );
+col_counter[0] = DFFEAS(A1L201, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
 
 
 --row_counter[0] is row_counter[0]
 --register power-up is low
 
-row_counter[0] = DFFEAS(A1L185, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+row_counter[0] = DFFEAS(A1L257, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
+
+
+--col_counter[1] is col_counter[1]
+--register power-up is low
+
+col_counter[1] = DFFEAS(A1L114, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
 
 
 --row_counter[1] is row_counter[1]
 --register power-up is low
 
-row_counter[1] = DFFEAS(A1L98, A1L172Q, A1L207Q,  , Vactive,  ,  ,  ,  );
+row_counter[1] = DFFEAS(A1L94, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
 
 
---A1L144 is Equal3~1
-A1L144 = ( !A1L22 & ( (!A1L34 & (!A1L10 & (!A1L14 & !A1L18))) ) );
+--col_counter[2] is col_counter[2]
+--register power-up is low
+
+col_counter[2] = DFFEAS(A1L118, A1L249Q, A1L244Q,  , Hactive,  ,  ,  ,  );
 
 
---A1L150 is Equal7~1
-A1L150 = ( A1L54 & ( (!A1L58 & (A1L42 & (!A1L74 & A1L78))) ) );
+--row_counter[2] is row_counter[2]
+--register power-up is low
+
+row_counter[2] = DFFEAS(A1L98, A1L244Q, A1L283Q,  , Vactive,  ,  ,  ,  );
 
 
---A1L176 is pixel_clk~0
-A1L176 = !A1L177Q;
+--A1L210 is Equal0~3
+A1L210 = (!A1L10 & (!A1L14 & !A1L18));
 
 
---A1L129 is col_counter[0]~0
-A1L129 = !col_counter[0];
+--A1L214 is Equal2~1
+A1L214 = ( !A1L22 & ( A1L210 & ( (!A1L26 & (!A1L30 & (A1L2 & A1L6))) ) ) );
 
 
---A1L185 is row_counter[0]~0
-A1L185 = !row_counter[0];
+--A1L230 is Hactive~0
+A1L230 = ( A1L214 & ( A1L209 & ( (Hactive & ((!A1L212) # (A1L207))) ) ) ) # ( !A1L214 & ( A1L209 & ( Hactive ) ) ) # ( A1L214 & ( !A1L209 & ( (!Hactive & (((A1L207 & A1L211)))) # (Hactive & ((!A1L212) # ((A1L207 & A1L211)))) ) ) ) # ( !A1L214 & ( !A1L209 & ( ((A1L207 & A1L211)) # (Hactive) ) ) );
 
 
---A1L208 is ~GND
-A1L208 = GND;
+--A1L219 is Equal4~2
+A1L219 = (!A1L58 & (!A1L62 & (!A1L66 & !A1L70)));
 
 
---A1L209 is ~VCC
-A1L209 = VCC;
+--A1L220 is Equal4~3
+A1L220 = (A1L74 & (!A1L78 & !A1L54));
+
+
+--A1L269 is Vactive~0
+A1L269 = ( A1L219 & ( A1L220 & ( (!Vactive & (A1L42 & (A1L46 & !A1L50))) # (Vactive & ((!A1L42) # ((!A1L50) # (A1L46)))) ) ) ) # ( !A1L219 & ( A1L220 & ( Vactive ) ) ) # ( A1L219 & ( !A1L220 & ( Vactive ) ) ) # ( !A1L219 & ( !A1L220 & ( Vactive ) ) );
+
+
+--A1L216 is Equal3~1
+A1L216 = ( !A1L22 & ( (!A1L34 & (!A1L10 & (!A1L14 & !A1L18))) ) );
+
+
+--A1L222 is Equal7~1
+A1L222 = ( A1L54 & ( (!A1L58 & (A1L42 & (!A1L74 & A1L78))) ) );
+
+
+--A1L248 is pixel_clk~0
+A1L248 = !A1L249Q;
+
+
+--A1L201 is col_counter[0]~0
+A1L201 = !col_counter[0];
+
+
+--A1L257 is row_counter[0]~0
+A1L257 = !row_counter[0];
+
+
+--A1L284 is ~GND
+A1L284 = GND;
+
+
+--A1L285 is ~VCC
+A1L285 = VCC;
 
 
