@@ -102,6 +102,10 @@ BEGIN
     PROCESS (Hsync, Vsync, Vactive, dena, pixel_clk)
         VARIABLE row_counter: INTEGER RANGE 0 TO Vc;
         VARIABLE col_counter: INTEGER RANGE 0 TO Hc;
+        VARIABLE game_row: INTEGER RANGE 0 TO SCREEN_H / SQ_SIZE;
+        VARIABLE game_col: INTEGER RANGE 0 TO SCREEN_W / SQ_SIZE;
+        VARIABLE game_row_row: INTEGER RANGE 0 TO SQ_SIZE - 1;
+        VARIABLE game_col_col: INTEGER RANGE 0 TO SQ_SIZE - 1;
         VARIABLE curr_sq:     std_logic_vector(1 downto 0);
 		  VARIABLE display_buffer: disp_buf;
     BEGIN
@@ -142,16 +146,35 @@ BEGIN
 		-- If screen enabled
         IF (dena='1') THEN
 		    -- Plot the screen here
+    
+            -- Get the current square [G, R] slv
+            game_row := row_counter / SQ_SIZE;          -- Current row, col of 
+            game_col := col_counter / SQ_SIZE;          -- game square
+            game_row_row := row_counter mod SQ_SIZE;    -- Current row, col
+            game_col_col := col_counter mod SQ_SIZE;    -- inside game square
+            curr_sq := display_buffer(game_row)(game_col);
             
-            -- Get the current square [B, G, R] slv
-            curr_sq := display_buffer
-                (row_counter / SQ_SIZE)(col_counter / SQ_SIZE);
-
             -- Get RG components of square 
-            R <= (OTHERS => curr_sq(0));
-            G <= (OTHERS => curr_sq(1));
-				B <= (OTHERS => '0');
+            -- Clear the border
+            -- IF((row_counter = SQ_SIZE * game_row) OR 
+            --    (row_counter = SQ_SIZE * (game_row + 1) - 1) OR
+            --    (col_counter = SQ_SIZE * game_col) OR 
+            --    (col_counter = SQ_SIZE * (game_col + 1) - 1)) THEN 
+            --     R <= (OTHERS => '0');
+            --     G <= (OTHERS => '0');
+            -- Clear the outer corners 
+            IF( (game_row_row + game_col_col >= 8) AND 
+                (game_row_row - game_col_col <= SQ_SIZE - 8) AND 
+                (game_col_col - game_row_row <= SQ_SIZE - 8) AND 
+                (game_row_row + game_col_col <= 2 * SQ_SIZE - 8) ) THEN 
+                R <= (OTHERS => curr_sq(0));
+                G <= (OTHERS => curr_sq(1));
+            --B <= (OTHERS => '0');
             --B <= (OTHERS => curr_sq(2));
+            ELSE 
+                R <= (OTHERS => '0');
+                G <= (OTHERS => '0');
+            END IF;
         -- If screen disabled, turn off the entire screen
         ELSE
             R <= (OTHERS => '0');
