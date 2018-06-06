@@ -1,5 +1,5 @@
 Analysis & Synthesis report for snake
-Tue Jun 05 16:20:07 2018
+Tue Jun 05 20:25:26 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 05 16:20:06 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 05 20:25:25 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; snake                                       ;
 ; Top-level Entity Name           ; snake                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1177                                        ;
+; Total registers                 ; 1110                                        ;
 ; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -182,31 +182,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1554      ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2517      ;
-;     -- 7 input functions                    ; 61        ;
-;     -- 6 input functions                    ; 453       ;
-;     -- 5 input functions                    ; 113       ;
-;     -- 4 input functions                    ; 971       ;
-;     -- <=3 input functions                  ; 919       ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 1177      ;
-;                                             ;           ;
-; I/O pins                                    ; 37        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 1151      ;
-; Total fan-out                               ; 14227     ;
-; Average fan-out                             ; 3.78      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 1491     ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 2178     ;
+;     -- 7 input functions                    ; 61       ;
+;     -- 6 input functions                    ; 683      ;
+;     -- 5 input functions                    ; 481      ;
+;     -- 4 input functions                    ; 189      ;
+;     -- <=3 input functions                  ; 764      ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 1110     ;
+;                                             ;          ;
+; I/O pins                                    ; 37       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; game_clk ;
+; Maximum fan-out                             ; 1040     ;
+; Total fan-out                               ; 13615    ;
+; Average fan-out                             ; 4.05     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,7 +214,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |snake                     ; 2517 (2517)         ; 1177 (1177)               ; 0                 ; 0          ; 37   ; 0            ; |snake              ; snake       ; work         ;
+; |snake                     ; 2178 (2178)         ; 1110 (1110)               ; 0                 ; 0          ; 37   ; 0            ; |snake              ; snake       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -224,308 +224,309 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; display_buffer[14][19][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][18][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][17][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][16][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][15][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][14][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][13][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][12][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][11][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][10][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][9][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][8][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][7][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][6][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][5][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][4][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][3][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][2][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][1][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[14][0][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][19][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][18][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][17][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][16][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][15][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][14][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][13][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][12][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][11][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][10][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][9][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][8][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][7][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][6][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][5][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][4][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][3][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][2][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][1][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[13][0][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][19][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][18][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][17][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][16][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][15][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][14][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][13][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][12][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][11][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][10][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][9][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][8][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][7][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][6][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][5][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][4][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][3][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][2][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][1][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[12][0][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][19][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][18][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][17][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][16][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][15][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][14][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][13][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][12][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][11][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][10][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][9][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][8][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][7][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][6][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][5][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][4][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][3][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][2][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][1][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[11][0][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][19][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][18][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][17][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][16][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][15][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][14][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][13][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][12][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][11][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][10][1]               ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][9][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][8][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][7][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][6][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][5][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][4][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][3][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][2][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][1][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[10][0][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[9][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[8][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[7][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[6][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[5][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[4][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[3][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[2][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[1][0][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][19][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][18][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][17][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][16][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][15][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][14][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][13][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][12][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][11][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][10][1]                ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][9][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][8][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][7][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][6][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][5][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][4][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][3][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][2][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][1][1]                 ; Stuck at GND due to stuck port data_in ;
-; display_buffer[0][0][1]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][16][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][17][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][18][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][19][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][0][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][1][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][2][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][3][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][4][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][5][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][6][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][7][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][8][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][9][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][10][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][11][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][12][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][13][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][14][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][15][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][16][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][17][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][18][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[12][19][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][0][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][1][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][2][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][3][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][4][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][5][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][6][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][7][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][8][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][9][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][10][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][11][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][12][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][13][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][14][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][15][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][16][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][17][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][18][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[13][19][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][0][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][1][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][2][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][3][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][4][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][5][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][6][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][7][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][8][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][9][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][10][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][11][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][12][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][13][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][14][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][15][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][16][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][17][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][18][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[14][19][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][15][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][14][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][13][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][12][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][11][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][10][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][9][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][8][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][7][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][6][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][5][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][4][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][3][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][2][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][1][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[11][0][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][19][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][18][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][17][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][16][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][15][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][14][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][13][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][12][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][11][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][10][0]               ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][9][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][8][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][7][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][6][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][5][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][4][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][3][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][2][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][1][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[10][0][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[9][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[8][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[7][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[6][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[5][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[4][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[3][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[2][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[1][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][19][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][18][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][17][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][16][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][15][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][14][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][13][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][12][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][11][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][10][0]                ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][9][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][8][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][7][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][6][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][5][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][4][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][3][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][2][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][1][0]                 ; Stuck at GND due to stuck port data_in ;
+; display_buffer[0][0][0]                 ; Stuck at GND due to stuck port data_in ;
+; head[24..30]                            ; Stuck at GND due to stuck port data_in ;
 ; row_counter[9]                          ; Lost fanout                            ;
-; Total Number of Removed Registers = 301 ;                                        ;
+; tail[29]                                ; Merged with tail[30]                   ;
+; Total Number of Removed Registers = 308 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -534,12 +535,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1177  ;
-; Number of registers using Synchronous Clear  ; 104   ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 570   ;
+; Total registers                              ; 1110  ;
+; Number of registers using Synchronous Clear  ; 45    ;
+; Number of registers using Synchronous Load   ; 25    ;
+; Number of registers using Asynchronous Clear ; 563   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1125  ;
+; Number of registers using Clock Enable       ; 1056  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -549,11 +550,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; snake_body[1][0][0]                    ; 3       ;
-; head[0]                                ; 42      ;
-; next_head[0][0]                        ; 4       ;
-; pr_dir_state[0]                        ; 6       ;
-; Total number of inverted registers = 4 ;         ;
+; head[0]                                ; 131     ;
+; display_buffer[7][10][0]               ; 1       ;
+; pr_dir_state[0]                        ; 8       ;
+; snake_body[1][1][0]                    ; 3       ;
+; next_head[1][0]                        ; 9       ;
+; display_buffer[0][0][1]                ; 2       ;
+; display_buffer[1][0][1]                ; 2       ;
+; Total number of inverted registers = 7 ;         ;
 +----------------------------------------+---------+
 
 
@@ -562,11 +566,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |snake|game_end            ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |snake|tail[9]             ;
 ; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |snake|next_head           ;
-; 11:1               ; 9 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |snake|Mux4                ;
-; 11:1               ; 9 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |snake|Mux17               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |snake|game_end            ;
+; 10:1               ; 62 bits   ; 372 LEs       ; 372 LEs              ; 0 LEs                  ; No         ; |snake|Mux55               ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |snake|Mux68               ;
 ; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; No         ; |snake|next_head           ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |snake|Mux78               ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |snake|Mux88               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -579,7 +586,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GRID_LENGTH      ; 15        ; Signed Integer                         ;
 ; MAX_SNAKE_LENGTH ; 10        ; Signed Integer                         ;
 ; T_CLK_SYS        ; 20        ; Signed Integer                         ;
-; T_CLK            ; 100000000 ; Signed Integer                         ;
+; T_CLK            ; 500000000 ; Signed Integer                         ;
 ; Ha               ; 96        ; Signed Integer                         ;
 ; Hb               ; 144       ; Signed Integer                         ;
 ; Hc               ; 784       ; Signed Integer                         ;
@@ -597,33 +604,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1177                        ;
+; arriav_ff             ; 1110                        ;
 ;     CLR               ; 2                           ;
 ;     CLR SLD           ; 1                           ;
-;     ENA               ; 558                         ;
-;     ENA CLR           ; 506                         ;
-;     ENA CLR SCLR      ; 61                          ;
-;     SCLR              ; 43                          ;
+;     ENA               ; 496                         ;
+;     ENA CLR           ; 536                         ;
+;     ENA CLR SLD       ; 24                          ;
+;     SCLR              ; 45                          ;
 ;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 2519                        ;
-;     arith             ; 250                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 244                         ;
-;         2 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 2179                        ;
+;     arith             ; 421                         ;
+;         0 data inputs ; 14                          ;
+;         1 data inputs ; 330                         ;
+;         2 data inputs ; 3                           ;
+;         4 data inputs ; 73                          ;
+;         5 data inputs ; 1                           ;
 ;     extend            ; 61                          ;
 ;         7 data inputs ; 61                          ;
-;     normal            ; 2208                        ;
+;     normal            ; 1697                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 615                         ;
-;         4 data inputs ; 971                         ;
-;         5 data inputs ; 113                         ;
-;         6 data inputs ; 453                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 382                         ;
+;         4 data inputs ; 116                         ;
+;         5 data inputs ; 480                         ;
+;         6 data inputs ; 683                         ;
 ; boundary_port         ; 37                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.60                       ;
-; Average LUT depth     ; 8.00                        ;
+; Max LUT depth         ; 16.60                       ;
+; Average LUT depth     ; 12.42                       ;
 +-----------------------+-----------------------------+
 
 
@@ -632,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -642,7 +651,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 05 16:19:45 2018
+    Info: Processing started: Tue Jun 05 20:25:03 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off snake -c snake
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -654,373 +663,73 @@ Info (12021): Found 2 design units, including 1 entities, in source file snake.v
 Info (12127): Elaborating entity "snake" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at snake.vhd(25): used implicit default value for signal "ssd0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 25
 Warning (10541): VHDL Signal Declaration warning at snake.vhd(26): used implicit default value for signal "ssd1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 26
-Warning (10036): Verilog HDL or VHDL warning at snake.vhd(53): object "new_apple" assigned a value but never read File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 53
-Warning (10631): VHDL Process Statement warning at snake.vhd(196): inferring latch(es) for signal or variable "apple", which holds its previous value in one or more paths through the process File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][0]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][1]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][2]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][3]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][4]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][5]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][6]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][7]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][8]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][9]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][10]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][11]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][12]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][13]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][14]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][15]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][16]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][17]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][18]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][19]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][20]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][21]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][22]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][23]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][24]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][25]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][26]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][27]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][28]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][29]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[0][30]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][0]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][1]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][2]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][3]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][4]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][5]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][6]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][7]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][8]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][9]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][10]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][11]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][12]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][13]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][14]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][15]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][16]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][17]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][18]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][19]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][20]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][21]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][22]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][23]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][24]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][25]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][26]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][27]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][28]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][29]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
-Info (10041): Inferred latch for "apple[1][30]" at snake.vhd(196) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 196
+Warning (10036): Verilog HDL or VHDL warning at snake.vhd(52): object "new_apple" assigned a value but never read File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 52
+Warning (10631): VHDL Process Statement warning at snake.vhd(144): inferring latch(es) for signal or variable "apple", which holds its previous value in one or more paths through the process File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at snake.vhd(356): signal "pr_dir_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 356
+Info (10041): Inferred latch for "apple[1][0]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][1]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][2]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][3]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][4]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][5]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][6]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][7]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][8]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][9]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][10]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][11]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][12]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][13]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][14]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][15]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][16]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][17]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][18]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][19]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][20]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][21]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][22]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][23]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][24]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][25]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][26]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][27]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][28]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][29]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[1][30]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][0]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][1]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][2]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][3]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][4]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][5]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][6]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][7]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][8]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][9]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][10]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][11]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][12]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][13]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][14]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][15]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][16]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][17]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][18]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][19]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][20]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][21]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][22]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][23]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][24]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][25]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][26]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][27]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][28]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][29]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
+Info (10041): Inferred latch for "apple[0][30]" at snake.vhd(291) File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 291
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake_body" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "display_buffer" into its bus
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "display_buffer[0][16][0]" is converted into an equivalent circuit using register "display_buffer[0][16][0]~_emulated" and latch "display_buffer[0][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][17][0]" is converted into an equivalent circuit using register "display_buffer[0][17][0]~_emulated" and latch "display_buffer[0][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][18][0]" is converted into an equivalent circuit using register "display_buffer[0][18][0]~_emulated" and latch "display_buffer[0][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][19][0]" is converted into an equivalent circuit using register "display_buffer[0][19][0]~_emulated" and latch "display_buffer[0][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][16][0]" is converted into an equivalent circuit using register "display_buffer[1][16][0]~_emulated" and latch "display_buffer[1][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][17][0]" is converted into an equivalent circuit using register "display_buffer[1][17][0]~_emulated" and latch "display_buffer[1][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][18][0]" is converted into an equivalent circuit using register "display_buffer[1][18][0]~_emulated" and latch "display_buffer[1][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][19][0]" is converted into an equivalent circuit using register "display_buffer[1][19][0]~_emulated" and latch "display_buffer[1][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][16][0]" is converted into an equivalent circuit using register "display_buffer[2][16][0]~_emulated" and latch "display_buffer[2][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][17][0]" is converted into an equivalent circuit using register "display_buffer[2][17][0]~_emulated" and latch "display_buffer[2][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][18][0]" is converted into an equivalent circuit using register "display_buffer[2][18][0]~_emulated" and latch "display_buffer[2][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][19][0]" is converted into an equivalent circuit using register "display_buffer[2][19][0]~_emulated" and latch "display_buffer[2][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][16][0]" is converted into an equivalent circuit using register "display_buffer[3][16][0]~_emulated" and latch "display_buffer[3][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][17][0]" is converted into an equivalent circuit using register "display_buffer[3][17][0]~_emulated" and latch "display_buffer[3][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][18][0]" is converted into an equivalent circuit using register "display_buffer[3][18][0]~_emulated" and latch "display_buffer[3][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][19][0]" is converted into an equivalent circuit using register "display_buffer[3][19][0]~_emulated" and latch "display_buffer[3][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][16][0]" is converted into an equivalent circuit using register "display_buffer[4][16][0]~_emulated" and latch "display_buffer[4][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][17][0]" is converted into an equivalent circuit using register "display_buffer[4][17][0]~_emulated" and latch "display_buffer[4][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][18][0]" is converted into an equivalent circuit using register "display_buffer[4][18][0]~_emulated" and latch "display_buffer[4][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][19][0]" is converted into an equivalent circuit using register "display_buffer[4][19][0]~_emulated" and latch "display_buffer[4][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][16][0]" is converted into an equivalent circuit using register "display_buffer[5][16][0]~_emulated" and latch "display_buffer[5][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][17][0]" is converted into an equivalent circuit using register "display_buffer[5][17][0]~_emulated" and latch "display_buffer[5][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][18][0]" is converted into an equivalent circuit using register "display_buffer[5][18][0]~_emulated" and latch "display_buffer[5][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][19][0]" is converted into an equivalent circuit using register "display_buffer[5][19][0]~_emulated" and latch "display_buffer[5][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][16][0]" is converted into an equivalent circuit using register "display_buffer[6][16][0]~_emulated" and latch "display_buffer[6][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][17][0]" is converted into an equivalent circuit using register "display_buffer[6][17][0]~_emulated" and latch "display_buffer[6][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][18][0]" is converted into an equivalent circuit using register "display_buffer[6][18][0]~_emulated" and latch "display_buffer[6][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][19][0]" is converted into an equivalent circuit using register "display_buffer[6][19][0]~_emulated" and latch "display_buffer[6][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][16][0]" is converted into an equivalent circuit using register "display_buffer[7][16][0]~_emulated" and latch "display_buffer[7][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][17][0]" is converted into an equivalent circuit using register "display_buffer[7][17][0]~_emulated" and latch "display_buffer[7][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][18][0]" is converted into an equivalent circuit using register "display_buffer[7][18][0]~_emulated" and latch "display_buffer[7][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][19][0]" is converted into an equivalent circuit using register "display_buffer[7][19][0]~_emulated" and latch "display_buffer[7][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][16][0]" is converted into an equivalent circuit using register "display_buffer[8][16][0]~_emulated" and latch "display_buffer[8][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][17][0]" is converted into an equivalent circuit using register "display_buffer[8][17][0]~_emulated" and latch "display_buffer[8][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][18][0]" is converted into an equivalent circuit using register "display_buffer[8][18][0]~_emulated" and latch "display_buffer[8][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][19][0]" is converted into an equivalent circuit using register "display_buffer[8][19][0]~_emulated" and latch "display_buffer[8][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][16][0]" is converted into an equivalent circuit using register "display_buffer[9][16][0]~_emulated" and latch "display_buffer[9][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][17][0]" is converted into an equivalent circuit using register "display_buffer[9][17][0]~_emulated" and latch "display_buffer[9][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][18][0]" is converted into an equivalent circuit using register "display_buffer[9][18][0]~_emulated" and latch "display_buffer[9][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][19][0]" is converted into an equivalent circuit using register "display_buffer[9][19][0]~_emulated" and latch "display_buffer[9][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][16][0]" is converted into an equivalent circuit using register "display_buffer[10][16][0]~_emulated" and latch "display_buffer[10][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][17][0]" is converted into an equivalent circuit using register "display_buffer[10][17][0]~_emulated" and latch "display_buffer[10][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][18][0]" is converted into an equivalent circuit using register "display_buffer[10][18][0]~_emulated" and latch "display_buffer[10][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][19][0]" is converted into an equivalent circuit using register "display_buffer[10][19][0]~_emulated" and latch "display_buffer[10][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][16][0]" is converted into an equivalent circuit using register "display_buffer[11][16][0]~_emulated" and latch "display_buffer[11][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][17][0]" is converted into an equivalent circuit using register "display_buffer[11][17][0]~_emulated" and latch "display_buffer[11][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][18][0]" is converted into an equivalent circuit using register "display_buffer[11][18][0]~_emulated" and latch "display_buffer[11][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][19][0]" is converted into an equivalent circuit using register "display_buffer[11][19][0]~_emulated" and latch "display_buffer[11][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][16][0]" is converted into an equivalent circuit using register "display_buffer[12][16][0]~_emulated" and latch "display_buffer[12][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][17][0]" is converted into an equivalent circuit using register "display_buffer[12][17][0]~_emulated" and latch "display_buffer[12][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][18][0]" is converted into an equivalent circuit using register "display_buffer[12][18][0]~_emulated" and latch "display_buffer[12][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][19][0]" is converted into an equivalent circuit using register "display_buffer[12][19][0]~_emulated" and latch "display_buffer[12][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][16][0]" is converted into an equivalent circuit using register "display_buffer[13][16][0]~_emulated" and latch "display_buffer[13][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][17][0]" is converted into an equivalent circuit using register "display_buffer[13][17][0]~_emulated" and latch "display_buffer[13][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][18][0]" is converted into an equivalent circuit using register "display_buffer[13][18][0]~_emulated" and latch "display_buffer[13][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][19][0]" is converted into an equivalent circuit using register "display_buffer[13][19][0]~_emulated" and latch "display_buffer[13][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][16][0]" is converted into an equivalent circuit using register "display_buffer[14][16][0]~_emulated" and latch "display_buffer[14][16][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][17][0]" is converted into an equivalent circuit using register "display_buffer[14][17][0]~_emulated" and latch "display_buffer[14][17][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][18][0]" is converted into an equivalent circuit using register "display_buffer[14][18][0]~_emulated" and latch "display_buffer[14][18][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][19][0]" is converted into an equivalent circuit using register "display_buffer[14][19][0]~_emulated" and latch "display_buffer[14][19][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][5][0]" is converted into an equivalent circuit using register "display_buffer[0][5][0]~_emulated" and latch "display_buffer[0][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][7][0]" is converted into an equivalent circuit using register "display_buffer[0][7][0]~_emulated" and latch "display_buffer[0][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][4][0]" is converted into an equivalent circuit using register "display_buffer[0][4][0]~_emulated" and latch "display_buffer[0][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][6][0]" is converted into an equivalent circuit using register "display_buffer[0][6][0]~_emulated" and latch "display_buffer[0][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][13][0]" is converted into an equivalent circuit using register "display_buffer[0][13][0]~_emulated" and latch "display_buffer[0][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][15][0]" is converted into an equivalent circuit using register "display_buffer[0][15][0]~_emulated" and latch "display_buffer[0][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][12][0]" is converted into an equivalent circuit using register "display_buffer[0][12][0]~_emulated" and latch "display_buffer[0][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][14][0]" is converted into an equivalent circuit using register "display_buffer[0][14][0]~_emulated" and latch "display_buffer[0][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][5][0]" is converted into an equivalent circuit using register "display_buffer[1][5][0]~_emulated" and latch "display_buffer[1][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][7][0]" is converted into an equivalent circuit using register "display_buffer[1][7][0]~_emulated" and latch "display_buffer[1][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][4][0]" is converted into an equivalent circuit using register "display_buffer[1][4][0]~_emulated" and latch "display_buffer[1][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][6][0]" is converted into an equivalent circuit using register "display_buffer[1][6][0]~_emulated" and latch "display_buffer[1][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][13][0]" is converted into an equivalent circuit using register "display_buffer[1][13][0]~_emulated" and latch "display_buffer[1][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][15][0]" is converted into an equivalent circuit using register "display_buffer[1][15][0]~_emulated" and latch "display_buffer[1][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][12][0]" is converted into an equivalent circuit using register "display_buffer[1][12][0]~_emulated" and latch "display_buffer[1][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][14][0]" is converted into an equivalent circuit using register "display_buffer[1][14][0]~_emulated" and latch "display_buffer[1][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][5][0]" is converted into an equivalent circuit using register "display_buffer[2][5][0]~_emulated" and latch "display_buffer[2][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][7][0]" is converted into an equivalent circuit using register "display_buffer[2][7][0]~_emulated" and latch "display_buffer[2][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][4][0]" is converted into an equivalent circuit using register "display_buffer[2][4][0]~_emulated" and latch "display_buffer[2][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][6][0]" is converted into an equivalent circuit using register "display_buffer[2][6][0]~_emulated" and latch "display_buffer[2][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][13][0]" is converted into an equivalent circuit using register "display_buffer[2][13][0]~_emulated" and latch "display_buffer[2][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][15][0]" is converted into an equivalent circuit using register "display_buffer[2][15][0]~_emulated" and latch "display_buffer[2][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][12][0]" is converted into an equivalent circuit using register "display_buffer[2][12][0]~_emulated" and latch "display_buffer[2][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][14][0]" is converted into an equivalent circuit using register "display_buffer[2][14][0]~_emulated" and latch "display_buffer[2][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][5][0]" is converted into an equivalent circuit using register "display_buffer[3][5][0]~_emulated" and latch "display_buffer[3][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][7][0]" is converted into an equivalent circuit using register "display_buffer[3][7][0]~_emulated" and latch "display_buffer[3][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][4][0]" is converted into an equivalent circuit using register "display_buffer[3][4][0]~_emulated" and latch "display_buffer[3][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][6][0]" is converted into an equivalent circuit using register "display_buffer[3][6][0]~_emulated" and latch "display_buffer[3][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][13][0]" is converted into an equivalent circuit using register "display_buffer[3][13][0]~_emulated" and latch "display_buffer[3][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][15][0]" is converted into an equivalent circuit using register "display_buffer[3][15][0]~_emulated" and latch "display_buffer[3][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][12][0]" is converted into an equivalent circuit using register "display_buffer[3][12][0]~_emulated" and latch "display_buffer[3][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][14][0]" is converted into an equivalent circuit using register "display_buffer[3][14][0]~_emulated" and latch "display_buffer[3][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][5][0]" is converted into an equivalent circuit using register "display_buffer[4][5][0]~_emulated" and latch "display_buffer[4][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][7][0]" is converted into an equivalent circuit using register "display_buffer[4][7][0]~_emulated" and latch "display_buffer[4][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][4][0]" is converted into an equivalent circuit using register "display_buffer[4][4][0]~_emulated" and latch "display_buffer[4][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][6][0]" is converted into an equivalent circuit using register "display_buffer[4][6][0]~_emulated" and latch "display_buffer[4][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][13][0]" is converted into an equivalent circuit using register "display_buffer[4][13][0]~_emulated" and latch "display_buffer[4][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][15][0]" is converted into an equivalent circuit using register "display_buffer[4][15][0]~_emulated" and latch "display_buffer[4][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][12][0]" is converted into an equivalent circuit using register "display_buffer[4][12][0]~_emulated" and latch "display_buffer[4][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][14][0]" is converted into an equivalent circuit using register "display_buffer[4][14][0]~_emulated" and latch "display_buffer[4][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][5][0]" is converted into an equivalent circuit using register "display_buffer[5][5][0]~_emulated" and latch "display_buffer[5][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][7][0]" is converted into an equivalent circuit using register "display_buffer[5][7][0]~_emulated" and latch "display_buffer[5][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][4][0]" is converted into an equivalent circuit using register "display_buffer[5][4][0]~_emulated" and latch "display_buffer[5][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][6][0]" is converted into an equivalent circuit using register "display_buffer[5][6][0]~_emulated" and latch "display_buffer[5][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][13][0]" is converted into an equivalent circuit using register "display_buffer[5][13][0]~_emulated" and latch "display_buffer[5][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][15][0]" is converted into an equivalent circuit using register "display_buffer[5][15][0]~_emulated" and latch "display_buffer[5][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][12][0]" is converted into an equivalent circuit using register "display_buffer[5][12][0]~_emulated" and latch "display_buffer[5][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][14][0]" is converted into an equivalent circuit using register "display_buffer[5][14][0]~_emulated" and latch "display_buffer[5][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][5][0]" is converted into an equivalent circuit using register "display_buffer[6][5][0]~_emulated" and latch "display_buffer[6][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][7][0]" is converted into an equivalent circuit using register "display_buffer[6][7][0]~_emulated" and latch "display_buffer[6][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][4][0]" is converted into an equivalent circuit using register "display_buffer[6][4][0]~_emulated" and latch "display_buffer[6][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][6][0]" is converted into an equivalent circuit using register "display_buffer[6][6][0]~_emulated" and latch "display_buffer[6][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][13][0]" is converted into an equivalent circuit using register "display_buffer[6][13][0]~_emulated" and latch "display_buffer[6][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][15][0]" is converted into an equivalent circuit using register "display_buffer[6][15][0]~_emulated" and latch "display_buffer[6][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][12][0]" is converted into an equivalent circuit using register "display_buffer[6][12][0]~_emulated" and latch "display_buffer[6][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][14][0]" is converted into an equivalent circuit using register "display_buffer[6][14][0]~_emulated" and latch "display_buffer[6][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][5][0]" is converted into an equivalent circuit using register "display_buffer[7][5][0]~_emulated" and latch "display_buffer[7][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][7][0]" is converted into an equivalent circuit using register "display_buffer[7][7][0]~_emulated" and latch "display_buffer[7][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][4][0]" is converted into an equivalent circuit using register "display_buffer[7][4][0]~_emulated" and latch "display_buffer[7][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][6][0]" is converted into an equivalent circuit using register "display_buffer[7][6][0]~_emulated" and latch "display_buffer[7][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][13][0]" is converted into an equivalent circuit using register "display_buffer[7][13][0]~_emulated" and latch "display_buffer[7][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][15][0]" is converted into an equivalent circuit using register "display_buffer[7][15][0]~_emulated" and latch "display_buffer[7][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][12][0]" is converted into an equivalent circuit using register "display_buffer[7][12][0]~_emulated" and latch "display_buffer[7][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][14][0]" is converted into an equivalent circuit using register "display_buffer[7][14][0]~_emulated" and latch "display_buffer[7][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][5][0]" is converted into an equivalent circuit using register "display_buffer[8][5][0]~_emulated" and latch "display_buffer[8][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][7][0]" is converted into an equivalent circuit using register "display_buffer[8][7][0]~_emulated" and latch "display_buffer[8][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][4][0]" is converted into an equivalent circuit using register "display_buffer[8][4][0]~_emulated" and latch "display_buffer[8][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][6][0]" is converted into an equivalent circuit using register "display_buffer[8][6][0]~_emulated" and latch "display_buffer[8][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][13][0]" is converted into an equivalent circuit using register "display_buffer[8][13][0]~_emulated" and latch "display_buffer[8][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][15][0]" is converted into an equivalent circuit using register "display_buffer[8][15][0]~_emulated" and latch "display_buffer[8][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][12][0]" is converted into an equivalent circuit using register "display_buffer[8][12][0]~_emulated" and latch "display_buffer[8][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][14][0]" is converted into an equivalent circuit using register "display_buffer[8][14][0]~_emulated" and latch "display_buffer[8][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][5][0]" is converted into an equivalent circuit using register "display_buffer[9][5][0]~_emulated" and latch "display_buffer[9][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][7][0]" is converted into an equivalent circuit using register "display_buffer[9][7][0]~_emulated" and latch "display_buffer[9][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][4][0]" is converted into an equivalent circuit using register "display_buffer[9][4][0]~_emulated" and latch "display_buffer[9][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][6][0]" is converted into an equivalent circuit using register "display_buffer[9][6][0]~_emulated" and latch "display_buffer[9][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][13][0]" is converted into an equivalent circuit using register "display_buffer[9][13][0]~_emulated" and latch "display_buffer[9][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][15][0]" is converted into an equivalent circuit using register "display_buffer[9][15][0]~_emulated" and latch "display_buffer[9][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][12][0]" is converted into an equivalent circuit using register "display_buffer[9][12][0]~_emulated" and latch "display_buffer[9][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][14][0]" is converted into an equivalent circuit using register "display_buffer[9][14][0]~_emulated" and latch "display_buffer[9][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][5][0]" is converted into an equivalent circuit using register "display_buffer[10][5][0]~_emulated" and latch "display_buffer[10][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][7][0]" is converted into an equivalent circuit using register "display_buffer[10][7][0]~_emulated" and latch "display_buffer[10][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][4][0]" is converted into an equivalent circuit using register "display_buffer[10][4][0]~_emulated" and latch "display_buffer[10][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][6][0]" is converted into an equivalent circuit using register "display_buffer[10][6][0]~_emulated" and latch "display_buffer[10][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][13][0]" is converted into an equivalent circuit using register "display_buffer[10][13][0]~_emulated" and latch "display_buffer[10][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][15][0]" is converted into an equivalent circuit using register "display_buffer[10][15][0]~_emulated" and latch "display_buffer[10][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][12][0]" is converted into an equivalent circuit using register "display_buffer[10][12][0]~_emulated" and latch "display_buffer[10][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][14][0]" is converted into an equivalent circuit using register "display_buffer[10][14][0]~_emulated" and latch "display_buffer[10][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][5][0]" is converted into an equivalent circuit using register "display_buffer[11][5][0]~_emulated" and latch "display_buffer[11][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][7][0]" is converted into an equivalent circuit using register "display_buffer[11][7][0]~_emulated" and latch "display_buffer[11][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][4][0]" is converted into an equivalent circuit using register "display_buffer[11][4][0]~_emulated" and latch "display_buffer[11][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][6][0]" is converted into an equivalent circuit using register "display_buffer[11][6][0]~_emulated" and latch "display_buffer[11][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][13][0]" is converted into an equivalent circuit using register "display_buffer[11][13][0]~_emulated" and latch "display_buffer[11][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][15][0]" is converted into an equivalent circuit using register "display_buffer[11][15][0]~_emulated" and latch "display_buffer[11][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][12][0]" is converted into an equivalent circuit using register "display_buffer[11][12][0]~_emulated" and latch "display_buffer[11][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][14][0]" is converted into an equivalent circuit using register "display_buffer[11][14][0]~_emulated" and latch "display_buffer[11][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][5][0]" is converted into an equivalent circuit using register "display_buffer[12][5][0]~_emulated" and latch "display_buffer[12][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][7][0]" is converted into an equivalent circuit using register "display_buffer[12][7][0]~_emulated" and latch "display_buffer[12][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][4][0]" is converted into an equivalent circuit using register "display_buffer[12][4][0]~_emulated" and latch "display_buffer[12][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][6][0]" is converted into an equivalent circuit using register "display_buffer[12][6][0]~_emulated" and latch "display_buffer[12][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][13][0]" is converted into an equivalent circuit using register "display_buffer[12][13][0]~_emulated" and latch "display_buffer[12][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][15][0]" is converted into an equivalent circuit using register "display_buffer[12][15][0]~_emulated" and latch "display_buffer[12][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][12][0]" is converted into an equivalent circuit using register "display_buffer[12][12][0]~_emulated" and latch "display_buffer[12][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][14][0]" is converted into an equivalent circuit using register "display_buffer[12][14][0]~_emulated" and latch "display_buffer[12][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][5][0]" is converted into an equivalent circuit using register "display_buffer[13][5][0]~_emulated" and latch "display_buffer[13][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][7][0]" is converted into an equivalent circuit using register "display_buffer[13][7][0]~_emulated" and latch "display_buffer[13][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][4][0]" is converted into an equivalent circuit using register "display_buffer[13][4][0]~_emulated" and latch "display_buffer[13][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][6][0]" is converted into an equivalent circuit using register "display_buffer[13][6][0]~_emulated" and latch "display_buffer[13][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][13][0]" is converted into an equivalent circuit using register "display_buffer[13][13][0]~_emulated" and latch "display_buffer[13][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][15][0]" is converted into an equivalent circuit using register "display_buffer[13][15][0]~_emulated" and latch "display_buffer[13][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][12][0]" is converted into an equivalent circuit using register "display_buffer[13][12][0]~_emulated" and latch "display_buffer[13][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][14][0]" is converted into an equivalent circuit using register "display_buffer[13][14][0]~_emulated" and latch "display_buffer[13][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][5][0]" is converted into an equivalent circuit using register "display_buffer[14][5][0]~_emulated" and latch "display_buffer[14][5][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][7][0]" is converted into an equivalent circuit using register "display_buffer[14][7][0]~_emulated" and latch "display_buffer[14][7][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][4][0]" is converted into an equivalent circuit using register "display_buffer[14][4][0]~_emulated" and latch "display_buffer[14][4][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][6][0]" is converted into an equivalent circuit using register "display_buffer[14][6][0]~_emulated" and latch "display_buffer[14][6][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][13][0]" is converted into an equivalent circuit using register "display_buffer[14][13][0]~_emulated" and latch "display_buffer[14][13][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][15][0]" is converted into an equivalent circuit using register "display_buffer[14][15][0]~_emulated" and latch "display_buffer[14][15][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][12][0]" is converted into an equivalent circuit using register "display_buffer[14][12][0]~_emulated" and latch "display_buffer[14][12][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][14][0]" is converted into an equivalent circuit using register "display_buffer[14][14][0]~_emulated" and latch "display_buffer[14][14][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][1][0]" is converted into an equivalent circuit using register "display_buffer[0][1][0]~_emulated" and latch "display_buffer[0][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][3][0]" is converted into an equivalent circuit using register "display_buffer[0][3][0]~_emulated" and latch "display_buffer[0][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][0][0]" is converted into an equivalent circuit using register "display_buffer[0][0][0]~_emulated" and latch "display_buffer[0][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][2][0]" is converted into an equivalent circuit using register "display_buffer[0][2][0]~_emulated" and latch "display_buffer[0][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][9][0]" is converted into an equivalent circuit using register "display_buffer[0][9][0]~_emulated" and latch "display_buffer[0][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][11][0]" is converted into an equivalent circuit using register "display_buffer[0][11][0]~_emulated" and latch "display_buffer[0][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][8][0]" is converted into an equivalent circuit using register "display_buffer[0][8][0]~_emulated" and latch "display_buffer[0][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[0][10][0]" is converted into an equivalent circuit using register "display_buffer[0][10][0]~_emulated" and latch "display_buffer[0][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][1][0]" is converted into an equivalent circuit using register "display_buffer[1][1][0]~_emulated" and latch "display_buffer[1][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][3][0]" is converted into an equivalent circuit using register "display_buffer[1][3][0]~_emulated" and latch "display_buffer[1][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][0][0]" is converted into an equivalent circuit using register "display_buffer[1][0][0]~_emulated" and latch "display_buffer[1][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][2][0]" is converted into an equivalent circuit using register "display_buffer[1][2][0]~_emulated" and latch "display_buffer[1][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][9][0]" is converted into an equivalent circuit using register "display_buffer[1][9][0]~_emulated" and latch "display_buffer[1][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][11][0]" is converted into an equivalent circuit using register "display_buffer[1][11][0]~_emulated" and latch "display_buffer[1][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][8][0]" is converted into an equivalent circuit using register "display_buffer[1][8][0]~_emulated" and latch "display_buffer[1][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[1][10][0]" is converted into an equivalent circuit using register "display_buffer[1][10][0]~_emulated" and latch "display_buffer[1][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][1][0]" is converted into an equivalent circuit using register "display_buffer[2][1][0]~_emulated" and latch "display_buffer[2][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][3][0]" is converted into an equivalent circuit using register "display_buffer[2][3][0]~_emulated" and latch "display_buffer[2][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][0][0]" is converted into an equivalent circuit using register "display_buffer[2][0][0]~_emulated" and latch "display_buffer[2][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][2][0]" is converted into an equivalent circuit using register "display_buffer[2][2][0]~_emulated" and latch "display_buffer[2][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][9][0]" is converted into an equivalent circuit using register "display_buffer[2][9][0]~_emulated" and latch "display_buffer[2][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][11][0]" is converted into an equivalent circuit using register "display_buffer[2][11][0]~_emulated" and latch "display_buffer[2][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][8][0]" is converted into an equivalent circuit using register "display_buffer[2][8][0]~_emulated" and latch "display_buffer[2][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[2][10][0]" is converted into an equivalent circuit using register "display_buffer[2][10][0]~_emulated" and latch "display_buffer[2][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][1][0]" is converted into an equivalent circuit using register "display_buffer[3][1][0]~_emulated" and latch "display_buffer[3][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][3][0]" is converted into an equivalent circuit using register "display_buffer[3][3][0]~_emulated" and latch "display_buffer[3][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][0][0]" is converted into an equivalent circuit using register "display_buffer[3][0][0]~_emulated" and latch "display_buffer[3][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][2][0]" is converted into an equivalent circuit using register "display_buffer[3][2][0]~_emulated" and latch "display_buffer[3][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][9][0]" is converted into an equivalent circuit using register "display_buffer[3][9][0]~_emulated" and latch "display_buffer[3][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][11][0]" is converted into an equivalent circuit using register "display_buffer[3][11][0]~_emulated" and latch "display_buffer[3][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][8][0]" is converted into an equivalent circuit using register "display_buffer[3][8][0]~_emulated" and latch "display_buffer[3][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[3][10][0]" is converted into an equivalent circuit using register "display_buffer[3][10][0]~_emulated" and latch "display_buffer[3][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][1][0]" is converted into an equivalent circuit using register "display_buffer[4][1][0]~_emulated" and latch "display_buffer[4][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][3][0]" is converted into an equivalent circuit using register "display_buffer[4][3][0]~_emulated" and latch "display_buffer[4][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][0][0]" is converted into an equivalent circuit using register "display_buffer[4][0][0]~_emulated" and latch "display_buffer[4][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][2][0]" is converted into an equivalent circuit using register "display_buffer[4][2][0]~_emulated" and latch "display_buffer[4][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][9][0]" is converted into an equivalent circuit using register "display_buffer[4][9][0]~_emulated" and latch "display_buffer[4][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][11][0]" is converted into an equivalent circuit using register "display_buffer[4][11][0]~_emulated" and latch "display_buffer[4][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][8][0]" is converted into an equivalent circuit using register "display_buffer[4][8][0]~_emulated" and latch "display_buffer[4][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[4][10][0]" is converted into an equivalent circuit using register "display_buffer[4][10][0]~_emulated" and latch "display_buffer[4][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][1][0]" is converted into an equivalent circuit using register "display_buffer[5][1][0]~_emulated" and latch "display_buffer[5][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][3][0]" is converted into an equivalent circuit using register "display_buffer[5][3][0]~_emulated" and latch "display_buffer[5][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][0][0]" is converted into an equivalent circuit using register "display_buffer[5][0][0]~_emulated" and latch "display_buffer[5][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][2][0]" is converted into an equivalent circuit using register "display_buffer[5][2][0]~_emulated" and latch "display_buffer[5][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][9][0]" is converted into an equivalent circuit using register "display_buffer[5][9][0]~_emulated" and latch "display_buffer[5][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][11][0]" is converted into an equivalent circuit using register "display_buffer[5][11][0]~_emulated" and latch "display_buffer[5][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][8][0]" is converted into an equivalent circuit using register "display_buffer[5][8][0]~_emulated" and latch "display_buffer[5][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[5][10][0]" is converted into an equivalent circuit using register "display_buffer[5][10][0]~_emulated" and latch "display_buffer[5][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][1][0]" is converted into an equivalent circuit using register "display_buffer[6][1][0]~_emulated" and latch "display_buffer[6][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][3][0]" is converted into an equivalent circuit using register "display_buffer[6][3][0]~_emulated" and latch "display_buffer[6][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][0][0]" is converted into an equivalent circuit using register "display_buffer[6][0][0]~_emulated" and latch "display_buffer[6][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][2][0]" is converted into an equivalent circuit using register "display_buffer[6][2][0]~_emulated" and latch "display_buffer[6][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][9][0]" is converted into an equivalent circuit using register "display_buffer[6][9][0]~_emulated" and latch "display_buffer[6][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][11][0]" is converted into an equivalent circuit using register "display_buffer[6][11][0]~_emulated" and latch "display_buffer[6][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][8][0]" is converted into an equivalent circuit using register "display_buffer[6][8][0]~_emulated" and latch "display_buffer[6][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[6][10][0]" is converted into an equivalent circuit using register "display_buffer[6][10][0]~_emulated" and latch "display_buffer[6][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][1][0]" is converted into an equivalent circuit using register "display_buffer[7][1][0]~_emulated" and latch "display_buffer[7][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][3][0]" is converted into an equivalent circuit using register "display_buffer[7][3][0]~_emulated" and latch "display_buffer[7][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][0][0]" is converted into an equivalent circuit using register "display_buffer[7][0][0]~_emulated" and latch "display_buffer[7][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][2][0]" is converted into an equivalent circuit using register "display_buffer[7][2][0]~_emulated" and latch "display_buffer[7][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][9][0]" is converted into an equivalent circuit using register "display_buffer[7][9][0]~_emulated" and latch "display_buffer[7][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][11][0]" is converted into an equivalent circuit using register "display_buffer[7][11][0]~_emulated" and latch "display_buffer[7][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][8][0]" is converted into an equivalent circuit using register "display_buffer[7][8][0]~_emulated" and latch "display_buffer[7][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[7][10][0]" is converted into an equivalent circuit using register "display_buffer[7][10][0]~_emulated" and latch "display_buffer[7][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][1][0]" is converted into an equivalent circuit using register "display_buffer[8][1][0]~_emulated" and latch "display_buffer[8][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][3][0]" is converted into an equivalent circuit using register "display_buffer[8][3][0]~_emulated" and latch "display_buffer[8][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][0][0]" is converted into an equivalent circuit using register "display_buffer[8][0][0]~_emulated" and latch "display_buffer[8][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][2][0]" is converted into an equivalent circuit using register "display_buffer[8][2][0]~_emulated" and latch "display_buffer[8][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][9][0]" is converted into an equivalent circuit using register "display_buffer[8][9][0]~_emulated" and latch "display_buffer[8][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][11][0]" is converted into an equivalent circuit using register "display_buffer[8][11][0]~_emulated" and latch "display_buffer[8][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][8][0]" is converted into an equivalent circuit using register "display_buffer[8][8][0]~_emulated" and latch "display_buffer[8][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[8][10][0]" is converted into an equivalent circuit using register "display_buffer[8][10][0]~_emulated" and latch "display_buffer[8][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][1][0]" is converted into an equivalent circuit using register "display_buffer[9][1][0]~_emulated" and latch "display_buffer[9][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][3][0]" is converted into an equivalent circuit using register "display_buffer[9][3][0]~_emulated" and latch "display_buffer[9][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][0][0]" is converted into an equivalent circuit using register "display_buffer[9][0][0]~_emulated" and latch "display_buffer[9][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][2][0]" is converted into an equivalent circuit using register "display_buffer[9][2][0]~_emulated" and latch "display_buffer[9][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][9][0]" is converted into an equivalent circuit using register "display_buffer[9][9][0]~_emulated" and latch "display_buffer[9][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][11][0]" is converted into an equivalent circuit using register "display_buffer[9][11][0]~_emulated" and latch "display_buffer[9][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][8][0]" is converted into an equivalent circuit using register "display_buffer[9][8][0]~_emulated" and latch "display_buffer[9][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[9][10][0]" is converted into an equivalent circuit using register "display_buffer[9][10][0]~_emulated" and latch "display_buffer[9][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][1][0]" is converted into an equivalent circuit using register "display_buffer[10][1][0]~_emulated" and latch "display_buffer[10][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][3][0]" is converted into an equivalent circuit using register "display_buffer[10][3][0]~_emulated" and latch "display_buffer[10][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][0][0]" is converted into an equivalent circuit using register "display_buffer[10][0][0]~_emulated" and latch "display_buffer[10][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][2][0]" is converted into an equivalent circuit using register "display_buffer[10][2][0]~_emulated" and latch "display_buffer[10][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][9][0]" is converted into an equivalent circuit using register "display_buffer[10][9][0]~_emulated" and latch "display_buffer[10][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][11][0]" is converted into an equivalent circuit using register "display_buffer[10][11][0]~_emulated" and latch "display_buffer[10][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][8][0]" is converted into an equivalent circuit using register "display_buffer[10][8][0]~_emulated" and latch "display_buffer[10][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[10][10][0]" is converted into an equivalent circuit using register "display_buffer[10][10][0]~_emulated" and latch "display_buffer[10][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][1][0]" is converted into an equivalent circuit using register "display_buffer[11][1][0]~_emulated" and latch "display_buffer[11][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][3][0]" is converted into an equivalent circuit using register "display_buffer[11][3][0]~_emulated" and latch "display_buffer[11][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][0][0]" is converted into an equivalent circuit using register "display_buffer[11][0][0]~_emulated" and latch "display_buffer[11][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][2][0]" is converted into an equivalent circuit using register "display_buffer[11][2][0]~_emulated" and latch "display_buffer[11][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][9][0]" is converted into an equivalent circuit using register "display_buffer[11][9][0]~_emulated" and latch "display_buffer[11][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][11][0]" is converted into an equivalent circuit using register "display_buffer[11][11][0]~_emulated" and latch "display_buffer[11][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][8][0]" is converted into an equivalent circuit using register "display_buffer[11][8][0]~_emulated" and latch "display_buffer[11][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[11][10][0]" is converted into an equivalent circuit using register "display_buffer[11][10][0]~_emulated" and latch "display_buffer[11][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][1][0]" is converted into an equivalent circuit using register "display_buffer[12][1][0]~_emulated" and latch "display_buffer[12][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][3][0]" is converted into an equivalent circuit using register "display_buffer[12][3][0]~_emulated" and latch "display_buffer[12][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][0][0]" is converted into an equivalent circuit using register "display_buffer[12][0][0]~_emulated" and latch "display_buffer[12][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][2][0]" is converted into an equivalent circuit using register "display_buffer[12][2][0]~_emulated" and latch "display_buffer[12][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][9][0]" is converted into an equivalent circuit using register "display_buffer[12][9][0]~_emulated" and latch "display_buffer[12][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][11][0]" is converted into an equivalent circuit using register "display_buffer[12][11][0]~_emulated" and latch "display_buffer[12][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][8][0]" is converted into an equivalent circuit using register "display_buffer[12][8][0]~_emulated" and latch "display_buffer[12][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[12][10][0]" is converted into an equivalent circuit using register "display_buffer[12][10][0]~_emulated" and latch "display_buffer[12][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][1][0]" is converted into an equivalent circuit using register "display_buffer[13][1][0]~_emulated" and latch "display_buffer[13][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][3][0]" is converted into an equivalent circuit using register "display_buffer[13][3][0]~_emulated" and latch "display_buffer[13][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][0][0]" is converted into an equivalent circuit using register "display_buffer[13][0][0]~_emulated" and latch "display_buffer[13][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][2][0]" is converted into an equivalent circuit using register "display_buffer[13][2][0]~_emulated" and latch "display_buffer[13][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][9][0]" is converted into an equivalent circuit using register "display_buffer[13][9][0]~_emulated" and latch "display_buffer[13][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][11][0]" is converted into an equivalent circuit using register "display_buffer[13][11][0]~_emulated" and latch "display_buffer[13][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][8][0]" is converted into an equivalent circuit using register "display_buffer[13][8][0]~_emulated" and latch "display_buffer[13][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[13][10][0]" is converted into an equivalent circuit using register "display_buffer[13][10][0]~_emulated" and latch "display_buffer[13][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][1][0]" is converted into an equivalent circuit using register "display_buffer[14][1][0]~_emulated" and latch "display_buffer[14][1][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][3][0]" is converted into an equivalent circuit using register "display_buffer[14][3][0]~_emulated" and latch "display_buffer[14][3][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][0][0]" is converted into an equivalent circuit using register "display_buffer[14][0][0]~_emulated" and latch "display_buffer[14][0][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][2][0]" is converted into an equivalent circuit using register "display_buffer[14][2][0]~_emulated" and latch "display_buffer[14][2][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][9][0]" is converted into an equivalent circuit using register "display_buffer[14][9][0]~_emulated" and latch "display_buffer[14][9][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][11][0]" is converted into an equivalent circuit using register "display_buffer[14][11][0]~_emulated" and latch "display_buffer[14][11][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][8][0]" is converted into an equivalent circuit using register "display_buffer[14][8][0]~_emulated" and latch "display_buffer[14][8][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
-    Warning (13310): Register "display_buffer[14][10][0]" is converted into an equivalent circuit using register "display_buffer[14][10][0]~_emulated" and latch "display_buffer[14][10][0]~1" File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 202
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ssd0[0]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 25
     Warning (13410): Pin "ssd0[1]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 25
@@ -1036,10 +745,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ssd1[4]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 26
     Warning (13410): Pin "ssd1[5]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 26
     Warning (13410): Pin "ssd1[6]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 26
-    Warning (13410): Pin "G[0]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
-    Warning (13410): Pin "G[1]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
-    Warning (13410): Pin "G[2]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
-    Warning (13410): Pin "G[3]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
     Warning (13410): Pin "B[0]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
     Warning (13410): Pin "B[1]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
     Warning (13410): Pin "B[2]" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 35
@@ -1048,19 +753,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "nsync" is stuck at GND File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register snake_body[1][0][0] will power up to High File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 47
-    Critical Warning (18010): Register pr_dir_state[0] will power up to High File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 456
+    Critical Warning (18010): Register snake_body[1][1][0] will power up to High File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 146
+    Critical Warning (18010): Register pr_dir_state[0] will power up to High File: C:/Users/Soph/Documents/College/Junior/EE 125/EE125/snake_project/snake/snake.vhd Line: 397
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3339 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2966 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 3302 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 335 warnings
-    Info: Peak virtual memory: 821 megabytes
-    Info: Processing ended: Tue Jun 05 16:20:07 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 2929 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 824 megabytes
+    Info: Processing ended: Tue Jun 05 20:25:26 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:38
 
 

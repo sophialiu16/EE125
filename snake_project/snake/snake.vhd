@@ -10,7 +10,7 @@ entity snake is
 		GRID_LENGTH: positive := SCREEN_H/SQ_SIZE; 
 		MAX_SNAKE_LENGTH: positive:= 10; 
 		T_CLK_SYS: positive := 20; ---period of 50 MHz system clock (20 ns) 
-		T_CLK: positive := 100000000; -- period of 10 Hz (10^8 ns)
+		T_CLK: positive := 500000000; -- period of 10 Hz (10^8 ns)
 		
 		  Ha: INTEGER := 96; --Hpulse
         Hb: INTEGER := 144; --Hpulse+HBP
@@ -38,18 +38,17 @@ entity snake is
 end entity;
 --------------------------------------------------------------------------------
 architecture snake of snake is
-	type position is array(1 downto 0) of natural; -- position (x, y), (0, 0) upper left corner
+	type position is array(0 to 1) of natural; -- position (x, y), (0, 0) upper left corner
 	type pos_array is array(natural range <>) of position; 
 	--type grid_row is array(natural range <>) of std_logic_vector;
 	--type grid is array(natural range <>) of grid_row; -- (0, 0) upper left corner
-	signal head: natural := 1; 
-	signal tail: natural := 0; -- head and tail pointers of snake 
-	signal snake_body: pos_array(0 to MAX_SNAKE_LENGTH); -- queue for snake body 
-	signal apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
+--	signal head: natural := 1; 
+--	signal tail: natural := 0; -- head and tail pointers of snake 
+--	signal snake_body: pos_array(0 to MAX_SNAKE_LENGTH - 1); -- queue for snake body 
+--	signal apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
 	
 	--signal game_grid : disp_buf:= (others => (others => ('0','0'))); 
 	signal game_clk: std_logic; 
-	signal game_end: std_logic:= '0'; 
 	signal new_apple: std_logic:= '0'; 
 	
 	signal score: natural := 0; 
@@ -66,14 +65,14 @@ architecture snake of snake is
 	return std_logic is 
 		variable arr_i, arr_max, arr_min: natural; 
 	begin 
-		if t > h then -- array full?
+		if t > h then -- assumes array full (TODO)
 			arr_max := MAX_SNAKE_LENGTH; 
 			arr_min := 0; 
 		else 
 			arr_max := h; 
 			arr_min := t;
 		end if; 
-		for i in 0 to MAX_SNAKE_LENGTH loop--pos_list'length loop
+		for i in 0 to MAX_SNAKE_LENGTH - 1 loop--pos_list'length loop
 		    if i >=  arr_min and i <= arr_max and pos_list(i) = p1 then 
 				return '1'; 
 			 end if; 
@@ -138,117 +137,75 @@ begin -- split
     END PROCESS;
     ---Display enable generation:
     dena <= Hactive AND Vactive;
---    -------------------------------------------------------
---    --Part 2: IMAGE GENERATOR
---    -------------------------------------------------------
---    PROCESS (Hsync, Vsync, Vactive, dena, pixel_clk)
---        VARIABLE row_counter: INTEGER RANGE 0 TO Vc;
---        VARIABLE col_counter: INTEGER RANGE 0 TO Hc;
---        VARIABLE curr_sq:     std_logic_vector(1 downto 0);
---		  VARIABLE display_buffer: disp_buf;
---    BEGIN
---        -- Initialize display buffer - test image
---
---        -- Reset row counter if Vsync is low
---        IF (Vsync='0') THEN
---            row_counter := 0;
---        -- Otherwise increment row counter if Hsync rising edge and Vactive 
---        -- is high
---        ELSIF rising_edge(Hsync) THEN
---            IF (Vactive='1') THEN
---                row_counter := row_counter + 1;
---            END IF;
---        END IF;
---        -- Reset column counter if Hsync is low
---        IF (Hsync='0') THEN
---            col_counter := 0;
---        -- Otherwise increment column counter if pixel_clk rising edge and 
---        -- Hactive is high
---        ELSIF rising_edge(pixel_clk) THEN
---            IF (Hactive='1') THEN
---                col_counter := col_counter + 1;
---            END IF;
---        END IF;
---		-- If screen enabled
---        IF (dena='1') THEN
---		    -- Plot the screen here
---            
---            -- Get the current square [B, G, R] slv
---            curr_sq := display_buffer
---                (row_counter / SQ_SIZE)(col_counter / SQ_SIZE);
---
---            -- Get RG components of square 
---            R <= (OTHERS => curr_sq(0));
---            G <= (OTHERS => curr_sq(1));
---				B <= (OTHERS => '0');
---            --B <= (OTHERS => curr_sq(2));
---        -- If screen disabled, turn off the entire screen
---        ELSE
---            R <= (OTHERS => '0');
---            G <= (OTHERS => '0');
---            --B <= (OTHERS => '0');
---        END IF;
---		  B <= (OTHERS => '0');
---    END PROCESS;
 
 -- main game loop 
-		process(all)
+	process(all)
+		
+		variable head: natural := 1; 
+		variable tail: natural := 0; -- head and tail pointers of snake 
+		variable snake_body: pos_array(0 to MAX_SNAKE_LENGTH - 1); -- queue for snake body 
+		variable apple: position := (GRID_WIDTH/2, GRID_LENGTH/2);
+		
+	   variable game_end: std_logic:= '0'; 
+	
 		variable next_head: position := (0, 1); 
 		variable next_apple: position := (GRID_WIDTH/2, GRID_LENGTH/2); 
 		
-		  VARIABLE row_counter: INTEGER RANGE 0 TO Vc;
-        VARIABLE col_counter: INTEGER RANGE 0 TO Hc;
-        VARIABLE curr_sq:     std_logic_vector(1 downto 0);
-		  VARIABLE display_buffer: disp_buf;
+		VARIABLE row_counter: INTEGER RANGE 0 TO Vc;
+      VARIABLE col_counter: INTEGER RANGE 0 TO Hc;
+      VARIABLE curr_sq:     std_logic_vector(1 downto 0);
+		VARIABLE display_buffer: disp_buf;
 		begin 
 			if rising_edge(game_clk) and game_end = '0' then 
 				if pr_dir_state = ddir then 
-					if(next_head(1) + 1 < GRID_LENGTH) then 
-						next_head := (next_head(0), next_head(1) + 1); 
+					if(snake_body(head)(1) + 1 < GRID_LENGTH) then 
+						next_head(0) := snake_body(head)(0);
+						next_head(1) := snake_body(head)(1) + 1; 
 					else 
-						game_end <= '1'; 
+						game_end := '1'; 
 					end if; 
 						
 				elsif pr_dir_state = udir then 
 					if(next_head(1) - 1 >= 0) then 
-						next_head := (next_head(0), next_head(1) - 1); 
+						next_head := (snake_body(head)(0), snake_body(head)(1) - 1); 
 					else 
-						game_end <= '1'; 
+						game_end := '1'; 
 					end if; 
 					
 				elsif pr_dir_state = rdir then 
 					if(next_head(0) + 1 < GRID_WIDTH) then 
-						next_head := (next_head(0) + 1, next_head(1)); 
+						next_head := (snake_body(head)(0) + 1, snake_body(head)(1)); 
 					else 
-						game_end <= '1'; 
+						game_end := '1'; 
 					end if; 
 					
 				elsif pr_dir_state = ldir then 
 					if(next_head(0) - 1 >= 0) then 
-						next_head := (next_head(0) - 1, next_head(1)); 
+						next_head := (snake_body(head)(0) - 1, snake_body(head)(1)); 
 					else 
-						game_end <= '1'; 
+						game_end := '1'; 
 					end if; 
 				end if; 
 				
 				-- check for hitting snake body 
 				if in_array(snake_body, next_head, head, tail) = '1' then  
-					game_end <= '1'; 
+					game_end := '1'; 
 				end if; 
 				
 				-- move snake to new position 
-				head <= head + 1; 
+				head := head + 1; 
 				if(head >= MAX_SNAKE_LENGTH) then 
-					head <= 0;
+					head := 0;
 				end if; -- wrap head pointer around queue 
 				
-				snake_body(head) <= next_head; 	
-				display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := ('0', '0'); 
-				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := ('0', '1'); --TODO 
+				snake_body(head)(0) := next_head(0);--snake_body(head-1)(0);
+				snake_body(head)(1) := next_head(1);--snake_body(head-1)(1) + 1;--next_head; 	 
+				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := "10"; --TODO 
+				display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "00";
 				
-				tail <= tail + 1; 
+				tail := tail + 1; 
 				if(tail >= MAX_SNAKE_LENGTH) then 
-					tail <= 0;
+					tail := 0;
 				end if; 
 				
 				-- check for apple 
@@ -257,10 +214,10 @@ begin -- split
 					score <= score + 1; 
 					if (head + 1 /= tail) and (head + 1 /= tail + MAX_SNAKE_LENGTH) then --TODO ew
 						if tail = 0 then 
-							tail <= MAX_SNAKE_LENGTH - 1; 
+							tail := MAX_SNAKE_LENGTH - 1; 
 						else 
-							tail <= tail - 1; -- bring back old tail 
-							display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := ('0', '1');
+							tail := tail - 1; -- bring back old tail 
+							display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "10";
 						end if; 
 					end if; 
 					new_apple <= '1';  
@@ -270,8 +227,8 @@ begin -- split
 --						uniform(seed1, seed2, next_apple_y); -- 0 to 1 
 --						next_apple := (natural(next_apple_x * real(GRID_WIDTH)), natural(next_apple_y * real(GRID_LENGTH)));
 --					end loop; 
---					apple <= next_apple;  
---					game_grid(apple(1))(apple(0)) <= 2;
+--					apple := next_apple;  
+--					display_buffer(apple(1))(apple(0)) := "01";
 				end if; 
 			end if; 
 			
@@ -332,23 +289,21 @@ begin -- split
 		  B <= (OTHERS => '0');
 			
 			if rst = '0' then 
-				game_end <= '0'; 
+				game_end := '0'; 
 				next_head := (0, 1); --TODO constants
 				score <= 0; 
-				head <= 1; 
-				tail <= 0; 
-				snake_body(1) <= (0, 1); 
-				snake_body(0) <= (0, 0); 
-				apple <= (GRID_WIDTH/2, GRID_LENGTH/2); 
-				display_buffer := (others => (others => ('0', '0'))); 
-				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := ('1', '0');
-				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := ('0', '1');
-				display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := ('0', '1');
+				head := 1; 
+				tail := 0; 
+				snake_body(1) := (0, 1); 
+				snake_body(0) := (0, 0); 
+				apple := (GRID_WIDTH/2, GRID_LENGTH/2); 
+				display_buffer := (others => (others => "00")); 
+				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := "10";
+				display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "10";
+				display_buffer(apple(1))(apple(0)) := "01";
 				new_apple <= '0'; 	
 			end if; 
 		end process;
-		
-		--vga(clk_sys); 
 	
 		-- score output
 --		with score mod 10 select
@@ -394,23 +349,9 @@ begin -- split
 --				new_apple <= '0'; 
 --			end if; 
 --		end process; 
-		
--- reset 
---		process(rst) 
---		begin 
---			if rst = '0' then 
---				-- reset variables 
---				score <= 0; 
---				head <= 1; 
---				tail <= 0; 
---				snake_body(head) <= (0, 1); 
---				snake_body(tail) <= (0, 0); 
---				new_apple <= '0'; 
---			end if; 
---		end process; 
 
 -- update snake direction 
-		process(all) 
+		process(ukey, dkey, rkey, lkey) 
 		begin
 			case pr_dir_state is 
 				when udir => 
