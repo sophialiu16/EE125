@@ -8,7 +8,7 @@ entity snake is
 	generic(	
 		GRID_WIDTH: positive := SCREEN_W/SQ_SIZE; 
 		GRID_LENGTH: positive := SCREEN_H/SQ_SIZE; 
-		MAX_SNAKE_LENGTH: positive:= (GRID_WIDTH - 1) * (GRID_LENGTH - 1); 
+		MAX_SNAKE_LENGTH: positive:= 50;--SCREEN_W/SQ_SIZE * SCREEN_H/SQ_SIZE; 
 		T_CLK_SYS: positive := 20; ---period of 50 MHz system clock (20 ns) 
 		T_CLK: positive := 200000000; -- period 2*10^8 ns, game clock 
 		
@@ -39,7 +39,7 @@ architecture snake of snake is
 	signal score: natural := 0; 
 	-- lookup tables for new apple positions 
 	type lut is array (natural range <> ) of natural;
-   constant grid_y: lut(0 to MAX_SNAKE_LENGTH - 1) := (
+   constant grid_y: lut(0 to 299) := (
         12, 00, 12, 13, 06, 02, 00, 11, 00, 11, 
 		  01, 08, 09, 15, 16, 11, 01, 08, 16, 04, 
 		  05, 16, 04, 09, 09, 03, 14, 08, 14, 00, 
@@ -69,13 +69,9 @@ architecture snake of snake is
 		  15, 11, 12, 06, 04, 05, 14, 04, 00, 03, 
 		  15, 02, 12, 07, 05, 14, 13, 13, 03, 09, 
 		  16, 07, 11, 01, 15, 10, 11, 15, 01, 09, 
-		  15, 06, 08, 15, 15, 00, 10, 05, 11, 05, 
-		  06, 14, 04, 05, 05, 05, 13, 00, 09, 08, 
-		  09, 13, 05, 10, 11, 12, 00, 16, 08, 15, 
-		  13, 02, 14, 04, 13, 04, 01, 16, 06, 06, 
-		  09, 06, 13, 05, 06, 10, 14, 11, 03, 11
+		  15, 06, 08, 15, 15, 00, 10, 05, 11, 05
         );
-   constant grid_x: lut(0 to MAX_SNAKE_LENGTH - 1) := (
+   constant grid_x: lut(0 to 299) := (
 			03, 08, 07, 05, 11, 02, 15, 16, 16, 16, 
 			11, 00, 15, 16, 08, 02, 09, 12, 08, 06, 
 			14, 18, 19, 12, 05, 18, 00, 09, 01, 16, 
@@ -105,11 +101,7 @@ architecture snake of snake is
 			18, 01, 00, 13, 12, 14, 06, 11, 12, 13, 
 			10, 00, 13, 16, 13, 18, 18, 03, 06, 03, 
 			17, 04, 09, 00, 19, 10, 02, 11, 14, 06, 
-			02, 18, 00, 12, 16, 02, 15, 11, 10, 11, 
-			14, 15, 17, 16, 09, 05, 09, 05, 17, 06, 
-			18, 07, 10, 17, 00, 00, 14, 19, 04, 07, 
-			07, 10, 05, 06, 09, 07, 03, 01, 13, 11, 
-			11, 06, 19, 15, 17, 17, 19, 02, 06, 13);
+			02, 18, 00, 12, 16, 02, 15, 11, 10, 11);
 	
 	-- direction FSM  
 	type state is (udir, ddir, ldir, rdir); 
@@ -288,8 +280,8 @@ begin
 							tail := MAX_SNAKE_LENGTH - 1; 
 						else 
 							tail := tail - 1; -- bring back old tail 
-							display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "10";
 						end if; 
+							display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "10";
 					end if;   
 				-- make new apple
 				i := 0;

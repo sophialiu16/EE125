@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Jun 06 11:13:12 2018
+Analysis & Synthesis Status : Successful - Wed Jun 06 12:57:29 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : snake
 Top-level Entity Name : snake
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1216
+Total registers : 3947
 Total pins : 44
 Total virtual pins : 0
 Total block memory bits : 0
