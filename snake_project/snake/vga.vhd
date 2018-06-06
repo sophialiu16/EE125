@@ -1,27 +1,27 @@
--- Device: Cyclone V 5CEBA4F23C7
-----------------------------------------------------------
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-----------------------------------------------------------
-PACKAGE vga_disp_buf IS 
-    CONSTANT SCREEN_W: INTEGER := 640;
-    CONSTANT SCREEN_H: INTEGER := 480;
-    CONSTANT SQ_SIZE: INTEGER := 32;	-- Need such low res to actually fit design
+--------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+--------------------------------------------------------------------------------
+package vga_disp_buf is 
+    -- Screen dimensions and game pizel size
+    constant SCREEN_W: INTEGER := 640;
+    constant SCREEN_H: INTEGER := 480;
+    constant SQ_SIZE: INTEGER := 32;	
     -- A display row, of SLVs in [G, R] format
-	 -- No support for blue (not needed)
-    TYPE disp_row IS ARRAY 
+	-- No support for blue (not needed)
+    type disp_row is ARRAY 
         (0 to (SCREEN_W / SQ_SIZE) - 1) OF std_logic_vector(1 downto 0);
-    -- The whole display 
-    TYPE disp_buf IS ARRAY 
+    -- The whole display - a ddisplay buffer
+    type disp_buf is ARRAY 
         (0 to (SCREEN_H / SQ_SIZE) - 1) OF disp_row;
-END PACKAGE;
+end package;
+--------------------------------------------------------------------------------
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use work.vga_disp_buf.all;
 ------------------------------------------------------------
---LIBRARY ieee;
---USE ieee.std_logic_1164.all;
---USE work.vga_disp_buf.all;
-------------------------------------------------------------
---ENTITY vga IS
---    GENERIC (
+--ENTITY vga is
+--    generic (
 --        Ha: INTEGER := 96; --Hpulse
 --        Hb: INTEGER := 144; --Hpulse+HBP
 --        Hc: INTEGER := 784; --Hpulse+HBP+Hactive
@@ -40,9 +40,9 @@ END PACKAGE;
 --        Hsync, Vsync: BUFFER STD_LOGIC;
 --        R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 --        nblanck, nsync : OUT STD_LOGIC);
---END vga;
+--end vga;
 ------------------------------------------------------------
---ARCHITECTURE vga OF vga IS
+--architecture vga OF vga is
 --    SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 --BEGIN
 --    -------------------------------------------------------
@@ -56,8 +56,8 @@ END PACKAGE;
 --    BEGIN
 --        IF (clk'EVENT AND clk='1') THEN
 --            pixel_clk <= NOT pixel_clk;
---        END IF;
---    END PROCESS;
+--        end IF;
+--    end PROCESS;
 --    --Horizontal signals generation:
 --    PROCESS (pixel_clk)
 --        VARIABLE Hcount: INTEGER RANGE 0 TO Hd;
@@ -73,9 +73,9 @@ END PACKAGE;
 --            ELSIF (Hcount=Hd) THEN
 --                Hsync <= '0';
 --                Hcount := 0;
---            END IF;
---        END IF;
---    END PROCESS;
+--            end IF;
+--        end IF;
+--    end PROCESS;
 --    --Vertical signals generation:
 --    PROCESS (Hsync)
 --        VARIABLE Vcount: INTEGER RANGE 0 TO Vd;
@@ -91,9 +91,9 @@ END PACKAGE;
 --        ELSIF (Vcount=Vd) THEN
 --            Vsync <= '0';
 --            Vcount := 0;
---        END IF;
---    END IF;
---    END PROCESS;
+--        end IF;
+--    end IF;
+--    end PROCESS;
 --    ---Display enable generation:
 --    dena <= Hactive AND Vactive;
 --    -------------------------------------------------------
@@ -116,9 +116,9 @@ END PACKAGE;
 --					     display_buffer(row)(col) := "01";
 --					 ELSE 
 --					     display_buffer(row)(col) := "10";
---					 END IF;
---				END LOOP;
---		  END LOOP;
+--					 end IF;
+--				end LOOP;
+--		  end LOOP;
 --        -- Reset row counter if Vsync is low
 --        IF (Vsync='0') THEN
 --            row_counter := 0;
@@ -127,8 +127,8 @@ END PACKAGE;
 --        ELSIF rising_edge(Hsync) THEN
 --            IF (Vactive='1') THEN
 --                row_counter := row_counter + 1;
---            END IF;
---        END IF;
+--            end IF;
+--        end IF;
 --        -- Reset column counter if Hsync is low
 --        IF (Hsync='0') THEN
 --            col_counter := 0;
@@ -137,8 +137,8 @@ END PACKAGE;
 --        ELSIF rising_edge(pixel_clk) THEN
 --            IF (Hactive='1') THEN
 --                col_counter := col_counter + 1;
---            END IF;
---        END IF;
+--            end IF;
+--        end IF;
 --		-- If screen enabled
 --        IF (dena='1') THEN
 --		    -- Plot the screen here
@@ -157,8 +157,8 @@ END PACKAGE;
 --            R <= (OTHERS => '0');
 --            G <= (OTHERS => '0');
 --            --B <= (OTHERS => '0');
---        END IF;
+--        end IF;
 --		  B <= (OTHERS => '0');
---    END PROCESS;
---END vga;
+--    end PROCESS;
+--end vga;
 ------------------------------------------------------------
