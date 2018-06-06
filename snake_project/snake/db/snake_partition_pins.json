@@ -4,6 +4,90 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "ssd0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ssd2[6]",
+					"strict" : false
+				},
+				{
 					"name" : "pixel_clk",
 					"strict" : false
 				},
@@ -48,11 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
