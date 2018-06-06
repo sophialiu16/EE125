@@ -1,5 +1,5 @@
 Flow report for snake
-Wed Jun 06 00:38:15 2018
+Wed Jun 06 11:20:24 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Jun 06 00:36:44 2018       ;
+; Flow Status                     ; Successful - Wed Jun 06 11:19:20 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; snake                                       ;
 ; Top-level Entity Name           ; snake                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 5,893 / 18,480 ( 32 % )                     ;
-; Total registers                 ; 1711                                        ;
+; Logic utilization (in ALMs)     ; 5,365 / 18,480 ( 29 % )                     ;
+; Total registers                 ; 1322                                        ;
 ; Total pins                      ; 44 / 224 ( 20 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2018 00:26:50 ;
+; Start date & time ; 06/06/2018 11:12:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; snake               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 172309001466009.152827001035992        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 172309001466009.152830873457496        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:05     ; 1.0                     ; 890 MB              ; 00:01:19                           ;
-; Fitter                    ; 00:08:35     ; 3.0                     ; 2449 MB             ; 00:30:37                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 812 MB              ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:01:30     ; 2.3                     ; 1340 MB             ; 00:03:15                           ;
-; Total                     ; 00:11:19     ; --                      ; --                  ; 00:35:19                           ;
+; Analysis & Synthesis      ; 00:00:58     ; 2.3                     ; 880 MB              ; 00:01:32                           ;
+; Fitter                    ; 00:05:54     ; 2.7                     ; 2381 MB             ; 00:19:52                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 809 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:01:03     ; 2.4                     ; 1265 MB             ; 00:02:10                           ;
+; Total                     ; 00:08:04     ; --                      ; --                  ; 00:23:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -8,9 +8,9 @@ entity snake is
 	generic(	
 		GRID_WIDTH: positive := SCREEN_W/SQ_SIZE; 
 		GRID_LENGTH: positive := SCREEN_H/SQ_SIZE; 
-		MAX_SNAKE_LENGTH: positive:= 10;--GRID_WIDTH * GRID_LENGTH; 
+		MAX_SNAKE_LENGTH: positive:= (GRID_WIDTH - 1) * (GRID_LENGTH - 1); 
 		T_CLK_SYS: positive := 20; ---period of 50 MHz system clock (20 ns) 
-		T_CLK: positive := 200000000; -- period of 10 Hz (10^8 ns)
+		T_CLK: positive := 200000000; -- period 2*10^8 ns, game clock 
 		
 		  Ha: INTEGER := 96; --Hpulse
         Hb: INTEGER := 144; --Hpulse+HBP
@@ -23,29 +23,23 @@ entity snake is
 	port(
 		clk, rst, ukey, dkey, lkey, rkey: in std_logic; 
 		ssd0, ssd1, ssd2: out std_logic_vector(6 downto 0);
-		 -- Display buffer
-        --      Pass in from game code
-        --display_buffer: IN disp_buf;
-        -- VGA signals:
-        --clk: IN STD_LOGIC; --50MHz in our board
-        pixel_clk: BUFFER STD_LOGIC;
-        Hsync, Vsync: BUFFER STD_LOGIC;
-        R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        nblanck, nsync : OUT STD_LOGIC);
-		-- output game grid display 
+      pixel_clk: BUFFER STD_LOGIC;
+      Hsync, Vsync: BUFFER STD_LOGIC;
+      R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      nblanck, nsync : OUT STD_LOGIC);
 end entity;
 --------------------------------------------------------------------------------
 architecture snake of snake is
-	type position is array(0 to 1) of natural; -- position (x, y), (0, 0) upper left corner
+	type position is array(0 to 1) of natural; --(x, y); (0, 0) is upper left corner
 	type pos_array is array(natural range <>) of position;  
 	
 	signal game_clk: std_logic; 
 	signal new_apple: std_logic:= '0'; 
 	
 	signal score: natural := 0; 
-	
+	-- lookup tables for new apple positions 
 	type lut is array (natural range <> ) of natural;
-   constant grid_y:   lut(0 to 339) := (
+   constant grid_y: lut(0 to MAX_SNAKE_LENGTH - 1) := (
         12, 00, 12, 13, 06, 02, 00, 11, 00, 11, 
 		  01, 08, 09, 15, 16, 11, 01, 08, 16, 04, 
 		  05, 16, 04, 09, 09, 03, 14, 08, 14, 00, 
@@ -81,7 +75,7 @@ architecture snake of snake is
 		  13, 02, 14, 04, 13, 04, 01, 16, 06, 06, 
 		  09, 06, 13, 05, 06, 10, 14, 11, 03, 11
         );
-   constant grid_x:   lut(0 to 339) := (
+   constant grid_x: lut(0 to MAX_SNAKE_LENGTH - 1) := (
 			03, 08, 07, 05, 11, 02, 15, 16, 16, 16, 
 			11, 00, 15, 16, 08, 02, 09, 12, 08, 06, 
 			14, 18, 19, 12, 05, 18, 00, 09, 01, 16, 
@@ -123,25 +117,18 @@ architecture snake of snake is
 	attribute enum_encoding: string;
 	attribute enum_encoding of state: type is "sequential";
 	
-	
-	-- check position is in array 
+	-- check if position is in array, given head and tail positions
 	function in_array (pos_list: pos_array; p1: position; h, t: natural) 
 	return std_logic is 
-		variable arr_i, arr_max, arr_min: natural; 
 		variable split: std_logic:= '0'; 
 	begin 
-		if t > h then -- assumes array full (TODO)
-			arr_max := MAX_SNAKE_LENGTH; 
-			arr_min := 0; 
+		if t > h then 
 			split:= '1'; 
-			
 		else 
-			arr_max := h; 
-			arr_min := t;
 			split := '0';
 		end if; 
-		for i in 0 to MAX_SNAKE_LENGTH - 1 loop--pos_list'length loop
-		    if split = '0' and i >=  arr_min and i <= arr_max then 
+		for i in 0 to MAX_SNAKE_LENGTH - 1 loop 
+		    if split = '0' and i >=  t and i <= h then 
 				if pos_list(i)(0) = p1(0) and pos_list(i)(1) = p1(1) then 
 					return '1'; 
 				end if; 
@@ -156,12 +143,10 @@ architecture snake of snake is
 		return '0'; 
 	end function in_array; 
 	
-	SIGNAL Hactive, Vactive, dena: STD_LOGIC;
+SIGNAL Hactive, Vactive, dena: STD_LOGIC;
 	
-begin -- split 
--- TODO init 
--- output score 
-
+begin 
+-- display processes 
     -------------------------------------------------------
     --Part 1: CONTROL GENERATOR
     -------------------------------------------------------
@@ -218,10 +203,10 @@ begin -- split
 	process(all)
 		
 		variable head: natural := 1; 
-		variable tail: natural := 0; -- head and tail pointers of snake 
+		variable tail: natural := 0; 		-- head and tail pointers of snake 
 		variable snake_body: pos_array(0 to MAX_SNAKE_LENGTH - 1); -- queue for snake body 
 		variable apple: position := (GRID_WIDTH/2, GRID_LENGTH/2);
-		variable gridi: natural := 0; 
+		variable gridi: natural := 0; 	-- lookup table index
 		
 	   variable game_end: std_logic:= '0'; 
 	
@@ -273,7 +258,7 @@ begin -- split
 					end if; 
 				end if; 
 				
-				-- check for hitting snake body 
+				-- check if hit snake body 
 				if in_array(snake_body, next_head, head, tail) = '1' then  
 					game_end := '1'; 
 				end if; 
@@ -284,12 +269,12 @@ begin -- split
 					head := 0;
 				end if; -- wrap head pointer around queue 
 				
-				snake_body(head)(0) := next_head(0);--snake_body(head-1)(0);
-				snake_body(head)(1) := next_head(1);--snake_body(head-1)(1) + 1;--next_head; 	 
+				snake_body(head)(0) := next_head(0);
+				snake_body(head)(1) := next_head(1); 	 
 				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := "10"; --TODO 
 				display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "00";
 				
-				tail := tail + 1; 
+				tail := tail + 1; -- get new tail position 
 				if(tail >= MAX_SNAKE_LENGTH) then 
 					tail := 0; 
 				end if; 
@@ -298,7 +283,7 @@ begin -- split
 				if(next_head(0) = apple(0) and next_head(1) = apple(1)) then 
 					-- increment score, make snake longer (if not maxed), new apple
 					score <= score + 1; 
-					if (head + 1 /= tail) and (head + 1 /= tail + MAX_SNAKE_LENGTH) then --TODO ew
+					if (head + 1 /= tail) and (head + 1 /= tail + MAX_SNAKE_LENGTH - 1) then 
 						if tail = 0 then 
 							tail := MAX_SNAKE_LENGTH - 1; 
 						else 
@@ -306,15 +291,15 @@ begin -- split
 							display_buffer(snake_body(tail)(1))(snake_body(tail)(0)) := "10";
 						end if; 
 					end if;   
---					-- make new apple
+				-- make new apple
 				i := 0;
-				while in_array(snake_body, next_apple, head, tail) = '1' and i < 5 loop
-					v_TIME := V_TIME - now;
+				-- try new positions with timeout 
+				while in_array(snake_body, next_apple, head, tail) = '1' and i < 10 loop
 					next_apple(0) := grid_x(gridi);
 					next_apple(1) := grid_y(gridi);
 					gridi := gridi + 1;
 					if gridi > MAX_SNAKE_LENGTH then 
-						gridi = 0; 
+						gridi := 0; 
 					end if; 
 					i := i + 1;
 				end loop; 
@@ -376,7 +361,7 @@ begin -- split
         END IF;
 		  B <= (OTHERS => '0');
 			
-			if rst = '0' then 
+			if rst = '0' then -- reset to initial state 
 				game_end := '0'; 
 				next_head := (0, 1); 
 				score <= 0; 
@@ -387,6 +372,7 @@ begin -- split
 				snake_body(1) := (0, 1); 
 				snake_body(0) := (0, 0); 
 				apple := (GRID_WIDTH/2, GRID_LENGTH/2); 
+				gridi := 0;
 				display_buffer := (others => (others => "00")); 
 				display_buffer(snake_body(head)(1))(snake_body(head)(0)) := "10";
 				display_buffer(snake_body(1)(1))(snake_body(1)(0)) := "10";
@@ -436,6 +422,7 @@ begin -- split
                 "0000000" when 8,       --"8" on SSD
                 "0000100" when 9,       --"9" on SSD
                 "0110000" when others;  --"E" for error	
+					 
 -- update snake direction 
 		process(ukey, dkey, rkey, lkey, clk) 
 		begin
@@ -454,11 +441,6 @@ begin -- split
 					elsif dkey = '0' then 
 						nx_dir_state <= ddir; 
 					else  
---					if rkey = '0' then 
---						nx_dir_state <= ddir; 
---					elsif lkey = '0' then 
---						nx_dir_state <= udir; 
---					else 
 						nx_dir_state <= rdir; 
 					end if; 
 				when ddir => 
@@ -475,11 +457,6 @@ begin -- split
 					elsif dkey = '0' then 
 						nx_dir_state <= ddir; 
 					else 
---					if rkey = '0' then 
---						nx_dir_state <= udir; 
---					elsif lkey = '0' then 
---						nx_dir_state <= ddir; 
---					else 
 						nx_dir_state <= ldir;
 					end if; 
 				when others => 	
@@ -497,9 +474,7 @@ begin -- split
 			end if; 
 		end process; 
 
--- debounce control keys?
-
--- game clock - generate 10 Hz clock
+-- generate slow game clock 
 		process(clk) 
 		variable sc_counter : integer range 0 to T_CLK/T_CLK_SYS := 0;
 		begin
